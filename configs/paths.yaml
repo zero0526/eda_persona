@@ -1,0 +1,7 @@
+root:
+  fb-action-logs:
+    persona: "./data/action_logs"
+    without-persona: "./data/no_persona_Actions"    
+  persona:
+    fb-pf-persona: "./data/original_facebook_persona.json"
+  

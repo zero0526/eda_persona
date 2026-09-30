@@ -1,0 +1,2707 @@
+{
+  "export_type": "benchmark_persona_phase_manifest",
+  "suite": {
+    "id": "9687fff5-1d43-4c8d-a8c8-a46dbf7f213a",
+    "kind": "persona_vs_neutral",
+    "status_at_export": "running",
+    "started_at": "2026-09-30T03:40:06.078Z",
+    "ended_at": null,
+    "config": {
+      "concurrency": 2,
+      "duration_seconds": 600,
+      "phases": [
+        "persona",
+        "neutral"
+      ],
+      "specs": [
+        {
+          "contractPersonaId": "vn_000019",
+          "controlMode": "native",
+          "personaId": "vn_000019",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "7c52bf4f-92ce-4e45-90be-c59b56f5ca88",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000041",
+          "controlMode": "native",
+          "personaId": "vn_000041",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "434e37d1-5f77-43b0-ac12-099236a04898",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000049",
+          "controlMode": "native",
+          "personaId": "vn_000049",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "ce21b173-755c-40a4-a4a9-c7ad2aec9670",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaId": "vn_000077",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "24f56b60-7d5a-4a6d-84a0-a8fb546a2bd7",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000081",
+          "controlMode": "native",
+          "personaId": "vn_000081",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "9e1c5c44-0881-47c3-813c-f282d53b06c7",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000087",
+          "controlMode": "native",
+          "personaId": "vn_000087",
+          "personaMode": "persona",
+          "phase": "persona",
+          "profileId": "c58a8c8e-9cbe-436c-b041-54828d395650",
+          "variant": "persona_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "4d30aa7e-da87-4795-879a-a7ed4b80a759",
+          "variant": "neutral_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "21476e56-d96a-4cbc-9872-36b0286b431f",
+          "variant": "neutral_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "a33617c6-4e7f-4aad-8d68-b05826647b3f",
+          "variant": "neutral_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "07d7efb4-4e3d-4ac0-8c0d-91bfb1c963f3",
+          "variant": "neutral_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "bd744a49-3c78-4c28-934f-4f754eb09c5b",
+          "variant": "neutral_native"
+        },
+        {
+          "contractPersonaId": "vn_000077",
+          "controlMode": "native",
+          "personaMode": "neutral",
+          "phase": "neutral",
+          "profileId": "01d5e07c-2275-4dfe-8e6a-d257f9c8e96f",
+          "variant": "neutral_native"
+        }
+      ]
+    }
+  },
+  "scope": "persona trials only; neutral trials are intentionally excluded",
+  "trials": [
+    {
+      "trial_id": "4c05f6e4-43ab-4af1-a9db-b3a0d1232f2d",
+      "persona_id": "vn_000019",
+      "profile_id": "7c52bf4f-92ce-4e45-90be-c59b56f5ca88",
+      "status": "done",
+      "episode_id": "f70a0623-6d79-4473-98d0-66988e23930c",
+      "report": {
+        "action_accuracy_percent": 94.4,
+        "actionable_steps": 18,
+        "decision_latency_ms": {
+          "max": 8391,
+          "mean": 3983
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 3777,
+            "step": 1
+          },
+          {
+            "latency_ms": 2659,
+            "step": 2
+          },
+          {
+            "latency_ms": 3617,
+            "step": 3
+          },
+          {
+            "latency_ms": 2955,
+            "step": 4
+          },
+          {
+            "latency_ms": 3547,
+            "step": 5
+          },
+          {
+            "latency_ms": 4011,
+            "step": 6
+          },
+          {
+            "latency_ms": 4061,
+            "step": 7
+          },
+          {
+            "latency_ms": 3784,
+            "step": 8
+          },
+          {
+            "latency_ms": 3872,
+            "step": 9
+          },
+          {
+            "latency_ms": 4176,
+            "step": 10
+          },
+          {
+            "latency_ms": 3887,
+            "step": 11
+          },
+          {
+            "latency_ms": 1663,
+            "step": 12
+          },
+          {
+            "latency_ms": 4291,
+            "step": 13
+          },
+          {
+            "latency_ms": 8391,
+            "step": 14
+          },
+          {
+            "latency_ms": 5531,
+            "step": 15
+          },
+          {
+            "latency_ms": 3545,
+            "step": 16
+          },
+          {
+            "latency_ms": 4721,
+            "step": 17
+          },
+          {
+            "latency_ms": 4370,
+            "step": 18
+          },
+          {
+            "latency_ms": 4674,
+            "step": 19
+          },
+          {
+            "latency_ms": 4061,
+            "step": 20
+          },
+          {
+            "latency_ms": 4601,
+            "step": 21
+          },
+          {
+            "latency_ms": 6013,
+            "step": 22
+          },
+          {
+            "latency_ms": 2159,
+            "step": 23
+          },
+          {
+            "latency_ms": 4937,
+            "step": 24
+          },
+          {
+            "latency_ms": 4149,
+            "step": 25
+          },
+          {
+            "latency_ms": 3922,
+            "step": 26
+          },
+          {
+            "latency_ms": 4251,
+            "step": 27
+          },
+          {
+            "latency_ms": 3975,
+            "step": 28
+          },
+          {
+            "latency_ms": 5649,
+            "step": 29
+          },
+          {
+            "latency_ms": 5983,
+            "step": 30
+          },
+          {
+            "latency_ms": 5513,
+            "step": 31
+          },
+          {
+            "latency_ms": 2187,
+            "step": 32
+          },
+          {
+            "latency_ms": 3938,
+            "step": 33
+          },
+          {
+            "latency_ms": 4540,
+            "step": 34
+          },
+          {
+            "latency_ms": 4672,
+            "step": 35
+          },
+          {
+            "latency_ms": 1654,
+            "step": 36
+          },
+          {
+            "latency_ms": 3760,
+            "step": 37
+          },
+          {
+            "latency_ms": 4493,
+            "step": 38
+          },
+          {
+            "latency_ms": 5858,
+            "step": 39
+          },
+          {
+            "latency_ms": 3620,
+            "step": 40
+          },
+          {
+            "latency_ms": 4742,
+            "step": 41
+          },
+          {
+            "latency_ms": 3887,
+            "step": 42
+          },
+          {
+            "latency_ms": 5461,
+            "step": 43
+          },
+          {
+            "latency_ms": 3290,
+            "step": 44
+          },
+          {
+            "latency_ms": 4230,
+            "step": 45
+          },
+          {
+            "latency_ms": 4373,
+            "step": 46
+          },
+          {
+            "latency_ms": 3808,
+            "step": 47
+          },
+          {
+            "latency_ms": 3934,
+            "step": 48
+          },
+          {
+            "latency_ms": 3983,
+            "step": 49
+          },
+          {
+            "latency_ms": 4299,
+            "step": 50
+          },
+          {
+            "latency_ms": 4516,
+            "step": 51
+          },
+          {
+            "latency_ms": 3253,
+            "step": 52
+          },
+          {
+            "latency_ms": 3663,
+            "step": 53
+          },
+          {
+            "latency_ms": 3746,
+            "step": 54
+          },
+          {
+            "latency_ms": 3330,
+            "step": 55
+          },
+          {
+            "latency_ms": 3310,
+            "step": 56
+          },
+          {
+            "latency_ms": 3265,
+            "step": 57
+          },
+          {
+            "latency_ms": 3329,
+            "step": 58
+          },
+          {
+            "latency_ms": 3969,
+            "step": 59
+          },
+          {
+            "latency_ms": 3449,
+            "step": 60
+          },
+          {
+            "latency_ms": 2634,
+            "step": 61
+          },
+          {
+            "latency_ms": 2183,
+            "step": 62
+          },
+          {
+            "latency_ms": 2086,
+            "step": 63
+          },
+          {
+            "latency_ms": 2727,
+            "step": 64
+          }
+        ],
+        "duration_seconds": 619,
+        "episode_id": "f70a0623-6d79-4473-98d0-66988e23930c",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 36942,
+          "mean": 12284
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T03:40:49.583Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T03:41:18.687Z",
+            "latency_ms": 29104,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T03:41:29.965Z",
+            "latency_ms": 11278,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T03:41:41.731Z",
+            "latency_ms": 11766,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T03:41:47.573Z",
+            "latency_ms": 5842,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T03:41:58.078Z",
+            "latency_ms": 10505,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T03:42:04.843Z",
+            "latency_ms": 6765,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T03:42:18.176Z",
+            "latency_ms": 13333,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T03:42:31.446Z",
+            "latency_ms": 13270,
+            "step": 9
+          },
+          {
+            "at": "2026-09-30T03:42:40.741Z",
+            "latency_ms": 9295,
+            "step": 10
+          },
+          {
+            "at": "2026-09-30T03:42:49.241Z",
+            "latency_ms": 8500,
+            "step": 11
+          },
+          {
+            "at": "2026-09-30T03:43:02.192Z",
+            "latency_ms": 12951,
+            "step": 12
+          },
+          {
+            "at": "2026-09-30T03:43:35.966Z",
+            "latency_ms": 33774,
+            "step": 13
+          },
+          {
+            "at": "2026-09-30T03:43:47.952Z",
+            "latency_ms": 11986,
+            "step": 14
+          },
+          {
+            "at": "2026-09-30T03:44:07.474Z",
+            "latency_ms": 19522,
+            "step": 15
+          },
+          {
+            "at": "2026-09-30T03:44:18.870Z",
+            "latency_ms": 11396,
+            "step": 16
+          },
+          {
+            "at": "2026-09-30T03:44:39.828Z",
+            "latency_ms": 20958,
+            "step": 17
+          },
+          {
+            "at": "2026-09-30T03:44:50.757Z",
+            "latency_ms": 10929,
+            "step": 18
+          },
+          {
+            "at": "2026-09-30T03:45:00.237Z",
+            "latency_ms": 9480,
+            "step": 19
+          },
+          {
+            "at": "2026-09-30T03:45:12.267Z",
+            "latency_ms": 12030,
+            "step": 20
+          },
+          {
+            "at": "2026-09-30T03:45:21.977Z",
+            "latency_ms": 9710,
+            "step": 21
+          },
+          {
+            "at": "2026-09-30T03:45:58.919Z",
+            "latency_ms": 36942,
+            "step": 22
+          },
+          {
+            "at": "2026-09-30T03:46:12.093Z",
+            "latency_ms": 13174,
+            "step": 23
+          },
+          {
+            "at": "2026-09-30T03:46:42.014Z",
+            "latency_ms": 29921,
+            "step": 24
+          },
+          {
+            "at": "2026-09-30T03:46:50.615Z",
+            "latency_ms": 8601,
+            "step": 25
+          },
+          {
+            "at": "2026-09-30T03:47:08.663Z",
+            "latency_ms": 18048,
+            "step": 26
+          },
+          {
+            "at": "2026-09-30T03:47:20.730Z",
+            "latency_ms": 12067,
+            "step": 27
+          },
+          {
+            "at": "2026-09-30T03:47:32.531Z",
+            "latency_ms": 11801,
+            "step": 28
+          },
+          {
+            "at": "2026-09-30T03:47:51.520Z",
+            "latency_ms": 18989,
+            "step": 29
+          },
+          {
+            "at": "2026-09-30T03:48:07.176Z",
+            "latency_ms": 15656,
+            "step": 30
+          },
+          {
+            "at": "2026-09-30T03:48:16.584Z",
+            "latency_ms": 9408,
+            "step": 31
+          },
+          {
+            "at": "2026-09-30T03:48:28.206Z",
+            "latency_ms": 11622,
+            "step": 32
+          },
+          {
+            "at": "2026-09-30T03:48:35.446Z",
+            "latency_ms": 7240,
+            "step": 33
+          },
+          {
+            "at": "2026-09-30T03:48:42.175Z",
+            "latency_ms": 6729,
+            "step": 34
+          },
+          {
+            "at": "2026-09-30T03:48:49.144Z",
+            "latency_ms": 6969,
+            "step": 35
+          },
+          {
+            "at": "2026-09-30T03:48:55.763Z",
+            "latency_ms": 6619,
+            "step": 36
+          },
+          {
+            "at": "2026-09-30T03:49:03.143Z",
+            "latency_ms": 7380,
+            "step": 37
+          },
+          {
+            "at": "2026-09-30T03:49:09.923Z",
+            "latency_ms": 6780,
+            "step": 38
+          },
+          {
+            "at": "2026-09-30T03:49:19.320Z",
+            "latency_ms": 9397,
+            "step": 39
+          },
+          {
+            "at": "2026-09-30T03:49:25.818Z",
+            "latency_ms": 6498,
+            "step": 40
+          },
+          {
+            "at": "2026-09-30T03:49:32.974Z",
+            "latency_ms": 7156,
+            "step": 41
+          },
+          {
+            "at": "2026-09-30T03:49:38.769Z",
+            "latency_ms": 5795,
+            "step": 42
+          },
+          {
+            "at": "2026-09-30T03:49:47.023Z",
+            "latency_ms": 8254,
+            "step": 43
+          },
+          {
+            "at": "2026-09-30T03:49:55.326Z",
+            "latency_ms": 8303,
+            "step": 44
+          },
+          {
+            "at": "2026-09-30T03:50:02.350Z",
+            "latency_ms": 7024,
+            "step": 45
+          }
+        ],
+        "steps": 45,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 64,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 31282,
+          "mean": 5205
+        },
+        "verified_actions": 17,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_f70a0623-6d79-4473-98d0-66988e23930c_7c52bf4f-92ce-4e45-90be-c59b56f5ca88_2026-09-30T03-40-26-811Z.webm"
+      },
+      "exported": true
+    },
+    {
+      "trial_id": "eb3eb3cf-5159-4886-aa55-1fc6ef2f6703",
+      "persona_id": "vn_000041",
+      "profile_id": "434e37d1-5f77-43b0-ac12-099236a04898",
+      "status": "done",
+      "episode_id": "d7a2ce38-e1b3-4c03-b2bf-703bba660b34",
+      "report": {
+        "action_accuracy_percent": 94.4,
+        "actionable_steps": 18,
+        "decision_latency_ms": {
+          "max": 6795,
+          "mean": 3542
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 1024,
+            "step": 1
+          },
+          {
+            "latency_ms": 4061,
+            "step": 2
+          },
+          {
+            "latency_ms": 2896,
+            "step": 3
+          },
+          {
+            "latency_ms": 3532,
+            "step": 4
+          },
+          {
+            "latency_ms": 3036,
+            "step": 5
+          },
+          {
+            "latency_ms": 3669,
+            "step": 6
+          },
+          {
+            "latency_ms": 4266,
+            "step": 7
+          },
+          {
+            "latency_ms": 3887,
+            "step": 8
+          },
+          {
+            "latency_ms": 1645,
+            "step": 9
+          },
+          {
+            "latency_ms": 3820,
+            "step": 10
+          },
+          {
+            "latency_ms": 3638,
+            "step": 11
+          },
+          {
+            "latency_ms": 3866,
+            "step": 12
+          },
+          {
+            "latency_ms": 4018,
+            "step": 13
+          },
+          {
+            "latency_ms": 3801,
+            "step": 14
+          },
+          {
+            "latency_ms": 3676,
+            "step": 15
+          },
+          {
+            "latency_ms": 4171,
+            "step": 16
+          },
+          {
+            "latency_ms": 2103,
+            "step": 17
+          },
+          {
+            "latency_ms": 4261,
+            "step": 18
+          },
+          {
+            "latency_ms": 4146,
+            "step": 19
+          },
+          {
+            "latency_ms": 1833,
+            "step": 20
+          },
+          {
+            "latency_ms": 4088,
+            "step": 21
+          },
+          {
+            "latency_ms": 2496,
+            "step": 22
+          },
+          {
+            "latency_ms": 6795,
+            "step": 23
+          },
+          {
+            "latency_ms": 3746,
+            "step": 24
+          },
+          {
+            "latency_ms": 4384,
+            "step": 25
+          },
+          {
+            "latency_ms": 4647,
+            "step": 26
+          },
+          {
+            "latency_ms": 4415,
+            "step": 27
+          },
+          {
+            "latency_ms": 4296,
+            "step": 28
+          },
+          {
+            "latency_ms": 5048,
+            "step": 29
+          },
+          {
+            "latency_ms": 3484,
+            "step": 30
+          },
+          {
+            "latency_ms": 4373,
+            "step": 31
+          },
+          {
+            "latency_ms": 4152,
+            "step": 32
+          },
+          {
+            "latency_ms": 5093,
+            "step": 33
+          },
+          {
+            "latency_ms": 1880,
+            "step": 34
+          },
+          {
+            "latency_ms": 4125,
+            "step": 35
+          },
+          {
+            "latency_ms": 1476,
+            "step": 36
+          },
+          {
+            "latency_ms": 6484,
+            "step": 37
+          },
+          {
+            "latency_ms": 3807,
+            "step": 38
+          },
+          {
+            "latency_ms": 4192,
+            "step": 39
+          },
+          {
+            "latency_ms": 4015,
+            "step": 40
+          },
+          {
+            "latency_ms": 5231,
+            "step": 41
+          },
+          {
+            "latency_ms": 4596,
+            "step": 42
+          },
+          {
+            "latency_ms": 2331,
+            "step": 43
+          },
+          {
+            "latency_ms": 4736,
+            "step": 44
+          },
+          {
+            "latency_ms": 2601,
+            "step": 45
+          },
+          {
+            "latency_ms": 3943,
+            "step": 46
+          },
+          {
+            "latency_ms": 1728,
+            "step": 47
+          },
+          {
+            "latency_ms": 4137,
+            "step": 48
+          },
+          {
+            "latency_ms": 1531,
+            "step": 49
+          },
+          {
+            "latency_ms": 3743,
+            "step": 50
+          },
+          {
+            "latency_ms": 1580,
+            "step": 51
+          },
+          {
+            "latency_ms": 4100,
+            "step": 52
+          },
+          {
+            "latency_ms": 1476,
+            "step": 53
+          },
+          {
+            "latency_ms": 3239,
+            "step": 54
+          },
+          {
+            "latency_ms": 3920,
+            "step": 55
+          },
+          {
+            "latency_ms": 4792,
+            "step": 56
+          },
+          {
+            "latency_ms": 1899,
+            "step": 57
+          },
+          {
+            "latency_ms": 3210,
+            "step": 58
+          },
+          {
+            "latency_ms": 4824,
+            "step": 59
+          },
+          {
+            "latency_ms": 1529,
+            "step": 60
+          },
+          {
+            "latency_ms": 2199,
+            "step": 61
+          },
+          {
+            "latency_ms": 1236,
+            "step": 62
+          },
+          {
+            "latency_ms": 3365,
+            "step": 63
+          },
+          {
+            "latency_ms": 4378,
+            "step": 64
+          }
+        ],
+        "duration_seconds": 662,
+        "episode_id": "d7a2ce38-e1b3-4c03-b2bf-703bba660b34",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 95179,
+          "mean": 17491
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T03:40:42.645Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T03:40:51.135Z",
+            "latency_ms": 8490,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T03:41:00.483Z",
+            "latency_ms": 9348,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T03:41:08.393Z",
+            "latency_ms": 7910,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T03:41:25.940Z",
+            "latency_ms": 17547,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T03:41:42.708Z",
+            "latency_ms": 16768,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T03:41:53.255Z",
+            "latency_ms": 10547,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T03:42:07.951Z",
+            "latency_ms": 14696,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T03:42:17.677Z",
+            "latency_ms": 9726,
+            "step": 9
+          },
+          {
+            "at": "2026-09-30T03:42:25.497Z",
+            "latency_ms": 7820,
+            "step": 10
+          },
+          {
+            "at": "2026-09-30T03:42:32.765Z",
+            "latency_ms": 7268,
+            "step": 11
+          },
+          {
+            "at": "2026-09-30T03:42:53.469Z",
+            "latency_ms": 20704,
+            "step": 12
+          },
+          {
+            "at": "2026-09-30T03:43:03.589Z",
+            "latency_ms": 10120,
+            "step": 13
+          },
+          {
+            "at": "2026-09-30T03:43:12.947Z",
+            "latency_ms": 9358,
+            "step": 14
+          },
+          {
+            "at": "2026-09-30T03:43:34.581Z",
+            "latency_ms": 21634,
+            "step": 15
+          },
+          {
+            "at": "2026-09-30T03:43:40.951Z",
+            "latency_ms": 6370,
+            "step": 16
+          },
+          {
+            "at": "2026-09-30T03:43:49.432Z",
+            "latency_ms": 8481,
+            "step": 17
+          },
+          {
+            "at": "2026-09-30T03:44:04.556Z",
+            "latency_ms": 15124,
+            "step": 18
+          },
+          {
+            "at": "2026-09-30T03:44:14.802Z",
+            "latency_ms": 10246,
+            "step": 19
+          },
+          {
+            "at": "2026-09-30T03:44:37.129Z",
+            "latency_ms": 22327,
+            "step": 20
+          },
+          {
+            "at": "2026-09-30T03:44:47.805Z",
+            "latency_ms": 10676,
+            "step": 21
+          },
+          {
+            "at": "2026-09-30T03:45:05.959Z",
+            "latency_ms": 18154,
+            "step": 22
+          },
+          {
+            "at": "2026-09-30T03:45:27.424Z",
+            "latency_ms": 21465,
+            "step": 23
+          },
+          {
+            "at": "2026-09-30T03:45:38.779Z",
+            "latency_ms": 11355,
+            "step": 24
+          },
+          {
+            "at": "2026-09-30T03:45:46.282Z",
+            "latency_ms": 7503,
+            "step": 25
+          },
+          {
+            "at": "2026-09-30T03:46:04.515Z",
+            "latency_ms": 18233,
+            "step": 26
+          },
+          {
+            "at": "2026-09-30T03:46:14.775Z",
+            "latency_ms": 10260,
+            "step": 27
+          },
+          {
+            "at": "2026-09-30T03:46:46.123Z",
+            "latency_ms": 31348,
+            "step": 28
+          },
+          {
+            "at": "2026-09-30T03:47:04.818Z",
+            "latency_ms": 18695,
+            "step": 29
+          },
+          {
+            "at": "2026-09-30T03:47:15.438Z",
+            "latency_ms": 10620,
+            "step": 30
+          },
+          {
+            "at": "2026-09-30T03:47:23.344Z",
+            "latency_ms": 7906,
+            "step": 31
+          },
+          {
+            "at": "2026-09-30T03:47:34.800Z",
+            "latency_ms": 11456,
+            "step": 32
+          },
+          {
+            "at": "2026-09-30T03:49:09.979Z",
+            "latency_ms": 95179,
+            "step": 33
+          },
+          {
+            "at": "2026-09-30T03:49:53.469Z",
+            "latency_ms": 43490,
+            "step": 34
+          },
+          {
+            "at": "2026-09-30T03:50:54.828Z",
+            "latency_ms": 61359,
+            "step": 35
+          }
+        ],
+        "steps": 35,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 64,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 26290,
+          "mean": 6344
+        },
+        "verified_actions": 17,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_d7a2ce38-e1b3-4c03-b2bf-703bba660b34_434e37d1-5f77-43b0-ac12-099236a04898_2026-09-30T03-40-25-402Z.webm"
+      },
+      "exported": true
+    },
+    {
+      "trial_id": "ed61cff6-b330-455b-a6e5-8da21ee69cee",
+      "persona_id": "vn_000049",
+      "profile_id": "ce21b173-755c-40a4-a4a9-c7ad2aec9670",
+      "status": "done",
+      "episode_id": "a8034b33-716e-43f0-ac5d-6ac4a8e2b387",
+      "report": {
+        "action_accuracy_percent": 87.5,
+        "actionable_steps": 16,
+        "decision_latency_ms": {
+          "max": 10148,
+          "mean": 3090
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 935,
+            "step": 1
+          },
+          {
+            "latency_ms": 3094,
+            "step": 2
+          },
+          {
+            "latency_ms": 863,
+            "step": 3
+          },
+          {
+            "latency_ms": 2572,
+            "step": 4
+          },
+          {
+            "latency_ms": 2966,
+            "step": 5
+          },
+          {
+            "latency_ms": 3172,
+            "step": 6
+          },
+          {
+            "latency_ms": 3671,
+            "step": 7
+          },
+          {
+            "latency_ms": 1765,
+            "step": 8
+          },
+          {
+            "latency_ms": 3429,
+            "step": 9
+          },
+          {
+            "latency_ms": 4185,
+            "step": 10
+          },
+          {
+            "latency_ms": 3022,
+            "step": 11
+          },
+          {
+            "latency_ms": 1486,
+            "step": 12
+          },
+          {
+            "latency_ms": 3354,
+            "step": 13
+          },
+          {
+            "latency_ms": 1393,
+            "step": 14
+          },
+          {
+            "latency_ms": 3410,
+            "step": 15
+          },
+          {
+            "latency_ms": 3151,
+            "step": 16
+          },
+          {
+            "latency_ms": 1833,
+            "step": 17
+          },
+          {
+            "latency_ms": 4947,
+            "step": 18
+          },
+          {
+            "latency_ms": 1375,
+            "step": 19
+          },
+          {
+            "latency_ms": 3622,
+            "step": 20
+          },
+          {
+            "latency_ms": 1344,
+            "step": 21
+          },
+          {
+            "latency_ms": 3394,
+            "step": 22
+          },
+          {
+            "latency_ms": 3701,
+            "step": 23
+          },
+          {
+            "latency_ms": 1562,
+            "step": 24
+          },
+          {
+            "latency_ms": 3126,
+            "step": 25
+          },
+          {
+            "latency_ms": 1325,
+            "step": 26
+          },
+          {
+            "latency_ms": 4025,
+            "step": 27
+          },
+          {
+            "latency_ms": 1241,
+            "step": 28
+          },
+          {
+            "latency_ms": 3367,
+            "step": 29
+          },
+          {
+            "latency_ms": 1286,
+            "step": 30
+          },
+          {
+            "latency_ms": 3438,
+            "step": 31
+          },
+          {
+            "latency_ms": 1625,
+            "step": 32
+          },
+          {
+            "latency_ms": 3039,
+            "step": 33
+          },
+          {
+            "latency_ms": 3314,
+            "step": 34
+          },
+          {
+            "latency_ms": 3831,
+            "step": 35
+          },
+          {
+            "latency_ms": 3416,
+            "step": 36
+          },
+          {
+            "latency_ms": 3502,
+            "step": 37
+          },
+          {
+            "latency_ms": 10148,
+            "step": 38
+          },
+          {
+            "latency_ms": 3611,
+            "step": 39
+          },
+          {
+            "latency_ms": 2290,
+            "step": 40
+          },
+          {
+            "latency_ms": 6595,
+            "step": 41
+          },
+          {
+            "latency_ms": 3436,
+            "step": 42
+          },
+          {
+            "latency_ms": 3887,
+            "step": 43
+          },
+          {
+            "latency_ms": 4045,
+            "step": 44
+          },
+          {
+            "latency_ms": 4969,
+            "step": 45
+          },
+          {
+            "latency_ms": 4464,
+            "step": 46
+          },
+          {
+            "latency_ms": 2062,
+            "step": 47
+          },
+          {
+            "latency_ms": 4426,
+            "step": 48
+          },
+          {
+            "latency_ms": 3379,
+            "step": 49
+          },
+          {
+            "latency_ms": 4864,
+            "step": 50
+          },
+          {
+            "latency_ms": 3548,
+            "step": 51
+          },
+          {
+            "latency_ms": 5224,
+            "step": 52
+          },
+          {
+            "latency_ms": 1920,
+            "step": 53
+          },
+          {
+            "latency_ms": 3813,
+            "step": 54
+          },
+          {
+            "latency_ms": 2977,
+            "step": 55
+          },
+          {
+            "latency_ms": 1204,
+            "step": 56
+          },
+          {
+            "latency_ms": 3125,
+            "step": 57
+          },
+          {
+            "latency_ms": 3330,
+            "step": 58
+          },
+          {
+            "latency_ms": 1180,
+            "step": 59
+          },
+          {
+            "latency_ms": 2985,
+            "step": 60
+          },
+          {
+            "latency_ms": 2575,
+            "step": 61
+          },
+          {
+            "latency_ms": 1130,
+            "step": 62
+          },
+          {
+            "latency_ms": 2692,
+            "step": 63
+          }
+        ],
+        "duration_seconds": 693,
+        "episode_id": "a8034b33-716e-43f0-ac5d-6ac4a8e2b387",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 49210,
+          "mean": 21101
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T03:50:58.447Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T03:51:22.312Z",
+            "latency_ms": 23865,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T03:51:31.987Z",
+            "latency_ms": 9675,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T03:51:47.995Z",
+            "latency_ms": 16008,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T03:52:13.028Z",
+            "latency_ms": 25033,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T03:52:20.277Z",
+            "latency_ms": 7249,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T03:52:29.827Z",
+            "latency_ms": 9550,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T03:52:40.045Z",
+            "latency_ms": 10218,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T03:52:48.565Z",
+            "latency_ms": 8520,
+            "step": 9
+          },
+          {
+            "at": "2026-09-30T03:53:34.328Z",
+            "latency_ms": 45763,
+            "step": 10
+          },
+          {
+            "at": "2026-09-30T03:54:19.442Z",
+            "latency_ms": 45114,
+            "step": 11
+          },
+          {
+            "at": "2026-09-30T03:54:50.291Z",
+            "latency_ms": 30849,
+            "step": 12
+          },
+          {
+            "at": "2026-09-30T03:54:57.798Z",
+            "latency_ms": 7507,
+            "step": 13
+          },
+          {
+            "at": "2026-09-30T03:55:14.722Z",
+            "latency_ms": 16924,
+            "step": 14
+          },
+          {
+            "at": "2026-09-30T03:55:25.404Z",
+            "latency_ms": 10682,
+            "step": 15
+          },
+          {
+            "at": "2026-09-30T03:55:55.847Z",
+            "latency_ms": 30443,
+            "step": 16
+          },
+          {
+            "at": "2026-09-30T03:56:06.904Z",
+            "latency_ms": 11057,
+            "step": 17
+          },
+          {
+            "at": "2026-09-30T03:56:17.065Z",
+            "latency_ms": 10161,
+            "step": 18
+          },
+          {
+            "at": "2026-09-30T03:56:31.472Z",
+            "latency_ms": 14407,
+            "step": 19
+          },
+          {
+            "at": "2026-09-30T03:56:52.235Z",
+            "latency_ms": 20763,
+            "step": 20
+          },
+          {
+            "at": "2026-09-30T03:57:01.943Z",
+            "latency_ms": 9708,
+            "step": 21
+          },
+          {
+            "at": "2026-09-30T03:57:39.670Z",
+            "latency_ms": 37727,
+            "step": 22
+          },
+          {
+            "at": "2026-09-30T03:57:52.013Z",
+            "latency_ms": 12343,
+            "step": 23
+          },
+          {
+            "at": "2026-09-30T03:58:05.435Z",
+            "latency_ms": 13422,
+            "step": 24
+          },
+          {
+            "at": "2026-09-30T03:58:29.199Z",
+            "latency_ms": 23764,
+            "step": 25
+          },
+          {
+            "at": "2026-09-30T03:58:42.168Z",
+            "latency_ms": 12969,
+            "step": 26
+          },
+          {
+            "at": "2026-09-30T03:58:56.359Z",
+            "latency_ms": 14191,
+            "step": 27
+          },
+          {
+            "at": "2026-09-30T03:59:44.129Z",
+            "latency_ms": 47770,
+            "step": 28
+          },
+          {
+            "at": "2026-09-30T04:00:18.899Z",
+            "latency_ms": 34770,
+            "step": 29
+          },
+          {
+            "at": "2026-09-30T04:01:03.371Z",
+            "latency_ms": 44472,
+            "step": 30
+          },
+          {
+            "at": "2026-09-30T04:01:52.581Z",
+            "latency_ms": 49210,
+            "step": 31
+          }
+        ],
+        "steps": 31,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 63,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 33829,
+          "mean": 7503
+        },
+        "verified_actions": 14,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_a8034b33-716e-43f0-ac5d-6ac4a8e2b387_ce21b173-755c-40a4-a4a9-c7ad2aec9670_2026-09-30T03-50-44-440Z.webm"
+      },
+      "exported": true
+    },
+    {
+      "trial_id": "6f3579ef-c82e-499b-acad-92d7cf386449",
+      "persona_id": "vn_000077",
+      "profile_id": "24f56b60-7d5a-4a6d-84a0-a8fb546a2bd7",
+      "status": "done",
+      "episode_id": "79f13fea-734e-4e6b-ae96-1c6235099416",
+      "report": {
+        "action_accuracy_percent": 100,
+        "actionable_steps": 6,
+        "decision_latency_ms": {
+          "max": 9213,
+          "mean": 2820
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 953,
+            "step": 1
+          },
+          {
+            "latency_ms": 2400,
+            "step": 2
+          },
+          {
+            "latency_ms": 2927,
+            "step": 3
+          },
+          {
+            "latency_ms": 3047,
+            "step": 4
+          },
+          {
+            "latency_ms": 1358,
+            "step": 5
+          },
+          {
+            "latency_ms": 2980,
+            "step": 6
+          },
+          {
+            "latency_ms": 3213,
+            "step": 7
+          },
+          {
+            "latency_ms": 3525,
+            "step": 8
+          },
+          {
+            "latency_ms": 8250,
+            "step": 9
+          },
+          {
+            "latency_ms": 3661,
+            "step": 10
+          },
+          {
+            "latency_ms": 3546,
+            "step": 11
+          },
+          {
+            "latency_ms": 3902,
+            "step": 12
+          },
+          {
+            "latency_ms": 4122,
+            "step": 13
+          },
+          {
+            "latency_ms": 1449,
+            "step": 14
+          },
+          {
+            "latency_ms": 4239,
+            "step": 15
+          },
+          {
+            "latency_ms": 1184,
+            "step": 16
+          },
+          {
+            "latency_ms": 3218,
+            "step": 17
+          },
+          {
+            "latency_ms": 1154,
+            "step": 18
+          },
+          {
+            "latency_ms": 3048,
+            "step": 19
+          },
+          {
+            "latency_ms": 1392,
+            "step": 20
+          },
+          {
+            "latency_ms": 3190,
+            "step": 21
+          },
+          {
+            "latency_ms": 1336,
+            "step": 22
+          },
+          {
+            "latency_ms": 3476,
+            "step": 23
+          },
+          {
+            "latency_ms": 9213,
+            "step": 24
+          },
+          {
+            "latency_ms": 3454,
+            "step": 25
+          },
+          {
+            "latency_ms": 1026,
+            "step": 26
+          },
+          {
+            "latency_ms": 3111,
+            "step": 27
+          },
+          {
+            "latency_ms": 2690,
+            "step": 28
+          },
+          {
+            "latency_ms": 3302,
+            "step": 29
+          },
+          {
+            "latency_ms": 1180,
+            "step": 30
+          },
+          {
+            "latency_ms": 4408,
+            "step": 31
+          },
+          {
+            "latency_ms": 1236,
+            "step": 32
+          },
+          {
+            "latency_ms": 2959,
+            "step": 33
+          },
+          {
+            "latency_ms": 1038,
+            "step": 34
+          },
+          {
+            "latency_ms": 2907,
+            "step": 35
+          },
+          {
+            "latency_ms": 1236,
+            "step": 36
+          },
+          {
+            "latency_ms": 4519,
+            "step": 37
+          },
+          {
+            "latency_ms": 1038,
+            "step": 38
+          },
+          {
+            "latency_ms": 3417,
+            "step": 39
+          },
+          {
+            "latency_ms": 1892,
+            "step": 40
+          },
+          {
+            "latency_ms": 2770,
+            "step": 41
+          },
+          {
+            "latency_ms": 1055,
+            "step": 42
+          },
+          {
+            "latency_ms": 2779,
+            "step": 43
+          },
+          {
+            "latency_ms": 2454,
+            "step": 44
+          },
+          {
+            "latency_ms": 1640,
+            "step": 45
+          }
+        ],
+        "duration_seconds": 622,
+        "episode_id": "79f13fea-734e-4e6b-ae96-1c6235099416",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 16124,
+          "mean": 8881
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T03:51:27.366Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T03:51:34.649Z",
+            "latency_ms": 7283,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T03:51:45.373Z",
+            "latency_ms": 10724,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T03:52:01.497Z",
+            "latency_ms": 16124,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T03:52:09.044Z",
+            "latency_ms": 7547,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T03:52:21.688Z",
+            "latency_ms": 12644,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T03:52:28.712Z",
+            "latency_ms": 7024,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T03:52:37.788Z",
+            "latency_ms": 9076,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T03:52:47.293Z",
+            "latency_ms": 9505,
+            "step": 9
+          }
+        ],
+        "steps": 9,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 45,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 32672,
+          "mean": 10700
+        },
+        "verified_actions": 6,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_79f13fea-734e-4e6b-ae96-1c6235099416_24f56b60-7d5a-4a6d-84a0-a8fb546a2bd7_2026-09-30T03-51-18-906Z.webm"
+      },
+      "exported": true
+    },
+    {
+      "trial_id": "94468b20-6f7f-4d52-91e9-07ab77b7036d",
+      "persona_id": "vn_000081",
+      "profile_id": "9e1c5c44-0881-47c3-813c-f282d53b06c7",
+      "status": "done",
+      "episode_id": "2cbcde75-15d8-4223-a1a3-22c69aca9b6d",
+      "report": {
+        "action_accuracy_percent": 93.8,
+        "actionable_steps": 16,
+        "decision_latency_ms": {
+          "max": 5480,
+          "mean": 3145
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 910,
+            "step": 1
+          },
+          {
+            "latency_ms": 2384,
+            "step": 2
+          },
+          {
+            "latency_ms": 956,
+            "step": 3
+          },
+          {
+            "latency_ms": 3340,
+            "step": 4
+          },
+          {
+            "latency_ms": 2699,
+            "step": 5
+          },
+          {
+            "latency_ms": 2829,
+            "step": 6
+          },
+          {
+            "latency_ms": 4468,
+            "step": 7
+          },
+          {
+            "latency_ms": 1148,
+            "step": 8
+          },
+          {
+            "latency_ms": 2779,
+            "step": 9
+          },
+          {
+            "latency_ms": 2693,
+            "step": 10
+          },
+          {
+            "latency_ms": 3066,
+            "step": 11
+          },
+          {
+            "latency_ms": 1209,
+            "step": 12
+          },
+          {
+            "latency_ms": 3512,
+            "step": 13
+          },
+          {
+            "latency_ms": 3250,
+            "step": 14
+          },
+          {
+            "latency_ms": 2980,
+            "step": 15
+          },
+          {
+            "latency_ms": 3455,
+            "step": 16
+          },
+          {
+            "latency_ms": 3900,
+            "step": 17
+          },
+          {
+            "latency_ms": 3403,
+            "step": 18
+          },
+          {
+            "latency_ms": 2965,
+            "step": 19
+          },
+          {
+            "latency_ms": 3437,
+            "step": 20
+          },
+          {
+            "latency_ms": 3823,
+            "step": 21
+          },
+          {
+            "latency_ms": 1964,
+            "step": 22
+          },
+          {
+            "latency_ms": 3139,
+            "step": 23
+          },
+          {
+            "latency_ms": 1825,
+            "step": 24
+          },
+          {
+            "latency_ms": 5310,
+            "step": 25
+          },
+          {
+            "latency_ms": 3187,
+            "step": 26
+          },
+          {
+            "latency_ms": 3629,
+            "step": 27
+          },
+          {
+            "latency_ms": 3351,
+            "step": 28
+          },
+          {
+            "latency_ms": 3686,
+            "step": 29
+          },
+          {
+            "latency_ms": 2701,
+            "step": 30
+          },
+          {
+            "latency_ms": 4747,
+            "step": 31
+          },
+          {
+            "latency_ms": 3881,
+            "step": 32
+          },
+          {
+            "latency_ms": 3272,
+            "step": 33
+          },
+          {
+            "latency_ms": 3670,
+            "step": 34
+          },
+          {
+            "latency_ms": 1588,
+            "step": 35
+          },
+          {
+            "latency_ms": 2889,
+            "step": 36
+          },
+          {
+            "latency_ms": 4052,
+            "step": 37
+          },
+          {
+            "latency_ms": 4188,
+            "step": 38
+          },
+          {
+            "latency_ms": 1826,
+            "step": 39
+          },
+          {
+            "latency_ms": 3371,
+            "step": 40
+          },
+          {
+            "latency_ms": 3904,
+            "step": 41
+          },
+          {
+            "latency_ms": 4640,
+            "step": 42
+          },
+          {
+            "latency_ms": 1798,
+            "step": 43
+          },
+          {
+            "latency_ms": 3278,
+            "step": 44
+          },
+          {
+            "latency_ms": 3668,
+            "step": 45
+          },
+          {
+            "latency_ms": 3129,
+            "step": 46
+          },
+          {
+            "latency_ms": 3690,
+            "step": 47
+          },
+          {
+            "latency_ms": 3212,
+            "step": 48
+          },
+          {
+            "latency_ms": 4838,
+            "step": 49
+          },
+          {
+            "latency_ms": 5480,
+            "step": 50
+          },
+          {
+            "latency_ms": 2860,
+            "step": 51
+          },
+          {
+            "latency_ms": 1957,
+            "step": 52
+          },
+          {
+            "latency_ms": 2750,
+            "step": 53
+          }
+        ],
+        "duration_seconds": 616,
+        "episode_id": "2cbcde75-15d8-4223-a1a3-22c69aca9b6d",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 122874,
+          "mean": 19078
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T04:02:03.043Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T04:02:12.252Z",
+            "latency_ms": 9209,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T04:02:19.394Z",
+            "latency_ms": 7142,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T04:02:23.255Z",
+            "latency_ms": 3861,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T04:02:58.471Z",
+            "latency_ms": 35216,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T04:03:23.328Z",
+            "latency_ms": 24857,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T04:03:44.182Z",
+            "latency_ms": 20854,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T04:03:56.663Z",
+            "latency_ms": 12481,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T04:04:03.327Z",
+            "latency_ms": 6664,
+            "step": 9
+          },
+          {
+            "at": "2026-09-30T04:04:12.234Z",
+            "latency_ms": 8907,
+            "step": 10
+          },
+          {
+            "at": "2026-09-30T04:04:21.308Z",
+            "latency_ms": 9074,
+            "step": 11
+          },
+          {
+            "at": "2026-09-30T04:04:49.825Z",
+            "latency_ms": 28517,
+            "step": 12
+          },
+          {
+            "at": "2026-09-30T04:05:43.015Z",
+            "latency_ms": 53190,
+            "step": 13
+          },
+          {
+            "at": "2026-09-30T04:06:01.578Z",
+            "latency_ms": 18563,
+            "step": 14
+          },
+          {
+            "at": "2026-09-30T04:06:18.545Z",
+            "latency_ms": 16967,
+            "step": 15
+          },
+          {
+            "at": "2026-09-30T04:06:27.849Z",
+            "latency_ms": 9304,
+            "step": 16
+          },
+          {
+            "at": "2026-09-30T04:06:37.812Z",
+            "latency_ms": 9963,
+            "step": 17
+          },
+          {
+            "at": "2026-09-30T04:06:50.205Z",
+            "latency_ms": 12393,
+            "step": 18
+          },
+          {
+            "at": "2026-09-30T04:06:56.174Z",
+            "latency_ms": 5969,
+            "step": 19
+          },
+          {
+            "at": "2026-09-30T04:08:59.048Z",
+            "latency_ms": 122874,
+            "step": 20
+          },
+          {
+            "at": "2026-09-30T04:09:10.289Z",
+            "latency_ms": 11241,
+            "step": 21
+          },
+          {
+            "at": "2026-09-30T04:09:25.323Z",
+            "latency_ms": 15034,
+            "step": 22
+          },
+          {
+            "at": "2026-09-30T04:09:57.960Z",
+            "latency_ms": 32637,
+            "step": 23
+          },
+          {
+            "at": "2026-09-30T04:10:22.214Z",
+            "latency_ms": 24254,
+            "step": 24
+          },
+          {
+            "at": "2026-09-30T04:10:33.040Z",
+            "latency_ms": 10826,
+            "step": 25
+          },
+          {
+            "at": "2026-09-30T04:10:51.062Z",
+            "latency_ms": 18022,
+            "step": 26
+          },
+          {
+            "at": "2026-09-30T04:11:01.182Z",
+            "latency_ms": 10120,
+            "step": 27
+          },
+          {
+            "at": "2026-09-30T04:11:09.240Z",
+            "latency_ms": 8058,
+            "step": 28
+          },
+          {
+            "at": "2026-09-30T04:11:20.949Z",
+            "latency_ms": 11709,
+            "step": 29
+          },
+          {
+            "at": "2026-09-30T04:11:35.389Z",
+            "latency_ms": 14440,
+            "step": 30
+          }
+        ],
+        "steps": 30,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 53,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 120163,
+          "mean": 8020
+        },
+        "verified_actions": 15,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_2cbcde75-15d8-4223-a1a3-22c69aca9b6d_9e1c5c44-0881-47c3-813c-f282d53b06c7_2026-09-30T04-01-50-449Z.webm"
+      },
+      "exported": true
+    },
+    {
+      "trial_id": "a1b52dbb-98f8-49b6-bfd3-fe09cfcf2008",
+      "persona_id": "vn_000087",
+      "profile_id": "c58a8c8e-9cbe-436c-b041-54828d395650",
+      "status": "done",
+      "episode_id": "d64ff4c9-4fa1-4a89-91a7-5535c84b07c8",
+      "report": {
+        "action_accuracy_percent": 100,
+        "actionable_steps": 15,
+        "decision_latency_ms": {
+          "max": 7143,
+          "mean": 2796
+        },
+        "decision_latency_series": [
+          {
+            "latency_ms": 862,
+            "step": 1
+          },
+          {
+            "latency_ms": 1826,
+            "step": 2
+          },
+          {
+            "latency_ms": 1811,
+            "step": 3
+          },
+          {
+            "latency_ms": 1885,
+            "step": 4
+          },
+          {
+            "latency_ms": 3261,
+            "step": 5
+          },
+          {
+            "latency_ms": 2702,
+            "step": 6
+          },
+          {
+            "latency_ms": 3097,
+            "step": 7
+          },
+          {
+            "latency_ms": 1291,
+            "step": 8
+          },
+          {
+            "latency_ms": 2700,
+            "step": 9
+          },
+          {
+            "latency_ms": 1257,
+            "step": 10
+          },
+          {
+            "latency_ms": 2424,
+            "step": 11
+          },
+          {
+            "latency_ms": 2808,
+            "step": 12
+          },
+          {
+            "latency_ms": 1259,
+            "step": 13
+          },
+          {
+            "latency_ms": 2815,
+            "step": 14
+          },
+          {
+            "latency_ms": 1231,
+            "step": 15
+          },
+          {
+            "latency_ms": 3545,
+            "step": 16
+          },
+          {
+            "latency_ms": 1374,
+            "step": 17
+          },
+          {
+            "latency_ms": 3056,
+            "step": 18
+          },
+          {
+            "latency_ms": 2730,
+            "step": 19
+          },
+          {
+            "latency_ms": 3447,
+            "step": 20
+          },
+          {
+            "latency_ms": 3166,
+            "step": 21
+          },
+          {
+            "latency_ms": 4418,
+            "step": 22
+          },
+          {
+            "latency_ms": 3081,
+            "step": 23
+          },
+          {
+            "latency_ms": 1968,
+            "step": 24
+          },
+          {
+            "latency_ms": 3138,
+            "step": 25
+          },
+          {
+            "latency_ms": 3239,
+            "step": 26
+          },
+          {
+            "latency_ms": 1624,
+            "step": 27
+          },
+          {
+            "latency_ms": 2982,
+            "step": 28
+          },
+          {
+            "latency_ms": 1748,
+            "step": 29
+          },
+          {
+            "latency_ms": 3145,
+            "step": 30
+          },
+          {
+            "latency_ms": 3262,
+            "step": 31
+          },
+          {
+            "latency_ms": 2959,
+            "step": 32
+          },
+          {
+            "latency_ms": 4285,
+            "step": 33
+          },
+          {
+            "latency_ms": 4630,
+            "step": 34
+          },
+          {
+            "latency_ms": 7143,
+            "step": 35
+          },
+          {
+            "latency_ms": 3894,
+            "step": 36
+          },
+          {
+            "latency_ms": 3471,
+            "step": 37
+          },
+          {
+            "latency_ms": 1845,
+            "step": 38
+          },
+          {
+            "latency_ms": 3263,
+            "step": 39
+          },
+          {
+            "latency_ms": 3285,
+            "step": 40
+          },
+          {
+            "latency_ms": 4629,
+            "step": 41
+          },
+          {
+            "latency_ms": 3695,
+            "step": 42
+          },
+          {
+            "latency_ms": 3587,
+            "step": 43
+          },
+          {
+            "latency_ms": 4597,
+            "step": 44
+          },
+          {
+            "latency_ms": 1808,
+            "step": 45
+          },
+          {
+            "latency_ms": 3078,
+            "step": 46
+          },
+          {
+            "latency_ms": 3186,
+            "step": 47
+          },
+          {
+            "latency_ms": 3179,
+            "step": 48
+          },
+          {
+            "latency_ms": 3359,
+            "step": 49
+          },
+          {
+            "latency_ms": 2647,
+            "step": 50
+          },
+          {
+            "latency_ms": 2132,
+            "step": 51
+          },
+          {
+            "latency_ms": 3491,
+            "step": 52
+          },
+          {
+            "latency_ms": 2638,
+            "step": 53
+          },
+          {
+            "latency_ms": 1201,
+            "step": 54
+          },
+          {
+            "latency_ms": 2248,
+            "step": 55
+          },
+          {
+            "latency_ms": 1423,
+            "step": 56
+          },
+          {
+            "latency_ms": 2208,
+            "step": 57
+          },
+          {
+            "latency_ms": 1165,
+            "step": 58
+          },
+          {
+            "latency_ms": 3174,
+            "step": 59
+          },
+          {
+            "latency_ms": 2382,
+            "step": 60
+          }
+        ],
+        "duration_seconds": 668,
+        "episode_id": "d64ff4c9-4fa1-4a89-91a7-5535c84b07c8",
+        "persona_alignment": {
+          "matched_visible_topic_count": 0,
+          "note": "Chỉ là điểm chứng cứ từ trace; không suy diễn sở thích từ hành động không có nội dung quan sát."
+        },
+        "persona_evidence_topics": [],
+        "session_cadence_ms": {
+          "max": 87152,
+          "mean": 19527
+        },
+        "session_cadence_series": [
+          {
+            "at": "2026-09-30T04:02:37.533Z",
+            "latency_ms": 0,
+            "step": 1
+          },
+          {
+            "at": "2026-09-30T04:03:06.475Z",
+            "latency_ms": 28942,
+            "step": 2
+          },
+          {
+            "at": "2026-09-30T04:03:14.227Z",
+            "latency_ms": 7752,
+            "step": 3
+          },
+          {
+            "at": "2026-09-30T04:03:21.763Z",
+            "latency_ms": 7536,
+            "step": 4
+          },
+          {
+            "at": "2026-09-30T04:03:46.112Z",
+            "latency_ms": 24349,
+            "step": 5
+          },
+          {
+            "at": "2026-09-30T04:04:29.848Z",
+            "latency_ms": 43736,
+            "step": 6
+          },
+          {
+            "at": "2026-09-30T04:04:51.062Z",
+            "latency_ms": 21214,
+            "step": 7
+          },
+          {
+            "at": "2026-09-30T04:05:01.146Z",
+            "latency_ms": 10084,
+            "step": 8
+          },
+          {
+            "at": "2026-09-30T04:05:14.760Z",
+            "latency_ms": 13614,
+            "step": 9
+          },
+          {
+            "at": "2026-09-30T04:05:25.215Z",
+            "latency_ms": 10455,
+            "step": 10
+          },
+          {
+            "at": "2026-09-30T04:05:34.041Z",
+            "latency_ms": 8826,
+            "step": 11
+          },
+          {
+            "at": "2026-09-30T04:05:57.566Z",
+            "latency_ms": 23525,
+            "step": 12
+          },
+          {
+            "at": "2026-09-30T04:06:18.026Z",
+            "latency_ms": 20460,
+            "step": 13
+          },
+          {
+            "at": "2026-09-30T04:06:29.874Z",
+            "latency_ms": 11848,
+            "step": 14
+          },
+          {
+            "at": "2026-09-30T04:06:58.769Z",
+            "latency_ms": 28895,
+            "step": 15
+          },
+          {
+            "at": "2026-09-30T04:07:07.459Z",
+            "latency_ms": 8690,
+            "step": 16
+          },
+          {
+            "at": "2026-09-30T04:07:20.879Z",
+            "latency_ms": 13420,
+            "step": 17
+          },
+          {
+            "at": "2026-09-30T04:07:29.789Z",
+            "latency_ms": 8910,
+            "step": 18
+          },
+          {
+            "at": "2026-09-30T04:07:38.560Z",
+            "latency_ms": 8771,
+            "step": 19
+          },
+          {
+            "at": "2026-09-30T04:07:51.009Z",
+            "latency_ms": 12449,
+            "step": 20
+          },
+          {
+            "at": "2026-09-30T04:08:06.307Z",
+            "latency_ms": 15298,
+            "step": 21
+          },
+          {
+            "at": "2026-09-30T04:08:16.178Z",
+            "latency_ms": 9871,
+            "step": 22
+          },
+          {
+            "at": "2026-09-30T04:08:26.197Z",
+            "latency_ms": 10019,
+            "step": 23
+          },
+          {
+            "at": "2026-09-30T04:08:40.546Z",
+            "latency_ms": 14349,
+            "step": 24
+          },
+          {
+            "at": "2026-09-30T04:08:51.636Z",
+            "latency_ms": 11090,
+            "step": 25
+          },
+          {
+            "at": "2026-09-30T04:09:13.362Z",
+            "latency_ms": 21726,
+            "step": 26
+          },
+          {
+            "at": "2026-09-30T04:09:35.843Z",
+            "latency_ms": 22481,
+            "step": 27
+          },
+          {
+            "at": "2026-09-30T04:09:55.561Z",
+            "latency_ms": 19718,
+            "step": 28
+          },
+          {
+            "at": "2026-09-30T04:10:05.520Z",
+            "latency_ms": 9959,
+            "step": 29
+          },
+          {
+            "at": "2026-09-30T04:10:40.668Z",
+            "latency_ms": 35148,
+            "step": 30
+          },
+          {
+            "at": "2026-09-30T04:11:35.236Z",
+            "latency_ms": 54568,
+            "step": 31
+          },
+          {
+            "at": "2026-09-30T04:13:02.388Z",
+            "latency_ms": 87152,
+            "step": 32
+          }
+        ],
+        "steps": 32,
+        "token_usage": {
+          "average_per_decision": 0,
+          "average_per_tool_step": 0,
+          "completion_tokens": 0,
+          "model_requests": 60,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        },
+        "tool_execution_latency_ms": {
+          "max": 31737,
+          "mean": 7919
+        },
+        "verified_actions": 15,
+        "video_path": "C:\\Users\\Admin\\Videos\\claw\\episode_d64ff4c9-4fa1-4a89-91a7-5535c84b07c8_c58a8c8e-9cbe-436c-b041-54828d395650_2026-09-30T04-02-20-928Z.webm"
+      },
+      "exported": true
+    }
+  ]
+}
