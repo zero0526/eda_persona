@@ -1,0 +1,16 @@
+variable,persona_n,persona_mean,persona_median,persona_iqr,no_persona_n,no_persona_mean,no_persona_median,no_persona_iqr,median_diff,mean_diff,mann_whitney_u,p_value,cliffs_delta,cliffs_magnitude,hedges_g,hedges_magnitude
+wm_cumulative_opened,349,1.95,2.0,3.0,88,0.0,0.0,0.0,2.0,1.95,26268.0,3.1950651184061165e-27,0.7106,Large,1.2183,Large
+wm_num_active_threads,349,6.48,8.0,0.0,88,2.02,2.0,4.25,6.0,4.46,26248.0,9.028389908524814e-32,0.7093,Large,1.5571,Large
+model_latency_ms,349,3259.59,3314.0,1599.0,88,1906.52,2082.5,1202.0,1231.5,1353.07,25246.5,9.536975733789376e-21,0.6441,Large,1.0779,Large
+context_completed_actions,287,17.08,16.0,18.0,61,5.82,5.0,4.0,11.0,11.26,14226.0,1.5582247181842553e-14,0.6252,Large,1.0979,Large
+wm_cumulative_searches,349,1.96,2.0,2.0,88,0.55,1.0,1.0,1.0,1.41,23592.0,1.352053100372654e-15,0.5363,Large,1.0417,Large
+context_action_velocity,349,2.71,3.0,1.68,88,1.31,0.91,1.89,2.09,1.4,22443.5,1.6207277159405972e-11,0.4615,Medium,0.8792,Large
+num_dimension_evidence,349,1.45,2.0,3.0,88,0.44,0.0,0.0,2.0,1.01,21297.0,3.8031408556793063e-10,0.3869,Medium,0.7545,Medium
+context_num_recent_actions,349,5.8,8.0,5.0,88,3.78,5.0,8.0,3.0,2.02,20841.5,8.402911948054352e-09,0.3572,Medium,0.6107,Medium
+wm_cumulative_reads,349,1.72,1.0,3.0,88,0.31,0.0,1.0,1.0,1.42,20833.5,2.5414052708415544e-08,0.3567,Medium,0.7582,Medium
+context_num_queries_this_session,349,2.26,2.0,2.0,88,1.11,1.0,2.0,1.0,1.15,20814.0,1.444087822350799e-07,0.3554,Medium,0.6505,Medium
+reason_length,349,66.19,31.0,112.0,88,19.75,0.0,31.0,31.0,46.44,19948.0,5.220892534390258e-06,0.299,Small,0.609,Medium
+total_step_latency_ms,349,10690.92,8756.0,9519.0,88,13495.14,4058.0,22193.0,4698.0,-2804.22,17854.5,0.018307059173866113,0.1627,Small,-0.2256,Small
+tool_execution_ms,349,7431.33,5146.0,8050.0,88,11588.61,1539.0,21848.5,3607.0,-4157.28,16397.0,0.32573024974189235,0.0678,Negligible,-0.3411,Small
+context_rest_accumulated_seconds,349,7.22,0.0,0.0,88,1.36,0.0,0.0,0.0,5.86,15952.0,0.1459258335256332,0.0388,Negligible,0.226,Small
+cognitive_latency_ratio,349,0.53,0.44,0.61,88,0.56,0.61,0.89,-0.18,-0.02,15879.5,0.6213230956887803,0.0341,Negligible,-0.0657,Negligible

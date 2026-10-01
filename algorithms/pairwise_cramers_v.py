@@ -39,7 +39,9 @@ def fast_bias_corrected_cramers_v_from_codes(
     float
         Giá trị Bergsma's V-tilde trong khoảng [0.0, 1.0].
     """
-    counts = np.bincount(x_codes * n_y + y_codes, minlength=n_x * n_y).reshape(n_x, n_y)
+    x_arr = np.asarray(x_codes, dtype=np.int64)
+    y_arr = np.asarray(y_codes, dtype=np.int64)
+    counts = np.bincount(x_arr * n_y + y_arr, minlength=n_x * n_y).reshape(n_x, n_y)
     row_sums = counts.sum(axis=1)
     col_sums = counts.sum(axis=0)
     r_nonzero = np.count_nonzero(row_sums)

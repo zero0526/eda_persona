@@ -1,0 +1,10 @@
+component,explained_variance_ratio,cumulative_variance_ratio,feature,PC1,PC2,PC3
+PC1,0.4307,0.4307,model_latency_ms,0.1799,0.6228,0.3781
+PC2,0.1505,0.5812,tool_execution_ms,-0.093,0.4135,-0.1448
+PC3,0.1211,0.7022,reason_length,0.0038,-0.1838,0.8783
+PC4,0.1125,0.8148,num_dimension_evidence,0.3143,0.5398,-0.0207
+PC5,0.0694,0.8842,context_action_velocity,0.4255,0.011,-0.1957
+,,,wm_num_active_threads,0.4428,-0.0961,-0.1129
+,,,wm_cumulative_searches,0.4372,-0.193,0.0562
+,,,wm_cumulative_reads,0.341,-0.2495,-0.0291
+,,,wm_cumulative_opened,0.4192,-0.084,0.0961

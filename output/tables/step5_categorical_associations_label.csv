@@ -1,0 +1,11 @@
+variable,cardinality,chi2_stat,dof,p_value,cramers_v,v_magnitude
+surface,6,91.7412,5,0.0,0.446,Large
+resolved_tool,19,70.9761,18,3.0875012102526966e-08,0.3484,Large
+intent,16,58.5951,15,4.3909180225121247e-07,0.3161,Large
+verified,2,9.7805,1,0.0017637608001019878,0.1419,Small
+tool,6,12.0628,5,0.03393750627254377,0.1272,Small
+has_working_memory,2,7.2298,1,0.007170172901584393,0.1195,Small
+has_target_candidate,2,5.8986,1,0.015153147923143928,0.106,Small
+target_candidate_kind,4,7.2697,3,0.06378141599364351,0.0989,Small
+reaction,6,6.8358,5,0.23314055231413,0.0647,Small
+context_is_overtime,1,0.0,0,1.0,0.0,Negligible

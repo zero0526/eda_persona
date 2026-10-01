@@ -1,0 +1,11 @@
+categorical_var,numeric_var,k_valid_groups,total_n,h_statistic,p_value,epsilon_squared,effect_magnitude
+intent,model_latency_ms,11,393,223.7,1.7925983721793116e-42,0.5594,Large
+resolved_tool,tool_execution_ms,12,426,230.7,3.033278225553929e-43,0.5307,Large
+tool,tool_execution_ms,4,433,191.51,2.884426358643162e-41,0.4394,Large
+dataset_type,wm_num_active_threads,2,437,137.59,8.971141722350225e-32,0.314,Large
+dataset_type,model_latency_ms,2,437,87.26,9.494527291080776e-21,0.1983,Large
+intent,reason_length,11,393,53.58,5.8137772990636016e-08,0.1141,Medium
+dataset_type,context_action_velocity,2,437,45.39,1.615437132568903e-11,0.102,Medium
+surface,model_latency_ms,6,437,44.71,1.6593813931607274e-08,0.0921,Medium
+surface,total_step_latency_ms,6,437,34.01,2.3655955064009577e-06,0.0673,Medium
+verified,model_latency_ms,2,437,7.97,0.004763119090663676,0.016,Small

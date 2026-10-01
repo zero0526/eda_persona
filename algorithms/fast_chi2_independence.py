@@ -44,7 +44,9 @@ def fast_chi2_from_codes(
     if n_x < 2 or n_y < 2 or n < 2:
         return 0.0, 0, 1.0
 
-    counts = np.bincount(x_codes * n_y + y_codes, minlength=n_x * n_y).reshape(n_x, n_y)
+    x_arr = np.asarray(x_codes, dtype=np.int64)
+    y_arr = np.asarray(y_codes, dtype=np.int64)
+    counts = np.bincount(x_arr * n_y + y_arr, minlength=n_x * n_y).reshape(n_x, n_y)
     r = counts.sum(axis=1)
     k = counts.sum(axis=0)
 

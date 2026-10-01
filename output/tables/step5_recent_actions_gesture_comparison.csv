@@ -1,0 +1,4 @@
+gesture_metric,persona_n,persona_median,persona_iqr,no_persona_n,no_persona_median,no_persona_iqr,mann_whitney_u,p_value,cliffs_delta,magnitude
+gesture_total_px,58,481.0,310.5,5,684.0,473.0,65.0,0.043220394375371354,-0.5517,Large
+gesture_ms,58,239.5,57.5,5,293.0,14.0,40.5,0.008173998120291832,-0.7207,Large
+landing_correction_px,42,211.0,349.75,2,364.0,150.0,22.0,0.2680708400482753,-0.4762,Large

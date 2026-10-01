@@ -46,6 +46,17 @@ from algorithms.contrastive_topic_profiler import (
     FEATURE_LABELS,
 )
 
+from algorithms.bivariate_multivariate_profiler import (
+    compute_mutual_information,
+    compare_numeric_by_group,
+    compare_categorical_by_group,
+    compute_correlation_matrices,
+    compute_pairwise_cramers_v_matrix,
+    compare_categorical_numeric_associations,
+    compute_multivariate_decomposition,
+    analyze_interactions_and_simpson_paradox,
+)
+
 __all__ = [
     "compute_pairwise_cramers_v",
     "fast_bias_corrected_cramers_v_from_codes",
@@ -69,4 +80,12 @@ __all__ = [
     "plot_contrasting_features",
     "EXPLAINABLE_ORIGIN_FEATURES",
     "FEATURE_LABELS",
+    "compute_mutual_information",
+    "compare_numeric_by_group",
+    "compare_categorical_by_group",
+    "compute_correlation_matrices",
+    "compute_pairwise_cramers_v_matrix",
+    "compare_categorical_numeric_associations",
+    "compute_multivariate_decomposition",
+    "analyze_interactions_and_simpson_paradox",
 ]

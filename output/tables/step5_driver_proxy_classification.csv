@@ -1,0 +1,9 @@
+attribute,cardinality,chi2_stat,dof,p_value,v_tilde,v_magnitude,multivariate_importance,rank_univariate,rank_multivariate,driver_status,analysis_note
+intent,16,58.5951,15,4.3909180225121247e-07,0.3161,Large,0.06255060728744963,3,1,Confirmed Driver,Unique contributor manh doc lap
+surface,6,91.7412,5,0.0,0.446,Large,0.042712550607287604,1,2,Confirmed Driver,Unique contributor manh doc lap
+verified,2,9.7805,1,0.0017637608001019878,0.1419,Small,0.03319838056680166,4,4,Confirmed Driver,Unique contributor manh doc lap
+resolved_tool,19,70.9761,18,3.0875012102526966e-08,0.3484,Large,0.006477732793522356,2,5,Likely Proxy,Proxy cua: nhieu da chieu
+tool,6,12.0628,5,0.03393750627254377,0.1272,Small,0.0,5,7,Likely Proxy,Proxy cua: nhieu da chieu
+has_working_memory,2,7.2298,1,0.007170172901584393,0.1195,Small,0.033198380566801675,6,3,Low Impact,Tac dong yeu khi kiem soat da bien
+has_target_candidate,2,5.8986,1,0.015153147923143928,0.106,Small,0.0036437246963563095,7,6,Low Impact,Tac dong yeu khi kiem soat da bien
+reaction,6,6.8358,5,0.23314055231413,0.0647,Small,0.0,8,7,Low Impact,Tac dong yeu khi kiem soat da bien

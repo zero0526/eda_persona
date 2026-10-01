@@ -1,0 +1,10 @@
+feature,vif,multicollinearity_risk
+wm_cumulative_searches,4.426,Low
+wm_num_active_threads,3.88,Low
+wm_cumulative_opened,3.223,Low
+context_action_velocity,3.175,Low
+num_dimension_evidence,2.658,Low
+wm_cumulative_reads,1.874,Low
+model_latency_ms,1.843,Low
+tool_execution_ms,1.171,Low
+reason_length,1.099,Low
