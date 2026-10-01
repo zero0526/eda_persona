@@ -1,0 +1,95 @@
+﻿Group,Field,Type,Meaning,Role,Valid_Values
+1. Metadata & Persona,dataset_type,category,Nhãn phân loại nhóm thực nghiệm A/B,Independent / Condition Variable,"'persona', 'no_persona'"
+1. Metadata & Persona,episode_id,string (UUID),Mã định danh duy nhất của từng phiên chạy (Episode),"Primary Key (Episode), Foreign Key (Step)",UUIDv4
+1. Metadata & Persona,file_name,string,Tên file JSON log thô nguồn,Provenance Attribute,benchmark_eda_*.json
+1. Metadata & Persona,persona_id,string / null,Mã định danh hồ sơ Persona áp dụng trong phiên,Condition / Foreign Key,vn_000019..87; null (ở nhóm đối chứng)
+1. Metadata & Persona,persona_pace,string / null,Thuộc tính tốc độ hành vi trong hồ sơ Persona,Independent Variable,"'quick', 'balanced', 'slow'; null"
+1. Metadata & Persona,persona_rest_style,string / null,Thuộc tính phong cách dừng nghỉ trong hồ sơ Persona,Independent Variable,"'frequent', 'balanced', 'deep'; null"
+1. Metadata & Persona,step_index,integer,Chỉ số thứ tự bước hành động tuần tự trong phiên,Sequence Index (1-based),1 đến 64
+1. Metadata & Persona,timestamp,datetime (ISO 8601),Thời điểm ghi nhận hành động trên máy chủ (UTC),Time Attribute,Chuỗi ISO UTC
+10. Working Memory & Drift,has_working_memory,boolean,Đánh dấu bước này có cấu trúc working_memory hợp lệ,Working Memory Flag,"True, False"
+10. Working Memory & Drift,wm_cumulative_opened,integer,Số trang/nhóm đã mở tích luỹ trong Working Memory,WM Cumulative Opened,0 đến 15
+10. Working Memory & Drift,wm_cumulative_reads,integer,Số bài viết đã đọc tích luỹ ghi trong Working Memory,WM Cumulative Reads,0 đến 25
+10. Working Memory & Drift,wm_cumulative_searches,integer,Số lần tìm kiếm tích luỹ ghi trong Working Memory,WM Cumulative Searches,0 đến 10
+10. Working Memory & Drift,wm_current_thread_origin,category,Nguồn gốc của mạch nhận thức (persona hay ngoại cảnh),Thread Origin,"'persona' (nội tại), 'situational' (tình huống)"
+10. Working Memory & Drift,wm_current_thread_state,category,Trạng thái của mạch nhận thức hiện tại (tra cứu từ active_threads),Thread State,"'exploring', 'active'; null"
+10. Working Memory & Drift,wm_current_thread_topic,string / null,Chủ đề của mạch nhận thức đang được xử lý,Current Thread Topic,"Chuỗi mô tả chủ đề (e.g. Thiền, Cờ tướng)"
+10. Working Memory & Drift,wm_current_thread_verified_steps,float / null,Số bước xác minh thành công của mạch hiện tại,Thread Verified Steps,"1, 2, 3..."
+10. Working Memory & Drift,wm_explored_evidence_share,float,Tỷ lệ bằng chứng đã khám phá so với tổng kế hoạch,Explored Evidence Ratio,0.00 đến 1.00
+10. Working Memory & Drift,wm_explored_thread_count,integer,Số lượng mạch chủ đề đã được khám phá trọn vẹn,Explored Threads Count,0 đến 8
+10. Working Memory & Drift,wm_has_novelty_warning,boolean,Cờ cảnh báo tiết chế khi Agent sa đà quá lâu vào nội dung ngoài lề,Anti-Drift Moderation Flag,"True (có cảnh báo TIẾT CHẾ), False"
+10. Working Memory & Drift,wm_novelty_guidance,string,Chỉ dẫn tiết chế/khám phá từ cơ chế Working Memory,Moderation Guidance String,Chuỗi chỉ dẫn hành vi (e.g. CẢNH BÁO TIẾT CHẾ)
+10. Working Memory & Drift,wm_num_active_threads,integer,Tổng số mạch chủ đề đang hoạt động đồng thời,Active Threads Count,1 đến 10
+10. Working Memory & Drift,wm_persona_threads_count,integer,Số lượng mạch chủ đề bắt nguồn từ hồ sơ Persona,Persona Threads Count,1 đến 8
+10. Working Memory & Drift,wm_situational_steps,integer,Số bước liên tiếp bị cuốn theo chủ đề tình huống ngoài lề,Cognitive Drift Metric,0 (tập trung) đến 6 (sa đà nghiêm trọng)
+10. Working Memory & Drift,wm_situational_threads_count,integer,Số lượng mạch chủ đề phát sinh từ kích thích tình huống ngoài,Situational Threads Count,0 đến 3
+11. WM Session Summaries,wm_summary_opened_sources,float / null,Số nguồn đã mở trong tóm tắt WM,WM Summary Opened Sources,0 đến 15
+11. WM Session Summaries,wm_summary_planned_minutes,float / null,Thời gian kế hoạch phiên ghi trong WM (phút),WM Planned Minutes,10.0 đến 15.0 phút
+11. WM Session Summaries,wm_summary_raw,string / null,Chuỗi văn bản thô tóm tắt tiến độ phiên của WM,WM Raw Summary String,Chuỗi text tóm tắt phiên
+11. WM Session Summaries,wm_summary_read_posts,float / null,Số bài đã đọc ghi trong tóm tắt WM,WM Summary Read Posts,0 đến 25
+11. WM Session Summaries,wm_summary_run_minutes,float / null,Thời gian chạy thực tế ghi nhận trong bản tóm tắt WM (phút),WM Run Minutes,0.0 đến 12.0 phút
+11. WM Session Summaries,wm_summary_searched_topics,float / null,Số chủ đề đã tìm kiếm trong tóm tắt WM,WM Summary Searched Topics,0 đến 8
+2. Action Space & Execution,action_summary,string,Mô tả tóm tắt hành động hoàn chỉnh từ log,Summary Text Feature,Chuỗi mô tả tóm tắt hành động
+2. Action Space & Execution,action_summary_target_surface,string / null,Bề mặt mục tiêu trích xuất từ summary,Target Surface,"feed, search, post_detail; null"
+2. Action Space & Execution,action_summary_verb,category,Động từ hành động trích xuất từ summary,Action Verb,"scroll, read, observe, react, search, open"
+2. Action Space & Execution,current_surface,string / null,Bề mặt giao diện hiện tại ghi nhận từ browser,Observed Surface,"feed, search, group, page, detail; null"
+2. Action Space & Execution,evidence,string,Chuỗi văn bản tóm tắt bằng chứng nhận thức thô,Raw Evidence String,Chuỗi JSON / Text tóm tắt
+2. Action Space & Execution,intent,category,Ý định hành vi của tác tử tại bước này,Dependent Variable (Decision),"observe, scroll, read, react, search, v.v."
+2. Action Space & Execution,reaction,string / null,Cảm xúc phản hồi tương tác bài viết,Social Feedback Variable,"like, love, haha, wow, sad, angry; null"
+2. Action Space & Execution,reason,string,Đoạn văn lập luận suy nghĩ của Agent khi ra quyết định,CoT Text Feature,Chuỗi văn bản tiếng Việt giải thích lý do
+2. Action Space & Execution,reason_length,integer,Độ dài ký tự của đoạn văn lập luận suy nghĩ,Cognitive Detail Metric,Ký tự văn bản (>0)
+2. Action Space & Execution,resolved_tool,string,Công cụ thực tế được Browser Engine thực thi,Execution Tool,"scroll_feed, observe_viewport, read_post, v.v."
+2. Action Space & Execution,surface,category,Bề mặt giao diện nơi phát lệnh hành vi,Spatial Origin,"feed, search, group, page, detail, reels"
+2. Action Space & Execution,target_id,string / null,Mã phần tử DOM hoặc bài viết được nhắm tới,DOM Target Identifier,Chuỗi ID DOM / Facebook Post ID; null
+2. Action Space & Execution,tool,string,Tên công cụ cấp cao được tác tử gọi,Command Call,"observe_viewport, scroll_feed, read_post, v.v."
+2. Action Space & Execution,verified,boolean,Trạng thái xác minh thành công trên DOM trình duyệt,Execution Outcome,"True (thành công), False (thất bại/timeout)"
+3. Latency & Effort,cognitive_latency_ratio,float,Tỷ số thời gian suy luận trên tổng thời gian bước,Cognitive Effort Index,0.00 đến 1.00 (model_ms / total_ms)
+3. Latency & Effort,llm_request_index,integer,Thứ tự yêu cầu gọi API LLM tích lũy trong phiên,API Request Counter,"1, 2, 3..."
+3. Latency & Effort,model_latency_ms,integer,Thời gian mô hình LLM suy luận ra quyết định (ms),Cognitive Time (ms),"1,000 ms đến 25,000 ms"
+3. Latency & Effort,tool_execution_ms,integer,Thời gian trình duyệt thực thi công cụ DOM (ms),Physical Time (ms),"50 ms đến 8,000 ms"
+3. Latency & Effort,total_step_latency_ms,integer,Tổng thời gian hoàn thành bước (model + tool),Total Step Latency (ms),model_ms + tool_ms
+4. Target Candidate (Content),has_target_candidate,boolean,Đánh dấu bước này có nhắm vào thực thể bài/nhóm cụ thể,Selection Flag,"True, False"
+4. Target Candidate (Content),target_candidate_kind,category,Phân loại thực thể Facebook được nhắm tới,Content Category,"post, search_group, search_page; null"
+4. Target Candidate (Content),target_candidate_text,string,Tiêu đề / trích đoạn văn bản thực thể được chọn,NLP Content Feature,Chuỗi văn bản bài viết / tên nhóm
+4. Target Candidate (Content),target_candidate_url,string (URL),Liên kết URL trực tiếp đến thực thể bài viết / fanpage,Resource Link,https://www.facebook.com/...; null
+5. Cognitive Matrix,dim_evidence_avg_weight,float / null,Trọng số nhận thức trung bình của các chiều viện dẫn,Average Weight,0.00 đến 1.00
+5. Cognitive Matrix,dim_evidence_max_weight,float / null,Trọng số nhận thức cao nhất trong các chiều được viện dẫn,Confidence / Max Weight,0.40 đến 1.00
+5. Cognitive Matrix,dim_evidence_primary_dimension,string / null,Chiều tâm lý giữ vai trò quyết định chính (role=primary),Primary Driver,"interest, discoveryStyle, readingDepth, v.v."
+5. Cognitive Matrix,dim_evidence_primary_ref_id,string / null,Mã tham chiếu đối tượng của chiều chính,Primary Reference ID,"post_*, search_group_*; null"
+5. Cognitive Matrix,dim_evidence_primary_value,string / null,Giá trị cụ thể của chiều tâm lý quyết định chính,Primary Driver Value,"Chuỗi mô tả giá trị (e.g. Thiền, Cờ vua)"
+5. Cognitive Matrix,dim_evidence_reference_ids,string / null,Danh sách các mã tham chiếu đối tượng,Reference ID List,Chuỗi ID phân cách dấu phẩy
+5. Cognitive Matrix,dim_evidence_roles,string / null,Danh sách các vai trò chiều nhận thức,Roles List,"primary, supporting, situational, constraint"
+5. Cognitive Matrix,dimension_sources,string / null,Danh sách các nguồn chiều tâm lý được viện dẫn,Source Dimension List,Chuỗi phân cách dấu phẩy
+5. Cognitive Matrix,dimensions,string / null,Danh sách các tên chiều tâm lý được viện dẫn,Dimension List,"interest, discoveryStyle, readingDepth, v.v."
+5. Cognitive Matrix,num_dim_constraint,integer,Số lượng chiều giữ vai trò ràng buộc/tiết chế,Constraint Count,"0, 1"
+5. Cognitive Matrix,num_dim_primary,integer,Số lượng chiều giữ vai trò chính (primary),Primary Count,"0, 1, 2"
+5. Cognitive Matrix,num_dim_situational,integer,Số lượng chiều giữ vai trò tình huống ngoài lề,Situational Count,"0, 1, 2"
+5. Cognitive Matrix,num_dim_supporting,integer,Số lượng chiều giữ vai trò bổ trợ (supporting),Supporting Count,0 đến 4
+5. Cognitive Matrix,num_dimension_evidence,integer,Số lượng chiều tâm lý được viện dẫn cho bước này,Cognitive Breadth,0 đến 5
+6. Temporal Budget & Dynamics,context_action_velocity,float,Vận tốc tương tác tức thời (hành động/phút),Engagement Velocity,0.0 đến ~8.0 actions/phút
+6. Temporal Budget & Dynamics,context_completed_actions,float / null,Số hành động đã hoàn thành ghi nhận trong context,Progress Counter,"1.0, 2.0..."
+6. Temporal Budget & Dynamics,context_elapsed_seconds,float / null,Thời gian tích luỹ đã trôi qua kể từ đầu phiên (giây),Temporal Progress,0 đến ~700 giây; null
+6. Temporal Budget & Dynamics,context_is_overtime,boolean,Đánh dấu phiên chạy đã vượt quá thời lượng kế hoạch,Overtime Indicator,"True, False"
+6. Temporal Budget & Dynamics,context_remaining_seconds,float / null,Thời gian còn lại của phiên theo kế hoạch (giây),Time Budget / Pressure,"Số dương (còn giờ), <=0 (quá giờ)"
+6. Temporal Budget & Dynamics,has_session_context,boolean,Đánh dấu bước này có trường session_context hợp lệ,Context Availability Flag,"True, False"
+7. Rest & Fatigue,context_rest_accumulated_seconds,integer,Thời gian dừng nghỉ tích luỹ của Agent (giây),Rest Accumulated (s),"0, 60, 120 giây"
+7. Rest & Fatigue,context_rest_count,integer,Số lần thực hiện hành vi dừng nghỉ xả hơi,Rest Frequency,"0, 1, 2 lần"
+8. Search & Memory,context_has_memory_queries,boolean,Đánh dấu bước này có sử dụng từ khóa từ bộ nhớ phiên trước,Memory Utilization Flag,"True, False"
+8. Search & Memory,context_num_memory_queries,integer,Số lượng từ khóa nạp lại từ bộ nhớ phiên trước,Cross-session Query Count,0 đến 5
+8. Search & Memory,context_num_queries_this_session,integer,Số lượng truy vấn tìm kiếm đã thực hiện trong phiên này,Session Query Count,0 đến 10
+8. Search & Memory,context_queries_this_session,string / null,Danh sách các từ khóa tìm kiếm trong phiên hiện tại,Session Queries,Chuỗi từ khóa tiếng Việt/Anh; null
+8. Search & Memory,context_recent_queries_from_memory,string / null,Danh sách từ khóa truy vấn lấy từ bộ nhớ phiên trước,Cross-session Queries,Chuỗi từ khóa tiếng Việt; null
+8. Search & Memory,planner_rule,string / null,Quy tắc lập kế hoạch hành động quy định trong context,Planning Constraint Rule,Chuỗi quy tắc lập kế hoạch
+8. Search & Memory,search_rule,string / null,Quy tắc điều hướng tìm kiếm quy định trong context,Search Constraint Rule,Chuỗi quy tắc tìm kiếm
+9. Browser Physical Gestures,context_num_recent_actions,integer,Số lượng hành vi gần nhất được lưu trong cửa sổ trượt context,Recent Actions Window Size,0 đến 5
+9. Browser Physical Gestures,recent_last_action_url,string / null,Đường dẫn URL của hành vi gần nhất,Previous URL,https://www.facebook.com/...; null
+9. Browser Physical Gestures,recent_last_execution_mode,category,Chế độ kỹ thuật tương tác trình duyệt gần nhất,Technical Execution Mode,"smooth_wheel, native_click, cdp_fallback"
+9. Browser Physical Gestures,recent_last_gesture_dir,string / null,Hướng cuộn chuột thực tế trên trình duyệt,Scroll Direction,"'down', 'up'; null"
+9. Browser Physical Gestures,recent_last_gesture_ms,float / null,Thời gian thực hiện thao tác cuộn chuột (ms),Physical Duration (ms),171 ms đến 299 ms; null
+9. Browser Physical Gestures,recent_last_gesture_pace,category,Nhãn tốc độ cử chỉ cuộn chuột vật lý đo đạc,Biomechanical Pace,"'fast' (lướt nhanh), 'careful' (chậm kỹ)"
+9. Browser Physical Gestures,recent_last_gesture_px,float / null,Khoảng cách cuộn chuột thực tế đo bằng pixel,Physical Distance (px),"181 px đến 1,418 px; null"
+9. Browser Physical Gestures,recent_last_intent,string / null,Ý định của hành vi gần nhất trong context,Previous Intent,"observe, scroll, read, react; null"
+9. Browser Physical Gestures,recent_last_landing_correction,float / null,Độ lệch hiệu chỉnh hạ cánh vị trí dừng cuộn (px),Landing Correction (px),0 px đến 150 px; null
+9. Browser Physical Gestures,recent_last_surface,string / null,Bề mặt của hành vi gần nhất trong context,Previous Surface,"feed, search, group; null"
+9. Browser Physical Gestures,recent_last_tool,string / null,Công cụ thực thi của hành vi gần nhất,Previous Tool,"scroll_feed, observe_viewport; null"
+9. Browser Physical Gestures,recent_last_url_type,category,Phân loại URL của hành vi gần nhất,URL Taxonomy,"post, page_or_profile, search, group; null"

@@ -1,0 +1,14 @@
+﻿Biến số,Cỡ mẫu hợp lệ (N),Tỷ lệ khuyết (%),Số Category (Cardinality),Nhóm chiếm ưu thế (Top 1),Shannon Entropy (bits),Trạng thái phân bổ,Danh mục hiếm Long-tail (<5%)
+dataset_type,437,0.0,2,persona (79.9%),0.72,Mất cân bằng (79.9% vs 20.1%),Không có
+intent,401,8.2,15,observe (29.7%),2.99,Đa dạng phong phú cao (High Entropy),"share (4.0%), close (1.7%), back (1.2%), open_comments (1.2%), expand (1.0%), scroll_comments (0.5%), like_page (0.2%), open_reels (0.2%)"
+resolved_tool,437,0.0,19,observe_viewport (27.2%),3.15,Đa dạng phong phú cao (High Entropy),"return_home (4.8%), open_search_result (4.3%), react_visible_post (3.7%), close_detail (1.6%), back_to_discovery (1.1%), session_status (1.1%), expand_visible_post (0.7%), rest (0.5%), wait_for_feed (0.5%), like_current_page (0.2%), open_post_discussion (0.2%), scroll_discussion (0.2%), open_visible_post (0.2%)"
+surface,437,0.0,6,feed (34.8%),2.31,Đa dạng phong phú cao (High Entropy),Không có
+reaction,247,43.5,5,like (96.8%),0.26,Bị thống trị bởi 'like' (96.8%),"wow (1.6%), haha (0.8%), love (0.4%), care (0.4%)"
+recent_last_gesture_pace,111,74.6,2,careful (84.7%),0.62,Mất cân bằng (84.7% vs 15.3%),Không có
+wm_current_thread_origin,343,21.5,2,persona (83.7%),0.64,Mất cân bằng (83.7% vs 16.3%),Không có
+wm_current_thread_state,343,21.5,2,exploring (97.1%),0.19,Mất cân bằng (97.1% vs 2.9%),active (2.9%)
+target_candidate_kind,66,84.9,3,post (71.2%),1.15,Phân bổ tập trung vừa phải,Không có
+has_target_candidate,437,0.0,2,False (84.9%),0.61,Mất cân bằng (84.9% vs 15.1%),Không có
+context_has_memory_queries,437,0.0,2,False (93.6%),0.34,Mất cân bằng (93.6% vs 6.4%),Không có
+wm_has_novelty_warning,437,0.0,2,False (93.8%),0.33,Mất cân bằng (93.8% vs 6.2%),Không có
+context_is_overtime,437,0.0,1,False (100.0%),-0.0,Bị thống trị bởi 'False' (100.0%),Không có

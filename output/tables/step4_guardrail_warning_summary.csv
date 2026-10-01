@@ -1,0 +1,6 @@
+﻿Metric,Persona,No-Persona,Statistical Difference
+Tổng số bước được khảo sát (Total steps),349,88,349 steps vs 88 steps
+Số bước bị kích hoạt Cảnh báo tiết chế (has_warning = True),0,27,"0 bước (0.0%) vs 27 bước (30.68%), p < 0.0001"
+Số phiên bị kích hoạt Cảnh báo tiết chế (Episodes with warning),0 / 6 (0.0%),1 / 2 (50.0%),0% vs 50%
+Số bước sa đà tối đa (Max situational_steps),0,6,0 bước vs 6 bước
+Cơ chế kiểm soát hành vi (Control Mechanism),Tự điều tiết nội tại (Intrinsic Self-Regulation theo Persona),Cưỡng chế ngoại lai (Extrinsic Guardrail can thiệp cảnh báo),La bàn nội tâm vs Hú còi cảnh báo

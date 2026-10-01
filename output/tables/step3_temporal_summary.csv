@@ -1,0 +1,9 @@
+﻿episode_id,dataset_type,persona_id,total_steps,step_continuous,median_delta_s,max_delta_s,abnormal_gaps_count,duration_minutes
+2cbcde75...,persona,vn_000081,53,100% Hoàn hảo,8.5,122.9,1,9.86
+45257517...,no_persona,None (Control),47,100% Hoàn hảo,7.1,37.1,0,10.03
+755b1653...,no_persona,None (Control),41,100% Hoàn hảo,2.9,63.2,6,9.42
+79f13fea...,persona,vn_000077,45,100% Hoàn hảo,7.3,35.5,0,10.13
+a8034b33...,persona,vn_000049,63,100% Hoàn hảo,9.0,37.7,0,11.12
+d64ff4c9...,persona,vn_000087,60,100% Hoàn hảo,9.9,35.1,0,10.72
+d7a2ce38...,persona,vn_000041,64,100% Hoàn hảo,10.3,29.5,0,10.54
+f70a0623...,persona,vn_000019,64,100% Hoàn hảo,8.3,36.9,0,9.75

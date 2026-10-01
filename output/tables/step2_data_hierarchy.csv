@@ -1,0 +1,5 @@
+﻿Cấp độ phân tích (Unit of Analysis),Tổng số bản ghi (N),Nhóm Persona,Nhóm No-Persona,Khóa chính (PK),Khóa ngoại (FK),Toàn vẹn tham chiếu
+1. Episode Level (Phiên),8,6,2,episode_id,None,100% Valid
+2. Step Level (Bước),437,349,88,"(episode_id, step_index)",episode_id -> Episode.PK,100% Valid
+3. Browser Gesture Level (Cử chỉ),189,168,21,"(episode_id, step_index, action_order)","(episode_id, step_index) -> Step.PK",100% Valid
+4. Cognitive Evidence Level (Bằng chứng),546,546,0,"(episode_id, step_index, evidence_order)","(episode_id, step_index) -> Step.PK",100% Valid

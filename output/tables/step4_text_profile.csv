@@ -1,0 +1,4 @@
+﻿Biến văn bản,Cỡ mẫu hợp lệ (N),Tỷ lệ khuyết (%),Độ dài ký tự (Mean),Độ dài ký tự (Median),Độ dài ký tự (Min/Max),Số từ trung bình (Word count),Số từ trung vị,Độ phong phú từ vựng (TTR),Top từ khóa nổi bật
+reason,258,0.0,96.3,51.5,31 / 360,20.3,11.0,0.102,"persona (165), bài (154), động (146), hành (136), kịch (128)"
+target_candidate_text,66,84.9,310.0,225.0,23 / 1800,67.8,47.5,0.264,"xem (37), ngày (37), nam (34), việt (33), ảnh (32)"
+action_summary,437,0.0,47.4,34.0,20 / 377,9.3,6.0,0.086,"động (292), hành (288), surface (171), hiện (128), quan (127)"

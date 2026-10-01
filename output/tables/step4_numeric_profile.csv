@@ -1,0 +1,5 @@
+﻿Biến số,Cỡ mẫu (N),Persona N,Persona Median,Persona Mean,Persona Q1,Persona Q3,Persona IQR,Persona Skew,No-Persona N,No-Persona Median,No-Persona Mean,No-Persona Q1,No-Persona Q3,No-Persona IQR,No-Persona Skew,Chênh lệch Median (P - NP),Mann-Whitney P-Value,Ý nghĩa Khác biệt,Nhận xét Phân hóa
+wm_num_active_threads,437,349,8.0,6.48,8.0,8.0,0.0,-1.63,88,2.0,2.02,0.0,4.25,4.25,0.49,6.0,0.0,Ý nghĩa cao (p < 0.001),Persona quản trị đa nhiệm 8 mạch song song (Med 8.0) vs No-Persona đơn tuyến cạn kiệt (Med 2.0)
+recent_last_gesture_px,111,104,463.0,524.12,318.0,631.25,313.25,1.03,7,684.0,815.29,536.0,1123.5,587.5,0.26,-221.0,0.0135,Có ý nghĩa (p < 0.05),Persona cuộn vi mô vừa tầm mắt 463px (N=104) vs No-Persona kéo tuột thô bạo 684px (N=7)
+wm_cumulative_reads,437,349,1.0,1.72,0.0,3.0,3.0,0.91,88,0.0,0.31,0.0,1.0,1.0,0.84,1.0,0.0,Ý nghĩa cao (p < 0.001),Persona đọc sâu 1-6 bài viết (Med 1.0) vs No-Persona không đọc bài nào (Med 0.0)
+wm_cumulative_opened,437,349,2.0,1.95,0.0,3.0,3.0,0.73,88,0.0,0.0,0.0,0.0,0.0,,2.0,0.0,Ý nghĩa cao (p < 0.001),Persona chủ động mở 2-4 nguồn Page/Group (Med 2.0) vs No-Persona 100% giam cầm trên Feed (Med 0.0)

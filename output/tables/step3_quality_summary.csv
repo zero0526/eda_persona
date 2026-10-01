@@ -1,0 +1,9 @@
+﻿Hạng mục kiểm tra,Kết quả thực tế,Tiêu chuẩn kỳ vọng,Trạng thái
+Tổng số dòng (N_rows),437 dòng,> 400 dòng,Đạt
+Tổng số cột (N_cols),94 cột,>= 90 cột,Đạt
+Dung lượng bộ nhớ RAM,2.12 MB,< 50 MB,Tối ưu
+Trùng lặp dòng hoàn toàn (Exact Duplicates),0 dòng,0 dòng,Đạt
+Trùng lặp khóa chính (PK Duplicates),0 dòng,0 dòng,Đạt
+Giá trị âm phi logic (Negative values),0 cột vi phạm,0 cột,Đạt
+Timestamp tương lai / Lỗi thời gian,0 bản ghi,0 bản ghi,Đạt
+"Chuỗi rỗng placeholder ẩn ('', N/A, null)",2 cột phát hiện,Đã bóc tách thành NaN,Cần chuẩn hóa

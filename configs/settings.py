@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any
 import yaml
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def deep_merge(source: dict[str, Any], destination: dict[str, Any]) -> dict[str, Any]:

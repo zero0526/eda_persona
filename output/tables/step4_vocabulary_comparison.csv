@@ -1,0 +1,10 @@
+﻿Chỉ số từ vựng CoT,Nhóm Persona,Nhóm No-Persona,So sánh & Nhận xét
+Cỡ mẫu tổng thể (Steps),349,88,Persona lớn hơn gấp 4.0 lần
+Số bước có lập luận CoT hợp lệ,217 (62.2%),41 (46.6%),Persona có tỷ lệ suy nghĩ thường trực cao hơn (+15.6%)
+Tổng số lượng từ (Total Tokens),4905,333,Persona có dung lượng suy nghĩ gấp 14.7 lần
+Kích thước vốn từ vựng (Vocab Size),522,65,Vốn từ của Persona phong phú gấp 8.0 lần
+Độ phong phú từ vựng (TTR),0.106,0.195,No-Persona TTR cao do tổng token quá ít (ngắn mẫu)
+Số từ trung bình mỗi bước (Word Count Mean),22.6,8.1,Persona trình bày suy nghĩ dài gấp 2.8 lần
+Tỷ lệ câu rập khuôn mặc định (%),41.5% (90/217),92.7% (38/41),No-Persona 92.7% là câu template sáo rỗng; Persona 59.9% là lập luận tự sinh
+Số từ vựng độc quyền (Exclusive Words),470 từ (90.0%),13 từ (20.0%),89.8% từ vựng của Persona hoàn toàn không xuất hiện ở No-Persona
+Độ tương đồng từ vựng (Jaccard Similarity),0.097,0.097,"Jaccard = 0.097 (chỉ 9.9% trùng lặp, phân hóa nhận thức triệt để)"
