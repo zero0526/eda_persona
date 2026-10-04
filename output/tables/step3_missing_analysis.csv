@@ -2,23 +2,24 @@
 context_recent_queries_from_memory,409,93.59,91.98,100.0,MAR (Memory-Conditional),0.0123,Chỉ xuất hiện ở 28 bước có nạp lại từ khóa từ bộ nhớ đa phiên trước đó.
 dim_evidence_primary_ref_id,388,88.79,87.39,94.32,MAR (Missing by Design),0.0987,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
 dim_evidence_reference_ids,388,88.79,87.39,94.32,MAR (Missing by Design),0.0987,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
-target_candidate_url,371,84.9,82.81,93.18,MAR (Content-Conditional),0.0237,"Chỉ xuất hiện khi bước hành vi nhắm trúng thực thể cụ thể (post, group, page); các bước duyệt bảng tin chung là NaN."
 target_candidate_kind,371,84.9,82.81,93.18,MAR (Content-Conditional),0.0237,"Chỉ xuất hiện khi bước hành vi nhắm trúng thực thể cụ thể (post, group, page); các bước duyệt bảng tin chung là NaN."
 target_candidate_text,371,84.9,82.81,93.18,MAR (Content-Conditional),0.0237,"Chỉ xuất hiện khi bước hành vi nhắm trúng thực thể cụ thể (post, group, page); các bước duyệt bảng tin chung là NaN."
+target_candidate_url,371,84.9,82.81,93.18,MAR (Content-Conditional),0.0237,"Chỉ xuất hiện khi bước hành vi nhắm trúng thực thể cụ thể (post, group, page); các bước duyệt bảng tin chung là NaN."
 recent_last_landing_correction,358,81.92,77.94,97.73,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
-recent_last_gesture_ms,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
-recent_last_gesture_pace,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
-recent_last_gesture_px,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
 recent_last_gesture_dir,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
+recent_last_gesture_pace,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
+recent_last_gesture_ms,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
+recent_last_gesture_px,326,74.6,70.2,92.05,MAR (Action-Conditional),0.0,Chỉ xuất hiện ở bước có thao tác cuộn chuột (smooth_wheel); các bước quan sát hoặc đọc bài không đo đạc cử chỉ cuộn.
+scroll_speed_px_s,326,74.6,70.2,92.05,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
 recent_last_action_url,261,59.73,57.31,69.32,MCAR (Random Absence),0.0534,Tỷ lệ khuyết thiếu phân bố đều giữa các nhóm.
 recent_last_url_type,261,59.73,57.31,69.32,MCAR (Random Absence),0.0534,Tỷ lệ khuyết thiếu phân bố đều giữa các nhóm.
-dim_evidence_roles,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
-dimensions,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
-dim_evidence_max_weight,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
 dim_evidence_primary_dimension,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
-dim_evidence_primary_value,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
-dim_evidence_avg_weight,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
 dimension_sources,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
+dim_evidence_avg_weight,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
+dim_evidence_primary_value,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
+dim_evidence_max_weight,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
+dimensions,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
+dim_evidence_roles,236,54.0,48.14,77.27,MAR (Missing by Design),0.0,Khuyết 100% ở nhóm No-Persona (do không có hồ sơ Persona để viện dẫn); ở nhóm Persona khuyết khi bước không có lập luận tâm lý.
 reaction,190,43.48,42.69,46.59,MAR (Context-Conditional),0.59,Khuyết tự nhiên theo hành vi tương tác thực tế của Agent trên Facebook Web.
 action_summary_target_surface,163,37.3,34.38,48.86,MAR (Context-Conditional),0.017,Khuyết tự nhiên theo hành vi tương tác thực tế của Agent trên Facebook Web.
 target_id,155,35.47,32.66,46.59,MAR (Group Dependent),0.0206,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0206).
@@ -43,30 +44,30 @@ wm_summary_raw,89,20.37,17.77,30.68,MAR (Group Dependent),0.0111,Tỷ lệ khuy�
 planner_rule,89,20.37,17.77,30.68,MAR (Group Dependent),0.0111,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0111).
 context_completed_actions,89,20.37,17.77,30.68,MAR (Group Dependent),0.0111,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0111).
 context_elapsed_seconds,89,20.37,17.77,30.68,MAR (Group Dependent),0.0111,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0111).
+persona_id,88,20.14,0.0,100.0,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
 persona_pace,88,20.14,0.0,100.0,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
 persona_rest_style,88,20.14,0.0,100.0,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
-persona_id,88,20.14,0.0,100.0,MAR (Group Dependent),0.0,Tỷ lệ khuyết thiếu có sự phân hóa đáng kể giữa 2 nhóm thực nghiệm (p = 0.0000).
 action_summary_verb,36,8.24,8.6,6.82,MCAR (Random Absence),0.7451,Tỷ lệ khuyết thiếu phân bố đều giữa các nhóm.
 intent,36,8.24,8.6,6.82,MAR (Context-Conditional),0.7451,Khuyết tự nhiên theo hành vi tương tác thực tế của Agent trên Facebook Web.
+step_index,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 file_name,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 dataset_type,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-episode_id,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-action_summary,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 evidence,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-verified,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-reason_length,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+model_latency_ms,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 reason,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-step_index,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+verified,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+action_summary,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+episode_id,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 resolved_tool,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 tool,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 timestamp,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 surface,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-llm_request_index,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 has_target_candidate,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 total_step_latency_ms,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 cognitive_latency_ratio,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+llm_request_index,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 tool_execution_ms,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
-model_latency_ms,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
+reason_length,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 context_action_velocity,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 context_rest_accumulated_seconds,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%
 num_dim_supporting,0,0.0,0.0,0.0,Complete (Không khuyết),1.0,Dữ liệu đầy đủ 100%

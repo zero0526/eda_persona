@@ -65,8 +65,8 @@ def profile_numeric_variables(
     """
     if target_cols is None:
         target_cols = [
-            "wm_num_active_threads", "recent_last_gesture_px", "wm_cumulative_reads",
-            "wm_cumulative_opened", "cognitive_latency_ratio", "context_action_velocity",
+            "wm_num_active_threads", "scroll_speed_px_s", "recent_last_gesture_px", "wm_cumulative_searches",
+            "wm_cumulative_reads", "wm_cumulative_opened", "cognitive_latency_ratio", "context_action_velocity",
             "model_latency_ms", "tool_execution_ms", "total_step_latency_ms",
             "wm_situational_steps", "recent_last_gesture_ms",
             "num_dimension_evidence", "dim_evidence_max_weight", "reason_length"
@@ -101,8 +101,12 @@ def profile_numeric_variables(
         # Nhận xét phân hóa thực nghiệm có tính suy luận hành vi sâu sắc
         if col == "wm_num_active_threads":
             insight = f"Persona quản trị đa nhiệm 8 mạch song song (Med 8.0) vs No-Persona đơn tuyến cạn kiệt (Med 2.0)"
+        elif col in ["scroll_speed_px_s", "recent_last_gesture_speed_px_s"]:
+            insight = f"Persona điều tiết tốc độ cuộn linh hoạt theo pace (Med {m_p['Median']:.1f} px/s) vs No-Persona kéo chuột đều (Med {m_np['Median']:.1f} px/s)"
         elif col == "recent_last_gesture_px":
             insight = f"Persona cuộn vi mô vừa tầm mắt 463px (N=104) vs No-Persona kéo tuột thô bạo 684px (N=7)"
+        elif col == "wm_cumulative_searches":
+            insight = f"Persona chủ động tìm kiếm 1-5 chủ đề (Med 2.0) vs No-Persona chỉ 0-1 lần (Med 1.0)"
         elif col == "wm_cumulative_reads":
             insight = f"Persona đọc sâu 1-6 bài viết (Med 1.0) vs No-Persona không đọc bài nào (Med 0.0)"
         elif col == "wm_cumulative_opened":
@@ -159,8 +163,8 @@ def compute_separate_distribution_tables(
     """
     if target_cols is None:
         target_cols = [
-            "wm_num_active_threads", "recent_last_gesture_px", "wm_cumulative_reads",
-            "wm_cumulative_opened", "cognitive_latency_ratio", "context_action_velocity",
+            "wm_num_active_threads", "scroll_speed_px_s", "recent_last_gesture_px", "wm_cumulative_searches",
+            "wm_cumulative_reads", "wm_cumulative_opened", "cognitive_latency_ratio", "context_action_velocity",
             "model_latency_ms", "tool_execution_ms", "total_step_latency_ms",
             "wm_situational_steps", "recent_last_gesture_ms",
             "num_dimension_evidence", "dim_evidence_max_weight", "reason_length"

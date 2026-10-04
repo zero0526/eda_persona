@@ -753,6 +753,7 @@ class PersonaActionLoader:
                     "recent_last_gesture_pace": parsed_last_act["gesture_pace"],
                     "recent_last_gesture_px": parsed_last_act["gesture_total_px"],
                     "recent_last_gesture_ms": parsed_last_act["gesture_ms"],
+                    "scroll_speed_px_s": (parsed_last_act["gesture_total_px"] / parsed_last_act["gesture_ms"] * 1000.0) if (parsed_last_act["gesture_total_px"] is not None and parsed_last_act["gesture_ms"] is not None and parsed_last_act["gesture_ms"] > 0) else None,
                     "recent_last_gesture_dir": parsed_last_act["gesture_direction"],
                     "recent_last_landing_correction": parsed_last_act["landing_correction_px"],
                     "recent_last_action_url": parsed_last_act["action_url"],

@@ -19,41 +19,66 @@ def plot_top_numeric_comparison(
     output_path: Path = None
 ) -> plt.Figure:
     """
-    Vẽ 4 subplot so sánh tập trung cho 4 biến định lượng CÓ TÍNH SUY LUẬN HÀNH VI SÂU SẮC NHẤT:
-    1. Dung lượng Mạch Nhận thức Đa nhiệm trong Bộ nhớ Làm việc (wm_num_active_threads)
-    2. Cơ học Vi thao tác Cuộn chuột Chuẩn người dùng (recent_last_gesture_px)
-    3. Chiều sâu Tiêu dùng Nội dung Thực chất (wm_cumulative_reads)
-    4. Khả năng Bứt phá Khám phá Nguồn trang Ngoại vi (wm_cumulative_opened)
+    Vẽ 6 subplot so sánh tập trung cho các biến định lượng nhận thức cốt lõi:
+    1. Dung lượng Bộ nhớ Làm việc (wm_num_active_threads)
+    2. Tốc độ Cuộn chuột Vật lý (scroll_speed_px_s)
+    3. Quãng đường Cuộn chuột (recent_last_gesture_px)
+    4. Hành vi Chủ động Khởi phát Tìm kiếm (wm_cumulative_searches)
+    5. Mở đọc Bài viết Chi tiết (wm_cumulative_reads)
+    6. Mở rộng Không gian Giao diện (wm_cumulative_opened)
     """
     plt.style.use("seaborn-v0_8-whitegrid" if "seaborn-v0_8-whitegrid" in plt.style.available else "default")
-    fig, axes = plt.subplots(2, 2, figsize=(16, 11))
+    fig, axes = plt.subplots(2, 3, figsize=(18, 11))
+    axes_flat = axes.flatten()
+
+    df_plot = df_steps.copy()
+    if "scroll_speed_px_s" not in df_plot.columns:
+        df_plot["scroll_speed_px_s"] = np.where(
+            df_plot["recent_last_gesture_ms"] > 0,
+            (df_plot["recent_last_gesture_px"] / df_plot["recent_last_gesture_ms"]) * 1000.0,
+            np.nan
+        )
 
     configs = [
         (
             "wm_num_active_threads",
-            "1. Dung Lượng Mạch Nhận Thức Đa Nhiệm (Active Threads)\n[Persona duy trì 8 mạch song song vs No-Persona đơn tuyến 2 mạch]",
-            axes[0, 0],
+            "1. Dung Lượng Nhận Thức Đa Nhiệm (Active Threads)\n[Persona duy trì 8 mạch song song vs No-Persona đơn tuyến 2 mạch]",
+            axes_flat[0],
             "mạch chủ đề",
             True
         ),
         (
+            "scroll_speed_px_s",
+            "2. Tốc Độ Cuộn Chuột Vật Lý (Scroll Speed - px/s)\n[Persona điều tiết linh hoạt 1,863 px/s vs No-Persona kéo tuột đều 2,425 px/s]",
+            axes_flat[1],
+            "px/s",
+            False
+        ),
+        (
             "recent_last_gesture_px",
-            "2. Cơ Học Vi Thao Tác Cuộn Chuột (Scroll Distance - px)\n[Persona cuộn vừa tầm mắt 463px (N=104) vs No-Persona cuộn tuột 684px (N=7)]",
-            axes[0, 1],
+            "3. Quãng Đường Cuộn Chuột (Scroll Distance - px)\n[Persona cuộn vi mô vừa tầm mắt 463px vs No-Persona cuộn tuột 684px]",
+            axes_flat[2],
             "pixels",
             False
         ),
         (
+            "wm_cumulative_searches",
+            "4. Hành Vi Chủ Động Tìm Kiếm (Cumulative Searches)\n[Persona tìm kiếm 1-5 chủ đề (Med 2.0) vs No-Persona tối đa 1 lần (Med 1.0)]",
+            axes_flat[3],
+            "lượt tìm kiếm",
+            True
+        ),
+        (
             "wm_cumulative_reads",
-            "3. Chiều Sâu Tiêu Dùng Nội Dung Thực Chất (Cumulative Reads)\n[Persona đọc sâu 1-6 bài viết vs No-Persona không đọc (0 bài)]",
-            axes[1, 0],
+            "5. Mở Đọc Bài Viết Chi Tiết (Cumulative Reads)\n[Persona mở đọc 1-6 bài (Med 1.0) vs No-Persona không đọc (0 bài)]",
+            axes_flat[4],
             "bài viết đã đọc",
             True
         ),
         (
             "wm_cumulative_opened",
-            "4. Khả Năng Mở Rộng Không Gian Ngoại Vi (Cumulative Opened Sources)\n[Persona mở 2-4 Page/Group vs No-Persona 100% bị giam cầm trên Feed]",
-            axes[1, 1],
+            "6. Mở Rộng Không Gian Giao Diện (Cumulative Opened Sources)\n[Persona mở 2-6 Page/Group vs No-Persona 100% bị giam cầm trên Feed]",
+            axes_flat[5],
             "nguồn/trang đã mở",
             True
         )
@@ -62,7 +87,7 @@ def plot_top_numeric_comparison(
     palette = {"persona": "#2b5c8f", "no_persona": "#d95f02"}
 
     for col, title, ax, unit, is_discrete in configs:
-        valid_df = df_steps.dropna(subset=[col])
+        valid_df = df_plot.dropna(subset=[col])
         if len(valid_df) == 0:
             continue
 
@@ -111,7 +136,7 @@ def plot_top_numeric_comparison(
         ax.set_xlabel(f"{col} ({unit})", fontsize=10, fontweight="bold")
         ax.legend(title="Nhóm Thực Nghiệm", fontsize=9, loc="upper right")
 
-    plt.suptitle("SO SÁNH TẬP TRUNG 4 ĐẶC TRƯNG ĐỊNH LƯỢNG SUY LUẬN HÀNH VI: PERSONA (XANH) VS NO-PERSONA (CAM)",
+    plt.suptitle("SO SÁNH TẬP TRUNG 5 ĐẶC TRƯNG ĐỊNH LƯỢNG SUY LUẬN HÀNH VI: PERSONA (XANH) VS NO-PERSONA (CAM)",
                  fontsize=14, fontweight="bold", y=1.00)
     plt.tight_layout()
 
@@ -132,7 +157,7 @@ def plot_top_categorical_comparison(
     """
     Vẽ so sánh tỷ lệ % phân phối cho các biến phân loại tiêu biểu nhất:
     1. Top 6 Ý định hành vi (Intent)
-    2. Bề mặt giao diện (Surface)
+    2. Cơ chế Cảnh báo Tiết chế (Novelty Warning / Guardrail)
     3. Tỷ lệ nhắm đối tượng mục tiêu (Target Candidate Selection)
     4. Tốc độ cử chỉ cuộn chuột đo đạc (Gesture Pace)
     """
@@ -153,17 +178,15 @@ def plot_top_categorical_comparison(
     ax1.set_xlabel("Ý định (Intent)", fontsize=10)
     ax1.legend(title="Nhóm", fontsize=8.5)
 
-    # 2. Surface Distribution
+    # 2. Working Memory Guardrail Warning
     ax2 = axes[0, 1]
-    surfaces = ["feed", "search", "post_detail", "group", "page", "reels"]
-    df_surf = df_steps[df_steps["surface"].isin(surfaces)]
-    ct2 = pd.crosstab(df_surf["surface"], df_surf["dataset_type"], normalize="columns") * 100
-    df_p2 = ct2.reindex(surfaces).fillna(0).reset_index().melt(id_vars="surface", var_name="dataset_type", value_name="Percentage")
-    sns.barplot(data=df_p2, x="surface", y="Percentage", hue="dataset_type", palette=palette, ax=ax2)
-    ax2.set_title("2. Không gian Chuyển dịch Bề mặt (% Surface)\n[Persona khám phá đa dạng Search, Detail, Group]", fontsize=11, fontweight="bold", pad=8)
+    ct2 = pd.crosstab(df_steps["wm_has_novelty_warning"], df_steps["dataset_type"], normalize="columns") * 100
+    df_p2 = ct2.reset_index().melt(id_vars="wm_has_novelty_warning", var_name="dataset_type", value_name="Percentage")
+    df_p2["Warning Status"] = df_p2["wm_has_novelty_warning"].map({True: "Có cảnh báo (Sa đà)", False: "Bình thường (Tự giác)"})
+    sns.barplot(data=df_p2, x="Warning Status", y="Percentage", hue="dataset_type", palette=palette, ax=ax2)
+    ax2.set_title("2. Cơ Chế Cảnh Báo Tiết Chế (% Novelty Warning)\n[No-Persona bị hú còi 30.7% bước vs Persona 0% (kháng trôi dạt)]", fontsize=11, fontweight="bold", pad=8)
     ax2.set_ylabel("Tỷ lệ trong nhóm (%)", fontsize=10, fontweight="bold")
-    ax2.set_xlabel("Bề mặt (Surface)", fontsize=10)
-    ax2.tick_params(axis="x", rotation=15)
+    ax2.set_xlabel("Trạng thái cảnh báo tiết chế", fontsize=10)
     ax2.legend(title="Nhóm", fontsize=8.5)
 
     # 3. Target Candidate Selection
