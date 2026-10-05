@@ -1,0 +1,11 @@
+﻿Ngram,Ý nghĩa Chu trình,Số lần Persona,Số lần No-Persona,Tỷ trọng Persona (%),Tỷ trọng No-Persona (%),Log_Odds_Ratio
+Observe -> Deep Read -> Observe,Observe -> Read -> Observe (Vòng lặp Kẹt Modal kinh điển),1,12,0.3,14.29,-3.66
+Deep Read -> Observe -> Navigate,Read -> Observe -> Nav (Bế tắc tìm cách đóng modal),0,4,0.0,4.76,-3.63
+Observe -> Other -> Observe,Observe -> Other -> Observe (Đứng nhìn thụ động / Thao tác thừa),0,4,0.0,4.76,-3.63
+Deep Read -> Observe -> Other,Read -> Observe -> Other (Kẹt modal dẫn đến hành vi lỗi),0,2,0.0,2.38,-3.02
+Scroll Feed -> Observe -> Deep Read,Scroll -> Observe -> Read (Cuộn ngập ngừng rồi rơi vào modal),1,4,0.3,4.76,-2.53
+Search Query -> Search Query -> Deep Read,Search -> Search -> Read (Tìm kiếm sâu -> Đọc trúng đích),5,0,1.48,0.0,1.03
+Scroll Feed -> Deep Read -> React/Social,Scroll -> Read -> React (Chu trình: Lướt -> Đọc -> Thả Like),5,0,1.48,0.0,1.03
+Scroll Feed -> Search Query -> Search Query,Scroll -> Search -> Search (Tìm kiếm chủ động đa tầng),7,0,2.08,0.0,1.34
+Scroll Feed -> Scroll Feed -> Scroll Feed,Scroll -> Scroll -> Scroll (Dòng chảy lướt liên tục - Flow),13,0,3.86,0.0,1.95
+React/Social -> Observe -> React/Social,React -> Observe -> React (Tương tác bùng nổ theo cụm),21,0,6.23,0.0,2.44

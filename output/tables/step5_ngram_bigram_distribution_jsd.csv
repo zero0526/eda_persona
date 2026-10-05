@@ -1,0 +1,62 @@
+Ngram,Count_Persona,Count_NoPersona,Prob_Persona (%),Prob_NoPersona (%),Lift_P_vs_NP,Log_Odds_Ratio,JSD_Contrib
+Scroll Feed -> Scroll Feed,22,0,6.41,0.0,64139941.69,2.494,0.03207
+Search Query -> Search Query,14,0,4.08,0.0,40816326.53,2.03,0.02041
+Scroll Feed -> Search Query,12,0,3.5,0.0,34985422.74,1.875,0.01749
+Deep Read -> React/Social,11,0,3.21,0.0,32069970.85,1.789,0.01603
+React/Social -> Observe,27,1,7.87,1.16,6.77,1.6,0.02015
+Observe -> React/Social,26,1,7.58,1.16,6.52,1.56,0.01899
+Scroll Feed -> Deep Read,8,0,2.33,0.0,23323615.16,1.478,0.01166
+React/Social -> Scroll Feed,7,0,2.04,0.0,20408163.27,1.35,0.0102
+Scroll Feed -> End Session,7,0,2.04,0.0,20408163.27,1.35,0.0102
+Search Query -> Deep Read,7,0,2.04,0.0,20408163.27,1.35,0.0102
+End Session -> Observe,7,0,2.04,0.0,20408163.27,1.35,0.0102
+Navigate -> Search Query,7,0,2.04,0.0,20408163.27,1.35,0.0102
+Search Query -> Navigate,7,0,2.04,0.0,20408163.27,1.35,0.0102
+End Session -> Scroll Feed,6,0,1.75,0.0,17492711.37,1.204,0.00875
+Navigate -> Deep Read,3,0,0.87,0.0,8746355.69,0.576,0.00437
+React/Social -> End Session,3,0,0.87,0.0,8746355.69,0.576,0.00437
+Deep Read -> End Session,3,0,0.87,0.0,8746355.69,0.576,0.00437
+React/Social -> Navigate,3,0,0.87,0.0,8746355.69,0.576,0.00437
+Other -> Other,3,0,0.87,0.0,8746355.69,0.576,0.00437
+Scroll Feed -> Navigate,8,1,2.33,1.16,2.01,0.367,0.00144
+Other -> End Session,2,0,0.58,0.0,5830903.79,0.236,0.00292
+End Session -> Deep Read,2,0,0.58,0.0,5830903.79,0.236,0.00292
+End Session -> Other,2,0,0.58,0.0,5830903.79,0.236,0.00292
+Deep Read -> Other,2,0,0.58,0.0,5830903.79,0.236,0.00292
+Navigate -> End Session,2,0,0.58,0.0,5830903.79,0.236,0.00292
+Search Query -> Observe,11,2,3.21,2.33,1.38,0.156,0.00051
+Deep Read -> Scroll Feed,6,1,1.75,1.16,1.5,0.093,0.00043
+Navigate -> Scroll Feed,10,2,2.92,2.33,1.25,0.062,0.00024
+Observe -> Search Query,14,3,4.08,3.49,1.17,0.049,0.00017
+Search Query -> Scroll Feed,8,2,2.33,2.33,1.0,-0.155,0.0
+Navigate -> Observe,11,3,3.21,3.49,0.92,-0.192,4e-05
+Rest/Wait -> Scroll Feed,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+React/Social -> Deep Read,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Rest/Wait -> Navigate,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Deep Read -> Navigate,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Deep Read -> Deep Read,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Search Query -> Other,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+End Session -> React/Social,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Deep Read -> Rest/Wait,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+End Session -> Rest/Wait,1,0,0.29,0.0,2915451.9,-0.278,0.00146
+Observe -> End Session,7,2,2.04,2.33,0.88,-0.283,7e-05
+Observe -> Navigate,14,5,4.08,5.81,0.7,-0.428,0.0011
+Scroll Feed -> React/Social,3,1,0.87,1.16,0.75,-0.535,0.00015
+Observe -> Scroll Feed,17,7,4.96,8.14,0.61,-0.565,0.00282
+Scroll Feed -> Observe,16,10,4.66,11.63,0.4,-1.002,0.01109
+Other -> React/Social,1,1,0.29,1.16,0.25,-1.388,0.00202
+Navigate -> Other,1,1,0.29,1.16,0.25,-1.388,0.00202
+Navigate -> Navigate,1,1,0.29,1.16,0.25,-1.388,0.00202
+React/Social -> Search Query,1,1,0.29,1.16,0.25,-1.388,0.00202
+Other -> Observe,3,4,0.87,4.65,0.19,-1.669,0.01022
+Observe -> Deep Read,6,13,1.75,15.12,0.12,-2.255,0.04379
+End Session -> Navigate,0,1,0.0,1.16,0.0,-2.489,0.00581
+Navigate -> Rest/Wait,0,1,0.0,1.16,0.0,-2.489,0.00581
+Rest/Wait -> End Session,0,1,0.0,1.16,0.0,-2.489,0.00581
+React/Social -> Other,0,1,0.0,1.16,0.0,-2.489,0.00581
+Other -> Rest/Wait,0,1,0.0,1.16,0.0,-2.489,0.00581
+Other -> Scroll Feed,0,1,0.0,1.16,0.0,-2.489,0.00581
+Scroll Feed -> Other,0,1,0.0,1.16,0.0,-2.489,0.00581
+Rest/Wait -> Observe,0,1,0.0,1.16,0.0,-2.489,0.00581
+Deep Read -> Observe,3,12,0.87,13.95,0.06,-2.793,0.05016
+Observe -> Other,0,4,0.0,4.65,0.0,-3.624,0.02326

@@ -1,0 +1,1038 @@
+Group,Subgroup,Category,Dimension,Label,Description,Value
+Background,Demographics,Demographics,Age bracket,Nhóm tuổi,Nhóm tuổi,"Dưới 5 tuổi
+5-12 tuổi
+13-17 tuổi
+18-24 tuổi
+25-34 tuổi
+35-44 tuổi
+45-54 tuổi
+55-64 tuổi
+65-74 tuổi
+75-84 tuổi
+Từ 85 tuổi trở lên"
+Background,Demographics,Demographics,Generational cohort,Thế hệ,"Nhóm thế hệ dựa trên thời kỳ họ sinh ra, thường được dùng để mô tả những trải nghiệm xã hội và công nghệ chung.","Gen Alpha
+Gen Z
+Gen Y
+Gen X
+Boomer
+Silent"
+Background,Demographics,Demographics,Gender identity,Bản dạng giới,Bản dạng giới,"Nam
+Nữ
+Phi nhị nguyên giới
+Không tiết lộ"
+Background,Demographics,Demographics,Region,Vùng miền,Vùng miền,"Miền Bắc
+Miền Trung
+Miền Nam"
+Background,Demographics,Demographics,Province,Tỉnh / Thành phố,Tỉnh / Thành phố,"An Giang
+Bắc Ninh
+Cà Mau
+Cần Thơ
+Cao Bằng
+Đà Nẵng
+Đắk Lắk
+Điện Biên
+Đồng Nai
+Đồng Tháp
+Gia Lai
+Hà Nội
+Hà Tĩnh
+Hải Phòng
+Huế
+Hưng Yên
+Khánh Hòa
+Lai Châu
+Lâm Đồng
+Lạng Sơn
+Lào Cai
+Nghệ An
+Ninh Bình
+Phú Thọ
+Quảng Ngãi
+Quảng Ninh
+Quảng Trị
+Sơn La
+Tây Ninh
+Thái Nguyên
+Thanh Hóa
+Thành phố Hồ Chí Minh
+Tuyên Quang
+Vĩnh Long"
+Background,Demographics,Demographics,Urbanicity,Môi trường sinh sống,Mức độ đô thị hóa của khu vực đang sinh sống.,"Trung tâm đô thị
+Vùng ven đô
+Thị trấn / Đô thị nhỏ
+Nông thôn
+Miền núi / Vùng sâu vùng xa"
+Background,Demographics,Demographics,Marital status,Tình trạng hôn nhân / tình cảm,Tình trạng quan hệ tình cảm hoặc hôn nhân hiện tại,"Độc thân
+Đang hẹn hò
+Đã đính hôn
+Đã kết hôn
+Ly thân / Đã ly hôn
+Góa"
+Background,Demographics,Demographics,Children,Số con,Số con,"Chưa có con
+1 con
+2 con
+Từ 3 con trở lên"
+Background,Demographics,Demographics,Household size,Quy mô hộ gia đình,Số người đang sống trong một hộ gia đình.,"Sống một mình
+2 người
+3-4 người
+Từ 5 người trở lên"
+Background,Demographics,Demographics,Socioeconomic band,Mức sống kinh tế,Điều kiện kinh tế và mức sống tổng thể.,"Thấp
+Trung bình thấp
+Trung bình
+Trung bình cao
+Cao"
+Background,Demographics,Demographics,Income band,Thu nhập hàng tháng,Thu nhập hàng tháng,"Dưới 5 triệu
+5-10 triệu
+10-20 triệu
+20-40 triệu
+40-80 triệu
+Trên 80 triệu"
+Background,Demographics,Demographics,Religious affiliation,Tín ngưỡng tôn giáo,Tín ngưỡng tôn giáo,"Phật giáo
+Kitô giáo / Cơ Đốc giáo
+Hồi giáo
+Do Thái giáo
+Ấn Độ giáo
+Không có"
+Background,Demographics,Demographics,Faith practice level,Mức độ tín ngưỡng,Mức độ tín ngưỡng,"Sùng đạo
+Thỉnh thoảng đi lễ
+Thiên về tâm linh
+Thực tế, duy vật"
+Background,Career & Education,Academic Background,Highest education,Trình độ học vấn cao nhất,Trình độ học vấn cao nhất,"Không có
+Tiểu học
+Trung học cơ sở
+Trung học phổ thông
+Trung cấp nghề / Chứng chỉ nghề
+Cao đẳng / Chương trình sau THPT ngắn hạn
+Đại học / Cử nhân
+Thạc sĩ
+Tiến sĩ"
+Background,Career & Education,Employment & Occupation,Employment status,Tình trạng việc làm,Hình thức làm việc hoặc trạng thái nghề nghiệp hiện tại,"Làm toàn thời gian
+Làm bán thời gian
+Chủ doanh nghiệp
+Kinh doanh tự do
+Freelance
+Học sinh / Sinh viên
+Đang tìm việc
+Đã nghỉ hưu
+Nội trợ"
+Background,Career & Education,Employment & Occupation,Primary industry,Ngành nghề chính,Lĩnh vực của công việc chính hiện tại. Phân loại theo nhóm ngành kinh tế.,"Nông nghiệp
+Lâm nghiệp
+Nuôi trồng thuỷ sản
+Sản xuất, chế biến thực phẩm
+Sản xuất đồ uống
+Sản xuất trang phục
+In ấn, quảng cáo
+Sản xuất dược phẩm
+Chế tác kim hoàn và mỹ nghệ kim loại
+Sản xuất thiết bị điện tử
+Sản xuất máy móc
+Sản xuất ô tô, xe máy
+Sản xuất nội thất
+Sửa chữa máy móc và thiết bị
+Xây dựng
+Bán, sửa chữa ô tô, xe máy
+Đại lý bán hàng hóa
+Vận tải đường sắt
+Vận tải đường bộ
+Vận tải đường sắt
+Vận tải đường thủy
+Vận tải hàng không
+Kho vận
+Dịch vụ chuyển phát
+Dịch vụ lưu trú
+Dịch vụ ăn uống
+Phát thanh, truyền hình
+Viễn thông
+Công nghệ thông tin
+Ngân hàng
+Bảo hiểm
+Bất động sản
+Kế toán
+Kiểm toán
+Luật
+Thiết kế kiến trúc
+Nghiên cứu khoa học và phát triển công nghệ
+Marketing
+Thú y
+Dịch vụ lao động và việc làm
+Du lịch
+Bảo vệ
+Giáo dục mầm non
+Giáo dục tiểu học
+Giáo dục trung học cơ sở
+Giáo dục trung học phổ thông
+Đào tạo trung cấp
+Đào tạo cao đẳng
+Đào tạo đại học
+Y tế
+Điều dưỡng
+Sáng tác, nghệ thuật và giải trí
+Thể thao
+Giúp việc
+Không có"
+Background,Career & Education,Employment & Occupation,Secondary industry,Ngành nghề phụ,Lĩnh vực của công việc phụ hiện tại. Phân loại theo nhóm ngành kinh tế.,"Sản xuất, chế biến thực phẩm
+Sửa chữa máy móc và thiết bị
+Đại lý bán hàng hóa
+Bảo hiểm
+Bất động sản
+Marketing
+Dịch vụ lao động và việc làm
+Không có"
+Background,Career & Education,Employment & Occupation,Career role,Nhóm nghề nghiệp,Nhóm vai trò công việc hiện tại.,"Khác
+Lao động nông nghiệp
+Công nhân sản xuất
+Thợ kỹ thuật
+Thợ thủ công
+Thợ thi công công trình
+Tài xế
+Shipper
+Nhân viên vận tải
+Nhân viên kho vận
+Nhân viên bán hàng
+CSKH
+Sales
+Nhân viên văn phòng
+Đầu bếp
+Nhân viên khách sạn
+Nhân viên nhà hàng
+Hướng dẫn viên
+Nhà sáng tạo nội dung
+Thiết kế đồ họa
+Kiến trúc sư
+Lập trình viên
+Kĩ sư CNTT
+Bảo vệ
+Giúp việc
+Kế toán
+Kiểm toán
+Luật sư
+Bác sĩ
+Dược sĩ
+Điều dưỡng
+Bác sĩ thú y
+Giáo viên / Giảng viên
+Vận động viên
+Nghệ sĩ"
+Background,Career & Education,Employment & Occupation,Years experience,Số năm kinh nghiệm,Số năm đã làm việc tích lũy trong lĩnh vực chuyên môn.,"0-2 năm
+3-5 năm
+6-10 năm
+11-20 năm
+Trên 20 năm"
+Background,Career & Education,Employment & Occupation,Work Arrangement,Hình thức làm việc,Hình thức làm việc hiện tại,"On-site
+Hybrid
+Remote
+Tự do thời gian
+Lưu động"
+Background,Life Experience,Personal Journey,Travel breadth,Trải nghiệm đi xa,"Phạm vi những nơi từng đi, sinh sống hoặc làm việc. Phản ánh mức độ tiếp xúc với các vùng miền và nền văn hóa khác nhau.","Chủ yếu quanh nơi sinh sống
+Đã đi nhiều nơi trong nước
+Đã đi một số nước / khu vực lân cận
+Đi nhiều quốc gia
+Đã sống / làm việc ở nước ngoài"
+Background,Life Experience,Personal Journey,Adversity faced,Trải nghiệm vượt khó,Mức độ khó khăn hoặc biến cố lớn từng đối mặt trong cuộc sống. Các mức từ ít trải nghiệm khó khăn đến khó khăn nghiêm trọng hoặc vẫn đang tiếp diễn.,"Cuộc sống khá thuận lợi
+Từng gặp một số khó khăn nhỏ
+Từng trải qua khó khăn đáng kể
+Đã vượt qua biến cố lớn
+Đang đối mặt với khó khăn lớn"
+Background,Life Experience,Personal Journey,Relationship experience,Kinh nghiệm tình cảm,Kinh nghiệm tình cảm,"Chưa từng có mối quan hệ sâu sắc
+Đã trải qua một vài mối quan hệ
+Đã có mối quan hệ lâu dài
+Nhiều thăng trầm trong tình cảm"
+Background,Life Experience,Personal Journey,Public recognition,Mức độ được công chúng biết đến,Mức độ được công chúng biết đến,"Được biết đến trong cộng đồng địa phương
+Được biết đến trong ngành
+Nổi tiếng rộng rãi"
+Background,Life Experience,Personal Journey,Tie to hometown,Mức độ gắn bó với quê hương,Mức độ gắn bó với quê hương,"Vẫn sống tại quê
+Thường xuyên về quê
+Thỉnh thoảng về quê
+Hiếm khi về quê
+Hầu như không còn gắn kết"
+Psychology & Cognition,Personality,Core Personality,Dominant personality trait,Nét tính cách nổi bật,Đặc điểm nổi bật nhất theo nhóm tính cách Big Five,"Cởi mở khám phá
+Tận tâm chu đáo
+Hướng ngoại năng động
+Hòa đồng dễ mến
+Nhạy cảm cảm xúc
+Cân bằng hài hòa"
+Psychology & Cognition,Personality,Core Personality,Social orientation,Xu hướng xã hội,Mức độ hướng nội hay hướng ngoại trong giao tiếp.,"Thiên về hướng nội
+Cân bằng
+Thiên về hướng ngoại"
+Psychology & Cognition,Personality,Core Personality,Social intelligence,Trí tuệ xã hội & Ứng xử,Khả năng thấu hiểu cảm xúc và ứng xử khéo léo trong các mối quan hệ.,"Rất khéo léo và nhạy bén
+Giao tiếp tốt và đồng cảm
+Bình thường
+Hơi thiếu nhạy cảm
+Vụng về trong giao tiếp xã hội"
+Psychology & Cognition,Personality,Core Personality,Leadership,Khả năng lãnh đạo,"Mức độ có xu hướng dẫn dắt, định hướng và tạo ảnh hưởng đến người khác.","Rất thích dẫn dắt và quyết đoán
+Có năng lực dẫn dắt khi cần
+Thích làm việc phối hợp đồng đều
+Thích làm người hỗ trợ"
+Psychology & Cognition,Personality,Core Personality,Humility,Tính khiêm tốn,Mức độ khiêm nhường và nhìn nhận bản thân.,"Rất khiêm tốn
+Trung bình
+Đôi khi tự hào quá mức
+Thích thể hiện / Phô trương bản thân"
+Psychology & Cognition,Personality,Core Personality,Self-regulation,Khả năng tự kiểm soát,"Mức độ kiểm soát cảm xúc, hành vi và những thôi thúc của bản thân.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Discipline,Tính kỷ luật,"Mức độ duy trì thói quen, nguyên tắc và làm những việc cần làm ngay cả khi thiếu động lực.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Resilience & Persistence,Kiên cường & Bền bỉ,Mức độ vững vàng và phục hồi sau thất bại hoặc căng thẳng.,"Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Adaptability,Khả năng thích nghi,Mức độ có thể điều chỉnh suy nghĩ và hành vi khi hoàn cảnh thay đổi.,"Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Ambition,Tham vọng & Cầu tiến,"Mức độ có mong muốn mạnh mẽ đạt được thành tựu, vị trí hoặc mục tiêu cao hơn.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Playfulness,Tính vui nhộn & Hài hước,"Mức độ thích vui đùa, tạo không khí nhẹ nhàng và không quá nghiêm trọng hóa mọi thứ.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Personality,Core Personality,Creativity,Mức độ sáng tạo,"Mức độ độc đáo trong tư duy, xu hướng nghĩ ra các ý tưởng, góc nhìn hoặc cách tiếp cận mới lạ.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Thinking focus,Tư duy tổng quan hay chi tiết,Xu hướng nhìn nhận bức tranh toàn cảnh hay đi sâu vào chi tiết nhỏ.,"Hoàn toàn nhìn tổng thể
+Thiên về nhìn tổng quan
+Cân bằng cả hai
+Thiên về soi chi tiết
+Rất tỉ mỉ / Chú trọng từng tiểu tiết"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Open-mindedness,Mức độ cở mở trong tư duy,Mức độ sẵn sàng xem xét những ý tưởng và quan điểm khác với mình.,"Cực kỳ cởi mở / Luôn tìm kiếm góc nhìn mới và lắng nghe phản biện
+Khá cởi mở / Sẵn sàng thay đổi quan điểm nếu có lý lẽ thuyết phục
+Cân bằng / Tiếp nhận có chọn lọc
+Hơi bảo thủ / Thiên về định kiến và quan điểm quen thuộc                                                                        
+Rất bảo thủ / Khó chấp nhận ý kiến trái chiều"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Reasoning style,Phân tích logic hay trực giác,Phương thức xử lý vấn đề dựa trên số liệu logic hay linh cảm trực giác.,"Hoàn toàn dựa trên logic & dữ liệu
+Thiên về logic
+Cân bằng giữa logic và trực giác
+Thiên về cảm nhận trực giác
+Hoàn toàn theo cảm tính"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Decision speed,Tốc độ ra quyết định,Cách thức và thời gian đưa ra quyết định.,"Quyết định chớp nhoáng
+Quyết định nhanh
+Cân nhắc vừa phải
+Phân tích rất kỹ trước khi quyết định
+Do dự / Rất khó đưa ra quyết định"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Speed vs accuracy,Ưu tiên tốc độ hay chuẩn xác,Sự ưu tiên khi hoàn thành công việc.,"Tốc độ là trên hết
+Thiên về nhanh gọn
+Cân bằng chất lượng và tốc độ
+Thiên về độ chính xác
+Độ chính xác hoàn hảo là trên hết"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Risk framing,Góc nhìn về rủi ro,Cách phản ứng trước tình huống bất định.,"Thiên về cơ hội
+Cân bằng giữa rủi ro và cơ hội
+Thiện về rủi ro"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Skepticism & Verification,Mức độ hoài nghi & Kiểm chứng,Thói quen đặt câu hỏi và đòi hỏi chứng cứ trước thông tin mới.,"Rất hoài nghi / Luôn kiểm chứng nguồn tin
+Có phản biện tỉnh táo
+Dễ tiếp nhận nhưng có chọn lọc
+Dễ tin người / Tin ngay tin tức trên mạng"
+Psychology & Cognition,Cognitive & Work Style,Thinking & Decision Making,Curiosity,Mức độ tò mò,"Mức độ muốn khám phá, đặt câu hỏi và tìm hiểu những điều mới.","Rất cao
+Cao
+Trung bình
+Thấp
+Hầu như không có"
+Psychology & Cognition,Cognitive & Work Style,Learning & Work Habits,Learning pace,Tốc độ tiếp thu,Khả năng nắm bắt và làm quen với kiến thức mới.,"Tiếp thu cực nhanh
+Nhanh nhạy
+Bình thường
+Cần thời gian nghiền ngẫm
+Hơi chậm trong học hỏi điều mới"
+Psychology & Cognition,Cognitive & Work Style,Learning & Work Habits,Attention span,Khả năng tập trung,Độ dài thời gian duy trì sự chú ý sâu vào một việc.,"Tập trung sâu và lâu dài
+Tập trung tốt
+Trung bình
+Dễ xao nhãng
+Khả năng chú ý rất thấp"
+Psychology & Cognition,Cognitive & Work Style,Learning & Work Habits,Perfectionism,Mức độ cầu toàn,Mức độ muốn công việc đạt tiêu chuẩn rất cao và chú ý đến việc làm mọi thứ thật hoàn chỉnh.,"Rất cao
+Cao
+Trung bình
+Thấp
+Không có"
+Psychology & Cognition,Cognitive & Work Style,Learning & Work Habits,Procrastination tendency,Xu hướng trì hoãn,Thói quen nước đến chân mới nhảy hay làm việc ngay.,"Luôn làm ngay lập tức
+Ít khi trì hoãn
+Thỉnh thoảng trì hoãn
+Thường xuyên nước đến chân mới nhảy
+Trì hoãn kinh niên"
+Psychology & Cognition,Cognitive & Work Style,Learning & Work Habits,Feedback receptiveness,Tiếp nhận góp ý,Thái độ khi đón nhận nhận xét và phê bình từ người khác.,"Rất cầu thị / Luôn cảm ơn góp ý
+Sẵn sàng lắng nghe và cải thiện
+Lắng nghe có chọn lọc
+Hơi tự ái / Phòng thủ
+Khó chịu / Bác bỏ góp ý"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Family,Ưu tiên gia đình,Mức độ coi trọng tổ ấm và các mối quan hệ ruột thịt.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Wealth & Success,Ưu tiên tài chính & Thành công,Mức độ coi trọng sự nghiệp và tích lũy tài sản.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Health & Wellness,Ưu tiên sức khỏe,Mức độ chú trọng chăm sóc thể chất và tinh thần.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Personal freedom,Ưu tiên tự do cá nhân,Mức độ coi trọng sự độc lập và quyền tự quyết.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Integrity & Honesty,Chính trực & Trung thực,Mức độ coi trọng sự thật và nguyên tắc đạo đức.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Benevolence & Kindness,Tinh thần nhân ái & Giúp đỡ,Mức độ sẵn lòng sẻ chia và hỗ trợ cộng đồng.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Tradition & Customs,Tôn trọng truyền thống,"Mức độ coi trọng việc duy trì phong tục, chuẩn mực và những giá trị được truyền lại.","Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Life Priorities & Values,Value: Privacy,Ưu tiên quyền riêng tư,Mức độ coi trọng việc kiểm soát thông tin cá nhân và không gian riêng của mình.,"Rất cao
+Cao
+Trung bình
+Thấp
+Rất thấp"
+Psychology & Cognition,Values & Worldview,Social Perspectives,Attitude: New technology,Thái độ với công nghệ mới,Mức độ hào hứng hoặc dè dặt trước các công nghệ mới.,"Rất ủng hộ
+Tích cực
+Trung lập
+Hoài nghi
+Phản đối"
+Psychology & Cognition,Values & Worldview,Social Perspectives,Attitude: Climate action,Thái độ với môi trường,Quan điểm về hành động bảo vệ môi trường và chống biến đổi khí hậu.,"Tích cực hành động / Sống xanh nghiêm ngặt
+Ủng hộ và thực hiện các thói quen xanh
+Quan tâm vừa phải
+Ít quan tâm"
+Psychology & Cognition,Values & Worldview,Social Perspectives,Attitude: Advertising,Thái độ với quảng cáo,Mức độ nhìn nhận tích cực hay tiêu cực về quảng cáo trong đời sống và truyền thông.,"Rất ủng hộ
+Tích cực
+Trung lập
+Hoài nghi
+Phản đối"
+Psychology & Cognition,Values & Worldview,Social Perspectives,Attitude: Influencers & KOCs,Thái độ với KOL / Influencer,Mức độ tin tưởng và nhìn nhận tích cực đối với influencer hoặc người sáng tạo có sức ảnh hưởng.,"Rất ủng hộ
+Tích cực
+Trung lập
+Hoài nghi
+Phản đối"
+Psychology & Cognition,Values & Worldview,Social Perspectives,Attitude: Online reviews,Thái độ với đánh giá trên mạng,Mức độ tham khảo review trước khi mua sắm hoặc trải nghiệm dịch vụ.,"Luôn đọc kỹ review trước khi quyết định
+Xem review như một kênh tham khảo quan trọng
+Xem lướt / Không quá phụ thuộc
+Chỉ tin người quen / Không tin review mạng"
+Behavior and Interaction,Language Profile,Language Competency,Language: Thai,Trình độ tiếng Thái,Trình độ tiếng Thái,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: Korean,Trình độ tiếng Hàn,Trình độ tiếng Hàn,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: German,Trình độ tiếng Đức,Trình độ tiếng Đức,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: Japanese,Trình độ tiếng Nhật,Trình độ tiếng Nhật,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: Russian,Trình độ tiếng Nga,Trình độ tiếng Nga,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: French,Trình độ tiếng Pháp,Trình độ tiếng Pháp,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: Chinese,Trình độ tiếng Trung,Trình độ tiếng Trung,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Language: English,Trình độ tiếng Anh,Trình độ tiếng Anh,"Tiếng mẹ đẻ
+Thành thạo
+Giao tiếp được
+Cơ bản
+Không biết"
+Behavior and Interaction,Language Profile,Language Competency,Multilingualism,Số ngôn ngữ có thể sử dụng,Số ngôn ngữ có thể sử dụng,"Một
+Hai
+Ba trở lên"
+Behavior and Interaction,Language Profile,Language Competency,Dialect & Regional accent,Phương ngữ & Giọng điệu,Đặc trưng ngôn ngữ vùng miền trong cách dùng từ.,"Giọng Bắc chuẩn
+Giọng Bắc địa phương
+Giọng Trung chuẩn
+Giọng Trung địa phương
+Giọng Nam chuẩn (Sài Gòn)
+Giọng miền Tây
+Pha trộn nhiều phương ngữ"
+Behavior and Interaction,Communication Style,Tone & Manner,Formality,Mức độ trang trọng,Văn phong giao tiếp thường ngày.,"Rất trang trọng / Chuẩn mực học thuật
+Lịch sự / Nhã nhặn
+Đời thường / Thân thiện
+Rất suồng sã / Nhiều tiếng lóng
+Lầy lội / Troll"
+Behavior and Interaction,Communication Style,Tone & Manner,Directness,Mức độ thẳng thắn,Cách diễn đạt ý kiến trong các cuộc thảo luận.,"Thẳng như ruột ngựa / Không né tránh
+Thẳng thắn nhưng có chừng mực
+Khéo léo / Lựa lời nói
+Nói giảm nói tránh / Vòng vo
+Ngại va chạm / Thường im lặng"
+Behavior and Interaction,Communication Style,Tone & Manner,Verbosity,Độ dài diễn đạt,Thói quen viết bài hoặc bình luận ngắn gọn hay dài dòng.,"Rất súc tích / Vài từ ngắn gọn
+Ngắn gọn đúng trọng tâm
+Độ dài vừa phải
+Thích viết dài / Kể lể chi tiết
+Tràng giang đại hải / Đậm chất tản văn"
+Behavior and Interaction,Communication Style,Tone & Manner,Politeness,Mức độ lễ phép & Lịch sự,Cách xưng hô và thái độ tôn trọng đối phương.,"Rất lễ phép
+Lịch thiệp văn minh
+Bình thường
+Thỉnh thoảng cộc lốc
+Bất lịch sự / Hay gắt gỏng"
+Behavior and Interaction,Communication Style,Tone & Manner,Humor style,Phong cách hài hước,Kiểu hài hước thường sử dụng trong giao tiếp.,"Hài khô / Tỉnh bơ
+Châm biếm
+Vui nhộn / Tinh nghịch
+Nhẹ nhàng / Lành mạnh
+Nghiêm túc"
+Behavior and Interaction,Communication Style,Tone & Manner,Storytelling tendency,Xu hướng kể chuyện,Thói quen lồng ghép câu chuyện trải nghiệm vào trao đổi.,"Rất thích kể chuyện
+Thường lấy ví dụ thực tế minh họa
+Nêu quan điểm trực tiếp / Ít kể chuyện
+Chỉ tập trung vào dữ kiện"
+Behavior and Interaction,Communication Style,Tone & Manner,Emotional expressiveness,Mức độ bộc lộ cảm xúc,Cách thể hiện tâm trạng qua bài viết hoặc tin nhắn.,"Rất giàu cảm xúc
+Biểu đạt cảm xúc tự nhiên
+Trung tính
+Kiềm chế
+Kín đáo / Rất lạnh lùng"
+Behavior and Interaction,Communication Style,Tone & Manner,Emoji & Emoticon usage,Mức độ & Thói quen dùng Emoji,Tần suất và kiểu cách sử dụng biểu tượng cảm xúc.,"Rất nhiều emoji sinh động
+Dùng emoji vừa phải đúng lúc
+Hiếm khi sử dụng
+Không bao giờ dùng emoji"
+Behavior and Interaction,Communication Style,Tone & Manner,Typing & Text style,Phong cách viết trên mạng,Thói quen định dạng câu chữ khi viết trên mạng xã hội,"Chuẩn chỉnh ngữ pháp
+Thường xuyên viết tắt / Dùng teencode
+Hay dùng từ đệm tình cảm
+Cộc lốc"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Primary social platform,Nền tảng xã hội chính,Nền tảng xã hội chính,"Facebook
+Zalo
+TikTok
+YouTube
+Instagram
+Threads
+LinkedIn
+X / Twitter
+Reddit
+Forums
+None"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Facebook frequency,Tần suất sử dụng Facebook,Tần suất sử dụng Facebook,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Zalo frequency,Tần suất sử dụng Zalo,Tần suất sử dụng Zalo,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Tiktok frequency,Tần suất sử dụng TikTok,Tần suất sử dụng TikTok,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Youtube frequency,Tần suất sử dụng YouTube,Tần suất sử dụng YouTube,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Instagram frequency,Tần suất sử dụng Instagram,Tần suất sử dụng Instagram,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Threads frequency,Tần suất sử dụng Threads,Tần suất sử dụng Threads,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,LinkedIn frequency,Tần suất sử dụng LinkedIn,Tần suất sử dụng LinkedIn,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,X / Twitter frequency,Tần suất sử dụng X / Twitter,Tần suất sử dụng X / Twitter,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Reddit frequency,Tần suất sử dụng Reddit,Tần suất sử dụng Reddit,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Platform Presence,Social Media Platforms,Forums frequency,Tần suất sử dụng diễn đàn,Tần suất sử dụng diễn đàn,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần mỗi tuần
+Hiếm khi
+Không dùng"
+Behavior and Interaction,Social Engagement,Interaction Habits,Social engagement style,Phong cách tham gia mạng xã hội,Cách thường tham gia và tương tác trên các nền tảng trực tuyến.,"Tàu ngầm (Chỉ xem và like, không post không cmt)
+Chiến thần bình luận dạo (Tương tác tích cực các post)
+Người thích chia sẻ (Thường share bài, clip hay)
+Người sáng tạo nội dung (Thường xuyên viết bài, làm clip)
+Bán hàng / Seeding / Affiliate
+Người thường xuyên tham gia, kết nối cộng đồng, hội nhóm"
+Behavior and Interaction,Social Engagement,Interaction Habits,Posting frequency,Tần suất đăng bài viết,Tần suất tự viết status hoặc đăng nội dung mới lên trang cá nhân.,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần một tuần
+Vài lần một tháng
+Rất hiếm khi
+Không bao giờ"
+Behavior and Interaction,Social Engagement,Interaction Habits,Commenting frequency,Tần suất bình luận,Tần suất viết comment trên các bài đăng công khai.,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần một tuần
+Vài lần một tháng
+Rất hiếm khi
+Không bao giờ"
+Behavior and Interaction,Social Engagement,Interaction Habits,Sharing frequency,Tần suất chia sẻ bài,Tần suất share lại nội dung của fanpage hoặc người khác về tường.,"Nhiều lần mỗi ngày
+Hàng ngày
+Vài lần một tuần
+Vài lần một tháng
+Rất hiếm khi
+Không bao giờ"
+Behavior and Interaction,Social Engagement,Interaction Habits,Messaging intensity,Cường độ nhắn tin / Chat,Tần suất trò chuyện qua MXH,"Nhắn tin liên tục suốt ngày
+Thường xuyên giữ liên lạc
+Chỉ nhắn khi có việc cần
+Ít khi check tin nhắn
+Rất lười rep tin nhắn"
+Behavior and Interaction,Social Engagement,Interaction Habits,Group community participation,Tham gia hội nhóm trực tuyến,Mức độ sinh hoạt trong các hội nhóm và cộng đồng mạng xã hội.,"Rất tích cực (Viết bài chia sẻ, thảo luận sôi nổi)
+Thường xuyên theo dõi và đọc bài
+Thỉnh thoảng đặt câu hỏi nhờ tư vấn
+Chỉ nằm vùng hóng chuyện
+Không tham gia nhóm nào"
+Behavior and Interaction,Social Engagement,Interaction Habits,Tech savviness,Mức độ thành thạo công nghệ,Độ am hiểu và kỹ năng sử dụng thiết bị số và ứng dụng mạng.,"Rất quen thuộc
+Thoải mái sử dụng
+Tiếp nhận thận trọng
+Ngại sử dụng
+Chủ động tránh"
+Behavior and Interaction,Social Engagement,Interaction Habits,Content consumption format,Định dạng nội dung ưa thích,Loại hình nội dung yêu thích nhất,"Video ngắn
+Bài viết dài chuyên sâu
+Hình ảnh
+Video dài
+Âm thanh
+Kết hợp nhiều hình thức"
+Behavior and Interaction,Social Engagement,Interaction Habits,Media diet,Nguồn thông tin thường dùng,Loại nguồn mà thường sử dụng nhất để cập nhật kiến thức và thông tin.,"Mạng xã hội
+Báo chí chính thống
+Các kênh video
+Hội nhóm cộng đồng
+Ít theo dõi thông tin"
+Behavior and Interaction,Social Engagement,Interaction Habits,Streaming hours per week,Thời lượng xem video mỗi tuần,"Tổng thời gian xem phim, video và livestream hàng tuần.","Dưới 3 giờ/tuần
+3-7 giờ/tuần
+8-15 giờ/tuần
+16-30 giờ/tuần
+Trên 30 giờ/tuần"
+Behavior and Interaction,Social Engagement,Interaction Habits,Podcast listening,Tần suất nghe podcast,Thói quen nghe các chương trình trò chuyện âm thanh.,"Hàng ngày
+Vài lần mỗi tuần
+Vài lần mỗi tháng
+Hiếm khi
+Không bao giờ"
+Behavior and Interaction,Social Engagement,Interaction Habits,Pet peeve: Pop-up ads,Mức khó chịu với quảng cáo,Mức khó chịu với quảng cáo,"Rất khó chịu
+Khó chịu
+Bình thường
+Không phiền"
+Behavior and Interaction,Social Engagement,Interaction Habits,Pet peeve: Clickbait,Mức khó chịu với nội dung Giật tít câu view,Mức khó chịu với nội dung Giật tít câu view,"Rất khó chịu
+Khó chịu
+Bình thường
+Không phiền"
+Behavior and Interaction,Social Engagement,Interaction Habits,Pet peeve: Toxic content,"Mức khó chịu với nội dung toxic, cãi vã xúc phạm nhau","Mức khó chịu với nội dung toxic, cãi vã xúc phạm nhau","Rất khó chịu
+Khó chịu
+Bình thường
+Không phiền"
+Behavior and Interaction,Interaction State,Emotional & Energy State,Emotional state,Trạng thái cảm xúc tức thời,Tâm trạng nổi bật tại thời điểm tương tác trực tuyến.,"Bình tĩnh / Thư thái
+Vui vẻ / Hào hứng
+Mệt mỏi / Căng thẳng
+Tò mò / Hóng chuyện
+Bức xúc / Khó chịu
+Lo âu / Bồn chồn"
+Behavior and Interaction,Interaction State,Emotional & Energy State,Energy level,Mức năng lượng hiện tại,Năng lượng thể chất và tinh thần khi trò chuyện.,"Rất tràn đầy năng lượng
+Năng lượng tốt
+Mức trung bình
+Hơi uể oải
+Kiệt sức / Hết pin"
+Behavior and Interaction,Interaction State,Emotional & Energy State,Stress level,Mức độ áp lực hiện tại,Mức độ căng thẳng tinh thần từ công việc hoặc cuộc sống.,"Hoàn toàn không có áp lực
+Áp lực nhẹ
+Áp lực trung bình
+Áp lực cao
+Cực kỳ căng thẳng"
+Lifestyle,Daily Lifestyle,Habits,Fashion sense,Phong cách thời trang,Gu ăn mặc và mức độ chú ý đến diện mạo cá nhân.,"Luôn đón đầu xu hướng thời trang
+Ăn mặc có phong cách và chỉn chu
+Đơn giản / Tối giản
+Ưu tiên thoải mái / Tiện dụng
+Không quan tâm nhiều đến thời trang"
+Lifestyle,Daily Lifestyle,Habits,Vacation & Travel style,Gu du lịch & Nghỉ dưỡng,Kiểu trải nghiệm ưa thích khi đi du lịch.,"Du lịch phượt / Khám phá mạo hiểm
+Du lịch trải nghiệm văn hóa & Ẩm thực
+Nghỉ dưỡng sang chảnh / Thư giãn nhẹ nhàng
+Du lịch tiết kiệm cùng bạn bè
+Thích ở nhà nghỉ ngơi"
+Lifestyle,Daily Lifestyle,Habits,Reading frequency,Tần suất đọc sách,Thói quen đọc sách giấy hoặc ebook nâng cao kiến thức.,"Hàng ngày
+Vài lần mỗi tuần
+Vài lần mỗi tháng
+Hiếm khi
+Không bao giờ"
+Lifestyle,Daily Lifestyle,Habits,Gaming frequency,Tần suất chơi game,"Thói quen giải trí bằng game trên điện thoại, máy tính hoặc console.","Hàng ngày
+Vài lần mỗi tuần
+Vài lần mỗi tháng
+Hiếm khi
+Không bao giờ"
+Lifestyle,Daily Lifestyle,Habits,Music listening,Tần suất nghe nhạc,Thói quen thưởng thức âm nhạc trong sinh hoạt.,"Hàng ngày
+Vài lần mỗi tuần
+Vài lần mỗi tháng
+Hiếm khi
+Không bao giờ"
+Lifestyle,Interest,Areas of Interest,Interest: Technology & AI,Công nghệ & Trí tuệ nhân tạo,Mức độ quan tâm đến thiết bị thông minh và công nghệ mới.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Personal finance & Investing,Tài chính cá nhân & Đầu tư,Mức độ quan tâm đến quản lý tiền bạc và đầu tư tài chính.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Real estate,Bất động sản & Nhà cửa,Mức độ quan tâm đến thị trường địa ốc và không gian sống.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Self-improvement,Phát triển bản thân,"Mức độ quan tâm đến sách kỹ năng, các khóa học và nâng cao năng lực.","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Parenting & Family life,Nuôi dạy con & Gia đình,Mức độ quan tâm đến phương pháp nuôi dạy con và vun vén tổ ấm.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Pets & Animals,Thú cưng & Động vật,Mức độ tình cảm và hứng thú với chó mèo và vật nuôi.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Spirituality & Mindfulness,Tâm linh & Chữa lành,"Mức độ quan tâm đến thiền định, tarot, chiêm tinh và sự an yên tinh thần.","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Environment & Nature,Môi trường & Thiên nhiên,Mức độ quan tâm đến lối sống xanh và các hoạt động bảo tồn thiên nhiên.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Social causes & Community,Hoạt động xã hội & Thiện nguyện,Mức độ quan tâm và tham gia các hoạt động đóng góp cho cộng đồng.,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Music,Âm nhạc,"Mức độ quan tâm, yêu thích âm nhạc","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Sport,Thể thao,"Mức độ quan tâm, yêu thích thể thao","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Film,Phim ảnh,"Mức độ quan tâm, yêu thích phim ảnh","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Dancing,Nhảy,"Mức độ quan tâm, yêu thích nhảy / khiêu vũ","Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Travel,Du lịch,Mức độ yêu thích du lịch,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Karaoke,Mức độ hát karaoke,Mức độ hát karaoke,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Cosplay,Mức độ tham gia cosplay,Mức độ tham gia cosplay,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Knitting / Embroidery,Mức độ tham gia đan len / thêu thùa,Mức độ tham gia đan len / thêu thùa,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Areas of Interest,Interest: Gardening,Mức độ yêu thích làm vườn,Mức độ yêu thích làm vườn,"Rất đam mê
+Có hứng thú tìm hiểu
+Bình thường
+Không quan tâm
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Pop,Mức độ yêu thích nhạc Pop,Mức độ yêu thích nhạc Pop,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Rock,Mức độ yêu thích nhạc Rock,Mức độ yêu thích nhạc Rock,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Hip-hop / Rap,Mức độ yêu thích nhạc Hip-hop / Rap,Mức độ yêu thích nhạc Hip-hop / Rap,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: R&B,Mức độ yêu thích nhạc R&B,Mức độ yêu thích nhạc R&B,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Electronic,Mức độ yêu thích nhạc điện tử / EDM,Mức độ yêu thích nhạc điện tử / EDM,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Indie,Mức độ yêu thích nhạc Indie,Mức độ yêu thích nhạc Indie,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Ballad,Mức độ yêu thích nhạc Ballad,Mức độ yêu thích nhạc Ballad,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: K-pop,Mức độ yêu thích K-pop,Mức độ yêu thích K-pop,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Music: Lo-fi / Classical,"Mức độ yêu thích Lo-fi, cổ điển","Mức độ yêu thích Lo-fi, cổ điển","Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Historical / Documentary,"Mức độ yêu thích phim tài liệu, lịch sử","Mức độ yêu thích phim tài liệu, lịch sử","Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Animation,Mức độ yêu thích phim hoạt hình / Anime,Mức độ yêu thích phim hoạt hình / Anime,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Romance,Mức độ yêu thích phim tình cảm,Mức độ yêu thích phim tình cảm,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Action / Adventure,Mức độ yêu thích phim hành động / phiêu lưu,Mức độ yêu thích phim hành động / phiêu lưu,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Comedy,Mức độ yêu thích phim hài,Mức độ yêu thích phim hài,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Drama,Mức độ yêu thích phim truyền hình,Mức độ yêu thích phim truyền hình,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Horror / Thriller,Mức độ yêu thích phim kinh dị giật gân,Mức độ yêu thích phim kinh dị giật gân,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Film: Sci-fi / Superhero,Mức độ yêu thích phim khoa học viễn tưởng / siêu anh hùng,Mức độ yêu thích phim khoa học viễn tưởng / siêu anh hùng,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Literary fiction,Mức độ yêu thích tiểu thuyết văn học,Mức độ yêu thích tiểu thuyết văn học,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Science fiction,Mức độ yêu thích khoa học viễn tưởng,Mức độ yêu thích khoa học viễn tưởng,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Fantasy,Mức độ yêu thích truyện kỳ ảo,Mức độ yêu thích truyện kỳ ảo,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Mystery / Thriller,Mức độ yêu thích truyện bí ẩn / giật gân,Mức độ yêu thích truyện bí ẩn / giật gân,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Romance,Mức độ yêu thích truyện tình cảm,Mức độ yêu thích truyện tình cảm,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Historical fiction,Mức độ yêu thích tiểu thuyết lịch sử,Mức độ yêu thích tiểu thuyết lịch sử,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Horror,Mức độ yêu thích truyện kinh dị,Mức độ yêu thích truyện kinh dị,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Biography / Memoir,"Mức độ yêu thích tiểu sử, hồi ký","Mức độ yêu thích tiểu sử, hồi ký","Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Self-help,Mức độ yêu thích sách phát triển bản thân,Mức độ yêu thích sách phát triển bản thân,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Business,Mức độ yêu thích sách kinh doanh,Mức độ yêu thích sách kinh doanh,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Popular science,Mức độ yêu thích sách khoa học phổ thông,Mức độ yêu thích sách khoa học phổ thông,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: History / Philosophy,"Mức độ yêu thích sách lịch sử, triết học","Mức độ yêu thích sách lịch sử, triết học","Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Creative & Cultural Tastes,Books: Graphic novels,Mức độ yêu thích truyện tranh,Mức độ yêu thích truyện tranh,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Interest,Sports,Sport: Football,Mức độ tham gia bóng đá,Mức độ tham gia bóng đá,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Basketball,Mức độ tham gia bóng rổ,Mức độ tham gia bóng rổ,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Tennis,Mức độ tham gia quần vợt,Mức độ tham gia quần vợt,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Pilates,Mức độ tham gia Pilates,Mức độ tham gia Pilates,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Esports,Mức độ tham gia Esports,Mức độ tham gia Esports,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Yoga,Mức độ tham gia Yoga,Mức độ tham gia Yoga,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Martial arts,Mức độ tham gia võ thuật,Mức độ tham gia võ thuật,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Golf,Mức độ tham gia Golf,Mức độ tham gia Golf,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Volleyball,Mức độ tham gia bóng chuyền,Mức độ tham gia bóng chuyền,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Swimming,Mức độ tham gia bơi lội,Mức độ tham gia bơi lội,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Running,Mức độ tham gia chạy bộ,Mức độ tham gia chạy bộ,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Cycling,Mức độ tham gia đạp xe,Mức độ tham gia đạp xe,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Boxing,Mức độ tham gia Boxing,Mức độ tham gia Boxing,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: MMA,Mức độ tham gia MMA,Mức độ tham gia MMA,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Wrestling,Mức độ tham gia đấu vật,Mức độ tham gia đấu vật,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Climbing,Mức độ tham gia leo núi / leo vách,Mức độ tham gia leo núi / leo vách,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Gym & Calisthenic,Mức độ tập gym & calisthenics,Mức độ tập gym & calisthenics,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Badminton,Mức độ tham gia cầu lông,Mức độ tham gia cầu lông,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Interest,Sports,Sport: Table tennis,Mức độ tham gia bóng bàn,Mức độ tham gia bóng bàn,"Thường xuyên tham gia
+Chủ yếu theo dõi
+Quan tâm nhẹ
+Không quan tâm"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Vietnamese,Ẩm thực truyền thống Việt Nam,Mức độ yêu thích Ẩm thực truyền thống Việt Nam,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Street Food,Món ăn đường phố,Mức độ yêu thích Món ăn đường phố,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Korean,Ẩm thực Hàn Quốc,Mức độ yêu thích Ẩm thực Hàn Quốc,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Japanese,Ẩm thực Nhật Bản,Mức độ yêu thích Ẩm thực Nhật Bản,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Thai,Ẩm thực Thái Lan,Mức độ yêu thích Ẩm thực Thái Lan,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: European,Ẩm thực Âu,Mức độ yêu thích Ẩm thực Âu,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Cuisine: Vegetarian,Món chay,Mức độ yêu thích Món chay,"Rất thích
+Thích
+Bình thường
+Không thích"
+Lifestyle,Food & Beverage,Culinary Preferences,Coffee & Tea culture,Văn hóa cà phê & Trà,Thói quen và sở thích thưởng thức đồ uống.,"Nghiện cà phê
+Thích trà sữa / Đồ uống ngọt
+Thích trà mộc / Trà đạo
+Thích không gian cà phê làm việc / Gặp gỡ
+Không quan trọng / Chỉ uống nước lọc"
+Lifestyle,Food & Beverage,Culinary Preferences,Cooking & Baking,Nấu ăn & Làm bánh,Mức độ tự nấu nướng và chăm sóc bữa ăn.,"Đam mê nấu ăn / Thường tự nấu
+Nấu ăn khá tốt khi cần
+Chỉ biết nấu các món cơ bản
+Không biết nấu / Chủ yếu ăn ngoài hoặc gọi đồ"
+Capability,Skills,General Skills,Logical reasoning skill,Kỹ năng suy luận logic,Mức độ thành thạo trong việc suy luận có hệ thống và xác định quan hệ logic giữa các thông tin.,"Chuyên gia
+Nâng cao
+Trung cấp
+Cơ bản
+Không có"
+Capability,Skills,General Skills,Critical thinking skill,Kỹ năng tư duy phản biện,"Mức độ thành thạo trong việc phân tích lập luận, kiểm tra giả định và đánh giá thông tin một cách có lý trí","Chuyên gia
+Nâng cao
+Trung cấp
+Cơ bản
+Không có"
+Capability,Skills,General Skills,Writing content skill,Kỹ năng viết & Diễn đạt nội dung,Mức độ thành thạo trong việc diễn đạt ý tưởng rõ ràng và hiệu quả bằng văn bản.,"Chuyên gia
+Nâng cao
+Trung cấp
+Cơ bản
+Không có"
+Capability,Skills,General Skills,Storytelling skill,"Kỹ năng kể chuyện, dẫn dắt câu chuyện",Khả năng dẫn dắt câu chuyện cuốn hút người nghe.,"Chuyên gia
+Nâng cao
+Trung cấp
+Cơ bản
+Không có"

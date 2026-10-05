@@ -196,13 +196,21 @@ class PersonaDataLoader:
 
             # 2. facebookBehavior (các trường hành vi chỉ định)
             fb_b = profile.get("facebookBehavior") or {}
+            row["discoveryStyle"] = fb_b.get("discoveryStyle")
             row["interactionStyle"] = fb_b.get("interactionStyle")
             row["pace"] = fb_b.get("pace")
             row["preferredSurface"] = fb_b.get("preferredSurface")
             row["readingDepth"] = fb_b.get("readingDepth")
             row["restStyle"] = fb_b.get("restStyle")
 
-            # 3. interests (lấy avoid và strong)
+            # 3. usage (thói quen truy cập và năng lượng)
+            usage = profile.get("usage") or {}
+            row["attention"] = usage.get("attention")
+            row["energy"] = usage.get("energy")
+            row["engagementStyle"] = usage.get("engagementStyle")
+            row["facebookFrequency"] = usage.get("facebookFrequency")
+
+            # 4. interests (lấy avoid và strong)
             interests = profile.get("interests") or {}
             avoid_list = interests.get("avoid") or []
             strong_list = interests.get("strong") or []

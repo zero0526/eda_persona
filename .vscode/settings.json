@@ -3,5 +3,6 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "notebook.renderers.useVscodeCdn": false
+  "notebook.renderers.useVscodeCdn": false,
+  "jupyter.notebookFileRoot": "${workspaceFolder}"
 }

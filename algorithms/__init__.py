@@ -56,6 +56,19 @@ from algorithms.bivariate_multivariate_profiler import (
     compute_multivariate_decomposition,
     analyze_interactions_and_simpson_paradox,
 )
+from algorithms.drift_and_rest_statistical_profiler import (
+    evaluate_temporal_drift_trajectory,
+    evaluate_guardrail_warning_recovery,
+    evaluate_rest_fatigue_dynamics,
+    run_full_statistical_investigation,
+)
+from algorithms.persona_interest_coverage_profiler import (
+    compute_persona_topic_coverage,
+)
+from algorithms.temporal_velocity_and_behavior_profiler import (
+    compute_temporal_velocity_by_pace,
+    compute_temporal_behavior_distribution,
+)
 
 __all__ = [
     "compute_pairwise_cramers_v",
@@ -88,4 +101,11 @@ __all__ = [
     "compare_categorical_numeric_associations",
     "compute_multivariate_decomposition",
     "analyze_interactions_and_simpson_paradox",
+    "evaluate_temporal_drift_trajectory",
+    "evaluate_guardrail_warning_recovery",
+    "evaluate_rest_fatigue_dynamics",
+    "run_full_statistical_investigation",
+    "compute_persona_topic_coverage",
+    "compute_temporal_velocity_by_pace",
+    "compute_temporal_behavior_distribution",
 ]

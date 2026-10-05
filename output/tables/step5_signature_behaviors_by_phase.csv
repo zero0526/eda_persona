@@ -1,0 +1,9 @@
+Giai đoạn,Đối tượng,Hành vi Đặc trưng,Tỷ trọng (%),Bản chất Nhận thức & Ý nghĩa Thực nghiệm
+Q1 (0-25% Early),Có Persona,Tìm kiếm chủ đề & Điều hướng (Search & Navigate),"38.4% (Search: 27.9%, Nav: 10.5%)","Chủ động 'săn tìm' nguồn bài viết, nạp các luồng chủ đề quan tâm vào Working Memory."
+Q1 (0-25% Early),Không Persona,Cuộn lướt feed bề nổi (Scroll Feed),28.6% (kèm Observe: 33.3%),"Lướt ngẫu nhiên bề nổi feed, thụ động do thiếu hồ sơ mục tiêu dẫn dắt ban đầu."
+Q2 (25-50% Mid-Early),Có Persona,Đọc sâu bài viết (Deep Read),13.8% (Đạt đỉnh cao nhất phiên),"Dành phần lớn nỗ lực để đọc sâu nội dung các bài viết tìm thấy từ Q1, chuyển hóa thông tin."
+Q2 (25-50% Mid-Early),Không Persona,Quan sát màn hình thụ động (Observe),40.9% (Chiếm đa số thời lượng),Không có luồng đọc có chủ đích; thời gian chết nhìn màn hình bắt đầu phình to.
+Q3 (50-75% Mid-Late),Có Persona,"Tương tác xã hội (React, Like, Share)",14.9% (Tăng lũy tiến),"Nội dung được thẩm thấu -> bộc lộ cảm xúc, like, react, share phù hợp với sở thích cá nhân."
+Q3 (50-75% Mid-Late),Không Persona,Kẹt trong Modal bài viết (Deep Read thụ động),27.3% (Tăng giả tạo),"Thời gian đọc tăng giả tạo do kẹt trong modal chi tiết, cố đóng nhưng không thành công."
+Q4 (75-100% Late),Có Persona,Chủ động Kết thúc phiên (End Session),22.5% (Search giảm về 0.0%),Đặc trưng áp đảo: Agent tự chủ gọi lệnh thoát phiên khi đã thỏa mãn mục tiêu khám phá.
+Q4 (75-100% Late),Không Persona,Nghỉ ngơi buông xuôi (Rest / Passive Idling),8.7% Rest (kèm 39.1% Observe),"'Chán chường buông xuôi, không làm gì chỉ nằm đợi hết giờ' sau chuỗi lỗi giao diện liên tiếp."

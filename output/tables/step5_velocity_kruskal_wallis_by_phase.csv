@@ -1,0 +1,5 @@
+﻿phase,kruskal_h,p_value,is_significant
+Q1 (0-25% Early),26.224,2.0212730992988256e-06,True
+Q2 (25-50% Mid-Early),33.134,6.3834682551113e-08,True
+Q3 (50-75% Mid-Late),23.019,1.0034635688962423e-05,True
+Q4 (75-100% Late),19.563,5.648907612632998e-05,True

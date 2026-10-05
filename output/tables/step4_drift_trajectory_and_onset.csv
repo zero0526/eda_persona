@@ -1,0 +1,9 @@
+﻿episode_id,dataset_type,total_steps,has_drift,onset_step_index,max_situational_steps,mean_situational_steps,drift_step_share
+2cbcde75-15d8-4223-a1a3-22c69aca9b6d,persona,53,False,-1,0,0.0,0.0
+45257517-583f-40dd-932f-09596d2b4769,no_persona,47,True,2,2,1.085,0.5745
+755b1653-927c-48f3-baf4-259c8d9091d8,no_persona,41,True,7,6,3.756,0.7073
+79f13fea-734e-4e6b-ae96-1c6235099416,persona,45,False,-1,0,0.0,0.0
+a8034b33-716e-43f0-ac5d-6ac4a8e2b387,persona,63,False,-1,0,0.0,0.0
+d64ff4c9-4fa1-4a89-91a7-5535c84b07c8,persona,60,False,-1,0,0.0,0.0
+d7a2ce38-e1b3-4c03-b2bf-703bba660b34,persona,64,False,-1,0,0.0,0.0
+f70a0623-6d79-4473-98d0-66988e23930c,persona,64,False,-1,0,0.0,0.0

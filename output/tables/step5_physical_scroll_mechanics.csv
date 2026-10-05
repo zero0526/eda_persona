@@ -1,0 +1,7 @@
+﻿persona_id,cluster,pace_profile,scroll_count,fast_mode_count,careful_mode_count,mean_speed_px_s,mean_scroll_px,mean_gesture_ms
+vn_000019,3,slow,23,0,23,1780.4,423.1,245.8
+vn_000041,2,balanced,13,0,13,1671.5,420.0,252.9
+vn_000049,2,slow,11,0,11,1847.3,459.1,256.3
+vn_000077,1,quick,2,2,0,4791.3,905.0,190.5
+vn_000081,1,quick,10,10,0,5074.8,997.8,199.1
+vn_000087,3,slow,12,0,12,1838.7,441.9,247.8

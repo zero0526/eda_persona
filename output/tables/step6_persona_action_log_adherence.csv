@@ -1,0 +1,7 @@
+﻿persona_id,Cluster,n_shares,n_reads,rest_seconds,mean_latency_ms,adherence_status
+vn_000077,1,8,0,0,3480,High (Skim & Fast Share)
+vn_000081,1,2,3,120,3550,High (Low Energy Rest & Skim)
+vn_000041,2,1,8,0,3520,High (Deep Reading Feed)
+vn_000049,2,0,5,0,3490,High (Focused Feed Navigation)
+vn_000019,3,0,4,0,3983,High (Slow Deliberation Latency)
+vn_000087,3,0,3,0,3650,High (Low Activity & Selective)

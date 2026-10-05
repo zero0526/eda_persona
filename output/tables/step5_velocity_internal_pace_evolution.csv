@@ -1,0 +1,4 @@
+﻿persona_pace,q1_mean,q4_mean,diff_q4_minus_q1,mann_whitney_u,p_value,cliffs_delta,effect_size
+quick,3.55,1.62,-1.93,509.0,0.00012489712232385567,0.631,Large
+balanced,3.9,2.36,-1.54,223.5,0.0003281662585884895,0.746,Large
+slow,1.99,2.95,0.96,607.0,0.0002494170327335635,-0.438,Medium

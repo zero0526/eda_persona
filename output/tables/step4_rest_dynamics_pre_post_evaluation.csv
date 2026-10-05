@@ -1,0 +1,4 @@
+﻿Metric,Pre_Rest_Mean,Pre_Rest_Std,Post_Rest_Mean,Post_Rest_Std,Diff (Post - Pre),Test_Statistic,p_value,Effect_Size,Is_Significant
+Action Velocity (hành động/phút),3.12,1.46,2.3,0.9,-0.82,Mann-Whitney U = 606.0,4.079638430095786e-06,Cliff's Delta = 0.741,True
+Verified Rate (%),86.2,,66.7,,-19.5,Odds Ratio = 0.320,0.11068041156880815,OR = 0.320,False
+Model Latency (ms),2941.3,1021.4,3391.2,1011.2,449.9,Mann-Whitney U = 262.0,0.12657204701715735,Mann-Whitney U,False

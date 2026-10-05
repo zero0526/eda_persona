@@ -1,0 +1,9 @@
+﻿episode_id,dataset_type,persona_id,session_minutes,total_steps,steps_with_evidence,evidence_coverage_pct,configured_core_interests_count,configured_all_positive_count,explored_topics_count,explored_topics_list,matched_profile_topics_count,alignment_precision_pct,core_topic_coverage_rate_pct,qualitative_breadth_vs_depth
+2cbcde75,persona,vn_000081,5.0,53,29,54.7,11,25,4,"Chess (Cờ vua), Meditation (Thiền định), Philosophy (Triết học), Sports (Thể thao)",3,75.0,27.3,Tập trung sâu 4 chủ đề trọng tâm
+79f13fea,persona,vn_000077,5.0,45,9,20.0,12,17,3,"Calligraphy (Thư pháp), Chess (Cờ vua), History (Lịch sử)",3,100.0,8.3,Tập trung sâu 3 chủ đề trọng tâm
+a8034b33,persona,vn_000049,8.0,63,31,49.2,12,22,3,"Biography (Tiểu sử / Hồi ký), History (Lịch sử), Sports (Thể thao)",1,33.3,16.7,Tập trung sâu 3 chủ đề trọng tâm
+d64ff4c9,persona,vn_000087,5.0,60,32,53.3,12,22,6,"Concerts (Hòa nhạc), Cycling (Đạp xe), Magic Tricks (Ảo thuật), Politics (Chính trị), Spirituality (Tâm linh), Sports (Thể thao)",5,83.3,41.7,Tập trung sâu 6 chủ đề trọng tâm
+d7a2ce38,persona,vn_000041,8.0,64,35,54.7,12,19,3,"Fitness (Thể hình / Gym), Knitting (Đan móc len), Sports (Thể thao)",2,66.7,16.7,Tập trung sâu 3 chủ đề trọng tâm
+f70a0623,persona,vn_000019,8.0,64,45,70.3,14,24,3,"Collecting (Sưu tầm), Gardening & Bonsai (Làm vườn / Cây cảnh), Magic Tricks (Ảo thuật)",3,100.0,21.4,Tập trung sâu 3 chủ đề trọng tâm
+45257517,no_persona,None,5.0,47,5,10.6,0,0,0,Không có hồ sơ (No Persona),0,,0.0,Hoạt động ngẫu nhiên / Không định hướng
+755b1653,no_persona,None,5.0,41,15,36.6,0,0,0,Không có hồ sơ (No Persona),0,,0.0,Hoạt động ngẫu nhiên / Không định hướng

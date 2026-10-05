@@ -1,0 +1,174 @@
+Ngram,Count_Persona,Count_NoPersona,Prob_Persona (%),Prob_NoPersona (%),Lift_P_vs_NP,Log_Odds_Ratio,JSD_Contrib
+React/Social -> Observe -> React/Social,21,0,6.23,0.0,62314540.06,2.441,0.03116
+Scroll Feed -> Scroll Feed -> Scroll Feed,13,0,3.86,0.0,38575667.66,1.95,0.01929
+Scroll Feed -> Search Query -> Search Query,7,0,2.08,0.0,20771513.35,1.344,0.01039
+Observe -> React/Social -> Observe,20,1,5.93,1.19,4.99,1.279,0.01243
+Deep Read -> React/Social -> Scroll Feed,5,0,1.48,0.0,14836795.25,1.028,0.00742
+Search Query -> Navigate -> Observe,5,0,1.48,0.0,14836795.25,1.028,0.00742
+Search Query -> Search Query -> Scroll Feed,5,0,1.48,0.0,14836795.25,1.028,0.00742
+Scroll Feed -> Deep Read -> React/Social,5,0,1.48,0.0,14836795.25,1.028,0.00742
+Search Query -> Search Query -> Deep Read,5,0,1.48,0.0,14836795.25,1.028,0.00742
+Navigate -> Observe -> Navigate,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Navigate -> Observe -> Search Query,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Deep Read -> React/Social -> Observe,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Observe -> Scroll Feed -> Search Query,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Scroll Feed -> End Session -> Scroll Feed,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Navigate -> Scroll Feed -> Search Query,4,0,1.19,0.0,11869436.2,0.824,0.00593
+Scroll Feed -> Scroll Feed -> Search Query,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Observe -> Search Query -> Search Query,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Scroll Feed -> Navigate -> Scroll Feed,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Observe -> React/Social -> End Session,3,0,0.89,0.0,8902077.15,0.57,0.00445
+React/Social -> Observe -> End Session,3,0,0.89,0.0,8902077.15,0.57,0.00445
+End Session -> Observe -> Scroll Feed,3,0,0.89,0.0,8902077.15,0.57,0.00445
+End Session -> Scroll Feed -> Scroll Feed,3,0,0.89,0.0,8902077.15,0.57,0.00445
+End Session -> Observe -> End Session,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Search Query -> Observe -> Navigate,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Scroll Feed -> Observe -> Scroll Feed,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Search Query -> Scroll Feed -> Scroll Feed,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Scroll Feed -> Search Query -> Navigate,3,0,0.89,0.0,8902077.15,0.57,0.00445
+Observe -> End Session -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> Navigate -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Search Query -> Navigate,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Scroll Feed -> Scroll Feed,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> End Session -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Search Query -> Search Query,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> Navigate -> Search Query,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> React/Social -> Scroll Feed,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> Navigate -> End Session,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> Scroll Feed -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Scroll Feed -> End Session,2,0,0.59,0.0,5934718.1,0.231,0.00297
+React/Social -> End Session -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Deep Read -> Scroll Feed -> Navigate,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Deep Read -> React/Social,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Deep Read -> Scroll Feed -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Navigate -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+React/Social -> Scroll Feed -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+React/Social -> Observe -> Scroll Feed,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Navigate -> Search Query -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Search Query -> Scroll Feed,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Search Query -> Observe -> Search Query,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Observe -> Search Query -> Navigate,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Search Query -> Search Query -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Search Query -> Navigate -> Search Query,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Observe -> React/Social,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Navigate -> Search Query,2,0,0.59,0.0,5934718.1,0.231,0.00297
+React/Social -> Scroll Feed -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Scroll Feed -> End Session,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> React/Social -> Observe,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Search Query -> Deep Read -> Scroll Feed,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Scroll Feed -> Navigate,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Scroll Feed -> Deep Read,2,0,0.59,0.0,5934718.1,0.231,0.00297
+Scroll Feed -> Observe -> Navigate,5,1,1.48,1.19,1.25,-0.083,0.00012
+Search Query -> Deep Read -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Scroll Feed -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Search Query -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> Rest/Wait -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Other -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Deep Read -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Deep Read -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> End Session -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> Navigate -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> Other -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> Other -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Scroll Feed -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Scroll Feed -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Other -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Observe -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Scroll Feed -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> Deep Read -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> Deep Read -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> End Session -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> End Session -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Deep Read -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Deep Read -> Deep Read,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Deep Read -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> React/Social -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Deep Read -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> Navigate -> Deep Read,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> Deep Read -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Rest/Wait -> Scroll Feed -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> React/Social -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+End Session -> Rest/Wait -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> End Session -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> Navigate -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> Other -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> React/Social -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Deep Read -> React/Social -> Deep Read,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Observe -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Navigate -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Navigate -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> React/Social -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> End Session -> Rest/Wait,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Other -> Observe -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Scroll Feed -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Scroll Feed -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Navigate -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> End Session -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Deep Read -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> Search Query -> Deep Read,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Deep Read -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Navigate -> Scroll Feed -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Search Query -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Search Query -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Other -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Search Query -> Scroll Feed -> React/Social,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Deep Read -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> End Session -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Other -> React/Social -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Other -> Other -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Scroll Feed -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Other -> Other -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Search Query -> Deep Read,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Rest/Wait -> Navigate -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> Deep Read -> Rest/Wait,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> Observe -> End Session,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> End Session -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> End Session -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Navigate -> Observe,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Scroll Feed -> Scroll Feed,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+React/Social -> Scroll Feed -> Search Query,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Other -> Other -> Other,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Scroll Feed -> Deep Read -> Navigate,1,0,0.3,0.0,2967359.05,-0.283,0.00148
+Observe -> Search Query -> Observe,7,2,2.08,2.38,0.87,-0.289,7e-05
+Search Query -> Observe -> Scroll Feed,6,2,1.78,2.38,0.75,-0.435,0.00031
+Observe -> Deep Read -> Scroll Feed,3,1,0.89,1.19,0.75,-0.54,0.00016
+Search Query -> Scroll Feed -> Observe,3,1,0.89,1.19,0.75,-0.54,0.00016
+Observe -> Navigate -> Scroll Feed,4,2,1.19,2.38,0.5,-0.809,0.00147
+Deep Read -> Scroll Feed -> Observe,2,1,0.59,1.19,0.5,-0.88,0.00073
+Other -> Observe -> Scroll Feed,2,1,0.59,1.19,0.5,-0.88,0.00073
+Observe -> Navigate -> Observe,3,2,0.89,2.38,0.37,-1.063,0.00254
+Scroll Feed -> Observe -> Search Query,4,3,1.19,3.57,0.33,-1.158,0.00451
+Observe -> Scroll Feed -> Observe,7,6,2.08,7.14,0.29,-1.294,0.01062
+Deep Read -> Observe -> React/Social,1,1,0.3,1.19,0.25,-1.394,0.00207
+Deep Read -> Observe -> Deep Read,1,1,0.3,1.19,0.25,-1.394,0.00207
+Observe -> Search Query -> Scroll Feed,1,1,0.3,1.19,0.25,-1.394,0.00207
+Search Query -> Scroll Feed -> Navigate,1,1,0.3,1.19,0.25,-1.394,0.00207
+Navigate -> Observe -> Deep Read,3,3,0.89,3.57,0.25,-1.412,0.00622
+Navigate -> Scroll Feed -> Observe,1,2,0.3,2.38,0.12,-1.917,0.00666
+Deep Read -> Observe -> Scroll Feed,1,3,0.3,3.57,0.08,-2.265,0.01179
+End Session -> Navigate -> Other,0,1,0.0,1.19,0.0,-2.495,0.00595
+Deep Read -> Observe -> End Session,0,1,0.0,1.19,0.0,-2.495,0.00595
+React/Social -> Search Query -> Scroll Feed,0,1,0.0,1.19,0.0,-2.495,0.00595
+React/Social -> Other -> Scroll Feed,0,1,0.0,1.19,0.0,-2.495,0.00595
+Navigate -> Other -> Rest/Wait,0,1,0.0,1.19,0.0,-2.495,0.00595
+Navigate -> Navigate -> Observe,0,1,0.0,1.19,0.0,-2.495,0.00595
+Observe -> Navigate -> Rest/Wait,0,1,0.0,1.19,0.0,-2.495,0.00595
+Observe -> End Session -> Navigate,0,1,0.0,1.19,0.0,-2.495,0.00595
+Other -> Rest/Wait -> End Session,0,1,0.0,1.19,0.0,-2.495,0.00595
+Navigate -> Rest/Wait -> Observe,0,1,0.0,1.19,0.0,-2.495,0.00595
+Rest/Wait -> Observe -> Deep Read,0,1,0.0,1.19,0.0,-2.495,0.00595
+Scroll Feed -> React/Social -> Search Query,0,1,0.0,1.19,0.0,-2.495,0.00595
+Scroll Feed -> Other -> React/Social,0,1,0.0,1.19,0.0,-2.495,0.00595
+React/Social -> Observe -> Deep Read,0,1,0.0,1.19,0.0,-2.495,0.00595
+Other -> Observe -> End Session,0,1,0.0,1.19,0.0,-2.495,0.00595
+Observe -> Scroll Feed -> Other,0,1,0.0,1.19,0.0,-2.495,0.00595
+Other -> Scroll Feed -> React/Social,0,1,0.0,1.19,0.0,-2.495,0.00595
+Other -> React/Social -> Other,0,1,0.0,1.19,0.0,-2.495,0.00595
+Scroll Feed -> Navigate -> Navigate,0,1,0.0,1.19,0.0,-2.495,0.00595
+Scroll Feed -> Observe -> Deep Read,1,4,0.3,4.76,0.06,-2.529,0.01715
+Other -> Observe -> Deep Read,0,2,0.0,2.38,0.0,-3.018,0.0119
+Deep Read -> Observe -> Other,0,2,0.0,2.38,0.0,-3.018,0.0119
+Scroll Feed -> Observe -> Other,0,2,0.0,2.38,0.0,-3.018,0.0119
+Deep Read -> Observe -> Navigate,0,4,0.0,4.76,0.0,-3.631,0.02381
+Observe -> Other -> Observe,0,4,0.0,4.76,0.0,-3.631,0.02381
+Observe -> Deep Read -> Observe,1,12,0.3,14.29,0.02,-3.655,0.06246
