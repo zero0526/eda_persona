@@ -1,14 +1,5 @@
-from data_loader import PersonaDataLoader
+import sqlite3
 
-loader = PersonaDataLoader()
-print("=== DATA SUMMARY ===")
-for k, v in loader.summary().items():
-    print(f"  • {k}: {v}")
+sql = sqlite3.connect('/data/projects/web-apps/agent_in_works/claw-master/data/persona-runner.sqlite')
 
-df_fb = loader.to_fb_dataframe(drop_null=True)
-print(f"\n=== FB BEHAVIOR PROFILE DATAFRAME (Shape: {df_fb.shape}) ===")
-print(df_fb[["persona_id", "directness", "emojiUse", "register", "interactionStyle", "pace", "preferredSurface", "readingDepth", "restStyle", "num_avoid", "num_strong"]])
-print("\nSample avoid & strong interests for first persona:")
-print("  • Avoid (sample 3):", df_fb.loc[0, "avoid"][:3])
-print("  • Strong (sample 3):", df_fb.loc[0, "strong"][:3])
-
+print(sql.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall())

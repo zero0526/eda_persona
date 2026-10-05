@@ -78,7 +78,7 @@ except ImportError:
     )
 
 # Đường dẫn mặc định tới SQLite của claw-master
-DEFAULT_SQLITE_PATH = r"D:\source_code\agent_in_works\claw-master\data\persona-runner.sqlite"
+DEFAULT_SQLITE_PATH = r"/data/projects/web-apps/agent_in_works/claw-master/data/persona-runner.sqlite"
 
 try:
     from dotenv import load_dotenv
