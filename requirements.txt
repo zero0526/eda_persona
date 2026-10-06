@@ -7,3 +7,5 @@ matplotlib
 seaborn
 pyyaml
 underthesea
+python-dotenv
+pydantic>=2.0

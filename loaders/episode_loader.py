@@ -77,16 +77,15 @@ except ImportError:
         WorkingMemorySnapshotSchema,
     )
 
-# Đường dẫn mặc định tới SQLite của claw-master
-DEFAULT_SQLITE_PATH = r"/data/projects/web-apps/agent_in_works/claw-master/data/persona-runner.sqlite"
+# Đường dẫn mặc định tới SQLite của claw-master (tự động thích ứng Windows / Linux)
+DEFAULT_SQLITE_PATH = (
+    r"D:\source_code\agent_in_works\claw-master\data\persona-runner.sqlite"
+    if os.name == "nt"
+    else r"/data/projects/web-apps/agent_in_works/claw-master/data/persona-runner.sqlite"
+)
 
-try:
-    from dotenv import load_dotenv
-    # Tìm file .env ở thư mục hiện tại hoặc cấp trên
-    load_dotenv(override=False)
-except ImportError:
-    pass
-
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_sqlite_path(custom_path: Optional[str] = None) -> str:
     """Xác định đường dẫn file SQLite từ tham số, biến môi trường SQLITE_PATH hoặc mặc định."""

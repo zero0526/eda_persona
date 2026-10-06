@@ -26,6 +26,15 @@ from loaders.schemas.runner_episode import (
     ActiveThreadSchema,
     FullEpisodeSchema,
 )
+from loaders.action_loader import (
+    ActionLoader,
+    ActionLog,
+    SessionLog,
+    PersonaActionHistory,
+    load_session_log,
+    load_persona_sessions,
+    load_all_persona_sessions,
+)
 
 __all__ = [
     "DEFAULT_SQLITE_PATH",
@@ -50,4 +59,13 @@ __all__ = [
     "ActiveEntitySchema",
     "ActiveThreadSchema",
     "FullEpisodeSchema",
+    # Action & Persona Session Loader
+    "ActionLoader",
+    "ActionLog",
+    "SessionLog",
+    "PersonaActionHistory",
+    "load_session_log",
+    "load_persona_sessions",
+    "load_all_persona_sessions",
 ]
+
