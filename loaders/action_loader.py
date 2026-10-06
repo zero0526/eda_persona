@@ -37,6 +37,12 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+# Đảm bảo thư mục gốc của project luôn nằm trong sys.path
+_current_file = Path(__file__).resolve()
+_project_root = _current_file.parent.parent
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+
 # Import các loader và schema hiện có
 try:
     from loaders.episode_loader import DEFAULT_SQLITE_PATH, get_sqlite_path, load_episode, list_episodes
@@ -135,6 +141,231 @@ class ActionLog(BaseModel):
     total_tokens: Optional[int] = Field(None, description="Tổng token tiêu thụ.")
 
 
+
+# ==============================================================================
+# II. PYDANTIC SCHEMAS CHO BỘ NHỚ (LONG-TERM PRIOR & SHORT-TERM WORKING MEMORY)
+# ==============================================================================
+
+# --- 1. Long-Term Prior Memory Schemas (Bộ nhớ dài hạn sẵn có lúc bắt đầu session) ---
+
+class ExplorationDispositionSchema(BaseModel):
+    """Thiên hướng khám phá nhận thức ban đầu của persona."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    initiative: Optional[str] = Field(None, description="Mức độ chủ động tìm tòi (high, medium, low).")
+    natural_triggers: List[str] = Field(default_factory=list, description="Các tác nhân tự nhiên kích thích tò mò.")
+    variety: Optional[str] = Field(None, description="Mức độ đa dạng hóa nội dung.")
+
+
+class ExplorationThreadBaselineSchema(BaseModel):
+    """Mạch định hướng khám phá ban đầu được nạp sẵn từ baseline."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    key: Optional[str] = Field(None, description="Mã định danh luồng khám phá.")
+    topic: Optional[str] = Field(None, description="Chủ đề quan tâm.")
+    angles: List[str] = Field(default_factory=list, description="Các góc nhìn hoặc câu hỏi tò mò.")
+    based_on: List[str] = Field(default_factory=list, description="Căn cứ đặc tính persona.")
+    source_types: List[str] = Field(default_factory=list, description="Các loại định dạng nguồn ưu tiên.")
+
+
+class PriorInterestThreadDetail(BaseModel):
+    """Luồng sở thích dài hạn đã có sẵn của tác tử bot trước khi vào phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    thread_key: str = Field(..., description="Khóa định danh slug của luồng sở thích.")
+    title: Optional[str] = Field(None, description="Tiêu đề luồng sở thích.")
+    summary: Optional[str] = Field(None, description="Tóm tắt nhận thức tiến trình luồng sở thích.")
+    confidence: Optional[float] = Field(None, description="Độ tin cậy của mô hình về sở thích này (0.0 đến 1.0).")
+    evidence_count: Optional[int] = Field(0, description="Số lượng bằng chứng tương tác đã tích lũy.")
+    status: Optional[str] = Field(None, description="Trạng thái luồng (active, dormant).")
+    updated_at: Optional[str] = Field(None, description="Thời điểm cập nhật cuối.")
+
+
+class PriorEntityAffinityDetail(BaseModel):
+    """Trang, nhóm hoặc thực thể quen thuộc mà tác tử đã có độ gắn kết từ trước."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    entity_type: Optional[str] = Field(None, description="Loại thực thể (source, group, page, user).")
+    entity_key: Optional[str] = Field(None, description="URL hoặc key của thực thể.")
+    display_name: Optional[str] = Field(None, description="Tên hiển thị của trang/nhóm.")
+    url: Optional[str] = Field(None, description="Đường dẫn URL của thực thể.")
+    affinity: Optional[float] = Field(None, description="Điểm gắn kết (affinity score) từ 0.0 đến 1.0.")
+    familiarity: Optional[float] = Field(None, description="Mức độ quen thuộc.")
+    relationship_state: Optional[str] = Field(None, description="Trạng thái quan hệ (provisional, established).")
+    evidence_count: Optional[int] = Field(0, description="Số lượng bằng chứng tương tác ghi nhận.")
+
+
+class PriorHabitSnapshotDetail(BaseModel):
+    """Ảnh chụp phân bổ thói quen tương tác của tác tử trước khi bắt đầu phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    action_counts: Dict[str, int] = Field(default_factory=dict, description="Số lần thực hiện từng loại tool/action trước đó.")
+    surface_counts: Dict[str, int] = Field(default_factory=dict, description="Số bước trên từng bề mặt trước đó.")
+    learned_pacing: Dict[str, float] = Field(default_factory=dict, description="Nhịp độ tương tác đã học được.")
+    preferred_surfaces: List[str] = Field(default_factory=list, description="Các bề mặt ưa thích.")
+    ranked_topics: List[str] = Field(default_factory=list, description="Các chủ đề xếp hạng ưu tiên.")
+    verified_tools: List[str] = Field(default_factory=list, description="Các công cụ đã xác minh thành thạo.")
+
+
+class PriorLongTermMemory(BaseModel):
+    """Toàn bộ tri thức và bộ nhớ dài hạn sẵn có tại thời điểm bắt đầu session."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    core_interests: List[str] = Field(default_factory=list, description="Danh sách sở thích cốt lõi dài hạn.")
+    avoid_topics: List[str] = Field(default_factory=list, description="Danh sách chủ đề chủ động né tránh.")
+    adjacent_interests: List[str] = Field(default_factory=list, description="Sở thích tiệm cận/phát sinh.")
+    source_preferences: List[str] = Field(default_factory=list, description="Ưu tiên định dạng nguồn nội dung.")
+    preferred_surface: Optional[str] = Field(None, description="Bề mặt ưu tiên (feed, reels...).")
+    reading_depth: Optional[str] = Field(None, description="Độ sâu đọc (selective, deep...).")
+    discovery_style: Optional[str] = Field(None, description="Phong cách khám phá (topic_led...).")
+    interaction_style: Optional[str] = Field(None, description="Phong cách tương tác (responsive...).")
+    exploration_disposition: Optional[ExplorationDispositionSchema] = Field(None, description="Thiên hướng khám phá nhận thức.")
+    exploration_threads: List[ExplorationThreadBaselineSchema] = Field(default_factory=list, description="Các mạch định hướng khám phá ban đầu.")
+    known_interest_threads: List[PriorInterestThreadDetail] = Field(default_factory=list, description="Các luồng sở thích dài hạn đã có sẵn.")
+    known_affinities: List[PriorEntityAffinityDetail] = Field(default_factory=list, description="Các trang/nhóm đã quen thuộc từ trước.")
+    prior_habit_snapshot: Optional[PriorHabitSnapshotDetail] = Field(None, description="Ảnh chụp thói quen hành vi trước phiên.")
+
+
+# --- 2. Short-Term Working Memory Schemas (Bộ nhớ ngắn hạn sinh ra lúc hành động) ---
+
+class WorkingMemoryActiveThreadDetail(BaseModel):
+    """Luồng quan tâm/hứng thú đang được theo đuổi trong working memory của phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    key: Optional[str] = Field(None, description="Khóa định danh luồng nội dung.")
+    topic: Optional[str] = Field(None, description="Chủ đề đang quan tâm.")
+    purpose: Optional[str] = Field(None, description="Mục đích nhận thức của hành động.")
+    origin: Optional[str] = Field(None, description="Nguồn gốc luồng (situational, persona, exploration).")
+    state: Optional[str] = Field(None, description="Trạng thái tâm lý/hành vi (exploring, active, resolved).")
+    interest_relation: Optional[str] = Field(None, description="Quan hệ với sở thích (situational, aligned).")
+    open_question: Optional[str] = Field(None, description="Câu hỏi mở mà tác tử tò mò muốn tìm lời giải.")
+    last_intent: Optional[str] = Field(None, description="Ý định hành động gần nhất trên mạch này.")
+    verified_steps: Optional[int] = Field(0, description="Số bước thực thi thành công gắn với mạch.")
+    evidence: List[str] = Field(default_factory=list, description="Bằng chứng nhận thức kích hoạt mạch này.")
+
+
+class WorkingMemoryReadPostDetail(BaseModel):
+    """Bài viết đã đọc trong phiên kèm thời gian dừng đọc (dwell time) và đoạn trích."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    url: Optional[str] = Field(None, description="URL bài viết.")
+    dwell_seconds: Optional[float] = Field(None, description="Thời gian dừng đọc bài tính bằng giây (dwell time).")
+    read_at_elapsed: Optional[int] = Field(None, description="Thời điểm đọc tính từ đầu phiên (giây).")
+    snippet: Optional[str] = Field(None, description="Trích đoạn nội dung bài viết.")
+    content_stage: Optional[str] = Field(None, description="Giai đoạn đọc (preview, full).")
+    duration_measurement: Optional[str] = Field(None, description="Cách thức đo thời gian dừng đọc.")
+
+
+class WorkingMemoryOpenedSourceDetail(BaseModel):
+    """Nguồn, trang hoặc nhóm Facebook đã mở ra trong phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    at_elapsed: Optional[int] = Field(None, description="Thời điểm mở tính từ đầu phiên (giây).")
+    target: Optional[str] = Field(None, description="Tên hoặc trích dẫn nguồn/nhóm đã mở.")
+    type: Optional[str] = Field(None, description="Loại nguồn (group, page, profile).")
+
+
+class WorkingMemorySearchedTopicDetail(BaseModel):
+    """Chủ đề tìm kiếm ghi nhận trong working memory của phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    at_elapsed: Optional[int] = Field(None, description="Thời điểm tìm kiếm tính từ đầu phiên (giây).")
+    query: Optional[str] = Field(None, description="Từ khóa truy vấn tìm kiếm.")
+    purpose: Optional[str] = Field(None, description="Mục đích tìm kiếm.")
+    open_question: Optional[str] = Field(None, description="Câu hỏi mở tác tử tò mò.")
+    outcome: Optional[str] = Field(None, description="URL hoặc kết quả tìm kiếm.")
+    thread_id: Optional[str] = Field(None, description="ID luồng quan tâm liên kết.")
+
+
+class WorkingMemoryOwnWritingDetail(BaseModel):
+    """Nội dung do tác tử tự sáng tác trong phiên (comment, bài chia sẻ...)."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    kind: Optional[str] = Field(None, description="Loại nội dung (comment, share, search_related).")
+    content: Optional[str] = Field(None, description="Nội dung văn bản được viết.")
+    voice_id: Optional[str] = Field(None, description="ID giọng điệu phát ngôn.")
+    provenance: Optional[str] = Field(None, description="Nguồn gốc tác sinh.")
+    subject_kind: Optional[str] = Field(None, description="Đối tượng tương tác (post, video).")
+    subject_url: Optional[str] = Field(None, description="URL đối tượng tương tác.")
+
+
+class WorkingMemoryNoveltyDetail(BaseModel):
+    """Thông tin điều hướng tính mới mẻ và kiểm soát trôi dạt chủ đề."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    guidance: Optional[str] = Field(None, description="Hướng dẫn từ hệ thống về tính mới mẻ và quota đổi chủ đề.")
+    explored_thread_count: Optional[int] = Field(None, description="Số luồng chủ đề đã khám phá.")
+    explored_evidence_share: Optional[float] = Field(None, description="Tỷ trọng bằng chứng đã khám phá.")
+    situational_steps: Optional[int] = Field(None, description="Số bước tương tác theo tình huống ngẫu nhiên.")
+
+
+class WorkingMemoryRestDetail(BaseModel):
+    """Trạng thái nghỉ ngơi và phân bổ nhịp thở trong phiên."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    accumulated_seconds: int = Field(0, description="Tổng số giây nghỉ ngơi tích lũy.")
+    count: int = Field(0, description="Số lần nghỉ ngơi.")
+
+
+class SessionHabitFactDetail(BaseModel):
+    """Sự kiện hình thành thói quen vi mô phát sinh trong phiên từ `habit_facts`."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    id: Union[str, int] = Field(..., description="ID sự kiện thói quen.")
+    kind: str = Field(..., description="Loại sự kiện (interaction_outcome, session_timing...).")
+    intent: Optional[str] = Field(None, description="Ý định hành động.")
+    tool: Optional[str] = Field(None, description="Công cụ thực thi.")
+    resolver: Optional[str] = Field(None, description="Bộ điều phối resolver.")
+    verified: Optional[bool] = Field(None, description="Trạng thái xác minh thành công.")
+    surface: Optional[str] = Field(None, description="Bề mặt tương tác.")
+    dwell_ms: Optional[int] = Field(None, description="Thời gian dừng dwell (ms).")
+    created_at: Optional[str] = Field(None, description="Thời điểm ghi nhận.")
+
+
+class SessionMemoryDeltaDetail(BaseModel):
+    """Biến đổi cập nhật vào bộ nhớ dài hạn do phiên này sinh ra từ `memory_delta_ledger`."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    id: Optional[Union[str, int]] = Field(None, description="ID bản ghi delta.")
+    record_type: str = Field(..., description="Loại thực thể (thread, entity, affinity).")
+    record_key: str = Field(..., description="Khóa định danh slug/URL.")
+    operation: str = Field(..., description="Thao tác (upsert, create, update, decay).")
+    statement: Optional[str] = Field(None, description="Mệnh đề nhận thức mới rút ra được.")
+    confidence: Optional[float] = Field(None, description="Độ tin cậy của tri thức mới.")
+    evidence_count: Optional[int] = Field(None, description="Số lượng bằng chứng mới.")
+    rationale: Optional[str] = Field(None, description="Lập luận củng cố cho việc cập nhật bộ nhớ.")
+    created_at: Optional[str] = Field(None, description="Thời điểm ghi nhận.")
+
+
+class ShortTermWorkingMemory(BaseModel):
+    """Bộ nhớ làm việc ngắn hạn sinh ra và biến đổi liên tục trong suốt phiên thực thi."""
+    model_config = ConfigDict(extra="ignore", populate_by_name=True)
+
+    current_surface: Optional[str] = Field(None, description="Bề mặt giao diện hiện tại.")
+    elapsed_seconds: Optional[int] = Field(None, description="Thời gian đã chạy (giây).")
+    remaining_seconds: Optional[int] = Field(None, description="Thời gian còn lại (giây).")
+    completed_actions: Optional[int] = Field(None, description="Số hành động đã hoàn tất trong phiên.")
+    planned_active_seconds: Optional[int] = Field(None, description="Thời lượng mục tiêu của phiên (giây).")
+    rest: WorkingMemoryRestDetail = Field(default_factory=WorkingMemoryRestDetail, description="Nhịp nghỉ tích lũy trong phiên.")
+    summary: Optional[str] = Field(None, description="Tóm tắt ngắn gọn trạng thái bộ nhớ phiên.")
+    planner_rule: Optional[str] = Field(None, description="Quy tắc định hướng lập kế hoạch nhận thức.")
+    novelty: Optional[WorkingMemoryNoveltyDetail] = Field(None, description="Điều hướng tính mới mẻ và kiểm soát chủ đề.")
+    active_threads: List[WorkingMemoryActiveThreadDetail] = Field(default_factory=list, description="Các luồng quan tâm/hứng thú đang sinh ra và theo đuổi trong phiên.")
+    current_thread: Optional[WorkingMemoryActiveThreadDetail] = Field(None, description="Mạch nội dung hiện tại đang xử lý.")
+    read_posts: List[WorkingMemoryReadPostDetail] = Field(default_factory=list, description="Danh sách các bài viết đã đọc kèm dwell time.")
+    opened_sources: List[WorkingMemoryOpenedSourceDetail] = Field(default_factory=list, description="Danh sách các URL/nguồn đã mở trong phiên.")
+    searched_topics: List[WorkingMemorySearchedTopicDetail] = Field(default_factory=list, description="Các chủ đề tìm kiếm trong working memory.")
+    recent_own_writing: List[WorkingMemoryOwnWritingDetail] = Field(default_factory=list, description="Các nội dung bài viết/bình luận tác tử tự sáng tác.")
+    habit_facts: List[SessionHabitFactDetail] = Field(default_factory=list, description="Các sự kiện thói quen phát sinh trong phiên.")
+    memory_deltas: List[SessionMemoryDeltaDetail] = Field(default_factory=list, description="Biến đổi/cập nhật bộ nhớ dài hạn do phiên sinh ra.")
+    consolidation_summary: Optional[str] = Field(None, description="Tóm tắt hợp nhất tri thức sau phiên.")
+    learned_count: Optional[int] = Field(None, description="Số lượng tri thức mới được học.")
+
+
+# ==============================================================================
+# III. PYDANTIC SCHEMAS CHO SESSION HOÀN CHỈNH
+# ==============================================================================
+
 class SessionLog(BaseModel):
     """Đại diện cho log hoàn chỉnh của một phiên chạy (Session/Episode)."""
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -158,6 +389,16 @@ class SessionLog(BaseModel):
     
     # Danh sách toàn bộ hành động (được sắp xếp chuẩn theo thứ tự bước/thời gian)
     actions: List[ActionLog] = Field(default_factory=list, description="Danh sách các hành động trong phiên.")
+
+    # Thông tin bộ nhớ tại phiên này
+    prior_memory: Optional[PriorLongTermMemory] = Field(
+        None,
+        description="Bộ nhớ dài hạn sẵn có tại thời điểm bắt đầu phiên (baseline interests, avoid topics, known threads, affinities, habit snapshot)."
+    )
+    working_memory: Optional[ShortTermWorkingMemory] = Field(
+        None,
+        description="Bộ nhớ ngắn hạn sinh ra và biến đổi trong phiên (active threads, read posts, novelty guidance, habit facts, memory deltas)."
+    )
 
     # Các chỉ số thống kê gộp nhanh
     total_actions: int = Field(0, description="Tổng số hành động thực hiện trong phiên.")
@@ -238,7 +479,9 @@ class SessionLog(BaseModel):
         return pd.DataFrame(records)
 
     def get_summary(self) -> Dict[str, Any]:
-        """Trả về từ điển tóm tắt các chỉ số chính của session."""
+        """Trả về từ điển tóm tắt các chỉ số chính của session kèm thông tin bộ nhớ."""
+        pm = self.prior_memory
+        wm = self.working_memory
         return {
             "session_id": self.session_id,
             "persona_id": self.persona_id,
@@ -254,13 +497,26 @@ class SessionLog(BaseModel):
             "total_scroll_px": self.total_scroll_px,
             "surface_distribution": self.surface_distribution,
             "intent_distribution": self.intent_distribution,
+            # Chỉ số tóm tắt bộ nhớ dài hạn
+            "prior_core_interests_count": len(pm.core_interests) if pm else 0,
+            "prior_avoid_topics_count": len(pm.avoid_topics) if pm else 0,
+            "prior_known_threads_count": len(pm.known_interest_threads) if pm else 0,
+            "prior_known_affinities_count": len(pm.known_affinities) if pm else 0,
+            # Chỉ số tóm tắt bộ nhớ ngắn hạn
+            "session_active_threads_count": len(wm.active_threads) if wm else 0,
+            "session_read_posts_count": len(wm.read_posts) if wm else 0,
+            "session_habit_facts_count": len(wm.habit_facts) if wm else 0,
+            "session_memory_deltas_count": len(wm.memory_deltas) if wm else 0,
+            "novelty_guidance": wm.novelty.guidance if wm and wm.novelty else None,
         }
 
     @classmethod
     def from_full_episode(
         cls,
         ep: FullEpisodeSchema,
-        session_order: Optional[int] = None
+        session_order: Optional[int] = None,
+        prior_memory: Optional[PriorLongTermMemory] = None,
+        working_memory: Optional[ShortTermWorkingMemory] = None,
     ) -> SessionLog:
         """Khởi tạo SessionLog từ đối tượng FullEpisodeSchema nạp từ SQLite."""
         actions: List[ActionLog] = []
@@ -356,6 +612,8 @@ class SessionLog(BaseModel):
             terminal_reason=ep.metadata.terminal_reason,
             video_path=ep.metadata.video_path,
             actions=actions,
+            prior_memory=prior_memory,
+            working_memory=working_memory,
         )
 
 
@@ -469,16 +727,106 @@ class PersonaActionHistory(BaseModel):
         crosstab = pd.crosstab(valid[column], valid["next_state"], normalize="index")
         return crosstab.round(4)
 
+    def to_memory_evolution_dataframe(self) -> pd.DataFrame:
+        """Xuất DataFrame tiến hóa bộ nhớ dài hạn và ngắn hạn qua các session theo thời gian."""
+        records = []
+        for s in self.sessions:
+            pm = s.prior_memory
+            wm = s.working_memory
+
+            row = {
+                "persona_id": self.persona_id,
+                "persona_name": self.persona_name,
+                "session_order": s.session_order,
+                "session_id": s.session_id,
+                "started_at": s.started_at,
+                "duration_seconds": s.duration_seconds,
+                "total_actions": s.total_actions,
+                # --- Long-Term Prior Memory (Bắt đầu phiên) ---
+                "prior_core_interests_count": len(pm.core_interests) if pm else 0,
+                "prior_avoid_topics_count": len(pm.avoid_topics) if pm else 0,
+                "prior_adjacent_interests_count": len(pm.adjacent_interests) if pm else 0,
+                "prior_exploration_threads_count": len(pm.exploration_threads) if pm else 0,
+                "prior_known_threads_count": len(pm.known_interest_threads) if pm else 0,
+                "prior_known_affinities_count": len(pm.known_affinities) if pm else 0,
+                "prior_preferred_surface": pm.preferred_surface if pm else None,
+                "prior_discovery_style": pm.discovery_style if pm else None,
+                "prior_interaction_style": pm.interaction_style if pm else None,
+                # --- Short-Term Working Memory (Sinh ra trong phiên) ---
+                "session_active_threads_count": len(wm.active_threads) if wm else 0,
+                "session_read_posts_count": len(wm.read_posts) if wm else 0,
+                "session_read_posts_avg_dwell_sec": (
+                    round(sum(p.dwell_seconds or 0 for p in wm.read_posts) / len(wm.read_posts), 2)
+                    if wm and wm.read_posts else 0.0
+                ),
+                "session_opened_sources_count": len(wm.opened_sources) if wm else 0,
+                "session_searched_topics_count": len(wm.searched_topics) if wm else 0,
+                "session_recent_writings_count": len(wm.recent_own_writing) if wm else 0,
+                "session_rest_accumulated_seconds": wm.rest.accumulated_seconds if wm else 0,
+                "session_rest_count": wm.rest.count if wm else 0,
+                "session_habit_facts_count": len(wm.habit_facts) if wm else 0,
+                "session_memory_deltas_count": len(wm.memory_deltas) if wm else 0,
+                "session_learned_count": wm.learned_count if wm else 0,
+                "novelty_guidance": wm.novelty.guidance if wm and wm.novelty else None,
+                "novelty_situational_steps": wm.novelty.situational_steps if wm and wm.novelty else None,
+                "working_memory_summary": wm.summary if wm else None,
+            }
+            records.append(row)
+        return pd.DataFrame(records)
+
+    def to_working_memory_active_threads_dataframe(self) -> pd.DataFrame:
+        """Xuất DataFrame chi tiết tất cả các luồng quan tâm/hứng thú được theo đuổi trong các phiên."""
+        records = []
+        for s in self.sessions:
+            if not s.working_memory:
+                continue
+            for th in s.working_memory.active_threads:
+                records.append({
+                    "persona_id": self.persona_id,
+                    "session_order": s.session_order,
+                    "session_id": s.session_id,
+                    "thread_key": th.key,
+                    "topic": th.topic,
+                    "purpose": th.purpose,
+                    "origin": th.origin,
+                    "state": th.state,
+                    "interest_relation": th.interest_relation,
+                    "open_question": th.open_question,
+                    "last_intent": th.last_intent,
+                    "verified_steps": th.verified_steps,
+                    "evidence": ", ".join(th.evidence) if th.evidence else None,
+                })
+        return pd.DataFrame(records)
+
+    def to_read_posts_dataframe(self) -> pd.DataFrame:
+        """Xuất DataFrame chi tiết các bài viết đã đọc kèm thời gian dwell time qua các phiên."""
+        records = []
+        for s in self.sessions:
+            if not s.working_memory:
+                continue
+            for p in s.working_memory.read_posts:
+                records.append({
+                    "persona_id": self.persona_id,
+                    "session_order": s.session_order,
+                    "session_id": s.session_id,
+                    "read_at_elapsed": p.read_at_elapsed,
+                    "dwell_seconds": p.dwell_seconds,
+                    "url": p.url,
+                    "content_stage": p.content_stage,
+                    "snippet": p.snippet[:150] if p.snippet else None,
+                })
+        return pd.DataFrame(records)
+
 
 # ==============================================================================
-# II. LỚP ĐIỀU PHỐI ACTION LOADER
+# IV. LỚP ĐIỀU PHỐI ACTION LOADER
 # ==============================================================================
 
 class ActionLoader:
     """Bộ nạp chuyên sâu quản lý Action Logs và kết tập Sessions theo Persona.
     
     Cung cấp các API thuận tiện để tải session đơn lẻ hoặc tải toàn bộ session
-    kết tập theo Persona có sắp xếp theo thời gian thực thi.
+    kết tập theo Persona có sắp xếp theo thời gian thực thi kèm bộ nhớ phiên đầy đủ.
     """
 
     def __init__(
@@ -490,25 +838,356 @@ class ActionLoader:
         self.action_logs_dir = Path(action_logs_dir) if action_logs_dir else Path("./data/action_logs")
         self._persona_histories_cache: Optional[Dict[str, PersonaActionHistory]] = None
 
+    def _load_memory_for_session(
+        self,
+        session_id: str,
+        bot_id: Optional[str] = None,
+        conn: Optional[sqlite3.Connection] = None
+    ) -> Tuple[Optional[PriorLongTermMemory], Optional[ShortTermWorkingMemory]]:
+        """Nạp dữ liệu bộ nhớ dài hạn tại điểm xuất phát và bộ nhớ ngắn hạn trong phiên từ SQLite."""
+        if not os.path.exists(self.sqlite_path):
+            return None, None
+
+        close_after = False
+        if conn is None:
+            conn = sqlite3.connect(self.sqlite_path)
+            conn.row_factory = sqlite3.Row
+            close_after = True
+
+        try:
+            cur = conn.cursor()
+
+            # Lấy bot_id nếu chưa có
+            if not bot_id:
+                cur.execute("SELECT bot_id FROM episodes WHERE id = ?", (session_id,))
+                ep_row = cur.fetchone()
+                if ep_row:
+                    bot_id = ep_row["bot_id"]
+
+            prior_mem: Optional[PriorLongTermMemory] = None
+            if bot_id:
+                # 1. Baseline
+                cur.execute("SELECT baseline_json FROM persona_memory_baselines WHERE bot_id = ?", (bot_id,))
+                b_row = cur.fetchone()
+                b_json = _safe_json_loads(b_row["baseline_json"]) if b_row else {}
+                if not isinstance(b_json, dict):
+                    b_json = {}
+
+                # 2. Habit snapshot
+                cur.execute("SELECT snapshot_json FROM habit_snapshots WHERE bot_id = ?", (bot_id,))
+                h_row = cur.fetchone()
+                h_json = _safe_json_loads(h_row["snapshot_json"]) if h_row else {}
+                if not isinstance(h_json, dict):
+                    h_json = {}
+
+                # 3. Interest threads
+                cur.execute(
+                    "SELECT thread_key, title, summary, confidence, evidence_count, status, updated_at "
+                    "FROM interest_threads WHERE bot_id = ?",
+                    (bot_id,)
+                )
+                known_threads = []
+                for tr in cur.fetchall():
+                    known_threads.append(PriorInterestThreadDetail(
+                        thread_key=tr["thread_key"],
+                        title=tr["title"],
+                        summary=tr["summary"],
+                        confidence=tr["confidence"],
+                        evidence_count=tr["evidence_count"],
+                        status=tr["status"],
+                        updated_at=tr["updated_at"],
+                    ))
+
+                # 4. Entity affinities
+                cur.execute(
+                    "SELECT entity_type, entity_key, display_name, url, affinity, familiarity, "
+                    "relationship_state, evidence_count FROM entity_affinities WHERE bot_id = ?",
+                    (bot_id,)
+                )
+                known_affinities = []
+                for ar in cur.fetchall():
+                    known_affinities.append(PriorEntityAffinityDetail(
+                        entity_type=ar["entity_type"],
+                        entity_key=ar["entity_key"],
+                        display_name=ar["display_name"],
+                        url=ar["url"],
+                        affinity=ar["affinity"],
+                        familiarity=ar["familiarity"],
+                        relationship_state=ar["relationship_state"],
+                        evidence_count=ar["evidence_count"],
+                    ))
+
+                # Bóc tách exploration disposition
+                exp_disp_raw = b_json.get("exploration_disposition") or {}
+                exp_disp = None
+                if isinstance(exp_disp_raw, dict):
+                    exp_disp = ExplorationDispositionSchema(
+                        initiative=exp_disp_raw.get("initiative"),
+                        natural_triggers=exp_disp_raw.get("natural_triggers") or [],
+                        variety=exp_disp_raw.get("variety"),
+                    )
+
+                # Bóc tách exploration threads
+                exp_threads = []
+                for et in (b_json.get("exploration_threads") or []):
+                    if isinstance(et, dict):
+                        exp_threads.append(ExplorationThreadBaselineSchema(
+                            key=et.get("key"),
+                            topic=et.get("topic"),
+                            angles=et.get("angles") or [],
+                            based_on=et.get("based_on") or [],
+                            source_types=et.get("source_types") or [],
+                        ))
+
+                # Bóc tách habit snapshot
+                prior_habit = None
+                if h_json:
+                    prior_habit = PriorHabitSnapshotDetail(
+                        action_counts=h_json.get("action_counts") or {},
+                        surface_counts=h_json.get("surface_counts") or {},
+                        learned_pacing=h_json.get("learned_pacing") or {},
+                        preferred_surfaces=h_json.get("preferred_surfaces") or [],
+                        ranked_topics=h_json.get("ranked_topics") or [],
+                        verified_tools=h_json.get("verified_tools") or [],
+                    )
+
+                prior_mem = PriorLongTermMemory(
+                    core_interests=b_json.get("core_interests") or [],
+                    avoid_topics=b_json.get("avoid_topics") or [],
+                    adjacent_interests=b_json.get("adjacent_interests") or [],
+                    source_preferences=b_json.get("source_preferences") or [],
+                    preferred_surface=b_json.get("preferred_surface"),
+                    reading_depth=b_json.get("reading_depth"),
+                    discovery_style=b_json.get("discovery_style"),
+                    interaction_style=b_json.get("interaction_style"),
+                    exploration_disposition=exp_disp,
+                    exploration_threads=exp_threads,
+                    known_interest_threads=known_threads,
+                    known_affinities=known_affinities,
+                    prior_habit_snapshot=prior_habit,
+                )
+
+            # 5. Short-term Working Memory (Từ session_id)
+            cur.execute("SELECT snapshot_json FROM episode_working_memory WHERE episode_id = ?", (session_id,))
+            wm_row = cur.fetchone()
+            wm_json = _safe_json_loads(wm_row["snapshot_json"]) if wm_row else {}
+            if not isinstance(wm_json, dict):
+                wm_json = {}
+            wm_inner = wm_json.get("working_memory") or {}
+            if not isinstance(wm_inner, dict):
+                wm_inner = {}
+
+            # Active threads
+            active_threads = []
+            for at in (wm_inner.get("active_threads") or []):
+                if isinstance(at, dict):
+                    active_threads.append(WorkingMemoryActiveThreadDetail(
+                        key=at.get("key"),
+                        topic=at.get("topic"),
+                        purpose=at.get("purpose"),
+                        origin=at.get("origin"),
+                        state=at.get("state"),
+                        interest_relation=at.get("interest_relation"),
+                        open_question=at.get("open_question"),
+                        last_intent=at.get("last_intent"),
+                        verified_steps=at.get("verified_steps") or 0,
+                        evidence=at.get("evidence") or [],
+                    ))
+
+            # Current thread
+            cur_th = None
+            ct_raw = wm_inner.get("current_thread")
+            if isinstance(ct_raw, dict):
+                cur_th = WorkingMemoryActiveThreadDetail(
+                    key=ct_raw.get("key") or ct_raw.get("id"),
+                    topic=ct_raw.get("topic"),
+                    purpose=ct_raw.get("purpose"),
+                    origin=ct_raw.get("origin"),
+                    state=ct_raw.get("state"),
+                    interest_relation=ct_raw.get("interest_relation"),
+                    open_question=ct_raw.get("open_question"),
+                    last_intent=ct_raw.get("last_intent"),
+                    verified_steps=ct_raw.get("verified_steps") or 0,
+                    evidence=ct_raw.get("evidence") or [],
+                )
+
+            # Read posts
+            read_posts = []
+            for rp in (wm_inner.get("read_posts") or []):
+                if isinstance(rp, dict):
+                    read_posts.append(WorkingMemoryReadPostDetail(
+                        url=rp.get("url"),
+                        dwell_seconds=rp.get("dwell_seconds"),
+                        read_at_elapsed=rp.get("read_at_elapsed"),
+                        snippet=rp.get("snippet"),
+                        content_stage=rp.get("content_stage"),
+                        duration_measurement=rp.get("duration_measurement"),
+                    ))
+
+            # Opened sources
+            opened_sources = []
+            for src in (wm_inner.get("opened_sources") or []):
+                if isinstance(src, dict):
+                    opened_sources.append(WorkingMemoryOpenedSourceDetail(
+                        at_elapsed=src.get("at_elapsed"),
+                        target=src.get("target"),
+                        type=src.get("type"),
+                    ))
+
+            # Searched topics
+            searched_topics = []
+            for st in (wm_inner.get("searched_topics") or []):
+                if isinstance(st, dict):
+                    searched_topics.append(WorkingMemorySearchedTopicDetail(
+                        at_elapsed=st.get("at_elapsed"),
+                        query=st.get("query"),
+                        purpose=st.get("purpose"),
+                        open_question=st.get("open_question"),
+                        outcome=st.get("outcome"),
+                        thread_id=st.get("thread_id"),
+                    ))
+
+            # Recent writings
+            writings = []
+            for w in (wm_inner.get("recent_own_writing") or []):
+                if isinstance(w, dict):
+                    subj = w.get("subject") or {}
+                    writings.append(WorkingMemoryOwnWritingDetail(
+                        kind=w.get("kind"),
+                        content=w.get("content"),
+                        voice_id=w.get("voice_id"),
+                        provenance=w.get("provenance"),
+                        subject_kind=subj.get("kind") if isinstance(subj, dict) else None,
+                        subject_url=subj.get("url") if isinstance(subj, dict) else None,
+                    ))
+
+            # Novelty
+            novelty = None
+            nov_raw = wm_inner.get("novelty")
+            if isinstance(nov_raw, dict):
+                novelty = WorkingMemoryNoveltyDetail(
+                    guidance=nov_raw.get("guidance"),
+                    explored_thread_count=nov_raw.get("explored_thread_count"),
+                    explored_evidence_share=nov_raw.get("explored_evidence_share"),
+                    situational_steps=nov_raw.get("situational_steps"),
+                )
+
+            # Rest
+            rest_raw = wm_json.get("rest") or {}
+            rest_obj = WorkingMemoryRestDetail(
+                accumulated_seconds=rest_raw.get("accumulated_seconds") or 0,
+                count=rest_raw.get("count") or 0,
+            )
+
+            # Habit facts
+            cur.execute("SELECT id, kind, value_json, created_at FROM habit_facts WHERE episode_id = ? ORDER BY created_at", (session_id,))
+            habit_facts = []
+            for hfr in cur.fetchall():
+                v_json = _safe_json_loads(hfr["value_json"]) or {}
+                if not isinstance(v_json, dict):
+                    v_json = {}
+                habit_facts.append(SessionHabitFactDetail(
+                    id=hfr["id"],
+                    kind=hfr["kind"],
+                    intent=v_json.get("intent"),
+                    tool=v_json.get("tool"),
+                    resolver=v_json.get("resolver"),
+                    verified=v_json.get("verified"),
+                    surface=v_json.get("surface"),
+                    dwell_ms=v_json.get("dwell_ms"),
+                    created_at=hfr["created_at"],
+                ))
+
+            # Memory delta ledger
+            cur.execute(
+                "SELECT id, record_type, record_key, operation, after_json, evidence_json, created_at "
+                "FROM memory_delta_ledger WHERE episode_id = ? ORDER BY created_at",
+                (session_id,)
+            )
+            deltas = []
+            for dlr in cur.fetchall():
+                aft = _safe_json_loads(dlr["after_json"]) or {}
+                ev = _safe_json_loads(dlr["evidence_json"]) or {}
+                stmt = aft.get("statement") if isinstance(aft, dict) else None
+                conf = aft.get("confidence") if isinstance(aft, dict) else None
+                ev_cnt = aft.get("evidence_count") if isinstance(aft, dict) else None
+                rat = ev.get("rationale") if isinstance(ev, dict) else None
+                deltas.append(SessionMemoryDeltaDetail(
+                    id=dlr["id"],
+                    record_type=dlr["record_type"],
+                    record_key=dlr["record_key"],
+                    operation=dlr["operation"],
+                    statement=stmt,
+                    confidence=conf,
+                    evidence_count=ev_cnt,
+                    rationale=rat,
+                    created_at=dlr["created_at"],
+                ))
+
+            # Consolidation run
+            cur.execute(
+                "SELECT result_json FROM memory_consolidation_runs WHERE episode_id = ? ORDER BY created_at DESC LIMIT 1",
+                (session_id,)
+            )
+            cr_row = cur.fetchone()
+            cr_res = _safe_json_loads(cr_row["result_json"]) if cr_row else {}
+            cons_summary = cr_res.get("summary") if isinstance(cr_res, dict) else None
+            learned_count = cr_res.get("learned") or cr_res.get("learned_count") if isinstance(cr_res, dict) else None
+
+            working_mem = ShortTermWorkingMemory(
+                current_surface=wm_json.get("current_surface"),
+                elapsed_seconds=wm_json.get("elapsed_seconds"),
+                remaining_seconds=wm_json.get("remaining_seconds"),
+                completed_actions=wm_json.get("completed_actions"),
+                planned_active_seconds=wm_json.get("planned_active_seconds"),
+                rest=rest_obj,
+                summary=wm_inner.get("summary"),
+                planner_rule=wm_inner.get("planner_rule"),
+                novelty=novelty,
+                active_threads=active_threads,
+                current_thread=cur_th,
+                read_posts=read_posts,
+                opened_sources=opened_sources,
+                searched_topics=searched_topics,
+                recent_own_writing=writings,
+                habit_facts=habit_facts,
+                memory_deltas=deltas,
+                consolidation_summary=cons_summary,
+                learned_count=learned_count,
+            )
+
+            return prior_mem, working_mem
+        finally:
+            if close_after:
+                conn.close()
+
     def load_session(
         self,
         session_id: str,
         source: Literal["auto", "sqlite", "json"] = "auto"
     ) -> SessionLog:
-        """Nạp log của 1 session (episode) theo session_id.
+        """Nạp log của 1 session (episode) theo session_id kèm bộ nhớ đầy đủ.
 
         Args:
             session_id: UUID định danh episode / session.
             source: Nguồn dữ liệu ('auto', 'sqlite', 'json').
 
         Returns:
-            SessionLog: Đối tượng chứa toàn bộ actions sắp xếp theo thứ tự thời gian.
+            SessionLog: Đối tượng chứa toàn bộ actions và memory sắp xếp theo thứ tự thời gian.
         """
         # 1. Thử từ SQLite
         if source in ("auto", "sqlite") and os.path.exists(self.sqlite_path):
             try:
                 full_ep = load_episode(session_id, sqlite_path=self.sqlite_path)
-                return SessionLog.from_full_episode(full_ep)
+                prior_mem, working_mem = self._load_memory_for_session(
+                    session_id=session_id,
+                    bot_id=full_ep.metadata.bot_id
+                )
+                return SessionLog.from_full_episode(
+                    full_ep,
+                    prior_memory=prior_mem,
+                    working_memory=working_mem
+                )
             except Exception as e:
                 if source == "sqlite":
                     raise e
@@ -656,7 +1335,8 @@ class ActionLoader:
 
         Returns:
             Dict[str, PersonaActionHistory]: Từ điển dạng {persona_id: PersonaActionHistory}.
-            Mỗi PersonaActionHistory chứa các session đã được sắp xếp tăng dần theo `started_at`.
+            Mỗi PersonaActionHistory chứa các session đã được sắp xếp tăng dần theo `started_at`
+            kèm đầy đủ bộ nhớ dài hạn khởi đầu và bộ nhớ ngắn hạn của phiên.
         """
         if self._persona_histories_cache is not None and not refresh:
             return self._persona_histories_cache
@@ -666,15 +1346,29 @@ class ActionLoader:
         # 1. Nạp từ SQLite nếu có
         if source in ("auto", "sqlite") and os.path.exists(self.sqlite_path):
             try:
-                episodes_meta = list_episodes(sqlite_path=self.sqlite_path)
-                for ep_m in episodes_meta:
-                    ep_id = ep_m["id"]
-                    try:
-                        full_ep = load_episode(ep_id, sqlite_path=self.sqlite_path)
-                        sess = SessionLog.from_full_episode(full_ep)
-                        all_sessions.append(sess)
-                    except Exception as err:
-                        print(f"[!] Bỏ qua episode {ep_id}: {err}")
+                conn = sqlite3.connect(self.sqlite_path)
+                conn.row_factory = sqlite3.Row
+                try:
+                    episodes_meta = list_episodes(sqlite_path=self.sqlite_path)
+                    for ep_m in episodes_meta:
+                        ep_id = ep_m["id"]
+                        try:
+                            full_ep = load_episode(ep_id, sqlite_path=self.sqlite_path)
+                            prior_mem, working_mem = self._load_memory_for_session(
+                                session_id=ep_id,
+                                bot_id=ep_m.get("bot_id"),
+                                conn=conn
+                            )
+                            sess = SessionLog.from_full_episode(
+                                full_ep,
+                                prior_memory=prior_mem,
+                                working_memory=working_mem
+                            )
+                            all_sessions.append(sess)
+                        except Exception as err:
+                            print(f"[!] Bỏ qua episode {ep_id}: {err}")
+                finally:
+                    conn.close()
             except Exception as e:
                 if source == "sqlite":
                     raise e
@@ -777,16 +1471,32 @@ class ActionLoader:
             return pd.DataFrame()
         return pd.concat(dfs, ignore_index=True)
 
+    def to_unified_memory_evolution_dataframe(
+        self,
+        personas_history: Optional[Dict[str, PersonaActionHistory]] = None
+    ) -> pd.DataFrame:
+        """Xuất DataFrame tiến hóa bộ nhớ toàn diện cho tất cả các persona theo thứ tự session."""
+        histories = personas_history or self.load_all_personas()
+        dfs = []
+        for p_hist in histories.values():
+            df_m = p_hist.to_memory_evolution_dataframe()
+            if not df_m.empty:
+                dfs.append(df_m)
+
+        if not dfs:
+            return pd.DataFrame()
+        return pd.concat(dfs, ignore_index=True)
+
 
 # ==============================================================================
-# III. CÁC HÀM TIỆN ÍCH DỄ SỬ DỤNG TRỰC TIẾP (CONVENIENCE APIS)
+# V. CÁC HÀM TIỆN ÍCH DỄ SỬ DỤNG TRỰC TIẾP (CONVENIENCE APIS)
 # ==============================================================================
 
 def load_session_log(
     session_id: str,
     sqlite_path: Optional[str] = None
 ) -> SessionLog:
-    """Nạp log đầy đủ của 1 session cụ thể theo session_id."""
+    """Nạp log đầy đủ của 1 session cụ thể theo session_id kèm bộ nhớ."""
     loader = ActionLoader(sqlite_path=sqlite_path)
     return loader.load_session(session_id)
 
@@ -803,15 +1513,15 @@ def load_persona_sessions(
 def load_all_persona_sessions(
     sqlite_path: Optional[str] = None
 ) -> Dict[str, PersonaActionHistory]:
-    """Nạp và kết tập toàn bộ session theo từng Persona theo thứ tự thời gian thực thi."""
+    """Nạp và kết tập toàn bộ session theo từng Persona theo thứ tự thời gian thực thi kèm bộ nhớ."""
     loader = ActionLoader(sqlite_path=sqlite_path)
     return loader.load_all_personas()
 
 
 if __name__ == "__main__":
-    print("=" * 70)
-    print("KIỂM THỬ LOAD ACTION LOGS VÀ KẾT TẬP THEO PERSONA")
-    print("=" * 70)
+    print("=" * 75)
+    print("KIỂM THỬ LOAD ACTION LOGS & BỘ NHỚ THEO PHIÊN (SESSION & PERSONA)")
+    print("=" * 75)
 
     loader = ActionLoader()
     histories = loader.load_all_personas()
@@ -820,9 +1530,23 @@ if __name__ == "__main__":
     for pid, hist in histories.items():
         print(f"\n Persona: {pid:<12} | Tên: {hist.persona_name:<15} | Tổng session: {hist.total_sessions} | Tổng action: {hist.total_actions}")
         for s in hist.sessions:
-            print(f"   - Phiên #{s.session_order}: ID={s.session_id[:8]}... | Bắt đầu={s.started_at} | Số bước={s.total_actions} | Surface={s.surface_distribution}")
+            pm = s.prior_memory
+            wm = s.working_memory
+            print(f"   * Phiên #{s.session_order}: ID={s.session_id[:8]}... | Bắt đầu={s.started_at} | Bước={s.total_actions}")
+            if pm:
+                print(f"     [Bộ nhớ dài hạn đầu phiên] Core Interests ({len(pm.core_interests)}): {pm.core_interests[:2]}... | Avoid ({len(pm.avoid_topics)}) | Threads có sẵn={len(pm.known_interest_threads)} | Affinities={len(pm.known_affinities)}")
+            if wm:
+                print(f"     [Bộ nhớ ngắn hạn trong phiên] Active Threads ({len(wm.active_threads)}): {[t.topic for t in wm.active_threads[:2]]} | Đã đọc ({len(wm.read_posts)} bài) | Habit Facts ({len(wm.habit_facts)}) | Memory Deltas ({len(wm.memory_deltas)})")
 
-    # Xuất thử DataFrame tổng hợp
-    df_actions = loader.to_unified_actions_dataframe(histories)
-    print(f"\n DataFrame Unified Actions: {df_actions.shape[0]} dòng, {df_actions.shape[1]} cột.")
-    print("Các cột chính:", list(df_actions.columns[:10]))
+    # Xuất thử DataFrame tiến hóa bộ nhớ
+    df_mem = loader.to_unified_memory_evolution_dataframe(histories)
+    print(f"\n DataFrame Unified Memory Evolution: {df_mem.shape[0]} phiên, {df_mem.shape[1]} thuộc tính.")
+    print("Một số cột tiến hóa bộ nhớ chính:")
+    for col in [
+        "persona_id", "session_order", "prior_core_interests_count", "prior_avoid_topics_count",
+        "prior_known_threads_count", "session_active_threads_count", "session_read_posts_count",
+        "session_habit_facts_count", "session_memory_deltas_count", "session_learned_count"
+    ]:
+        if col in df_mem.columns:
+            print(f"  - {col}")
+
