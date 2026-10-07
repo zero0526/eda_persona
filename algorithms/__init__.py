@@ -69,8 +69,21 @@ from algorithms.temporal_velocity_and_behavior_profiler import (
     compute_temporal_velocity_by_pace,
     compute_temporal_behavior_distribution,
 )
+from algorithms.cross_session_behavior_profiler import (
+    prepare_h3_dataset,
+    extract_cross_session_entities,
+    compute_multi_level_consistency,
+    compute_macro_surface_transitions,
+    compute_surface_retention,
+    compute_surface_retention_comparison,
+    compute_habit_evolution_and_correlation,
+    compute_intent_ngram_analysis,
+    compute_persona_repeated_ngram_patterns,
+)
 
 __all__ = [
+
+
     "compute_pairwise_cramers_v",
     "fast_bias_corrected_cramers_v_from_codes",
     "wilson_score_interval",
@@ -108,4 +121,15 @@ __all__ = [
     "compute_persona_topic_coverage",
     "compute_temporal_velocity_by_pace",
     "compute_temporal_behavior_distribution",
+    "prepare_h3_dataset",
+    "extract_cross_session_entities",
+    "compute_multi_level_consistency",
+    "compute_macro_surface_transitions",
+    "compute_surface_retention",
+    "compute_surface_retention_comparison",
+    "compute_habit_evolution_and_correlation",
+    "compute_intent_ngram_analysis",
+    "compute_persona_repeated_ngram_patterns",
 ]
+
+

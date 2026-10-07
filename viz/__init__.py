@@ -9,6 +9,10 @@ from .univariate_viz import (
 from .temporal_dynamics_viz import (
     plot_velocity_and_behavior_dynamics,
 )
+from .session_consistency_viz import (
+    plot_macro_surface_transitions,
+    plot_h3_three_panel_comparison,
+)
 
 __all__ = [
     "plot_top_numeric_comparison",
@@ -17,4 +21,7 @@ __all__ = [
     "plot_vocabulary_distribution_comparison",
     "plot_strong_interests_coverage",
     "plot_velocity_and_behavior_dynamics",
+    "plot_macro_surface_transitions",
+    "plot_h3_three_panel_comparison",
 ]
+
