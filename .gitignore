@@ -5,3 +5,5 @@ __pycache__/
 .venv/
 .pytest_cache/
 data/persona-runner.sqlite
+data/persona-runner.sqlite-shm
+data/persona-runner.sqlite-wal
