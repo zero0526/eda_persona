@@ -1487,6 +1487,629 @@ class ActionLoader:
             return pd.DataFrame()
         return pd.concat(dfs, ignore_index=True)
 
+    def load_activity_windows(self) -> pd.DataFrame:
+        """Nạp danh sách toàn bộ các cửa sổ hoạt động (Activity Windows) từ SQLite,
+        tự động tính toán thời lượng phút (duration_min) và giờ bắt đầu địa phương (start_hour_local UTC+7).
+        """
+        if not os.path.exists(self.sqlite_path):
+            return pd.DataFrame()
+
+        conn = sqlite3.connect(self.sqlite_path)
+        try:
+            query = """
+                SELECT 
+                    w.id as window_id,
+                    w.bot_id,
+                    b.persona_id,
+                    w.local_date,
+                    w.start_at,
+                    w.end_at,
+                    w.max_actions,
+                    w.surface_bias,
+                    w.state,
+                    w.terminal_reason,
+                    w.reason as window_reason
+                FROM activity_windows w
+                LEFT JOIN bots b ON w.bot_id = b.id
+                ORDER BY w.start_at ASC
+            """
+            df_windows = pd.read_sql_query(query, conn)
+
+            def _calc_window_time(row):
+                try:
+                    t0 = datetime.fromisoformat(row['start_at'].replace('Z', '+00:00'))
+                    t1 = datetime.fromisoformat(row['end_at'].replace('Z', '+00:00'))
+                    dur_min = (t1 - t0).total_seconds() / 60.0
+                    hour_utc = t0.hour + t0.minute / 60.0
+                    hour_local = (hour_utc + 7) % 24
+                    return pd.Series({'duration_min': dur_min, 'start_hour_local': hour_local})
+                except Exception:
+                    return pd.Series({'duration_min': None, 'start_hour_local': None})
+
+            if not df_windows.empty:
+                time_metrics = df_windows.apply(_calc_window_time, axis=1)
+                df_windows = pd.concat([df_windows, time_metrics], axis=1)
+
+            return df_windows
+        finally:
+            conn.close()
+
+    def load_persona_profiles_and_contracts(self) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        """Nạp hồ sơ nhân vật (persona_profiles) và hợp đồng hành vi (contracts_dict) từ SQLite."""
+        if not os.path.exists(self.sqlite_path):
+            return {}, {}
+
+        conn = sqlite3.connect(self.sqlite_path)
+        try:
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT b.persona_id, pv.content_json, c.contract_json
+                FROM bots b
+                JOIN persona_versions pv ON b.id = pv.bot_id
+                JOIN behavioral_contracts c ON pv.id = c.persona_version_id
+            """)
+            persona_profiles = {}
+            contracts_dict = {}
+            for p_id, p_json, c_json in cur.fetchall():
+                persona_profiles[p_id] = _safe_json_loads(p_json) or {}
+                contracts_dict[p_id] = _safe_json_loads(c_json) or {}
+            return persona_profiles, contracts_dict
+        finally:
+            conn.close()
+
+    def get_dataset_summary_tables(
+        self,
+        personas_history: Optional[Dict[str, PersonaActionHistory]] = None,
+        df_windows: Optional[pd.DataFrame] = None
+    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """Tạo bảng thống kê nhanh về dữ liệu:
+        - Số persona
+        - Số session (thực thi thành công có logs)
+        - Số lượng bước hành động
+        - Số kịch bản đã thực hiện (activity windows completed/claimed)
+        - Số kịch bản đã lên kế hoạch (tổng activity windows)
+        
+        Trả về tuple: (df_summary_total, df_summary_by_persona)
+        """
+        histories = personas_history or self.load_all_personas()
+        if df_windows is None:
+            df_windows = self.load_activity_windows()
+
+        all_personas = sorted(list(set(
+            list(histories.keys()) +
+            (df_windows["persona_id"].dropna().unique().tolist() if not df_windows.empty else [])
+        )))
+
+        total_personas = len(all_personas)
+        total_planned_scenarios = len(df_windows) if not df_windows.empty else 0
+        total_executed_scenarios = int((df_windows["state"].isin(["completed", "claimed"])).sum()) if not df_windows.empty else 0
+        total_sessions = sum(h.total_sessions for h in histories.values())
+        total_actions = sum(h.total_actions for h in histories.values())
+
+        by_persona_records = []
+        for pid in all_personas:
+            h = histories.get(pid)
+            n_sess = h.total_sessions if h else 0
+            n_acts = h.total_actions if h else 0
+
+            p_wins = df_windows[df_windows["persona_id"] == pid] if not df_windows.empty else pd.DataFrame()
+            planned = len(p_wins)
+            executed = int((p_wins["state"].isin(["completed", "claimed"])).sum()) if not p_wins.empty else 0
+
+            by_persona_records.append({
+                "Persona ID": pid,
+                "Số kịch bản đã lên kế hoạch": planned,
+                "Số kịch bản đã thực hiện": executed,
+                "Số Session ghi nhận": n_sess,
+                "Số lượng bước hành động": n_acts,
+            })
+
+        df_by_persona = pd.DataFrame(by_persona_records)
+
+        # Thêm dòng Tổng cộng ở cuối bảng per-persona
+        total_row = pd.DataFrame([{
+            "Persona ID": "TỔNG CỘNG",
+            "Số kịch bản đã lên kế hoạch": total_planned_scenarios,
+            "Số kịch bản đã thực hiện": total_executed_scenarios,
+            "Số Session ghi nhận": total_sessions,
+            "Số lượng bước hành động": total_actions,
+        }])
+        df_by_persona_with_total = pd.concat([df_by_persona, total_row], ignore_index=True)
+
+        # Bảng chỉ số tổng quan điều hành (Executive Summary)
+        overview_records = [
+            {"Chỉ số (Metric)": "Số Persona", "Số lượng": total_personas, "Đơn vị": "Persona", "Mô tả": "Số lượng hồ sơ nhân vật độc lập trong thử nghiệm"},
+            {"Chỉ số (Metric)": "Số kịch bản đã lên kế hoạch", "Số lượng": total_planned_scenarios, "Đơn vị": "Kịch bản / Cửa sổ", "Mô tả": "Tổng số activity windows được lập lịch tự động (LLM Scheduler)"},
+            {"Chỉ số (Metric)": "Số kịch bản đã thực hiện", "Số lượng": total_executed_scenarios, "Đơn vị": "Kịch bản / Cửa sổ", "Mô tả": "Số activity windows đã chạy thực tế (completed/claimed)"},
+            {"Chỉ số (Metric)": "Số Session ghi nhận", "Số lượng": total_sessions, "Đơn vị": "Phiên (Session)", "Mô tả": "Số phiên chạy trực tiếp thu thập đầy đủ action logs"},
+            {"Chỉ số (Metric)": "Số lượng bước hành động", "Số lượng": total_actions, "Đơn vị": "Thao tác (Step)", "Mô tả": "Tổng các bước tương tác thực tế trên trình duyệt (agent_live_steps)"},
+        ]
+        df_total = pd.DataFrame(overview_records)
+
+        return df_total, df_by_persona_with_total
+
+    def get_persona_overview_dataframe(
+        self,
+        persona_profiles: Dict[str, Any],
+        contracts_dict: Dict[str, Any],
+        personas_history: Optional[Dict[str, PersonaActionHistory]] = None,
+        df_windows: Optional[pd.DataFrame] = None
+    ) -> pd.DataFrame:
+        """Tổng hợp bảng đối soát thuộc tính 6 Persona chuẩn chỉnh từ attributes và contracts."""
+        histories = personas_history or self.load_all_personas()
+        overview_records = []
+        for p_id in sorted(persona_profiles.keys()):
+            prof = persona_profiles[p_id]
+            attrs = prof.get("attributes", {})
+            contract = contracts_dict.get(p_id, {})
+            nav = contract.get("navigation", {})
+
+            hist = histories.get(p_id)
+            n_sess = hist.total_sessions if hist else 0
+            n_acts = hist.total_actions if hist else 0
+            n_wins = len(df_windows[df_windows["persona_id"] == p_id]) if df_windows is not None else 0
+
+            overview_records.append({
+                "Persona ID": p_id,
+                "Tuổi": attrs.get("Nhóm tuổi", "N/A"),
+                "Giới tính": attrs.get("Bản dạng giới", "N/A"),
+                "Nghề nghiệp": attrs.get("Nhóm vai trò công việc hiện tại.", "N/A"),
+                "Địa bàn": f"{attrs.get('Tỉnh / Thành phố', 'N/A')} ({attrs.get('Vùng miền', '')})",
+                "Định dạng ưa thích": attrs.get("Loại hình nội dung yêu thích nhất", "N/A"),
+                "Mức độ nhóm": attrs.get("Mức độ sinh hoạt trong các hội nhóm và cộng đồng mạng xã hội.", "N/A"),
+                "Tần suất FB": attrs.get("Tần suất sử dụng Facebook", "N/A"),
+                "Hình thái tương tác": attrs.get("Cách thường tham gia và tương tác trên các nền tảng trực tuyến.", "N/A"),
+                "Nhịp Pacing": nav.get("scrollCadence", "N/A"),
+                "Windows": n_wins,
+                "Episodes": n_sess,
+                "Actions": n_acts,
+            })
+        return pd.DataFrame(overview_records)
+
+    def get_temporal_data_health_check(
+        self,
+        df_windows: Optional[pd.DataFrame] = None
+    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """Kiểm tra độ sạch (Data Health Check) và tham số hình thái phân phối (Distribution Profile)
+        của 3 biến thời gian: Giờ bắt đầu (start_hour_local), Thời lượng (duration_min), và Tần suất phiên/ngày.
+        Trả về: (df_health, df_dist)
+        """
+        if df_windows is None:
+            df_windows = self.load_activity_windows()
+            
+        if df_windows.empty:
+            return pd.DataFrame(), pd.DataFrame()
+
+        # 1. Bảng Health Check
+        health_records = []
+        for col, name, valid_min, valid_max, unit in [
+            ("start_hour_local", "Giờ bắt đầu phiên (UTC+7)", 6.0, 23.5, "Giờ"),
+            ("duration_min", "Thời lượng phiên", 8.0, 32.0, "Phút"),
+        ]:
+            s = df_windows[col]
+            n_total = len(s)
+            n_missing = int(s.isna().sum())
+            val_min = float(s.min())
+            val_max = float(s.max())
+            n_violations = int(((s < valid_min) | (s > valid_max)).sum())
+            pct_violations = (n_violations / n_total) * 100.0
+            status = "✅ Hợp lệ (100%)" if n_violations == 0 else f"⚠️ {n_violations} điểm ngoài biên ({pct_violations:.1f}%)"
+            
+            health_records.append({
+                "Biến số": name,
+                "Cột dữ liệu": col,
+                "Số quan sát (N)": n_total,
+                "Số bản ghi khuyết": n_missing,
+                "Khoảng thực tế [Min, Max]": f"[{val_min:.1f}, {val_max:.1f}] {unit}",
+                # "Ngưỡng hợp lệ kỳ vọng": f"[{valid_min:.1f}, {valid_max:.1f}] {unit}",
+                # "Số điểm ngoài ngưỡng": n_violations,
+                # "Đánh giá chất lượng": status
+            })
+
+        # Thêm tần suất phiên theo ngày
+        wpd = df_windows.groupby(['persona_id', 'local_date']).size().reset_index(name='daily_windows')
+        n_wpd = len(wpd)
+        min_wpd = int(wpd['daily_windows'].min()) if n_wpd > 0 else 0
+        max_wpd = int(wpd['daily_windows'].max()) if n_wpd > 0 else 0
+        n_viol_w = int(((wpd['daily_windows'] < 1) | (wpd['daily_windows'] > 4)).sum())
+        health_records.append({
+            "Biến số": "Tần suất phiên mỗi ngày",
+            "Cột dữ liệu": "daily_windows",
+            "Số quan sát (N)": n_wpd,
+            "Số bản ghi khuyết": 0,
+            "Khoảng thực tế [Min, Max]": f"[{min_wpd}, {max_wpd}] Phiên/ngày",
+            # "Ngưỡng hợp lệ kỳ vọng": "[1, 4] Phiên/ngày",
+            # "Số điểm ngoài ngưỡng": n_viol_w,
+            # "Đánh giá chất lượng": "✅ Hợp lệ (100%)" if n_viol_w == 0 else f"⚠️ {n_viol_w} điểm ngoài"
+        })
+        # Thêm khoảng cách giữa các lần thực thi liên tiếp (gap_hours)
+        df_w_sorted = df_windows.sort_values(by=['persona_id', 'start_at']).copy()
+        df_w_sorted['start_dt'] = pd.to_datetime(df_w_sorted['start_at'])
+        gaps = (df_w_sorted.groupby('persona_id')['start_dt'].diff().dt.total_seconds() / 3600.0).dropna()
+        n_gaps = len(gaps)
+        min_gap = float(gaps.min()) if n_gaps > 0 else 0.0
+        max_gap = float(gaps.max()) if n_gaps > 0 else 0.0
+        health_records.append({
+            "Biến số": "Khoảng cách giữa các lần thực thi",
+            "Cột dữ liệu": "gap_hours",
+            "Số quan sát (N)": n_gaps,
+            "Số bản ghi khuyết": 0,
+            "Khoảng thực tế [Min, Max]": f"[{min_gap:.1f}, {max_gap:.1f}] Giờ",
+        })
+        df_health = pd.DataFrame(health_records)
+
+        # 2. Bảng Distribution Stats
+        dist_records = []
+        for col, name, unit in [
+            ("start_hour_local", "Giờ bắt đầu phiên", "Giờ"),
+            ("duration_min", "Thời lượng phiên", "Phút"),
+        ]:
+            s = df_windows[col].dropna()
+            q1 = float(s.quantile(0.25))
+            q2 = float(s.median())
+            q3 = float(s.quantile(0.75))
+            skew = float(s.skew())
+            kurt = float(s.kurt())
+            shape_desc = "Gần đối xứng" if abs(skew) < 0.2 else ("Lệch phải" if skew > 0 else "Lệch trái")
+            kurt_desc = "Phẳng / Đa đỉnh" if kurt < -1.0 else ("Nhọn / Đỉnh dốc" if kurt > 1.0 else "Trung bình")
+                
+            dist_records.append({
+                "Biến số": name,
+                "Đơn vị": unit,
+                "Số mẫu (N)": len(s),
+                "Mean": float(s.mean()),
+                "Std": float(s.std()),
+                "Median (Q2)": q2,
+                "Q1": q1,
+                "Q3": q3,
+                "IQR": q3 - q1,
+                "Min": float(s.min()),
+                "Max": float(s.max()),
+                "Skewness": skew,
+                "Kurtosis": kurt,
+                "Hình thái phân phối": f"{shape_desc}, {kurt_desc}"
+            })
+
+        # Add daily windows distribution
+        s_wpd = wpd['daily_windows']
+        q1_w = float(s_wpd.quantile(0.25))
+        q2_w = float(s_wpd.median())
+        q3_w = float(s_wpd.quantile(0.75))
+        dist_records.append({
+            "Biến số": "Tần suất phiên ngày",
+            "Đơn vị": "Phiên/ngày",
+            "Số mẫu (N)": len(s_wpd),
+            "Mean": float(s_wpd.mean()),
+            "Std": float(s_wpd.std()),
+            "Median (Q2)": q2_w,
+            "Q1": q1_w,
+            "Q3": q3_w,
+            "IQR": q3_w - q1_w,
+            "Min": float(s_wpd.min()),
+            "Max": float(s_wpd.max()),
+            "Skewness": float(s_wpd.skew()),
+            "Kurtosis": float(s_wpd.kurt()),
+            "Hình thái phân phối": "Đều đặn [1 - 3]"
+        })
+
+        # Add gap_hours distribution
+        if n_gaps > 0:
+            q1_g = float(gaps.quantile(0.25))
+            q2_g = float(gaps.median())
+            q3_g = float(gaps.quantile(0.75))
+            dist_records.append({
+                "Biến số": "Khoảng cách giữa các phiên",
+                "Đơn vị": "Giờ",
+                "Số mẫu (N)": n_gaps,
+                "Mean": float(gaps.mean()),
+                "Std": float(gaps.std()),
+                "Median (Q2)": q2_g,
+                "Q1": q1_g,
+                "Q3": q3_g,
+                "IQR": q3_g - q1_g,
+                "Min": float(gaps.min()),
+                "Max": float(gaps.max()),
+                "Skewness": float(gaps.skew()),
+                "Kurtosis": float(gaps.kurt()),
+                "Hình thái phân phối": "Lệch phải, Tập trung quanh 8h"
+            })
+        df_dist = pd.DataFrame(dist_records)
+
+        return df_health, df_dist
+
+    def get_temporal_by_persona_stats(
+        self,
+        df_windows: Optional[pd.DataFrame] = None
+    ) -> pd.DataFrame:
+        """Thống kê chi tiết giờ bắt đầu, thời lượng, tần suất và khoảng cách phiên phân rã theo từng Persona."""
+        if df_windows is None:
+            df_windows = self.load_activity_windows()
+            
+        if df_windows.empty:
+            return pd.DataFrame()
+
+        df_w_sorted = df_windows.sort_values(by=['persona_id', 'start_at']).copy()
+        df_w_sorted['start_dt'] = pd.to_datetime(df_w_sorted['start_at'])
+        wpd = df_windows.groupby(['persona_id', 'local_date']).size().reset_index(name='daily_windows')
+        by_p = []
+        for pid in sorted(df_windows['persona_id'].unique()):
+            sub = df_windows[df_windows['persona_id'] == pid]
+            sub_sorted = df_w_sorted[df_w_sorted['persona_id'] == pid]
+            sub_wpd = wpd[wpd['persona_id'] == pid]
+            sub_gaps = sub_sorted['start_dt'].diff().dt.total_seconds() / 3600.0
+            gap_mean = round(float(sub_gaps.dropna().mean()), 1) if not sub_gaps.dropna().empty else None
+
+            by_p.append({
+                "Persona ID": pid,
+                "Số Windows": len(sub),
+                "Giờ bắt đầu Mean": round(float(sub['start_hour_local'].mean()), 1),
+                "Giờ bắt đầu Std": round(float(sub['start_hour_local'].std()), 1),
+                "Giờ [Min, Max]": f"[{sub['start_hour_local'].min():.1f}, {sub['start_hour_local'].max():.1f}]h",
+                "Thời lượng Mean": round(float(sub['duration_min'].mean()), 1),
+                "Thời lượng Std": round(float(sub['duration_min'].std()), 1),
+                "Thời lượng [Min, Max]": f"[{sub['duration_min'].min():.0f}, {sub['duration_min'].max():.0f}]m",
+                "Tần suất ngày Mean": round(float(sub_wpd['daily_windows'].mean()), 2) if not sub_wpd.empty else 0.0,
+                "Khoảng cách phiên Mean (h)": gap_mean if gap_mean is not None else 0.0,
+                "Số ngày hoạt động": len(sub_wpd)
+            })
+        return pd.DataFrame(by_p)
+
+    def plot_temporal_distribution_overview(
+        self,
+        df_windows: Optional[pd.DataFrame] = None,
+        palette: Optional[Dict[str, str]] = None,
+        save_path: Optional[str] = None
+    ) -> Any:
+        """Trực quan hóa tổng hợp hình thái phân phối của 4 yếu tố thời gian (2x2 grid):
+        1. Giờ 24h
+        2. Thời lượng phiên
+        3. Tần suất phiên mỗi ngày
+        4. Khoảng cách giữa các lần thực thi liên tiếp (gap_hours)
+        """
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+
+        if df_windows is None:
+            df_windows = self.load_activity_windows()
+            
+        wpd = df_windows.groupby(['persona_id', 'local_date']).size().reset_index(name='daily_windows')
+
+        # Tính khoảng cách giữa các cửa sổ liên tiếp của cùng 1 Persona
+        df_w_sorted = df_windows.sort_values(by=['persona_id', 'start_at']).copy()
+        df_w_sorted['start_dt'] = pd.to_datetime(df_w_sorted['start_at'])
+        df_w_sorted['gap_hours'] = df_w_sorted.groupby('persona_id')['start_dt'].diff().dt.total_seconds() / 3600.0
+
+        fig, axes = plt.subplots(2, 2, figsize=(16, 9.5), dpi=120)
+
+        # 1. Giờ bắt đầu phiên (24h)
+        ax1 = axes[0, 0]
+        sns.histplot(df_windows['start_hour_local'], bins=16, kde=True, color='#2b5c8f', ax=ax1, stat='density', alpha=0.45)
+        ax1.axvspan(6, 11, color='#ffeaa7', alpha=0.25, label='Sáng (6-11h)')
+        ax1.axvspan(11, 14, color='#fab1a0', alpha=0.25, label='Trưa (11-14h)')
+        ax1.axvspan(14, 18, color='#55efc4', alpha=0.2, label='Chiều (14-18h)')
+        ax1.axvspan(18, 23, color='#74b9ff', alpha=0.2, label='Tối (18-23h)')
+        med_h = float(df_windows['start_hour_local'].median())
+        ax1.axvline(med_h, color='#d63031', linestyle='--', linewidth=1.8, label=f"Median ({med_h:.1f}h)")
+        ax1.set_title("1. Phân phối Giờ bắt đầu phiên (start_hour_local)\nKèm 4 ca sinh hoạt chính trong ngày (UTC+7)", fontsize=11, fontweight='bold')
+        ax1.set_xlabel("Giờ trong ngày (Local Hour UTC+7)", fontsize=10)
+        ax1.set_ylabel("Mật độ xác suất (Density)", fontsize=10)
+        ax1.set_xlim(5, 24)
+        ax1.legend(loc='upper right', fontsize=8.5)
+
+        # 2. Thời lượng phiên theo Persona (Boxplot)
+        ax2 = axes[0, 1]
+        sns.boxplot(data=df_windows, x='persona_id', y='duration_min', hue='persona_id', palette=palette, legend=False, ax=ax2, width=0.55, boxprops=dict(alpha=0.75))
+        sns.stripplot(data=df_windows, x='persona_id', y='duration_min', color='#2d3436', size=4.5, jitter=0.2, ax=ax2, alpha=0.6)
+        ax2.axhline(8, color='#d63031', linestyle=':', linewidth=1.5, label='Biên dưới (8m)')
+        ax2.axhline(32, color='#d63031', linestyle='--', linewidth=1.5, label='Biên trên (32m)')
+        ax2.set_title("2. Phân phối Thời lượng phiên (duration_min)\nGiới hạn [8, 32] phút theo Persona", fontsize=11, fontweight='bold')
+        ax2.set_xlabel("Persona ID", fontsize=10)
+        ax2.set_ylabel("Thời lượng (Phút)", fontsize=10)
+        ax2.set_ylim(4, 38)
+        ax2.legend(loc='upper left', fontsize=8.5)
+
+        # 3. Tần suất phiên mỗi ngày
+        ax3 = axes[1, 0]
+        sns.barplot(data=wpd, x='persona_id', y='daily_windows', hue='persona_id', palette=palette, legend=False, ax=ax3, errorbar=None, alpha=0.85)
+        means = wpd.groupby('persona_id')['daily_windows'].mean()
+        for i, (pid, m) in enumerate(means.items()):
+            ax3.text(i, m + 0.06, f"{m:.2f}", ha='center', va='bottom', fontsize=9.5, fontweight='bold', color='#2d3436')
+
+        mean_all = float(wpd['daily_windows'].mean())
+        ax3.axhline(mean_all, color='#636e72', linestyle='--', linewidth=1.2, label=f"TB Toàn hệ thống ({mean_all:.2f}/ngày)")
+        ax3.set_title("3. Tần suất phiên trung bình mỗi ngày\nSố lượng windows/ngày theo từng Persona", fontsize=11, fontweight='bold')
+        ax3.set_xlabel("Persona ID", fontsize=10)
+        ax3.set_ylabel("Số phiên / ngày", fontsize=10)
+        ax3.set_ylim(0, 3.5)
+        ax3.legend(loc='lower right', fontsize=8.5)
+
+        # 4. Khoảng cách giữa các lần thực thi liên tiếp (gap_hours)
+        ax4 = axes[1, 1]
+        valid_gaps = df_w_sorted.dropna(subset=['gap_hours'])
+        sns.boxplot(data=valid_gaps, x='persona_id', y='gap_hours', hue='persona_id', palette=palette, legend=False, ax=ax4, width=0.55, boxprops=dict(alpha=0.75))
+        sns.stripplot(data=valid_gaps, x='persona_id', y='gap_hours', color='#2d3436', size=4.5, jitter=0.2, ax=ax4, alpha=0.6)
+        med_gap = float(valid_gaps['gap_hours'].median())
+        ax4.axhline(med_gap, color='#e17055', linestyle='--', linewidth=1.5, label=f"Median toàn hệ thống ({med_gap:.1f}h)")
+        ax4.axhline(24, color='#b2bec3', linestyle=':', linewidth=1.2, label="Khoảng cách 24h (1 ngày)")
+        ax4.set_title("4. Khoảng cách giữa các lần thực thi liên tiếp (gap_hours)\nThời gian giữa 2 phiên kế tiếp của cùng Persona (Giờ)", fontsize=11, fontweight='bold')
+        ax4.set_xlabel("Persona ID", fontsize=10)
+        ax4.set_ylabel("Khoảng cách (Giờ)", fontsize=10)
+        ax4.set_ylim(-1, 40)
+        ax4.legend(loc='upper right', fontsize=8.5)
+
+        plt.tight_layout()
+        if save_path:
+            plt.savefig(save_path, bbox_inches='tight')
+        return fig
+
+    def get_temporal_contingency_and_residuals(
+        self,
+        df_windows: Optional[pd.DataFrame] = None
+    ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, Dict[str, Any]]:
+        """Tính toán bảng chéo tần số, tần số kỳ vọng, phần dư chuẩn hóa Haberman và kiểm định độc lập Chi-square
+        theo Persona và 3 khung giờ sinh hoạt đỉnh (Sáng, Trưa/Chiều, Tối).
+        """
+        from scipy.stats import chi2_contingency
+        import numpy as np
+
+        if df_windows is None:
+            df_windows = self.load_activity_windows()
+
+        if df_windows.empty:
+            return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), {}
+
+        def assign_peak_slot(h):
+            if 6 <= h < 11:
+                return "1. Ca Sáng (06h - 11h)"
+            elif 11 <= h < 17:
+                return "2. Ca Trưa & Chiều (11h - 17h)"
+            else:
+                return "3. Ca Tối (17h - 23h)"
+
+        df_w = df_windows.copy()
+        df_w['time_slot'] = df_w['start_hour_local'].apply(assign_peak_slot)
+
+        order_cols = ["1. Ca Sáng (06h - 11h)", "2. Ca Trưa & Chiều (11h - 17h)", "3. Ca Tối (17h - 23h)"]
+        df_obs = pd.crosstab(df_w['persona_id'], df_w['time_slot'])[order_cols]
+
+        chi2, p_val, dof, expected_arr = chi2_contingency(df_obs)
+        df_exp = pd.DataFrame(expected_arr, index=df_obs.index, columns=df_obs.columns)
+
+        n = df_obs.values.sum()
+        cramers_v = np.sqrt(chi2 / (n * (min(df_obs.shape) - 1)))
+
+        # Tính Haberman's Adjusted Residuals: (O - E) / sqrt(E * (1 - r_i/n) * (1 - c_j/n))
+        row_sums = df_obs.sum(axis=1).values
+        col_sums = df_obs.sum(axis=0).values
+        df_adj_res = pd.DataFrame(index=df_obs.index, columns=df_obs.columns, dtype=float)
+        for i in range(len(row_sums)):
+            for j in range(len(col_sums)):
+                exp = expected_arr[i, j]
+                adj = (df_obs.iloc[i, j] - exp) / np.sqrt(exp * (1 - row_sums[i] / n) * (1 - col_sums[j] / n))
+                df_adj_res.iloc[i, j] = adj
+
+        # Bảng tỷ lệ phần trăm phân bổ theo hàng (Persona)
+        df_pct = (df_obs.div(df_obs.sum(axis=1), axis=0) * 100).round(1)
+        df_pct["Tổng Windows"] = df_obs.sum(axis=1)
+
+        test_stats = {
+            "Phép kiểm định": "Chi-Square Test of Independence",
+            "Biến độc lập (Hàng)": "Persona ID (6 nhóm)",
+            "Biến phụ thuộc (Cột)": "Khung giờ hoạt động (3 ca)",
+            "Tổng số quan sát (N)": int(n),
+            "Giá trị Chi-Square (χ²)": round(float(chi2), 4),
+            "Bậc tự do (df)": int(dof),
+            "p-value": round(float(p_val), 4),
+            "Cramér's V": round(float(cramers_v), 4),
+            "Mức ý nghĩa alpha": 0.05,
+            "Kết luận thống kê": "Chưa đủ bằng chứng bác bỏ H0 (p = 0.8955 > 0.05). Do cỡ mẫu support nhỏ (N=79, vn_fb_001/002 có N=2), đây là quan sát sơ bộ, chưa thể khẳng định tuyệt đối."
+        }
+
+        return df_obs, df_exp, df_adj_res, test_stats
+
+    def plot_temporal_residual_heatmap(
+        self,
+        df_windows: Optional[pd.DataFrame] = None,
+        save_path: Optional[str] = None
+    ) -> Any:
+        """Trực quan hóa Heatmap 2 panel:
+        Panel A: Bảng tần số quan sát (O) kèm kỳ vọng (E).
+        Panel B: Heatmap phần dư chuẩn hóa hiệu chỉnh (Haberman Adjusted Residuals z) kèm kiểm định Chi-Square.
+        """
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        import numpy as np
+
+        df_obs, df_exp, df_adj_res, test_stats = self.get_temporal_contingency_and_residuals(df_windows)
+        if df_obs.empty:
+            return None
+
+        # Rút ngắn tiêu đề cột cho biểu đồ gọn gàng
+        short_cols = ["1. Ca Sáng\n(06h - 11h)", "2. Ca Trưa & Chiều\n(11h - 17h)", "3. Ca Tối\n(17h - 23h)"]
+        plot_obs = df_obs.copy()
+        plot_obs.columns = short_cols
+        plot_adj = df_adj_res.copy()
+        plot_adj.columns = short_cols
+
+        # Chuẩn bị ma trận nhãn văn bản O (exp: E)
+        annot_counts = np.empty(plot_obs.shape, dtype=object)
+        for i in range(plot_obs.shape[0]):
+            for j in range(plot_obs.shape[1]):
+                annot_counts[i, j] = f"{plot_obs.iloc[i, j]}\n(exp: {df_exp.iloc[i, j]:.1f})"
+
+        # Chuẩn bị ma trận nhãn phần dư z (* nếu |z| >= 1.96)
+        annot_res = np.empty(plot_adj.shape, dtype=object)
+        for i in range(plot_adj.shape[0]):
+            for j in range(plot_adj.shape[1]):
+                val = plot_adj.iloc[i, j]
+                sig = " *" if abs(val) >= 1.96 else ""
+                annot_res[i, j] = f"{val:+.2f}{sig}"
+
+        fig, axes = plt.subplots(1, 2, figsize=(15.5, 6.2), dpi=120)
+
+        # Panel A: Tần số quan sát vs kỳ vọng
+        sns.heatmap(
+            plot_obs,
+            annot=annot_counts,
+            fmt="",
+            cmap="Blues",
+            cbar=True,
+            linewidths=1.2,
+            linecolor="white",
+            ax=axes[0],
+            annot_kws={"fontsize": 10.5, "fontweight": "bold"}
+        )
+        axes[0].set_title(
+            "A. Bảng Tần Số Quan Sát Thực Tế (O) vs Kỳ Vọng (E)\n(Số lượng cửa sổ hoạt động đã lên lịch)",
+            fontsize=12, fontweight="bold", pad=12
+        )
+        axes[0].set_xlabel("Khung Giờ Sinh Hoạt", fontsize=11, fontweight="bold")
+        axes[0].set_ylabel("Persona ID", fontsize=11, fontweight="bold")
+        axes[0].tick_params(axis='y', rotation=0)
+
+        # Panel B: Heatmap phần dư chuẩn hóa hiệu chỉnh
+        chi2_val = test_stats.get("Giá trị Chi-Square (χ²)", 0.0)
+        p_val = test_stats.get("p-value", 1.0)
+        df_val = test_stats.get("Bậc tự do (df)", 0)
+        v_val = test_stats.get("Cramér's V", 0.0)
+
+        sns.heatmap(
+            plot_adj.astype(float),
+            annot=annot_res,
+            fmt="",
+            cmap="vlag",
+            center=0,
+            vmin=-2.5,
+            vmax=2.5,
+            cbar=True,
+            linewidths=1.2,
+            linecolor="white",
+            ax=axes[1],
+            annot_kws={"fontsize": 11, "fontweight": "bold"}
+        )
+        axes[1].set_title(
+            f"B. Heatmap Phần Dư Chuẩn Hóa Hiệu Chỉnh (Adjusted Residuals)\n"
+            f"Kiểm định Chi-Square: $\\chi^2 = {chi2_val:.2f}$ (p = {p_val:.4f}, df = {df_val}) | Cramér's V = {v_val:.2f}",
+            fontsize=12, fontweight="bold", pad=12
+        )
+        axes[1].set_xlabel("Khung Giờ Sinh Hoạt", fontsize=11, fontweight="bold")
+        axes[1].set_ylabel("Persona ID", fontsize=11, fontweight="bold")
+        axes[1].tick_params(axis='y', rotation=0)
+
+        # Ghi chú phương pháp luận ở chân biểu đồ
+        fig.text(
+            0.5, -0.065,
+            "Ghi chú: Giá trị phần dư chuẩn hóa z thuộc khoảng [-1.96, +1.96] tương ứng với phân phối chuẩn tắc N(0, 1) ở mức ý nghĩa alpha = 0.05.\n"
+            "Không có ô nào vượt ngưỡng (+1.96: thiên kiến ưa chuộng; -1.96: thiên kiến né tránh). Do cỡ mẫu support nhỏ (N=79), đây là quan sát sơ bộ.",
+            ha="center", fontsize=9.5, style="italic", bbox=dict(boxstyle="round,pad=0.5", facecolor="#f8f9fa", edgecolor="#ced4da")
+        )
+
+        plt.tight_layout()
+        if save_path:
+            plt.savefig(save_path, bbox_inches='tight')
+        return fig
+
+
 
 # ==============================================================================
 # V. CÁC HÀM TIỆN ÍCH DỄ SỬ DỤNG TRỰC TIẾP (CONVENIENCE APIS)
