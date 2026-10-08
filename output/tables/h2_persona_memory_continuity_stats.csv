@@ -1,0 +1,7 @@
+﻿persona_id,vai_tro,so_phien,so_active_threads_tb_phien,tong_active_threads,unique_threads_count,bai_doc_tich_luy_bo_nho,memory_deltas_count,ty_le_duy_tri_chu_de_cot_loi_pct,so_thuc_the_quay_lai_xuyen_phien
+vn_fb_001,Thiết kế đồ họa,4,3.0,12,12,22,10,100.0,2
+vn_fb_002,Lao động / Gia đình,4,2.75,11,10,14,11,100.0,0
+vn_fb_003,Bảo vệ trực ca,4,2.75,11,11,14,12,50.0,1
+vn_fb_004,Nhân viên nhà hàng,4,3.5,14,13,4,9,100.0,0
+vn_fb_005,Thợ cơ khí,4,2.5,10,10,21,14,75.0,1
+vn_fb_006,Gen X Kinh doanh,3,1.67,5,5,14,5,66.7,2

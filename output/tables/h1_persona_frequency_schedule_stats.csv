@@ -1,0 +1,7 @@
+﻿persona_id,vai_tro_nghe_nghiep,so_windows,so_ngay_hoat_dong,tan_suat_ngay_mean,tan_suat_ngay_std,tan_suat_ngay_min,tan_suat_ngay_max,gap_hours_median,gap_hours_mean,ca_sang_06_11h_pct,ca_trua_11_14h_pct,ca_chieu_14_18h_pct,ca_toi_18_23h_pct,ca_dem_23_06h_pct,dau_an_lich_trinh_nghe_nghiep,ket_luan_h1
+vn_fb_001,vn_fb_001 (Thiết kế đồ họa),22,8,2.75,0.46,2,3,7.25,9.75,36.4,22.7,9.1,31.8,0.0,"Rải đều cả ngày (Sáng 36.4%, Trưa 22.7%, Tối 31.8%): Dân thiết kế làm việc linh hoạt trên máy tính.",ĐẠT YÊU CẦU
+vn_fb_002,vn_fb_002 (Lao động / Gia đình),15,9,1.67,0.5,1,2,12.12,14.16,33.3,20.0,13.3,33.3,0.0,"Tần suất thấp nhất (1.67 lần/ngày): Lao động bận con nhỏ, nghỉ qua đêm kéo dài 15-16h (gap median 12.1h).",ĐẠT YÊU CẦU
+vn_fb_003,vn_fb_003 (Bảo vệ trực ca),12,7,1.71,0.76,1,3,11.5,14.48,41.7,8.3,0.0,50.0,0.0,"Né ca trực ngày (0% chiều, 8.3% trưa): Quy định ca trực nghiêm ngặt; dồn sáng sớm (41.7%) & tối (50%).",ĐẠT YÊU CẦU
+vn_fb_004,vn_fb_004 (Nhân viên nhà hàng),16,7,2.29,0.95,1,3,8.0,10.55,31.2,0.0,31.2,37.5,0.0,Né trưa (0%): Bận chạy bàn nhà hàng giờ cao điểm; dồn xế chiều (31.2%) & tối (37.5%).,ĐẠT YÊU CẦU
+vn_fb_005,vn_fb_005 (Thợ cơ khí),17,7,2.43,0.79,1,3,8.0,11.3,29.4,23.5,11.8,35.3,0.0,"Rải đều theo ca nghỉ thợ máy: Sáng cà phê (29.4%), Trưa giữa ca (23.5%), Tối sau ca (35.3%).",ĐẠT YÊU CẦU
+vn_fb_006,vn_fb_006 (Gen X Kinh doanh),13,7,1.86,0.69,1,3,11.75,13.15,7.7,38.5,7.7,46.2,0.0,Né sáng sớm (7.7%): Gen X sáng bận việc đời thường; vào nghỉ trưa (38.5%) & tối sau cơm (46.2%).,ĐẠT YÊU CẦU

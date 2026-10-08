@@ -1,0 +1,24 @@
+﻿persona_id,session_order,session_id,working_memory_summary,read_posts,searched_topics,opened_sources
+vn_fb_001,1,2241a54c-e30b-411e-aa84-37ee8e0bbe90,"Phiên đã chạy 5/12 phút. Đã đọc 5 bài viết, tìm kiếm 1 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Cờ vua và các tình huống thú vị trong trò chơi' (situational).",5,1,1
+vn_fb_001,2,1f4fc804-6767-4155-9b2b-0deb74f8e837,"Phiên đã chạy 11/15 phút. Đã đọc 5 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Cờ vua - tình huống thú vị' (situational).",5,0,0
+vn_fb_001,3,1b810cd9-19f2-498b-802e-3195d902f0e7,"Phiên đã chạy 15/15 phút. Đã đọc 9 bài viết, tìm kiếm 1 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Cờ vua và các tình huống thú vị' (situational).",6,1,1
+vn_fb_001,4,773d113e-58d0-4e82-9200-849c8f7a6fbe,"Phiên đã chạy 35/35 phút. Đã đọc 49 bài viết, tìm kiếm 1 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Thiết kế 3D trong kiến trúc và nội thất' (persona).",6,1,1
+vn_fb_002,1,34efda55-dee5-4209-9fe8-751320a0dccd,"Phiên đã chạy 10/10 phút. Đã đọc 9 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Khám sức khỏe sinh sản' (persona).",6,0,0
+vn_fb_002,2,521c9990-e91a-4dde-a29e-eab19769d9f2,"Phiên đã chạy 3/18 phút. Đã đọc 1 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Tâm linh Phật giáo' (situational).",1,0,0
+vn_fb_002,3,38c96768-c74d-4fe6-a426-0eb95d34b75d,"Phiên đã chạy 20/20 phút. Đã đọc 1 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Video ngắn - Reels' (persona).",1,0,0
+vn_fb_002,4,5cb3f0bf-230b-4b68-b6e0-4e1d6225bde0,"Phiên đã chạy 15/15 phút. Đã đọc 10 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Video ngắn' (situational).",6,0,0
+vn_fb_003,1,9e8baabb-5691-4c15-b278-0b5534c6ee08,"Phiên đã chạy 10/10 phút. Đã đọc 2 bài viết, tìm kiếm 1 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Ẩm thực đường phố Đà Nẵng' (persona).",2,1,1
+vn_fb_003,2,a27a406f-19be-4a98-aa93-5d9a6fad0b8e,"Phiên đã chạy 25/25 phút. Đã đọc 10 bài viết, tìm kiếm 1 lần, mở 0 nguồn/trang. Mạch gần nhất: 'am_thuc' (persona).",6,1,0
+vn_fb_003,3,62cedcab-d23f-4bc1-a10b-114aa17fd910,"Phiên đã chạy 26/25 phút. Đã đọc 0 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'video ngắn giải trí' (situational).",0,0,0
+vn_fb_003,4,8b0a810e-805a-45dd-9c64-c10e5125df13,"Phiên đã chạy 20/20 phút. Đã đọc 7 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'phát triển bản thân' (persona).",6,0,0
+vn_fb_004,1,eaedef3d-73dc-4527-8c52-e2f444a389bd,"Phiên đã chạy 10/10 phút. Đã đọc 1 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Reels' (situational).",1,0,0
+vn_fb_004,2,7fa44f4e-ed8f-4401-9fe5-745c5025776c,"Phiên đã chạy 20/20 phút. Đã đọc 0 bài viết, tìm kiếm 1 lần, mở 0 nguồn/trang. Mạch gần nhất: 'video highlight bóng đá' (persona).",0,1,0
+vn_fb_004,3,828f064e-272a-4b6a-a579-963d5ed5e1b9,"Phiên đã chạy 25/25 phút. Đã đọc 2 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'video giải trí' (situational).",2,0,0
+vn_fb_004,4,1467fb7f-2b2b-4734-b8f9-0d5c4e0295fc,"Phiên đã chạy 35/35 phút. Đã đọc 1 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Video giải trí' (situational).",1,0,0
+vn_fb_005,1,5123fea1-29bb-4c04-b8df-5065884acfaf,"Phiên đã chạy 4/12 phút. Đã đọc 3 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'khám phá feed' (situational).",3,0,0
+vn_fb_005,2,3bd87615-0c11-4ade-897a-8aac32829ef0,"Phiên đã chạy 10/10 phút. Đã đọc 8 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'kỹ thuật nhiếp ảnh mặt trăng' (situational).",6,0,0
+vn_fb_005,3,397f1fb0-d82d-4b24-aec0-e7f69d5cd12c,"Phiên đã chạy 15/15 phút. Đã đọc 17 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Sự kiện thiên văn - Sao Hỏa và Mặt Trăng' (situational).",6,0,0
+vn_fb_005,4,81b9d263-b661-4688-bd01-826514fdd24b,"Phiên đã chạy 10/10 phút. Đã đọc 9 bài viết, tìm kiếm 9 lần, mở 3 nguồn/trang. Mạch gần nhất: 'Sự kiện thiên văn Sao Hỏa đối lập' (situational).",6,6,3
+vn_fb_006,1,3bec6714-e1d8-4382-b218-87beab8417c2,"Phiên đã chạy 10/10 phút. Đã đọc 6 bài viết, tìm kiếm 1 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Bất động sản Cần Thơ' (persona).",6,1,1
+vn_fb_006,2,2f5baca0-f84c-48a4-8bbb-f45a3e39eaa9,"Phiên đã chạy 8/8 phút. Đã đọc 2 bài viết, tìm kiếm 2 lần, mở 1 nguồn/trang. Mạch gần nhất: 'Khám phá feed' (persona).",2,2,1
+vn_fb_006,3,53a21bfd-97c0-426f-b2d6-8312d37ecf2d,"Phiên đã chạy 14/22 phút. Đã đọc 13 bài viết, tìm kiếm 0 lần, mở 0 nguồn/trang. Mạch gần nhất: 'Nội dung feed' (situational).",6,0,0
