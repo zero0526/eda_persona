@@ -1960,16 +1960,18 @@ class ActionLoader:
 
         def assign_peak_slot(h):
             if 6 <= h < 11:
-                return "1. Ca Sáng (06h - 11h)"
-            elif 11 <= h < 17:
-                return "2. Ca Trưa & Chiều (11h - 17h)"
+                return "1. Sáng (06h - 11h)"
+            elif 11 <= h < 14:
+                return "2. Trưa (11h - 14h)"
+            elif 14 <= h < 18:
+                return "3. Chiều (14h - 18h)"
             else:
-                return "3. Ca Tối (17h - 23h)"
+                return "4. Tối (18h - 23h)"
 
         df_w = df_windows.copy()
         df_w['time_slot'] = df_w['start_hour_local'].apply(assign_peak_slot)
 
-        order_cols = ["1. Ca Sáng (06h - 11h)", "2. Ca Trưa & Chiều (11h - 17h)", "3. Ca Tối (17h - 23h)"]
+        order_cols = ["1. Sáng (06h - 11h)", "2. Trưa (11h - 14h)", "3. Chiều (14h - 18h)", "4. Tối (18h - 23h)"]
         df_obs = pd.crosstab(df_w['persona_id'], df_w['time_slot'])[order_cols]
 
         chi2, p_val, dof, expected_arr = chi2_contingency(df_obs)
@@ -1992,17 +1994,24 @@ class ActionLoader:
         df_pct = (df_obs.div(df_obs.sum(axis=1), axis=0) * 100).round(1)
         df_pct["Tổng Windows"] = df_obs.sum(axis=1)
 
+        p_val_fmt = round(float(p_val), 4)
+        conclusion = (
+            f"Chưa có sự khác biệt rõ rệt giữa các persona theo khung giờ (p = {p_val_fmt} > 0.05). "
+            f"Tổng số quan sát N = {int(n)} cửa sổ trên 6 Persona."
+            if p_val > 0.05
+            else f"Có sự khác biệt theo khung giờ giữa các persona (p = {p_val_fmt} <= 0.05, N = {int(n)})."
+        )
         test_stats = {
             "Phép kiểm định": "Chi-Square Test of Independence",
             "Biến độc lập (Hàng)": "Persona ID (6 nhóm)",
-            "Biến phụ thuộc (Cột)": "Khung giờ hoạt động (3 ca)",
+            "Biến phụ thuộc (Cột)": "Khung giờ hoạt động (4 ca: Sáng, Trưa, Chiều, Tối)",
             "Tổng số quan sát (N)": int(n),
             "Giá trị Chi-Square (χ²)": round(float(chi2), 4),
             "Bậc tự do (df)": int(dof),
             "p-value": round(float(p_val), 4),
             "Cramér's V": round(float(cramers_v), 4),
             "Mức ý nghĩa alpha": 0.05,
-            "Kết luận thống kê": "Chưa đủ bằng chứng bác bỏ H0 (p = 0.8955 > 0.05). Do cỡ mẫu support nhỏ (N=79, vn_fb_001/002 có N=2), đây là quan sát sơ bộ, chưa thể khẳng định tuyệt đối."
+            "Kết luận thống kê": conclusion
         }
 
         return df_obs, df_exp, df_adj_res, test_stats
@@ -2025,7 +2034,12 @@ class ActionLoader:
             return None
 
         # Rút ngắn tiêu đề cột cho biểu đồ gọn gàng
-        short_cols = ["1. Ca Sáng\n(06h - 11h)", "2. Ca Trưa & Chiều\n(11h - 17h)", "3. Ca Tối\n(17h - 23h)"]
+        short_cols = [
+            "1. Sáng\n(06h - 11h)",
+            "2. Trưa\n(11h - 14h)",
+            "3. Chiều\n(14h - 18h)",
+            "4. Tối\n(18h - 23h)"
+        ]
         plot_obs = df_obs.copy()
         plot_obs.columns = short_cols
         plot_adj = df_adj_res.copy()
@@ -2045,7 +2059,7 @@ class ActionLoader:
                 sig = " *" if abs(val) >= 1.96 else ""
                 annot_res[i, j] = f"{val:+.2f}{sig}"
 
-        fig, axes = plt.subplots(1, 2, figsize=(15.5, 6.2), dpi=120)
+        fig, axes = plt.subplots(1, 2, figsize=(17.5, 6.2), dpi=120)
 
         # Panel A: Tần số quan sát vs kỳ vọng
         sns.heatmap(
@@ -2097,10 +2111,11 @@ class ActionLoader:
         axes[1].tick_params(axis='y', rotation=0)
 
         # Ghi chú phương pháp luận ở chân biểu đồ
+        n_obs = int(test_stats.get("Tổng số quan sát (N)", len(df_obs)))
         fig.text(
             0.5, -0.065,
-            "Ghi chú: Giá trị phần dư chuẩn hóa z thuộc khoảng [-1.96, +1.96] tương ứng với phân phối chuẩn tắc N(0, 1) ở mức ý nghĩa alpha = 0.05.\n"
-            "Không có ô nào vượt ngưỡng (+1.96: thiên kiến ưa chuộng; -1.96: thiên kiến né tránh). Do cỡ mẫu support nhỏ (N=79), đây là quan sát sơ bộ.",
+            f"Ghi chú: Giá trị phần dư chuẩn hóa z thuộc khoảng [-1.96, +1.96] tương ứng với mức ý nghĩa alpha = 0.05 (N = {n_obs} cửa sổ).\n"
+            "Chỉ số z dương thể hiện tần suất xuất hiện nhiều hơn kỳ vọng, z âm thể hiện ít hơn kỳ vọng.",
             ha="center", fontsize=9.5, style="italic", bbox=dict(boxstyle="round,pad=0.5", facecolor="#f8f9fa", edgecolor="#ced4da")
         )
 
