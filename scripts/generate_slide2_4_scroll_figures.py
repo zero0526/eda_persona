@@ -222,19 +222,19 @@ lines2, labels2 = ax2_twin.get_legend_handles_labels()
 ax2.legend(lines1 + lines2, labels1 + labels2, loc='upper left', frameon=True, fontsize=8.8, facecolor='#ffffff', edgecolor='#bdc3c7')
 
 # --- CALLOUT BOX DƯỚI CHÂN HÌNH ---
-fig.text(
-    0.5, 0.02,
-    "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ ĐỘNG LỰC HỌC CUỘN TRANG (H2: PHÙ HỢP VỚI HỒ SƠ & HỢP ĐỒNG CADENCE) ★\n"
-    "• Nhóm nhịp độ nhanh ('quick'): vn_fb_001 (Thiết kế, 1,719 px/bước) và vn_fb_005 (Cơ khí, 1,378 px/bước) có quãng đường cuộn dài vượt trội so với mức trung bình hệ thống (1,080 px).\n"
-    "• Nhóm nhịp độ điều độ ('balanced'): vn_fb_002 (1,056 px), vn_fb_003 (736 px), vn_fb_006 (704 px) duy trì biên độ vuốt vừa phải và ngắn hơn.\n"
-    "• Đặc thù chuỗi cuộn liên tiếp: vn_fb_003 (Bảo vệ) có tỷ lệ cuộn liên tiếp đạt 59.5% (78/131 bước) với độ trễ thấp (8.5s), phản ánh thói quen cuộn liên tục khi tuần tra/trực ca.\n"
-    "• Đặc thù độ trễ dài: vn_fb_006 (Gen X) ghi nhận độ trễ trung vị cao nhất (12.1s, mean 20.4s), phản ánh tốc độ đọc chậm rãi, cẩn trọng của người lớn tuổi.",
-    ha='center',
-    fontsize=9.6,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig.text(
+#     0.5, 0.02,
+#     "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ ĐỘNG LỰC HỌC CUỘN TRANG (H2: PHÙ HỢP VỚI HỒ SƠ & HỢP ĐỒNG CADENCE) ★\n"
+#     "• Nhóm nhịp độ nhanh ('quick'): vn_fb_001 (Thiết kế, 1,719 px/bước) và vn_fb_005 (Cơ khí, 1,378 px/bước) có quãng đường cuộn dài vượt trội so với mức trung bình hệ thống (1,080 px).\n"
+#     "• Nhóm nhịp độ điều độ ('balanced'): vn_fb_002 (1,056 px), vn_fb_003 (736 px), vn_fb_006 (704 px) duy trì biên độ vuốt vừa phải và ngắn hơn.\n"
+#     "• Đặc thù chuỗi cuộn liên tiếp: vn_fb_003 (Bảo vệ) có tỷ lệ cuộn liên tiếp đạt 59.5% (78/131 bước) với độ trễ thấp (8.5s), phản ánh thói quen cuộn liên tục khi tuần tra/trực ca.\n"
+#     "• Đặc thù độ trễ dài: vn_fb_006 (Gen X) ghi nhận độ trễ trung vị cao nhất (12.1s, mean 20.4s), phản ánh tốc độ đọc chậm rãi, cẩn trọng của người lớn tuổi.",
+#     ha='center',
+#     fontsize=9.6,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.10, 1, 0.98])
 fig4_path = FIGURES_DIR / "slide2_4_scroll_dynamics.png"

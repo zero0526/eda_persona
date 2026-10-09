@@ -1,0 +1,7 @@
+﻿cluster_id,cluster_name,so_luot,ty_le,persona_dai_dien,thuoc_tinh_chinh,color
+3,Cụm 3: Tâm linh & Sức khỏe,18,5.538461538461538,vn_fb_006 & 002 (Trung niên & Lớn tuổi),"spirituality (7), health (5), wealth (4), thread (2)",#16a085
+4,Cụm 4: Truyền thống & Lịch sử,23,7.076923076923077,vn_fb_005 (Cơ khí / Tri ân tướng Giáp),"value_tradition (21), cuisine_jp (2)",#8e44ad
+5,Cụm 5: Giải trí Video & Thể thao,24,7.384615384615385,vn_fb_004 (Nhà hàng / Gen Z),"content_format (13), football (11)",#d35400
+1,Cụm 1: Ngôn ngữ & Gia đình,31,9.538461538461538,vn_fb_002 (Gia đình / Nghệ An),"tone (14), province (7), expressiveness (5), parenting (3)",#27ae60
+2,Cụm 2: Ẩm thực & Giao lưu Đêm,41,12.615384615384615,vn_fb_003 (Bảo vệ ca trực),"cuisine_vn (14), street_food (12), social_style (7), group (6)",#e67e22
+6,Cụm 6: Khám phá Tri thức & BĐS,172,52.92307692307693,"vn_fb_001, 005, 006 (Trí thức & Kỹ thuật)","curiosity (119), real_estate (36), career (7), tech (7)",#2980b9

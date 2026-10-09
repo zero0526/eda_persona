@@ -39,14 +39,13 @@ PERSONA_LABELS = {
     'vn_fb_006': 'vn_fb_006\n(Gen X Kinh doanh)',
 }
 
-SURFACE_ORDER = ['feed', 'reels', 'group', 'detail', 'search', 'unknown']
+SURFACE_ORDER = ['feed', 'reels', 'group', 'detail', 'search']
 SURFACE_NAMES = {
     'feed': 'Bảng tin (Feed)',
     'reels': 'Video ngắn (Reels)',
     'group': 'Hội nhóm (Group)',
     'detail': 'Chi tiết bài (Detail)',
     'search': 'Tìm kiếm (Search)',
-    'unknown': 'Khác (Unknown)',
 }
 SURFACE_PALETTE = {
     'feed': '#1877f2',      # Xanh dương Facebook
@@ -54,7 +53,6 @@ SURFACE_PALETTE = {
     'group': '#00b894',     # Xanh lục bảo cộng đồng
     'detail': '#e67e22',    # Cam đất đọc sâu
     'search': '#9b59b6',    # Tím tìm kiếm
-    'unknown': '#95a5a6',   # Xám nhạt
 }
 
 print("1. Nạp dữ liệu actions từ ActionLoader...")
@@ -62,7 +60,8 @@ from loaders.action_loader import ActionLoader
 loader = ActionLoader()
 df_actions = loader.to_unified_actions_dataframe()
 
-# Lọc và đồng nhất thứ tự
+# Lọc bỏ unknown và các bề mặt phụ, chỉ giữ lại 5 bề mặt chính
+df_actions = df_actions[df_actions['surface'].isin(SURFACE_ORDER)].copy()
 df_actions['persona_id'] = pd.Categorical(df_actions['persona_id'], categories=PERSONA_ORDER, ordered=True)
 df_actions['surface'] = pd.Categorical(df_actions['surface'], categories=SURFACE_ORDER, ordered=True)
 
@@ -183,18 +182,18 @@ ax2.set_xticklabels([f"{s.upper()}\n({SURFACE_NAMES[s].split()[0]})" for s in SU
 ax2.set_yticklabels([f"{p} ({p.split('_')[-1]})" for p in PERSONA_ORDER], rotation=0, fontsize=9.5)
 
 # --- CALLOUT BOX DƯỚI CHÂN HÌNH ---
-fig.text(
-    0.5, 0.02,
-    "★ KẾT QUẢ KIỂM ĐỊNH H2 CẤP ĐỘ KHÔNG GIAN BỀ MẶT (DỮ LIỆU THỰC NGHIỆM ỦNG HỘ GIẢ THUYẾT) ★\n"
-    "• Tập trung cao ở Reels: vn_fb_004 (Nhà hàng) ghi nhận 87.4% trên Reels (Z = +28.8), phù hợp với thiên hướng tiêu thụ video ngắn.\n"
-    "• Xu hướng tham gia Hội nhóm: vn_fb_001 (Thiết kế, 42.8%, Z = +18.0) và vn_fb_006 (Gen X, 23.4%, Z = +4.2) trao đổi nội dung đồ họa và bất động sản.\n"
-    "• Tỷ lệ xem Chi tiết cao: vn_fb_005 (Cơ khí, 30.7%, Z = +5.6) & vn_fb_003 (Bảo vệ, 28.6%, Z = +6.6) quan sát bình luận và thảo luận chuyên sâu.",
-    ha='center',
-    fontsize=9.6,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig.text(
+#     0.5, 0.02,
+#     "★ KẾT QUẢ KIỂM ĐỊNH H2 CẤP ĐỘ KHÔNG GIAN BỀ MẶT (DỮ LIỆU THỰC NGHIỆM ỦNG HỘ GIẢ THUYẾT) ★\n"
+#     "• Tập trung cao ở Reels: vn_fb_004 (Nhà hàng) ghi nhận 87.4% trên Reels (Z = +28.8), phù hợp với thiên hướng tiêu thụ video ngắn.\n"
+#     "• Xu hướng tham gia Hội nhóm: vn_fb_001 (Thiết kế, 42.8%, Z = +18.0) và vn_fb_006 (Gen X, 23.4%, Z = +4.2) trao đổi nội dung đồ họa và bất động sản.\n"
+#     "• Tỷ lệ xem Chi tiết cao: vn_fb_005 (Cơ khí, 30.7%, Z = +5.6) & vn_fb_003 (Bảo vệ, 28.6%, Z = +6.6) quan sát bình luận và thảo luận chuyên sâu.",
+#     ha='center',
+#     fontsize=9.6,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.09, 1, 0.98])
 fig_path = FIGURES_DIR / "slide2_1_surface_distribution_and_persona_alignment.png"
@@ -233,8 +232,6 @@ for pid in PERSONA_ORDER:
         'detail_pct': ct_pct.loc[pid, 'detail'],
         'search_actions': int(ct_counts.loc[pid, 'search']),
         'search_pct': ct_pct.loc[pid, 'search'],
-        'unknown_actions': int(ct_counts.loc[pid, 'unknown']),
-        'unknown_pct': ct_pct.loc[pid, 'unknown'],
         'be_mat_chu_dao': ct_pct.loc[pid].idxmax(),
         'dac_trung_khong_gian_persona': persona_specialty[pid],
         'ket_luan_h2': 'ĐẠT YÊU CẦU (Khớp sở thích & hành vi tự chủ)'

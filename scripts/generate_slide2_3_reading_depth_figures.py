@@ -192,19 +192,19 @@ ax2.grid(True, axis='y', alpha=0.5)
 ax2.legend(loc='upper right', frameon=True, fontsize=9.0, facecolor='#ffffff', edgecolor='#bdc3c7')
 
 # --- CALLOUT BOX DƯỚI CHÂN HÌNH ---
-fig.text(
-    0.5, 0.02,
-    "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ MỨC ĐỘ ĐỌC SÂU & TIÊU THỤ THÔNG TIN (H2: PHÙ HỢP VỚI HỒ SƠ PERSONA) ★\n"
-    "• vn_fb_005 (Cơ khí): Tỷ lệ đọc sâu cao nhất (47.0%, 62 bước), tích lũy trung bình 5.2 bài/phiên, tập trung đọc bài kỹ thuật và bình luận chuyên môn.\n"
-    "• vn_fb_001 (Thiết kế) & vn_fb_006 (Gen X): Đọc sâu ở mức 34.5% - 36.8%, tích lũy 4.7 - 5.5 bài/phiên, phù hợp với thói quen thẩm định và tìm hiểu kỹ nội dung.\n"
-    "• vn_fb_004 (Nhà hàng): Tỷ lệ lướt nhanh áp đảo (93.5%), chỉ có 6.5% đọc sâu (1.0 bài/phiên), phản ánh nhịp độ cuộn chuyển nhanh đặc trưng của video ngắn.\n"
-    "• vn_fb_003 (Bảo vệ): Lướt chiếm 76.2% trong ca trực, nhưng kết hợp đọc sâu 23.8% khi gặp bài viết hoặc phần bình luận đáng chú ý.",
-    ha='center',
-    fontsize=9.6,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig.text(
+#     0.5, 0.02,
+#     "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ MỨC ĐỘ ĐỌC SÂU & TIÊU THỤ THÔNG TIN (H2: PHÙ HỢP VỚI HỒ SƠ PERSONA) ★\n"
+#     "• vn_fb_005 (Cơ khí): Tỷ lệ đọc sâu cao nhất (47.0%, 62 bước), tích lũy trung bình 5.2 bài/phiên, tập trung đọc bài kỹ thuật và bình luận chuyên môn.\n"
+#     "• vn_fb_001 (Thiết kế) & vn_fb_006 (Gen X): Đọc sâu ở mức 34.5% - 36.8%, tích lũy 4.7 - 5.5 bài/phiên, phù hợp với thói quen thẩm định và tìm hiểu kỹ nội dung.\n"
+#     "• vn_fb_004 (Nhà hàng): Tỷ lệ lướt nhanh áp đảo (93.5%), chỉ có 6.5% đọc sâu (1.0 bài/phiên), phản ánh nhịp độ cuộn chuyển nhanh đặc trưng của video ngắn.\n"
+#     "• vn_fb_003 (Bảo vệ): Lướt chiếm 76.2% trong ca trực, nhưng kết hợp đọc sâu 23.8% khi gặp bài viết hoặc phần bình luận đáng chú ý.",
+#     ha='center',
+#     fontsize=9.6,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.10, 1, 0.98])
 fig3_path = FIGURES_DIR / "slide2_3_scanning_vs_deep_reading.png"

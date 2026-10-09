@@ -1,0 +1,20 @@
+﻿persona_id,feat_raw,chain_disp,n_steps,desc,tfidf,tot,s_counts,n_sess,excl
+vn_fb_001,scroll@group__THEN__read@group__THEN__react@group,scroll [group] ➔ read [group] ➔ react [group],3,Đọc sâu & Tương tác trong Nhóm Kiến trúc,0.153,7,"[0, 0, 0, 7]",1,100.0
+vn_fb_001,scroll@group__THEN__read@group,scroll [group] ➔ read [group],2,Lướt & Đọc tài liệu trong Hội nhóm Chuyên môn,0.153,26,"[0, 0, 1, 25]",2,81.2
+vn_fb_001,open@search__THEN__observe@search__THEN__open@group,open [search] ➔ observe [search] ➔ open [group],3,Tìm kiếm từ khóa kiến trúc ➔ Mở Hội nhóm Chuyên ngành,0.072,2,"[1, 0, 1, 0]",2,66.7
+vn_fb_001,read@group__THEN__open_comments@detail,read [group] ➔ open_comments [detail],2,Đọc bài trong nhóm ➔ Mở xem thảo luận chuyên gia,0.1,6,"[1, 0, 0, 5]",2,66.7
+vn_fb_002,observe@feed__THEN__react@feed,observe [feed] ➔ react [feed],2,Dừng nhìn bài thiện nguyện trên Feed ➔ Thả tim cảm xúc,0.184,9,"[2, 7, 0, 0]",2,69.2
+vn_fb_002,read@feed__THEN__react@feed__THEN__scroll@feed,read [feed] ➔ react [feed] ➔ scroll [feed],3,Đọc nhanh ➔ Thả tim hướng thiện ➔ Cuộn lướt tiếp (Tranh thủ giờ nghỉ),0.117,4,"[0, 0, 1, 3]",2,50.0
+vn_fb_002,scroll@feed__THEN__read@feed__THEN__react@feed,scroll [feed] ➔ read [feed] ➔ react [feed],3,Lướt bảng tin ➔ Đọc nhanh ➔ Thả tim cảm xúc,0.12,3,"[1, 0, 0, 2]",2,30.0
+vn_fb_003,comment@detail__THEN__observe@detail__THEN__scroll_comments@detail,comment [detail] ➔ observe [detail] ➔ scroll_comments [detail],3,Bình luận hỏi quán ăn đêm ➔ Dừng quan sát ➔ Cuộn đọc bàn luận đêm,0.179,7,"[1, 6, 0, 0]",2,100.0
+vn_fb_003,comment@detail__THEN__observe@detail,comment [detail] ➔ observe [detail],2,Để lại bình luận hỏi quán ➔ Dừng quan sát phản hồi,0.136,16,"[6, 10, 0, 0]",2,72.7
+vn_fb_003,observe@feed__THEN__scroll@feed__THEN__search@search,observe [feed] ➔ scroll [feed] ➔ search [search],3,Lướt feed đêm ➔ Chủ động tìm kiếm địa điểm ẩm thực,0.103,2,"[1, 1, 0, 0]",2,100.0
+vn_fb_004,watch@reels__THEN__next@reels,watch [reels] ➔ next [reels],2,Trục tiêu thụ video ngắn Reels liên hoàn,0.335,133,"[0, 28, 41, 64]",3,78.7
+vn_fb_004,next@reels__THEN__watch@reels__THEN__react@reels,next [reels] ➔ watch [reels] ➔ react [reels],3,Xem chọn lọc clip bóng đá highlight ➔ Thả tim cảm xúc ➔ Vuốt chuyển tiếp,0.141,3,"[0, 0, 2, 1]",2,75.0
+vn_fb_004,react@reels__THEN__next@reels,react [reels] ➔ next [reels],2,Thả tim video ưng ý ➔ Vuốt chuyển sang clip tiếp theo,0.136,4,"[1, 1, 2, 0]",3,66.7
+vn_fb_005,read@feed__THEN__expand@feed__THEN__observe@feed,read [feed] ➔ expand [feed] ➔ observe [feed],3,"Đọc mở đầu bài kỹ thuật dài ➔ Bấm ""Xem thêm"" mở toàn văn ➔ Thẩm định chi tiết",0.138,3,"[1, 2, 0, 0]",2,100.0
+vn_fb_005,read@feed__THEN__open_comments@detail__THEN__comment@detail,read [feed] ➔ open_comments [detail] ➔ comment [detail],3,Đọc bài chuyên ngành ➔ Mở xem bình luận ➔ Viết bình luận thảo luận,0.112,2,"[1, 0, 1, 0]",2,100.0
+vn_fb_005,search@search__THEN__scroll@search,search [search] ➔ scroll [search],2,Tìm kiếm chuyên sâu từ khóa Hội Thiên văn SAL,0.157,4,"[0, 0, 0, 4]",1,100.0
+vn_fb_006,observe@group__THEN__read@group__THEN__react@group,observe [group] ➔ read [group] ➔ react [group],3,Quan sát nhóm BĐS Cần Thơ ➔ Đọc khảo sát giá ➔ Tương tác bài đăng,0.15,3,"[3, 0, 0, 0]",1,100.0
+vn_fb_006,search@search__THEN__open@search__THEN__observe@search,search [search] ➔ open [search] ➔ observe [search],3,Tìm kiếm BĐS/Nha khoa có chủ đích ➔ Mở kết quả ➔ Quan sát thẩm định logic,0.099,2,"[1, 0, 0, 1]",2,66.7
+vn_fb_006,observe@feed__THEN__search@search,observe [feed] ➔ search [search],2,Thấy tin tức trên feed ➔ Chuyển ngay sang tìm kiếm kiểm chứng dữ liệu,0.099,2,"[1, 1, 0, 0]",2,66.7

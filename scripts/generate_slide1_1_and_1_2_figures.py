@@ -174,17 +174,17 @@ ax1b.set_xticklabels(["Ca Sáng\n(06-11h)", "Ca Trưa\n(11-14h)", "Ca Chiều\n(
 ax1b.set_yticklabels([f"{p} ({p.split('_')[-1]})" for p in PERSONA_ORDER], rotation=0, fontsize=10)
 
 # Hộp nhận định phân nhóm ở chân biểu đồ
-fig1.text(
-    0.5, 0.02,
-    "★ NHẬN ĐỊNH PHÂN NHÓM LỊCH TRÌNH THEO PERSONA (H1) ★\n"
-    "• Nhóm né tránh / giờ đặc thù: vn_fb_004 (Nhà hàng) NÉ TRƯA 0% (bận chạy bàn khách đông); vn_fb_003 (Bảo vệ) NÉ CHIỀU 0% & trưa 8.3% (ca trực nghiêm ngặt, dồn 2 đầu ca sáng/tối); vn_fb_006 (Gen X) ÍT VÀO SÁNG 7.7% (bận việc nhà, dồn trưa/tối).\n"
-    "• Nhóm linh hoạt / rải đều cả ngày: vn_fb_001 (Thiết kế đồ họa) rải đều các cữ sáng, trưa, tối nhờ tính chất tự do; vn_fb_005 (Thợ cơ khí) & vn_fb_002 (Lao động/Gia đình) rải đều theo các quãng nghỉ giải lao.",
-    ha='center',
-    fontsize=9.8,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig1.text(
+#     0.5, 0.02,
+#     "★ NHẬN ĐỊNH PHÂN NHÓM LỊCH TRÌNH THEO PERSONA (H1) ★\n"
+#     "• Nhóm né tránh / giờ đặc thù: vn_fb_004 (Nhà hàng) NÉ TRƯA 0% (bận chạy bàn khách đông); vn_fb_003 (Bảo vệ) NÉ CHIỀU 0% & trưa 8.3% (ca trực nghiêm ngặt, dồn 2 đầu ca sáng/tối); vn_fb_006 (Gen X) ÍT VÀO SÁNG 7.7% (bận việc nhà, dồn trưa/tối).\n"
+#     "• Nhóm linh hoạt / rải đều cả ngày: vn_fb_001 (Thiết kế đồ họa) rải đều các cữ sáng, trưa, tối nhờ tính chất tự do; vn_fb_005 (Thợ cơ khí) & vn_fb_002 (Lao động/Gia đình) rải đều theo các quãng nghỉ giải lao.",
+#     ha='center',
+#     fontsize=9.8,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.09, 1, 0.98])
 fig1_path = FIGURES_DIR / "slide1_1_four_shifts_and_persona_distribution.png"
@@ -289,17 +289,17 @@ ax2b.grid(True, axis='y')
 ax2b.legend(loc='upper right', frameon=True, fontsize=9.0, facecolor='#ffffff', edgecolor='#bdc3c7')
 
 # Hộp nhận định phân nhóm ở chân biểu đồ
-fig2.text(
-    0.5, 0.02,
-    "★ NHẬN ĐỊNH VỀ TẦN SUẤT & THỜI LƯỢNG SỬ DỤNG (H1: ĐẠT YÊU CẦU) ★\n"
-    "• Tần suất: Nhóm linh hoạt / giải trí cao (001: 2.75, 005: 2.43, 004: 2.29 lần/ngày) vs Nhóm bận gia đình / ca trực nghiêm ngặt (002: 1.67, 003: 1.71 lần/ngày).\n"
-    "• Thời lượng: Phân hóa theo sở thích nội dung: Lướt Reels lâu nhất (004: 23.6m) - Thợ kỹ thuật dứt khoát nhanh nhất (005: 13.1m, std=2.3m) | 100% phiên tự dừng (agent_stop).",
-    ha='center',
-    fontsize=9.8,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig2.text(
+#     0.5, 0.02,
+#     "★ NHẬN ĐỊNH VỀ TẦN SUẤT & THỜI LƯỢNG SỬ DỤNG (H1: ĐẠT YÊU CẦU) ★\n"
+#     "• Tần suất: Nhóm linh hoạt / giải trí cao (001: 2.75, 005: 2.43, 004: 2.29 lần/ngày) vs Nhóm bận gia đình / ca trực nghiêm ngặt (002: 1.67, 003: 1.71 lần/ngày).\n"
+#     "• Thời lượng: Phân hóa theo sở thích nội dung: Lướt Reels lâu nhất (004: 23.6m) - Thợ kỹ thuật dứt khoát nhanh nhất (005: 13.1m, std=2.3m) | 100% phiên tự dừng (agent_stop).",
+#     ha='center',
+#     fontsize=9.8,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.09, 1, 0.98])
 fig2_path = FIGURES_DIR / "slide1_2_duration_and_daily_frequency.png"

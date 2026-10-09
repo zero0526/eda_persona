@@ -1,0 +1,31 @@
+﻿feature,display,n_gram,tfidf_001,count_001,sess_001,s_dist,count_others,excl_pct,other_breakdown
+scroll@group__THEN__act_on_post@group,scroll [group] ➔ act_on_post [group],2-gram,0.1654840397538948,18,1/4,"[0, 0, 0, 18]",1,94.73684210526315,vn_fb_005:1
+act_on_post@group__THEN__scroll@group__THEN__read@group,act_on_post [group] ➔ scroll [group] ➔ read [group],3-gram,0.15974068623170995,8,1/4,"[0, 0, 0, 8]",0,100.0,
+scroll@group__THEN__read@group,scroll [group] ➔ read [group],2-gram,0.15291891554470807,26,2/4,"[0, 0, 1, 25]",6,81.25,"vn_fb_005:3, vn_fb_006:3"
+scroll@group__THEN__read@group__THEN__react@group,scroll [group] ➔ read [group] ➔ react [group],3-gram,0.15281397695581916,7,1/4,"[0, 0, 0, 7]",0,100.0,
+react@group__THEN__scroll@group__THEN__read@group,react [group] ➔ scroll [group] ➔ read [group],3-gram,0.15281397695581916,7,1/4,"[0, 0, 0, 7]",0,100.0,
+read@group__THEN__react@group__THEN__scroll@group,read [group] ➔ react [group] ➔ scroll [group],3-gram,0.15281397695581916,7,1/4,"[0, 0, 0, 7]",0,100.0,
+react@group__THEN__scroll@group,react [group] ➔ scroll [group],2-gram,0.14823684379304555,12,1/4,"[0, 0, 0, 12]",1,92.3076923076923,vn_fb_006:1
+scroll@group__THEN__act_on_post@group__THEN__react@group,scroll [group] ➔ act_on_post [group] ➔ react [group],3-gram,0.14481767793685538,6,1/4,"[0, 0, 0, 6]",0,100.0,
+scroll@unknown__THEN__observe@feed,scroll [unknown] ➔ observe [feed],2-gram,0.14481767793685538,6,1/4,"[0, 6, 0, 0]",0,100.0,
+act_on_post@group__THEN__react@group,act_on_post [group] ➔ react [group],2-gram,0.14481767793685538,6,1/4,"[0, 0, 0, 6]",0,100.0,
+observe@feed__THEN__scroll@unknown,observe [feed] ➔ scroll [unknown],2-gram,0.14481767793685538,6,1/4,"[0, 6, 0, 0]",0,100.0,
+act_on_post@group__THEN__scroll@group,act_on_post [group] ➔ scroll [group],2-gram,0.14453565658913176,11,1/4,"[0, 0, 0, 11]",1,91.66666666666666,vn_fb_005:1
+act_on_post@group__THEN__react@group__THEN__scroll@group,act_on_post [group] ➔ react [group] ➔ scroll [group],3-gram,0.13536006356005745,5,1/4,"[0, 0, 0, 5]",0,100.0,
+read@group__THEN__scroll@group__THEN__act_on_post@group,read [group] ➔ scroll [group] ➔ act_on_post [group],3-gram,0.13536006356005745,5,1/4,"[0, 0, 0, 5]",0,100.0,
+read@group__THEN__scroll@group,read [group] ➔ scroll [group],2-gram,0.13316537341855494,15,1/4,"[0, 0, 0, 15]",2,88.23529411764706,"vn_fb_005:1, vn_fb_006:1"
+read@group__THEN__react@group,read [group] ➔ react [group],2-gram,0.12530964713801607,7,1/4,"[0, 0, 0, 7]",3,70.0,vn_fb_006:3
+open_comments@detail__THEN__scroll_comments@detail__THEN__close@group,open_comments [detail] ➔ scroll_comments [detail] ➔ close [group],3-gram,0.12378487905576963,4,1/4,"[0, 0, 0, 4]",0,100.0,
+observe@feed__THEN__scroll@feed__THEN__expand@feed,observe [feed] ➔ scroll [feed] ➔ expand [feed],3-gram,0.12378487905576963,4,1/4,"[0, 4, 0, 0]",0,100.0,
+close@group__THEN__scroll@group__THEN__act_on_post@group,close [group] ➔ scroll [group] ➔ act_on_post [group],3-gram,0.12378487905576963,4,1/4,"[0, 0, 0, 4]",0,100.0,
+react@group__THEN__scroll@group__THEN__act_on_post@group,react [group] ➔ scroll [group] ➔ act_on_post [group],3-gram,0.12378487905576963,4,1/4,"[0, 0, 0, 4]",0,100.0,
+read@group__THEN__open_comments@detail__THEN__scroll_comments@detail,read [group] ➔ open_comments [detail] ➔ scroll_comments [detail],3-gram,0.12378487905576963,4,1/4,"[0, 0, 0, 4]",0,100.0,
+scroll_comments@detail__THEN__close@group,scroll_comments [detail] ➔ close [group],2-gram,0.10150537159297332,4,1/4,"[0, 0, 0, 4]",2,66.66666666666666,vn_fb_005:2
+read@group__THEN__open_comments@detail,read [group] ➔ open_comments [detail],2-gram,0.10025907742673874,6,2/4,"[1, 0, 0, 5]",3,66.66666666666666,"vn_fb_005:2, vn_fb_006:1"
+expand@feed__THEN__read@feed,expand [feed] ➔ read [feed],2-gram,0.08926829131459958,3,2/4,"[0, 2, 0, 1]",2,60.0,vn_fb_005:2
+expand@feed__THEN__observe@feed,expand [feed] ➔ observe [feed],2-gram,0.08926829131459958,3,1/4,"[0, 3, 0, 0]",4,42.857142857142854,vn_fb_005:4
+scroll_comments@detail__THEN__close@group__THEN__scroll@group,scroll_comments [detail] ➔ close [group] ➔ scroll [group],3-gram,0.08926829131459958,3,1/4,"[0, 0, 0, 3]",1,75.0,vn_fb_005:1
+open@search__THEN__observe@search,open [search] ➔ observe [search],2-gram,0.08926829131459958,3,2/4,"[1, 0, 2, 0]",2,60.0,vn_fb_006:2
+expand@feed__THEN__observe@feed__THEN__scroll@feed,expand [feed] ➔ observe [feed] ➔ scroll [feed],3-gram,0.08782907187982927,2,1/4,"[0, 2, 0, 0]",0,100.0,
+scroll@feed__THEN__expand@feed__THEN__observe@feed,scroll [feed] ➔ expand [feed] ➔ observe [feed],3-gram,0.08782907187982927,2,1/4,"[0, 2, 0, 0]",0,100.0,
+observe@feed__THEN__read@feed__THEN__react@feed,observe [feed] ➔ read [feed] ➔ react [feed],3-gram,0.08782907187982927,2,1/4,"[0, 2, 0, 0]",0,100.0,

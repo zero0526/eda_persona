@@ -201,12 +201,12 @@ for bar, count in zip(bars, cat_counts.values):
     ax1.text(w + 1.2, y, f"{count} lượt ({pct}%)", va='center', ha='left', fontsize=9.2, fontweight='bold', color='#2c3e50')
 
 # Ghi chú phân nhóm dưới Panel A
-ax1.text(0.04, 0.05, 
-         "★ TỔNG QUAN PHÂN NHÓM TIỀN ĐỀ:\n"
-         "• Nhóm 1 (001, 005, 006): Tiền đề chi phối bởi Đọc sâu văn bản & Hội nhóm\n"
-         "• Nhóm 2 (002, 003, 004): Tiền đề chi phối bởi Xem video ngắn & Đọc bình luận", 
-         transform=ax1.transAxes, fontsize=8.6, fontweight='bold', color='#1a365d',
-         bbox=dict(boxstyle='round,pad=0.4', facecolor='#ebf5fb', edgecolor='#2980b9', linewidth=1.0))
+# ax1.text(0.04, 0.05, 
+#          "★ TỔNG QUAN PHÂN NHÓM TIỀN ĐỀ:\n"
+#          "• Nhóm 1 (001, 005, 006): Tiền đề chi phối bởi Đọc sâu văn bản & Hội nhóm\n"
+#          "• Nhóm 2 (002, 003, 004): Tiền đề chi phối bởi Xem video ngắn & Đọc bình luận", 
+#          transform=ax1.transAxes, fontsize=8.6, fontweight='bold', color='#1a365d',
+#          bbox=dict(boxstyle='round,pad=0.4', facecolor='#ebf5fb', edgecolor='#2980b9', linewidth=1.0))
 
 
 # PANEL B: Bảng Đối Sánh 2 Cụm Bản Sắc Tiền Đề theo 6 Persona

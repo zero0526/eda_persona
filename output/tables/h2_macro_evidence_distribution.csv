@@ -1,5 +1,3 @@
-﻿tru_cot_nhan_thuc,so_luot_kich_hoat,ty_le_phan_tram,top_dimensions
-Tò mò & Khám phá tri thức,127,40.6,"curiosity (111), interest_technology (7), books_romance (2)"
-"Đời sống, Cảm xúc & Giải trí",96,30.7,"cuisine_vietnamese (14), tone (14), content_consumption_format (13)"
-Thực dụng & Chuyên môn đầu tư,60,19.2,"interest_real_estate (36), province (7), career_role (7)"
-Truyền thống & Tâm linh,29,9.3,"value_tradition (21), interest_spirituality (7), religion (1)"
+﻿nhom_nhan_thuc,so_luot_kich_hoat,ty_le_phan_tram
+Nhóm 1: Tri thức & Thực dụng,216,66.5
+Nhóm 2: Đời sống & Giải trí,109,33.5

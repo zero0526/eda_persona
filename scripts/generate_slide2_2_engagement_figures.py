@@ -258,19 +258,19 @@ ax2.grid(True, axis='y', alpha=0.5)
 ax2.legend(loc='upper right', bbox_to_anchor=(1.0, 0.98), frameon=True, fontsize=8.5, facecolor='#ffffff', edgecolor='#bdc3c7', ncol=2)
 
 # --- CALLOUT BOX DƯỚI CHÂN HÌNH ---
-fig.text(
-    0.5, 0.02,
-    "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ PHONG CÁCH TƯƠNG TÁC XÃ HỘI (H2: PHÙ HỢP VỚI HỒ SƠ PERSONA) ★\n"
-    "• vn_fb_003 (Bảo vệ, 'Chiến thần bình luận dạo'): Tỷ lệ comment đạt mức cao nhất (58.1% trên số bài tiếp cận, 18 bình luận), chú trọng thảo luận trực tiếp hơn thả reaction.\n"
-    "• vn_fb_005 (Cơ khí, 'Người thích chia sẻ'): Đạt AER cao nhất (11.8%), kết hợp 12 comment (26.1%) và là persona duy nhất thực hiện hành vi share (shareRate = 2.2%).\n"
-    "• vn_fb_002 (Gia đình): Xu hướng tình cảm rõ nét với 6 lượt 'love' và 1 'care' (chiếm 36.8% tổng reaction của persona), phù hợp với vai trò kết nối cộng đồng.\n"
-    "• vn_fb_004 & vn_fb_006 ('Tàu ngầm'): Tỷ lệ comment ở mức 0% đến 2.2%, phản ánh tính chất quan sát và tiêu thụ nội dung thụ động.",
-    ha='center',
-    fontsize=9.6,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
-)
+# fig.text(
+#     0.5, 0.02,
+#     "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ PHONG CÁCH TƯƠNG TÁC XÃ HỘI (H2: PHÙ HỢP VỚI HỒ SƠ PERSONA) ★\n"
+#     "• vn_fb_003 (Bảo vệ, 'Chiến thần bình luận dạo'): Tỷ lệ comment đạt mức cao nhất (58.1% trên số bài tiếp cận, 18 bình luận), chú trọng thảo luận trực tiếp hơn thả reaction.\n"
+#     "• vn_fb_005 (Cơ khí, 'Người thích chia sẻ'): Đạt AER cao nhất (11.8%), kết hợp 12 comment (26.1%) và là persona duy nhất thực hiện hành vi share (shareRate = 2.2%).\n"
+#     "• vn_fb_002 (Gia đình): Xu hướng tình cảm rõ nét với 6 lượt 'love' và 1 'care' (chiếm 36.8% tổng reaction của persona), phù hợp với vai trò kết nối cộng đồng.\n"
+#     "• vn_fb_004 & vn_fb_006 ('Tàu ngầm'): Tỷ lệ comment ở mức 0% đến 2.2%, phản ánh tính chất quan sát và tiêu thụ nội dung thụ động.",
+#     ha='center',
+#     fontsize=9.6,
+#     fontweight='bold',
+#     color='#196f3d',
+#     bbox=dict(boxstyle='round,pad=0.6', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.5)
+# )
 
 plt.tight_layout(rect=[0, 0.10, 1, 0.98])
 fig2_path = FIGURES_DIR / "slide2_2_interaction_intensity_and_style.png"

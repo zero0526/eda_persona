@@ -48,162 +48,171 @@ sub = df_actions[df_actions['intent'].isin(focused_intents)].copy()
 print(f"  -> Tổng số hành động tập trung cao: {len(sub)} actions")
 
 pillar_map = {
-    # Trụ cột 1: Tò mò & Khám phá tri thức
-    'curiosity': 'Tò mò & Khám phá tri thức',
-    'interest_technology': 'Tò mò & Khám phá tri thức',
-    'books_self_help': 'Tò mò & Khám phá tri thức',
-    'reading_frequency': 'Tò mò & Khám phá tri thức',
-    'books_fantasy': 'Tò mò & Khám phá tri thức',
-    'books_romance': 'Tò mò & Khám phá tri thức',
-    'attitude_new_technology': 'Tò mò & Khám phá tri thức',
-    'decision_speed': 'Tò mò & Khám phá tri thức',
-    'extroversion': 'Tò mò & Khám phá tri thức',
-    'logic_vs_intuition': 'Tò mò & Khám phá tri thức',
-    'tech_savviness': 'Tò mò & Khám phá tri thức',
+    # Trụ cột 1: Tò mò & Khám phá tri thức (Cognitive & Intellectual Needs)
+    'curiosity': 'Tò mò',
+    'interest_technology': 'Tò mò',
+    'books_self_help': 'Tò mò',
+    'reading_frequency': 'Tò mò',
+    'books_fantasy': 'Tò mò',
+    'books_romance': 'Tò mò',
+    'books_science_fiction': 'Tò mò',
+    'attitude_new_technology': 'Tò mò',
+    'decision_speed': 'Tò mò',
+    'extroversion': 'Tò mò',
+    'logic_vs_intuition': 'Tò mò',
+    'tech_savviness': 'Tò mò',
+    'skepticism': 'Tò mò',
+    'attention_span': 'Tò mò',
+    'language_english': 'Tò mò',
+    'discoveryStyle': 'Tò mò',
     
-    # Trụ cột 2: Thực dụng, Chuyên môn & Đầu tư
-    'interest_real_estate': 'Thực dụng & Chuyên môn đầu tư',
-    'career_role': 'Thực dụng & Chuyên môn đầu tư',
-    'value_wealth': 'Thực dụng & Chuyên môn đầu tư',
-    'province': 'Thực dụng & Chuyên môn đầu tư',
-    'writing_format': 'Thực dụng & Chuyên môn đầu tư',
-    'attitude_advertising': 'Thực dụng & Chuyên môn đầu tư',
-    'current_thread': 'Thực dụng & Chuyên môn đầu tư',
+    # Trụ cột 2: Thực dụng & Chuyên môn (Utilitarian & Professional Needs)
+    'interest_real_estate': 'Thực dụng & Chuyên môn',
+    'career_role': 'Thực dụng & Chuyên môn',
+    'value_wealth': 'Thực dụng & Chuyên môn',
+    'province': 'Thực dụng & Chuyên môn',
+    'writing_format': 'Thực dụng & Chuyên môn',
+    'attitude_advertising': 'Thực dụng & Chuyên môn',
+    'current_thread': 'Thực dụng & Chuyên môn',
+    'interest_investing': 'Thực dụng & Chuyên môn',
 
-    # Trụ cột 3: Truyền thống, Bản sắc & Tâm linh
+    # Trụ cột 3: Truyền thống & Tâm linh (Cultural & Spiritual Identity)
     'value_tradition': 'Truyền thống & Tâm linh',
     'interest_spirituality': 'Truyền thống & Tâm linh',
     'religion': 'Truyền thống & Tâm linh',
+    'books_history_philosophy': 'Truyền thống & Tâm linh',
+    'books_historical_fiction': 'Truyền thống & Tâm linh',
 
-    # Trụ cột 4: Đời sống, Cảm xúc & Giải trí
-    'cuisine_vietnamese': 'Đời sống, Cảm xúc & Giải trí',
-    'cuisine_street_food': 'Đời sống, Cảm xúc & Giải trí',
-    'cuisine_japanese': 'Đời sống, Cảm xúc & Giải trí',
-    'sport_football': 'Đời sống, Cảm xúc & Giải trí',
-    'sport_badminton': 'Đời sống, Cảm xúc & Giải trí',
-    'tone': 'Đời sống, Cảm xúc & Giải trí',
-    'content_consumption_format': 'Đời sống, Cảm xúc & Giải trí',
-    'emotional_expressiveness': 'Đời sống, Cảm xúc & Giải trí',
-    'interest_parenting_family_life': 'Đời sống, Cảm xúc & Giải trí',
-    'social_engagement_style': 'Đời sống, Cảm xúc & Giải trí',
-    'group_community_participation': 'Đời sống, Cảm xúc & Giải trí',
-    'value_health': 'Đời sống, Cảm xúc & Giải trí',
-    'value_family': 'Đời sống, Cảm xúc & Giải trí',
-    'facebook_frequency': 'Đời sống, Cảm xúc & Giải trí',
-    'dialect_register': 'Đời sống, Cảm xúc & Giải trí',
-    'interest_film': 'Đời sống, Cảm xúc & Giải trí',
-    'interest_pets': 'Đời sống, Cảm xúc & Giải trí',
-    'interest_travel': 'Đời sống, Cảm xúc & Giải trí',
+    # Trụ cột 4: Đời sống & Giải trí (Affective, Social & Daily Leisure)
+    'cuisine_vietnamese': 'Đời sống & Giải trí',
+    'cuisine_street_food': 'Đời sống & Giải trí',
+    'cuisine_japanese': 'Đời sống & Giải trí',
+    'sport_football': 'Đời sống & Giải trí',
+    'sport_badminton': 'Đời sống & Giải trí',
+    'sport_table_tennis': 'Đời sống & Giải trí',
+    'sport_boxing': 'Đời sống & Giải trí',
+    'tone': 'Đời sống & Giải trí',
+    'content_consumption_format': 'Đời sống & Giải trí',
+    'emotional_expressiveness': 'Đời sống & Giải trí',
+    'interest_parenting_family_life': 'Đời sống & Giải trí',
+    'social_engagement_style': 'Đời sống & Giải trí',
+    'group_community_participation': 'Đời sống & Giải trí',
+    'value_health': 'Đời sống & Giải trí',
+    'value_family': 'Đời sống & Giải trí',
+    'facebook_frequency': 'Đời sống & Giải trí',
+    'dialect_register': 'Đời sống & Giải trí',
+    'interest_film': 'Đời sống & Giải trí',
+    'film_animation': 'Đời sống & Giải trí',
+    'interest_pets': 'Đời sống & Giải trí',
+    'interest_travel': 'Đời sống & Giải trí',
+    'music_indie': 'Đời sống & Giải trí',
+    'humor_style': 'Đời sống & Giải trí',
+    'directness': 'Đời sống & Giải trí',
+    'children': 'Đời sống & Giải trí',
+    'emoji_emoticon_use': 'Đời sống & Giải trí',
 }
 
-sub['macro_pillar'] = sub['primary_dimension'].map(pillar_map).fillna('Khác')
+# ==============================================================================
+# 2. XÁC ĐỊNH 2 NHÓM BẢN SẮC NHẬN THỨC THEO BẢN CHẤT MỤC TIÊU HÀNH VI
+# ==============================================================================
+GROUP_1_IDS = ['vn_fb_001', 'vn_fb_005', 'vn_fb_006']
+GROUP_2_IDS = ['vn_fb_002', 'vn_fb_003', 'vn_fb_004']
 
-PILLAR_ORDER = [
-    'Tò mò & Khám phá tri thức',
-    'Đời sống, Cảm xúc & Giải trí',
-    'Thực dụng & Chuyên môn đầu tư',
-    'Truyền thống & Tâm linh'
+GROUP_NAMES = [
+    'Nhóm 1: Tri thức & Thực dụng',
+    'Nhóm 2: Đời sống & Giải trí'
 ]
 
-PILLAR_COLORS = {
-    'Tò mò & Khám phá tri thức': '#2980b9',      # Xanh lam
-    'Đời sống, Cảm xúc & Giải trí': '#e67e22',   # Cam ấm
-    'Thực dụng & Chuyên môn đầu tư': '#27ae60',  # Xanh ngọc
-    'Truyền thống & Tâm linh': '#8e44ad'        # Tím
+GROUP_COLORS = {
+    'Nhóm 1: Tri thức & Thực dụng': '#2980b9',  # Xanh lam duy lý
+    'Nhóm 2: Đời sống & Giải trí': '#e67e22'   # Cam ấm đời thường
 }
 
-print("2. Tính toán bảng thống kê vĩ mô...")
-pillar_counts = sub['macro_pillar'].value_counts().reindex(PILLAR_ORDER).fillna(0)
-pillar_pcts = (pillar_counts / len(sub) * 100).round(1)
+sub['persona_group'] = sub['persona_id'].apply(
+    lambda x: 'Nhóm 1: Tri thức & Thực dụng' if x in GROUP_1_IDS else 'Nhóm 2: Đời sống & Giải trí'
+)
+
+print("2. Tính toán bảng thống kê 2 nhóm nhận thức...")
+group_counts = sub['persona_group'].value_counts().reindex(GROUP_NAMES).fillna(0)
+group_pcts = (group_counts / len(sub) * 100).round(1)
+
+# Ma trận 2 Nhóm x 6 Hành vi
+ACTION_ORDER = ['read', 'react', 'comment', 'expand', 'search', 'share']
+ACTION_LABELS = ['Đọc sâu\n(read)', 'Thả cảm xúc\n(react)', 'Bình luận\n(comment)', 'Mở rộng\n(expand)', 'Tìm kiếm\n(search)', 'Chia sẻ\n(share)']
+ct_group_action = pd.crosstab(sub['persona_group'], sub['intent']).reindex(index=GROUP_NAMES, columns=ACTION_ORDER, fill_value=0)
 
 df_macro_dist = pd.DataFrame({
-    'tru_cot_nhan_thuc': PILLAR_ORDER,
-    'so_luot_kich_hoat': pillar_counts.values.astype(int),
-    'ty_le_phan_tram': pillar_pcts.values,
+    'nhom_nhan_thuc': GROUP_NAMES,
+    'so_luot_kich_hoat': group_counts.values.astype(int),
+    'ty_le_phan_tram': group_pcts.values,
 })
 
-# Thống kê top dimensions theo trụ cột
-top_dims_per_pillar = []
-for p in PILLAR_ORDER:
-    p_dims = sub[sub['macro_pillar'] == p]['primary_dimension'].value_counts().head(3)
-    p_str = ", ".join([f"{k} ({v})" for k, v in p_dims.items()])
-    top_dims_per_pillar.append(p_str)
-df_macro_dist['top_dimensions'] = top_dims_per_pillar
-
-# Ma trận Trụ cột x Hành vi
-ACTION_ORDER = ['read', 'react', 'comment', 'expand', 'search', 'share']
-ct_pillar_action = pd.crosstab(sub['macro_pillar'], sub['intent']).reindex(index=PILLAR_ORDER, columns=ACTION_ORDER, fill_value=0)
-df_matrix_export = ct_pillar_action.copy()
-df_matrix_export['TOTAL'] = df_matrix_export.sum(axis=1)
-
-print("3. Vẽ biểu đồ Tổng quan Vĩ mô (Slide 2.5)...")
+print("3. Vẽ biểu đồ Tổng quan Vĩ mô 2 Nhóm (Slide 2.5)...")
 fig = plt.figure(figsize=(16, 7.8), facecolor='#ffffff')
-gs = fig.add_gridspec(1, 2, width_ratios=[1.1, 1.3], wspace=0.28, left=0.07, right=0.96, top=0.88, bottom=0.18)
+gs = fig.add_gridspec(1, 2, width_ratios=[1.1, 1.3], wspace=0.30, left=0.12, right=0.96, top=0.88, bottom=0.18)
 
 ax1 = fig.add_subplot(gs[0, 0])
 ax2 = fig.add_subplot(gs[0, 1])
 
-# PANEL A: Phân bổ 4 trụ cột nhận thức
-y_pos = np.arange(len(PILLAR_ORDER))
-bars = ax1.barh(y_pos, pillar_counts.values, height=0.58, color=[PILLAR_COLORS[p] for p in PILLAR_ORDER], edgecolor='#2c3e50', linewidth=1.2, alpha=0.9)
+# PANEL A: Phân bổ 2 Nhóm Bản Sắc Nhận Thức
+y_pos = np.arange(len(GROUP_NAMES))
+bars = ax1.barh(y_pos, group_counts.values, height=0.48, color=[GROUP_COLORS[g] for g in GROUP_NAMES], edgecolor='#2c3e50', linewidth=1.2, alpha=0.9)
 
 ax1.set_yticks(y_pos)
-ax1.set_yticklabels(PILLAR_ORDER, fontsize=10.5, fontweight='bold', color='#2c3e50')
-ax1.invert_yaxis()  # Trụ cột lớn nhất lên trên
-ax1.set_xlabel('Số lượng hành vi tập trung được kích hoạt (actions)', fontsize=10, fontweight='bold', color='#34495e', labelpad=8)
-ax1.set_title('A. Phân Bổ 4 Trụ Cột Căn Cứ Nhận Thức Toàn Hệ Thống\n(Tổng số: N = 313 hành động có chủ đích)', fontsize=12, fontweight='bold', color='#2c3e50', pad=12)
-ax1.set_xlim(0, max(pillar_counts.values) * 1.25)
+ax1.set_yticklabels(GROUP_NAMES, fontsize=11, fontweight='bold', color='#2c3e50')
+ax1.invert_yaxis()
+ax1.set_xlabel('Số lượng hành vi tập trung được kích hoạt (actions)', fontsize=10.5, fontweight='bold', color='#34495e', labelpad=8)
+ax1.set_title('A. Phân Bổ Quyết Định Giữa 2 Nhóm Bản Sắc Nhận Thức\n(Tổng số: N = 325 hành vi tập trung)', fontsize=12, fontweight='bold', color='#2c3e50', pad=12)
+ax1.set_xlim(0, max(group_counts.values) * 1.35)
 ax1.grid(axis='x', linestyle='--', alpha=0.6)
 
-# Ghi chú giá trị trên thanh bar
-for bar, count, pct, p in zip(bars, pillar_counts.values, pillar_pcts.values, PILLAR_ORDER):
+# Ghi chú chi tiết trên thanh bar
+top_reasons_txt = [
+    "Đại diện: 001, 005, 006 (66.5%)\nTop lý do: curiosity (107), real_estate (36), tradition (21)",
+    "Đại diện: 002, 003, 004 (33.5%)\nTop lý do: cuisine (24), tone (14), format (13), football (10)"
+]
+
+for bar, count, pct, txt in zip(bars, group_counts.values, group_pcts.values, top_reasons_txt):
     w = bar.get_width()
     y = bar.get_y() + bar.get_height() / 2
-    top_dim_txt = sub[sub['macro_pillar'] == p]['primary_dimension'].value_counts().index[0]
-    ax1.text(w + 3, y, f"{count} lượt ({pct}%)\n[chủ đạo: {top_dim_txt}]", va='center', ha='left', fontsize=9.2, fontweight='bold', color='#2c3e50')
+    ax1.text(w + 4, y, f"{count} lượt ({pct}%)\n{txt}", va='center', ha='left', fontsize=9.2, fontweight='bold', color='#2c3e50')
 
-# PANEL B: Heatmap liên kết Trụ cột Nhận thức -> Hành vi tập trung cao
+# PANEL B: Heatmap liên kết 2 Nhóm -> 6 Hành vi tập trung
+# Tạo ma trận chuỗi định dạng count (pct%)
+annot_matrix = np.empty(ct_group_action.shape, dtype=object)
+for i in range(ct_group_action.shape[0]):
+    row_sum = ct_group_action.iloc[i].sum()
+    for j in range(ct_group_action.shape[1]):
+        val = ct_group_action.iloc[i, j]
+        pct = (val / row_sum * 100).round(1) if row_sum > 0 else 0
+        annot_matrix[i, j] = f"{val}\n({pct}%)"
+
 sns.heatmap(
-    ct_pillar_action,
-    annot=True,
-    fmt='d',
+    ct_group_action,
+    annot=annot_matrix,
+    fmt='',
     cmap='Blues',
     cbar=True,
     cbar_kws={'label': 'Số lượt kích hoạt hành vi', 'shrink': 0.8},
     linewidths=1.5,
     linecolor='#ffffff',
     ax=ax2,
-    annot_kws={'fontsize': 11, 'fontweight': 'bold', 'color': '#1a252f'}
+    annot_kws={'fontsize': 10.5, 'fontweight': 'bold', 'color': '#1a252f'}
 )
 
-ax2.set_title('B. Ma Trận Liên Kết: Trụ Cột Nhận Thức ➔ Hành Vi Tập Trung\n(Cột: Hành vi thực hiện | Hàng: Trụ cột lý do viện dẫn)', fontsize=12, fontweight='bold', color='#2c3e50', pad=12)
+ax2.set_title('B. Ma Trận Đối Sánh: 2 Nhóm Nhận Thức ➔ 6 Hành Vi Tập Trung\n(Cột: Hành vi thực hiện | Hàng: Nhóm động lực nhận thức)', fontsize=12, fontweight='bold', color='#2c3e50', pad=12)
 ax2.set_xlabel('Hành vi tập trung cao (Action Intent)', fontsize=10.5, fontweight='bold', color='#34495e', labelpad=8)
 ax2.set_ylabel('')
-ax2.set_xticklabels(['Đọc sâu\n(read)', 'Thả cảm xúc\n(react)', 'Bình luận\n(comment)', 'Mở rộng bài\n(expand)', 'Tìm kiếm\n(search)', 'Chia sẻ\n(share)'], fontsize=9.5, fontweight='bold', color='#2c3e50')
-ax2.set_yticklabels(PILLAR_ORDER, fontsize=10, fontweight='bold', color='#2c3e50', rotation=0)
+ax2.set_xticklabels(ACTION_LABELS, fontsize=9.5, fontweight='bold', color='#2c3e50')
+ax2.set_yticklabels(GROUP_NAMES, fontsize=10.5, fontweight='bold', color='#2c3e50', rotation=0)
 
 # Tiêu đề toàn slide
 fig.suptitle(
-    "KIỂM CHỨNG H2 (SLIDE 2.5): TỔNG QUAN CĂN CỨ NHẬN THỨC (DECISION EVIDENCE) & MA TRẬN LIÊN KẾT HÀNH HÀNH ĐỘNG",
+    "KIỂM CHỨNG H2 (SLIDE 2.5): CƠ CHẾ CĂN CỨ NHẬN THỨC & SỰ PHÂN HÓA 2 NHÓM BẢN SẮC HÀNH VI",
     fontsize=14,
     fontweight='bold',
     color='#1a365d',
     y=0.97
-)
-
-# CALLOUT BOX DƯỚI CHÂN HÌNH
-fig.text(
-    0.5, 0.035,
-    "★ NHẬN ĐỊNH THỰC NGHIỆM VỀ MỐI LIÊN HỆ GIỮA CĂN CỨ NHẬN THỨC VÀ HÀNH VI CÓ CHỦ ĐÍCH (H2) ★\n"
-    "• Trụ cột 'Tò mò & Khám phá tri thức' chi phối mạnh nhất (40.6%, 127 lượt), là động lực chính kích hoạt hành vi Đọc sâu (72 lượt) và Tìm kiếm (11 lượt).\n"
-    "• Trụ cột 'Đời sống, Cảm xúc & Giải trí' (30.4%, 95 lượt) kích hoạt tỷ lệ Bình luận (17 lượt) và Thả cảm xúc (29 lượt) cao nhất trong các nhóm căn cứ.\n"
-    "• Trụ cột 'Thực dụng & Chuyên môn đầu tư' (19.8%, 62 lượt) liên kết chủ đạo với Đọc sâu khảo sát (38 lượt) và Thả cảm xúc lưu bài (16 lượt).\n"
-    "• Trụ cột 'Truyền thống & Tâm linh' (9.3%, 29 lượt) có tần suất khiêm tốn nhưng kích hoạt tỷ lệ Bình luận thảo luận và Mở rộng bài đọc cao tương đối.",
-    ha='center',
-    fontsize=9.4,
-    fontweight='bold',
-    color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.7', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.2)
 )
 
 fig_path = FIGURES_DIR / "slide2_5_macro_decision_evidence_overview.png"
@@ -216,6 +225,8 @@ csv_macro_dist = TABLES_DIR / "h2_macro_evidence_distribution.csv"
 df_macro_dist.to_csv(csv_macro_dist, index=False, encoding='utf-8-sig')
 print(f"  -> Đã lưu: {csv_macro_dist}")
 
+df_matrix_export = ct_group_action.copy()
+df_matrix_export['TOTAL'] = df_matrix_export.sum(axis=1)
 csv_macro_matrix = TABLES_DIR / "h2_macro_evidence_action_matrix.csv"
 df_matrix_export.to_csv(csv_macro_matrix, encoding='utf-8-sig')
 print(f"  -> Đã lưu: {csv_macro_matrix}")
@@ -230,7 +241,6 @@ for pid in PERSONA_ORDER:
     ct = ct.sort_values(by='TOTAL', ascending=False)
     
     for dim, row in ct.iterrows():
-        # Lấy sample reason
         sample_reason = ""
         dim_sub = psub[psub['primary_dimension'] == dim]
         if not dim_sub.empty:
@@ -257,4 +267,97 @@ csv_detailed_path = TABLES_DIR / "h2_persona_evidence_matrices_detailed.csv"
 df_detailed_persona.to_csv(csv_detailed_path, index=False, encoding='utf-8-sig')
 print(f"  -> Đã lưu bảng chi tiết 6 Persona: {csv_detailed_path}")
 
-print("Hoàn tất tạo hình và dữ liệu Slide 2.5!")
+# ==============================================================================
+# 6. TẠO HÌNH VẼ SLIDE 2.5.1: PHÂN BỔ NHẬN THỨC NHÓM 1 (001, 005, 006)
+# ==============================================================================
+print("5. Vẽ biểu đồ Chi tiết Nhóm 1 (Slide 2.5.1)...")
+group1_pids = ['vn_fb_001', 'vn_fb_005', 'vn_fb_006']
+fig_g1, axes_g1 = plt.subplots(1, 3, figsize=(19, 7.2), facecolor='#ffffff')
+fig_g1.subplots_adjust(left=0.15, right=0.96, top=0.80, bottom=0.16, wspace=0.45)
+
+g1_colors = ['#2980b9', '#8e44ad', '#27ae60']
+
+DIM_LABEL_SHORT = {
+    'content_consumption_format': 'content_format',
+    'emotional_expressiveness': 'emotional_express',
+    'group_community_participation': 'group_community',
+    'interest_parenting_family_life': 'parenting_family',
+    'attitude_new_technology': 'attitude_new_tech',
+    'interest_real_estate': 'real_estate',
+    'interest_technology': 'technology',
+    'interest_spirituality': 'spirituality',
+    'social_engagement_style': 'social_engagement',
+    'cuisine_vietnamese': 'cuisine_vietnam',
+    'cuisine_street_food': 'street_food',
+    'cuisine_japanese': 'cuisine_japan',
+}
+
+for idx, (pid, ax) in enumerate(zip(group1_pids, axes_g1)):
+    psub = df_detailed_persona[df_detailed_persona['persona_id'] == pid].copy()
+    top_psub = psub.head(5).sort_values(by='TOTAL', ascending=True)
+    
+    y_pos = np.arange(len(top_psub))
+    bars = ax.barh(y_pos, top_psub['TOTAL'], height=0.55, color=g1_colors[idx], edgecolor='#2c3e50', alpha=0.85)
+    ax.set_yticks(y_pos)
+    labels = [DIM_LABEL_SHORT.get(d, d) for d in top_psub['primary_dimension']]
+    ax.set_yticklabels(labels, fontsize=10.5, fontweight='bold', color='#2c3e50')
+    
+    total_actions_pid = psub['TOTAL'].sum()
+    ax.set_title(f"{PERSONA_LABELS[pid]}\n(Tổng: {total_actions_pid} hành vi)", fontsize=11.5, fontweight='bold', color='#1a365d', pad=12)
+    ax.set_xlabel('Số lượt kích hoạt', fontsize=10.5, fontweight='bold', color='#34495e', labelpad=8)
+    ax.set_xlim(0, max(top_psub['TOTAL']) * 1.35)
+    ax.grid(axis='x', linestyle='--', alpha=0.5)
+    
+    for bar, val in zip(bars, top_psub['TOTAL']):
+        pct = (val / total_actions_pid * 100).round(1)
+        ax.text(val + max(top_psub['TOTAL']) * 0.03, bar.get_y() + bar.get_height()/2, f"{val} ({pct}%)", va='center', ha='left', fontsize=9.2, fontweight='bold', color='#2c3e50')
+
+fig_g1.suptitle(
+    "KIỂM CHỨNG H2 (SLIDE 2.5.1): CƠ CẤU CĂN CỨ NHẬN THỨC CHI TIẾT NHÓM 1 — TRI THỨC, KỸ THUẬT & THỰC DỤNG",
+    fontsize=14, fontweight='bold', color='#1a365d', y=0.95
+)
+fig_g1_path = FIGURES_DIR / "slide2_5_1_group1_evidence_breakdown.png"
+fig_g1.savefig(fig_g1_path, dpi=300)
+plt.close(fig_g1)
+print(f"  -> Đã lưu biểu đồ Nhóm 1: {fig_g1_path}")
+
+# ==============================================================================
+# 7. TẠO HÌNH VẼ SLIDE 2.5.2: PHÂN BỔ NHẬN THỨC NHÓM 2 (002, 003, 004)
+# ==============================================================================
+print("6. Vẽ biểu đồ Chi tiết Nhóm 2 (Slide 2.5.2)...")
+group2_pids = ['vn_fb_002', 'vn_fb_003', 'vn_fb_004']
+fig_g2, axes_g2 = plt.subplots(1, 3, figsize=(19, 7.2), facecolor='#ffffff')
+fig_g2.subplots_adjust(left=0.15, right=0.96, top=0.80, bottom=0.16, wspace=0.45)
+
+g2_colors = ['#16a085', '#d35400', '#c0392b']
+
+for idx, (pid, ax) in enumerate(zip(group2_pids, axes_g2)):
+    psub = df_detailed_persona[df_detailed_persona['persona_id'] == pid].copy()
+    top_psub = psub.head(5).sort_values(by='TOTAL', ascending=True)
+    
+    y_pos = np.arange(len(top_psub))
+    bars = ax.barh(y_pos, top_psub['TOTAL'], height=0.55, color=g2_colors[idx], edgecolor='#2c3e50', alpha=0.85)
+    ax.set_yticks(y_pos)
+    labels = [DIM_LABEL_SHORT.get(d, d) for d in top_psub['primary_dimension']]
+    ax.set_yticklabels(labels, fontsize=10.5, fontweight='bold', color='#2c3e50')
+    
+    total_actions_pid = psub['TOTAL'].sum()
+    ax.set_title(f"{PERSONA_LABELS[pid]}\n(Tổng: {total_actions_pid} hành vi)", fontsize=11.5, fontweight='bold', color='#1a365d', pad=12)
+    ax.set_xlabel('Số lượt kích hoạt', fontsize=10.5, fontweight='bold', color='#34495e', labelpad=8)
+    ax.set_xlim(0, max(top_psub['TOTAL']) * 1.35)
+    ax.grid(axis='x', linestyle='--', alpha=0.5)
+    
+    for bar, val in zip(bars, top_psub['TOTAL']):
+        pct = (val / total_actions_pid * 100).round(1)
+        ax.text(val + max(top_psub['TOTAL']) * 0.03, bar.get_y() + bar.get_height()/2, f"{val} ({pct}%)", va='center', ha='left', fontsize=9.2, fontweight='bold', color='#2c3e50')
+
+fig_g2.suptitle(
+    "KIỂM CHỨNG H2 (SLIDE 2.5.2): CƠ CẤU CĂN CỨ NHẬN THỨC CHI TIẾT NHÓM 2 — ĐỜI SỐNG THƯỜNG NHẬT, CẢM XÚC & GIẢI TRÍ",
+    fontsize=14, fontweight='bold', color='#1a365d', y=0.95
+)
+fig_g2_path = FIGURES_DIR / "slide2_5_2_group2_evidence_breakdown.png"
+fig_g2.savefig(fig_g2_path, dpi=300)
+plt.close(fig_g2)
+print(f"  -> Đã lưu biểu đồ Nhóm 2: {fig_g2_path}")
+
+print("Hoàn tất toàn bộ hình vẽ và dữ liệu Slide 2.5, 2.5.1, 2.5.2!")

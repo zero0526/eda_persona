@@ -1,0 +1,1058 @@
+{
+  "search": {
+    "vn_fb_001": {
+      "n": 2,
+      "evidence": [
+        {
+          "dimension": "interest_technology",
+          "count": 2,
+          "pct": 100.0,
+          "values": {
+            "Rất đam mê": 2
+          },
+          "sample_reason": "Tìm hiểu các công cụ AI mới cho thiết kế kiến trúc, lĩnh vực mình đang làm việc"
+        }
+      ]
+    },
+    "vn_fb_002": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_003": {
+      "n": 2,
+      "evidence": [
+        {
+          "dimension": "cuisine_street_food",
+          "count": 1,
+          "pct": 50.0,
+          "values": {
+            "Thích": 1
+          },
+          "sample_reason": "Feed hiện không có nội dung phù hợp sở thích; tìm kiếm quán bún trộn Đà Nẵng để khám phá ẩm thực đường phố miền Trung."
+        },
+        {
+          "dimension": "social_engagement_style",
+          "count": 1,
+          "pct": 50.0,
+          "values": {
+            "Chiến thần bình luận dạo (Tương tác tích cực các post)": 1
+          },
+          "sample_reason": "Feed không có bài ẩm thực Đà Nẵng, tìm trực tiếp để xem review quán ngon."
+        }
+      ]
+    },
+    "vn_fb_004": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "sport_football",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Chủ yếu theo dõi": 1
+          },
+          "sample_reason": "Không thấy video highlight bóng đá sau nhiều lần next, tìm kiếm trực tiếp để xem nội dung phù hợp."
+        }
+      ]
+    },
+    "vn_fb_005": {
+      "n": 9,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 9,
+          "pct": 100.0,
+          "values": {
+            "Cao": 9
+          },
+          "sample_reason": "Muốn tìm thông tin cụ thể về thời điểm tốt nhất để quan sát Sao Hỏa đối lập tại Đà Nẵng vào ngày 4/10, vì bài viết và bì"
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 3,
+      "evidence": [
+        {
+          "dimension": "interest_real_estate",
+          "count": 2,
+          "pct": 66.7,
+          "values": {
+            "Có hứng thú tìm hiểu": 2
+          },
+          "sample_reason": "Persona quan tâm bất động sản, đang sống tại Cần Thơ, muốn tìm hiểu thị trường địa ốc địa phương. Giọng miền Tây, viết n"
+        },
+        {
+          "dimension": "skepticism",
+          "count": 1,
+          "pct": 33.3,
+          "values": {
+            "Rất hoài nghi / Luôn kiểm chứng nguồn tin": 1
+          },
+          "sample_reason": "Kiểm chứng quảng cáo implant giá rẻ 2.2tr/sét"
+        }
+      ]
+    }
+  },
+  "comment": {
+    "vn_fb_001": {
+      "n": 3,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 2,
+          "pct": 66.7,
+          "values": {
+            "Rất cao": 2
+          },
+          "sample_reason": "Bài viết mời đánh giá ván cờ với 2 nước đi brilliant trong thể loại cờ nhanh. Với tính cách tò mò và thích khám phá, muố"
+        },
+        {
+          "dimension": "writing_format",
+          "count": 1,
+          "pct": 33.3,
+          "values": {
+            "Hay dùng từ đệm tình cảm": 1
+          },
+          "sample_reason": "Bình luận nhẹ nhàng, chúc mừng và góp ý khéo léo về nhận xét gây tranh cãi."
+        }
+      ]
+    },
+    "vn_fb_002": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "tone",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Lo âu / Bồn chồn": 1
+          },
+          "sample_reason": "Bình luận tích cực về việc làm điều tốt, phù hợp với quan tâm tâm linh Phật giáo"
+        }
+      ]
+    },
+    "vn_fb_003": {
+      "n": 18,
+      "evidence": [
+        {
+          "dimension": "cuisine_vietnamese",
+          "count": 7,
+          "pct": 38.9,
+          "values": {
+            "Rất thích": 7
+          },
+          "sample_reason": "Đang xem review quán cơm tấm, muốn hỏi địa chỉ cụ thể để biết có phải ở Đà Nẵng không. Giọng suồng sã, dùng từ đệm \"bác "
+        },
+        {
+          "dimension": "cuisine_street_food",
+          "count": 6,
+          "pct": 33.3,
+          "values": {
+            "Thích": 6
+          },
+          "sample_reason": "Bài review tokbokki phomai hấp dẫn, muốn hỏi địa chỉ quán. Giọng thẳng thắn, dùng từ lóng và emoji phù hợp persona."
+        },
+        {
+          "dimension": "social_engagement_style",
+          "count": 2,
+          "pct": 11.1,
+          "values": {
+            "Chiến thần bình luận dạo (Tương tác tích cực các post)": 2
+          },
+          "sample_reason": "Bình luận hỏi thêm kinh nghiệm kho vịt từ cộng đồng, phù hợp mạch đang tìm bí quyết nấu ăn. Giọng suồng sã, dùng từ đệm "
+        },
+        {
+          "dimension": "curiosity",
+          "count": 1,
+          "pct": 5.6,
+          "values": {
+            "Trung bình": 1
+          },
+          "sample_reason": "Bài review hủ tiếu Thái hấp dẫn, muốn hỏi địa chỉ quán. Giọng thẳng thắn, dùng emoji phù hợp persona."
+        },
+        {
+          "dimension": "province",
+          "count": 1,
+          "pct": 5.6,
+          "values": {
+            "Đà Nẵng": 1
+          },
+          "sample_reason": "Hỏi giờ mở cửa và giá cả vì bình luận chưa có thông tin rõ ràng"
+        },
+        {
+          "dimension": "writing_format",
+          "count": 1,
+          "pct": 5.6,
+          "values": {
+            "Hay dùng từ đệm tình cảm": 1
+          },
+          "sample_reason": "Bài viết về tình hình Cali và sự tử tế của nhân viên gợi cảm xúc, muốn bày tỏ cảm nghĩ"
+        }
+      ]
+    },
+    "vn_fb_004": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_005": {
+      "n": 12,
+      "evidence": [
+        {
+          "dimension": "value_tradition",
+          "count": 7,
+          "pct": 58.3,
+          "values": {
+            "Cao": 7
+          },
+          "sample_reason": "Bài viết về lịch sử Việt Nam đánh bại các cường quốc gợi tự hào dân tộc, muốn chia sẻ góc nhìn cá nhân."
+        },
+        {
+          "dimension": "curiosity",
+          "count": 4,
+          "pct": 33.3,
+          "values": {
+            "Cao": 4
+          },
+          "sample_reason": "Câu chuyện gây xúc động mạnh, muốn bày tỏ cảm xúc và chia sẻ với gia đình theo tính cách hướng ngoại và thích biểu đạt c"
+        },
+        {
+          "dimension": "province",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Đà Nẵng": 1
+          },
+          "sample_reason": "Người đăng hỏi kinh nghiệm quan sát tại Đà Nẵng - mình có thể chia sẻ về bầu trời quang đãng ở vùng nông thôn và hỏi thê"
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "cuisine_street_food",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Rất thích": 1
+          },
+          "sample_reason": "Đang xem căn hộ Cara River Park tại Cần Thơ. Muốn xem video thực tế và hỏi rõ về giá để cân nhắc. Giọng miền Tây, thẳng "
+        }
+      ]
+    }
+  },
+  "read": {
+    "vn_fb_001": {
+      "n": 52,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 28,
+          "pct": 53.8,
+          "values": {
+            "Rất cao": 28
+          },
+          "sample_reason": "Bài viết về cờ vua với tiêu đề gợi sự tò mò, phù hợp với tính cách cởi mở khám phá và quan tâm đến các trò chơi tư duy."
+        },
+        {
+          "dimension": "interest_real_estate",
+          "count": 14,
+          "pct": 26.9,
+          "values": {
+            "Rất đam mê": 14
+          },
+          "sample_reason": "Bài viết về thiết kế 3D kiến trúc liên quan trực tiếp đến công việc, muốn đọc xem có thông tin hữu ích"
+        },
+        {
+          "dimension": "career_role",
+          "count": 4,
+          "pct": 7.7,
+          "values": {
+            "Thiết kế đồ họa": 4
+          },
+          "sample_reason": "Đọc các bình luận để hiểu giải thích về smothered mate và mate trong 3 nước"
+        },
+        {
+          "dimension": "interest_technology",
+          "count": 4,
+          "pct": 7.7,
+          "values": {
+            "Rất đam mê": 4
+          },
+          "sample_reason": "Đọc bài về máy cưa bàn trượt để xem có thông tin hữu ích cho công việc thiết kế kiến trúc và nội thất không."
+        },
+        {
+          "dimension": "writing_format",
+          "count": 1,
+          "pct": 1.9,
+          "values": {
+            "Hay dùng từ đệm tình cảm": 1
+          },
+          "sample_reason": "Đọc bài đăng về tình huống cờ vua mate in 2 trong group Cờ vua"
+        }
+      ]
+    },
+    "vn_fb_002": {
+      "n": 21,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 5,
+          "pct": 23.8,
+          "values": {
+            "Trung bình": 5
+          },
+          "sample_reason": "Bài về dưỡng lão công lập quá tải liên quan đến vấn đề chăm sóc người cao tuổi trong gia đình, chị muốn đọc để hiểu tình"
+        },
+        {
+          "dimension": "tone",
+          "count": 5,
+          "pct": 23.8,
+          "values": {
+            "Lo âu / Bồn chồn": 5
+          },
+          "sample_reason": "Bài viết về Bồ tát Quán Thế Âm phù hợp với niềm tin Phật giáo của chị. Hình ảnh tượng cao 33 mét hướng ra sông Tiền gợi "
+        },
+        {
+          "dimension": "interest_parenting_family_life",
+          "count": 3,
+          "pct": 14.3,
+          "values": {
+            "Có hứng thú tìm hiểu": 3
+          },
+          "sample_reason": "Chị đọc bài viết về Phòng khám Hướng Dương, nội dung liên quan đến tư vấn sinh sản có thể hữu ích cho phụ nữ trong độ tu"
+        },
+        {
+          "dimension": "province",
+          "count": 3,
+          "pct": 14.3,
+          "values": {
+            "Thành phố Hồ Chí Minh": 3
+          },
+          "sample_reason": "Chị đọc bài viết về Đền Ông Hoàng Mười, nội dung tâm linh có thể thu hút sự chú ý tình huống của chị."
+        },
+        {
+          "dimension": "content_consumption_format",
+          "count": 2,
+          "pct": 9.5,
+          "values": {
+            "Video ngắn": 2
+          },
+          "sample_reason": "Xem phản hồi cho bình luận về thả tym và vía mạnh"
+        },
+        {
+          "dimension": "books_romance",
+          "count": 1,
+          "pct": 4.8,
+          "values": {
+            "Thích": 1
+          },
+          "sample_reason": "Chị đọc bài viết của SƯ MINH ĐẠO với giọng văn tâm tình, phù hợp với sở thích truyện tình cảm và cách diễn đạt cảm xúc t"
+        },
+        {
+          "dimension": "religion",
+          "count": 1,
+          "pct": 4.8,
+          "values": {
+            "Phật giáo": 1
+          },
+          "sample_reason": "Bài viết về Bồ tát Quán Thế Âm phù hợp với niềm tin Phật giáo của chị. Hình ảnh tượng cao 33 mét hướng ra sông Tiền gợi "
+        },
+        {
+          "dimension": "dialect_register",
+          "count": 1,
+          "pct": 4.8,
+          "values": {
+            "Giọng miền Tây": 1
+          },
+          "sample_reason": "Bài viết về tượng Quan Thế Âm Bồ Tát trên Fansipan - chủ đề tâm linh Phật giáo phù hợp với niềm tin cá nhân. Muốn đọc để"
+        }
+      ]
+    },
+    "vn_fb_003": {
+      "n": 23,
+      "evidence": [
+        {
+          "dimension": "cuisine_vietnamese",
+          "count": 7,
+          "pct": 30.4,
+          "values": {
+            "Rất thích": 7
+          },
+          "sample_reason": "Bài review đồ ăn Việt, hợp sở thích ẩm thực. Muốn xem chi tiết và địa chỉ quán."
+        },
+        {
+          "dimension": "group_community_participation",
+          "count": 5,
+          "pct": 21.7,
+          "values": {
+            "Chỉ nằm vùng hóng chuyện": 5
+          },
+          "sample_reason": "Bài về CiiN Bùi Thảo Ly đang được focus, có thể là video âm nhạc hoặc nội dung giải trí. Persona thích nhạc indie và pop"
+        },
+        {
+          "dimension": "social_engagement_style",
+          "count": 3,
+          "pct": 13.0,
+          "values": {
+            "Chiến thần bình luận dạo (Tương tác tích cực các post)": 3
+          },
+          "sample_reason": "Bài về quán nướng view biển Nguyễn Tất Thành, đúng chủ đề đang tìm."
+        },
+        {
+          "dimension": "cuisine_street_food",
+          "count": 2,
+          "pct": 8.7,
+          "values": {
+            "Thích": 2
+          },
+          "sample_reason": "Bài review tokbokki phomai có 38 like, nhiều bình luận - phù hợp sở thích ẩm thực đường phố."
+        },
+        {
+          "dimension": "interest_film",
+          "count": 2,
+          "pct": 8.7,
+          "values": {
+            "Rất đam mê": 2
+          },
+          "sample_reason": "Bài có 18.3K like, 2.7K share - số liệu ấn tượng. Đang ở feed khám phá, muốn xem nội dung gì thu hút nhiều người vậy."
+        },
+        {
+          "dimension": "curiosity",
+          "count": 2,
+          "pct": 8.7,
+          "values": {
+            "Trung bình": 2
+          },
+          "sample_reason": "Bài viết về YouTuber Jenny Huynh có 12K like, nhiều người quan tâm. Đọc xem nội dung gì."
+        },
+        {
+          "dimension": "attitude_advertising",
+          "count": 1,
+          "pct": 4.3,
+          "values": {
+            "Hoài nghi": 1
+          },
+          "sample_reason": "Bài viết quảng cáo dịch vụ tài chính với font đặc biệt, không liên quan đến sở thích. Đọc lướt nhanh để xác nhận nội dun"
+        },
+        {
+          "dimension": "content_consumption_format",
+          "count": 1,
+          "pct": 4.3,
+          "values": {
+            "Âm thanh": 1
+          },
+          "sample_reason": "Bài viết về cảnh mùa thu đẹp, có âm nhạc Guns N' Roses - Paradise City. Nội dung nhẹ nhàng, dễ xem phù hợp với nhịp lướt"
+        }
+      ]
+    },
+    "vn_fb_004": {
+      "n": 10,
+      "evidence": [
+        {
+          "dimension": "sport_football",
+          "count": 7,
+          "pct": 70.0,
+          "values": {
+            "Chủ yếu theo dõi": 7
+          },
+          "sample_reason": "Bài viết về bóng đá phù hợp với mục đích tìm highlight, đọc để xem nội dung có video hay không."
+        },
+        {
+          "dimension": "curiosity",
+          "count": 2,
+          "pct": 20.0,
+          "values": {
+            "Rất cao": 2
+          },
+          "sample_reason": "Bài viết đang focus trên feed, muốn xem nội dung trước khi quyết định tương tác."
+        },
+        {
+          "dimension": "content_consumption_format",
+          "count": 1,
+          "pct": 10.0,
+          "values": {
+            "Video ngắn": 1
+          },
+          "sample_reason": "Đọc bài viết về Luke Deakin đang ở Malta để hiểu hành trình đi bộ từ Anh đến Việt Nam. Bài có bình luận nói về hải sản V"
+        }
+      ]
+    },
+    "vn_fb_005": {
+      "n": 29,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 18,
+          "pct": 62.1,
+          "values": {
+            "Cao": 18
+          },
+          "sample_reason": "Muốn xem bài viết này nói về cái gì."
+        },
+        {
+          "dimension": "value_tradition",
+          "count": 7,
+          "pct": 24.1,
+          "values": {
+            "Cao": 7
+          },
+          "sample_reason": "Bài viết về Đại tướng Võ Nguyên Giáp và người thầy giáo trong chiến tranh, phù hợp với giá trị truyền thống và tính kể c"
+        },
+        {
+          "dimension": "extroversion",
+          "count": 1,
+          "pct": 3.4,
+          "values": {
+            "Thiên về hướng ngoại": 1
+          },
+          "sample_reason": "Tiêu đề gây tò mò về câu chuyện tìm thấy người mất tích sau 10 năm, phù hợp với sở thích xem video dài và tính cách thíc"
+        },
+        {
+          "dimension": "tech_savviness",
+          "count": 1,
+          "pct": 3.4,
+          "values": {
+            "Rất quen thuộc": 1
+          },
+          "sample_reason": "Bài cảnh báo lừa đảo qua Facebook và ảnh AI liên quan trực tiếp đến an toàn thông tin và tài chính, phù hợp với người dù"
+        },
+        {
+          "dimension": "books_fantasy",
+          "count": 1,
+          "pct": 3.4,
+          "values": {
+            "Không thích": 1
+          },
+          "sample_reason": "Thích bóng đá, muốn đọc bài về Messi"
+        },
+        {
+          "dimension": "sport_football",
+          "count": 1,
+          "pct": 3.4,
+          "values": {
+            "Thường xuyên tham gia": 1
+          },
+          "sample_reason": "Đọc bình luận để hiểu cảm xúc cộng đồng về Messi"
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 43,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 18,
+          "pct": 41.9,
+          "values": {
+            "Cao": 18
+          },
+          "sample_reason": "Bài livestream ngắn, chưa rõ nội dung. Đọc nhanh để xem có gì liên quan Cần Thơ hoặc chủ đề quan tâm."
+        },
+        {
+          "dimension": "interest_real_estate",
+          "count": 10,
+          "pct": 23.3,
+          "values": {
+            "Có hứng thú tìm hiểu": 10
+          },
+          "sample_reason": "Bài đăng về căn hộ tại Quận Cái Răng, Cần Thơ với giá 8.5 triệu/tháng. Cần đọc chi tiết để hiểu giá cả và thông tin bất "
+        },
+        {
+          "dimension": "interest_spirituality",
+          "count": 5,
+          "pct": 11.6,
+          "values": {
+            "Có hứng thú tìm hiểu": 5
+          },
+          "sample_reason": "Bài viết về sự tĩnh lặng và bản lĩnh, phù hợp với quan tâm về an yên tinh thần của người lớn tuổi. Nội dung ngắn gọn, dễ"
+        },
+        {
+          "dimension": "value_wealth",
+          "count": 4,
+          "pct": 9.3,
+          "values": {
+            "Cao": 4
+          },
+          "sample_reason": ""
+        },
+        {
+          "dimension": "value_health",
+          "count": 2,
+          "pct": 4.7,
+          "values": {
+            "Rất cao": 2
+          },
+          "sample_reason": "Bài viết về livestream, không liên quan đến mạch nhà ở xã hội đang quan tâm. Đọc lướt để xem có nội dung gì hữu ích khôn"
+        },
+        {
+          "dimension": "sport_badminton",
+          "count": 1,
+          "pct": 2.3,
+          "values": {
+            "Không quan tâm": 1
+          },
+          "sample_reason": "Bài viết về kỹ thuật gốm, có video 2:19. Mặc dù không phải sở thích chính, nhưng nội dung thủ công có thể thú vị để xem "
+        },
+        {
+          "dimension": "current_thread",
+          "count": 1,
+          "pct": 2.3,
+          "values": {
+            "Khám phá nội dung mới trên feed": 1
+          },
+          "sample_reason": "Bài DIY có thể có mẹo hữu ích cho việc nhà, phù hợp với người thích dữ kiện thực tế."
+        },
+        {
+          "dimension": "film_animation",
+          "count": 1,
+          "pct": 2.3,
+          "values": {
+            "Không thích": 1
+          },
+          "sample_reason": "Tin tức giáo dục trong nước, có thể liên quan đến lĩnh vực làm việc"
+        },
+        {
+          "dimension": "social_engagement_style",
+          "count": 1,
+          "pct": 2.3,
+          "values": {
+            "Tàu ngầm (Chỉ xem và like, không post không cmt)": 1
+          },
+          "sample_reason": "Đọc các bình luận đã cuộn tới"
+        }
+      ]
+    }
+  },
+  "expand": {
+    "vn_fb_001": {
+      "n": 7,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 5,
+          "pct": 71.4,
+          "values": {
+            "Rất cao": 5
+          },
+          "sample_reason": "Bài về võ sĩ Việt Nam đạt thành tích tại Teakwondo thực tế ảo. Nội dung thể thao Việt Nam và công nghệ VR kết hợp có thể"
+        },
+        {
+          "dimension": "decision_speed",
+          "count": 1,
+          "pct": 14.3,
+          "values": {
+            "Quyết định nhanh": 1
+          },
+          "sample_reason": "Bài viết về lời cảm ơn đến HLV cờ vua, có thể có câu chuyện truyền cảm hứng về người thầy và thế hệ kỳ thủ."
+        },
+        {
+          "dimension": "group_community_participation",
+          "count": 1,
+          "pct": 14.3,
+          "values": {
+            "Thường xuyên theo dõi và đọc bài": 1
+          },
+          "sample_reason": "Bài viết về Ben Anh Nguyễn đạt cup Bạc Formula Malaysia Trophy 2026. Persona có curiosity rất cao và attitude_new_techno"
+        }
+      ]
+    },
+    "vn_fb_002": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "interest_spirituality",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Không quan tâm": 1
+          },
+          "sample_reason": "Bài viết về Phật mẫu phù hợp niềm tin Phật giáo của chị. Chị muốn đọc đầy đủ nội dung để hiểu rõ hơn về lời cầu nguyện."
+        }
+      ]
+    },
+    "vn_fb_003": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_004": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Rất cao": 1
+          },
+          "sample_reason": "Bài viết về Luke Deakin ở Malta, liên quan đến hành trình đi bộ từ Anh đến Việt Nam mà tôi đã theo dõi gần đây. Muốn xem"
+        }
+      ]
+    },
+    "vn_fb_005": {
+      "n": 11,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 4,
+          "pct": 36.4,
+          "values": {
+            "Cao": 4
+          },
+          "sample_reason": "Bài viết bị cắt, muốn đọc toàn bộ nội dung về lịch sử Việt Nam đánh bại các cường quốc."
+        },
+        {
+          "dimension": "value_tradition",
+          "count": 4,
+          "pct": 36.4,
+          "values": {
+            "Cao": 4
+          },
+          "sample_reason": "Muốn đọc toàn bộ câu chuyện về người thầy giáo trong chiến tranh, phù hợp với tính kể chuyện và giá trị truyền thống."
+        },
+        {
+          "dimension": "logic_vs_intuition",
+          "count": 1,
+          "pct": 9.1,
+          "values": {
+            "Hoàn toàn dựa trên logic & dữ liệu": 1
+          },
+          "sample_reason": "Bài viết về Đại tướng Võ Nguyên Giáp và người thầy giáo trong chiến tranh, phù hợp với giá trị coi trọng truyền thống. M"
+        },
+        {
+          "dimension": "cuisine_japanese",
+          "count": 1,
+          "pct": 9.1,
+          "values": {
+            "Rất thích": 1
+          },
+          "sample_reason": "Thấy bài từ Hiroyuki Takeoka về món ăn Nhật, tò mò xem chi tiết. Mình thích ẩm thực Nhật và hay xem video dài về các món"
+        },
+        {
+          "dimension": "value_family",
+          "count": 1,
+          "pct": 9.1,
+          "values": {
+            "Trung bình": 1
+          },
+          "sample_reason": "Bài viết có tiêu đề sâu sắc về tình yêu thương, muốn đọc nội dung đầy đủ"
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 0,
+      "evidence": []
+    }
+  },
+  "react": {
+    "vn_fb_001": {
+      "n": 19,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 10,
+          "pct": 52.6,
+          "values": {
+            "Rất cao": 10
+          },
+          "sample_reason": "Bài toán mate in 2 thú vị, phù hợp với tính cách thích thử thách và tò mò cao. Muốn thể hiện sự quan tâm với nội dung nà"
+        },
+        {
+          "dimension": "interest_real_estate",
+          "count": 5,
+          "pct": 26.3,
+          "values": {
+            "Rất đam mê": 5
+          },
+          "sample_reason": "Bài viết có nội dung thực tế, hữu ích cho công việc thiết kế."
+        },
+        {
+          "dimension": "career_role",
+          "count": 3,
+          "pct": 15.8,
+          "values": {
+            "Thiết kế đồ họa": 3
+          },
+          "sample_reason": "Bài viết cung cấp thông tin hữu ích về vật liệu ốp tường PU vân đá, phù hợp với công việc thiết kế nội thất"
+        },
+        {
+          "dimension": "interest_technology",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Rất đam mê": 1
+          },
+          "sample_reason": "Bài viết chia sẻ về giá trị của thiết kế 3D kiến trúc, phù hợp với công việc của mình"
+        }
+      ]
+    },
+    "vn_fb_002": {
+      "n": 19,
+      "evidence": [
+        {
+          "dimension": "tone",
+          "count": 8,
+          "pct": 42.1,
+          "values": {
+            "Lo âu / Bồn chồn": 8
+          },
+          "sample_reason": "Bài viết về Bồ tát Quán Thế Âm (Mẹ Nam Hải) phù hợp với niềm tin Phật giáo của chị. Hình tượng hộ mệnh cho ngư dân miền "
+        },
+        {
+          "dimension": "emotional_expressiveness",
+          "count": 5,
+          "pct": 26.3,
+          "values": {
+            "Biểu đạt cảm xúc tự nhiên": 5
+          },
+          "sample_reason": "Bài viết về Bồ tát Quán Thế Âm (Mẹ Nam Hải) phù hợp với niềm tin Phật giáo của chị. Hình ảnh tượng cao 33 mét hướng ra s"
+        },
+        {
+          "dimension": "cuisine_street_food",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Rất thích": 1
+          },
+          "sample_reason": "Bài viết về Đền Ông Hoàng Mười phù hợp với niềm tin Phật giáo và quan tâm tâm linh nhẹ nhàng của chị. Lời cầu nguyện tài"
+        },
+        {
+          "dimension": "facebook_frequency",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Nhiều lần mỗi ngày": 1
+          },
+          "sample_reason": "Bài viết về Phật mẫu Diêu Trì Kim Mẫu với lời dạy tâm linh sâu sắc. Chị thể hiện sự tôn trọng bằng một like, phù hợp với"
+        },
+        {
+          "dimension": "books_romance",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Thích": 1
+          },
+          "sample_reason": "Bài thơ chạm đến nỗi xót xa của phận người, phù hợp với sở thích truyện tình cảm và cách biểu đạt cảm xúc tự nhiên của c"
+        },
+        {
+          "dimension": "province",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Thành phố Hồ Chí Minh": 1
+          },
+          "sample_reason": "Bài dự báo mưa có khả năng gây ngập úng ở TPHCM, liên quan trực tiếp đến đời sống gia đình chị. Chị bày tỏ sự quan tâm, "
+        },
+        {
+          "dimension": "interest_spirituality",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Không quan tâm": 1
+          },
+          "sample_reason": "Câu chuyện về ông già ăn nước đá giữa trời nóng thật cảm động, thể hiện sự sẻ chia giữa người với người"
+        },
+        {
+          "dimension": "content_consumption_format",
+          "count": 1,
+          "pct": 5.3,
+          "values": {
+            "Video ngắn": 1
+          },
+          "sample_reason": "Video về ngày trọng đại, không khí gia đình vui vẻ, muốn chia sẻ niềm vui"
+        }
+      ]
+    },
+    "vn_fb_003": {
+      "n": 3,
+      "evidence": [
+        {
+          "dimension": "content_consumption_format",
+          "count": 2,
+          "pct": 66.7,
+          "values": {
+            "Âm thanh": 2
+          },
+          "sample_reason": "Video cascade tạt nước khá ấn tượng với pha thoát hiểm bất ngờ. Thả reaction wow cho pha hành động này."
+        },
+        {
+          "dimension": "curiosity",
+          "count": 1,
+          "pct": 33.3,
+          "values": {
+            "Trung bình": 1
+          },
+          "sample_reason": "Món này nghe lạ tai, cá rô ngộp qua đêm rồi muối sả nghệ... cách chế biến độc đáo, người ăn được thì ghiền. Thích cái mô"
+        }
+      ]
+    },
+    "vn_fb_004": {
+      "n": 9,
+      "evidence": [
+        {
+          "dimension": "content_consumption_format",
+          "count": 6,
+          "pct": 66.7,
+          "values": {
+            "Video ngắn": 6
+          },
+          "sample_reason": "Tình huống bóng đá thú vị, Dembele lỡ cơ hội ngon ăn. Thích xem thêm highlight."
+        },
+        {
+          "dimension": "sport_football",
+          "count": 2,
+          "pct": 22.2,
+          "values": {
+            "Chủ yếu theo dõi": 2
+          },
+          "sample_reason": "Thích bình luận nói về đóng góp của thầy HLV với bóng đá Việt Nam, phù hợp quan tâm bóng đá."
+        },
+        {
+          "dimension": "reading_frequency",
+          "count": 1,
+          "pct": 11.1,
+          "values": {
+            "Vài lần mỗi tuần": 1
+          },
+          "sample_reason": "Bình luận có nội dung thú vị với 6 reaction, thể hiện sự quan tâm đến cầu thủ."
+        }
+      ]
+    },
+    "vn_fb_005": {
+      "n": 12,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 6,
+          "pct": 50.0,
+          "values": {
+            "Cao": 6
+          },
+          "sample_reason": "Charlie Duke 91 tuổi rồi, người thứ 10 đi bộ trên Mặt Trăng. Thật sự ấn tượng với tuổi thọ và sự nghiệp của ông. Giọng m"
+        },
+        {
+          "dimension": "value_tradition",
+          "count": 3,
+          "pct": 25.0,
+          "values": {
+            "Cao": 3
+          },
+          "sample_reason": "Bài viết về Đại tướng Võ Nguyên Giáp và những người thầy trong chiến tranh rất ý nghĩa, phù hợp với giá trị coi trọng tr"
+        },
+        {
+          "dimension": "cuisine_japanese",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Rất thích": 1
+          },
+          "sample_reason": "Bài hỏi muốn thử trải nghiệm nào, mình thích wasabi tươi nên bấm love. Giọng miền Trung, lầy lội, không dùng emoji."
+        },
+        {
+          "dimension": "attitude_new_technology",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Tích cực": 1
+          },
+          "sample_reason": "Video CNC khắc gỗ 2.5D gây ấn tượng với kỹ thuật chính xác và hiệu ứng thị giác đẹp. Phù hợp với hứng thú công nghệ mới "
+        },
+        {
+          "dimension": "province",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Đà Nẵng": 1
+          },
+          "sample_reason": "Câu chuyện hay về người Nhật sống ở Việt Nam 10 năm"
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 12,
+      "evidence": [
+        {
+          "dimension": "interest_real_estate",
+          "count": 5,
+          "pct": 41.7,
+          "values": {
+            "Có hứng thú tìm hiểu": 5
+          },
+          "sample_reason": "Bài đăng trái cây cắt sẵn tươi ngon, giá hợp lý 25k cho 4 loại, có cả nước uống đa dạng. Phù hợp với sở thích ẩm thực đư"
+        },
+        {
+          "dimension": "value_health",
+          "count": 3,
+          "pct": 25.0,
+          "values": {
+            "Rất cao": 3
+          },
+          "sample_reason": "Cảnh biển mây Ba Vì đẹp, thể hiện thiên nhiên Việt Nam. Persona thích nội dung đời sống, có thể đánh dấu quan tâm nhẹ."
+        },
+        {
+          "dimension": "curiosity",
+          "count": 2,
+          "pct": 16.7,
+          "values": {
+            "Cao": 2
+          },
+          "sample_reason": "Tin tức pháo hoa tại Hà Nội, có thể quan tâm. Đọc xem chi tiết."
+        },
+        {
+          "dimension": "cuisine_street_food",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Rất thích": 1
+          },
+          "sample_reason": "Bài trái cây cắt sẵn 25k/4 loại hợp lý, phù hợp sở thích ẩm thực đường phố và món chay. Giá tốt, có thể tham khảo."
+        },
+        {
+          "dimension": "current_thread",
+          "count": 1,
+          "pct": 8.3,
+          "values": {
+            "Khám phá nội dung mới trên feed": 1
+          },
+          "sample_reason": "Bài viết gợi suy ngẫm về thời gian và giá trị công việc, phù hợp với tâm trạng hiện tại. Nội dung ngắn gọn, dễ hiểu."
+        }
+      ]
+    }
+  },
+  "share": {
+    "vn_fb_001": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_002": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_003": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_004": {
+      "n": 0,
+      "evidence": []
+    },
+    "vn_fb_005": {
+      "n": 1,
+      "evidence": [
+        {
+          "dimension": "curiosity",
+          "count": 1,
+          "pct": 100.0,
+          "values": {
+            "Cao": 1
+          },
+          "sample_reason": "Sự kiện thiên văn hấp dẫn, muốn chia sẻ và hỏi kinh nghiệm từ cộng đồng địa phương."
+        }
+      ]
+    },
+    "vn_fb_006": {
+      "n": 0,
+      "evidence": []
+    }
+  }
+}
