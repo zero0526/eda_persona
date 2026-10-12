@@ -1,0 +1,23 @@
+﻿dimension,so_lan,ty_le_tong_%,gia_tri_dac_trung,ty_le_primary,ty_le_supporting,trong_so_tb,trong_so_max,y_nghia_nhan_thuc
+content_consumption_format,348,46.71,Video ngắn,87.64367816091954,12.35632183908046,0.6594827586206896,0.8,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+curiosity,292,39.19,Rất cao,4.4520547945205475,95.54794520547945,0.5154109589041096,0.8,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+sport_football,49,6.58,Chủ yếu theo dõi,93.87755102040816,6.122448979591836,0.5969387755102041,0.7,"Sở thích theo dõi bóng đá, tin thể thao"
+humor_style,13,1.74,Vui nhộn / Tinh nghịch,15.384615384615385,84.61538461538461,0.5153846153846154,0.7,"Gu hài hước, giải trí vui vẻ"
+energy_level,6,0.81,Hơi uể oải,0.0,100.0,0.39999999999999997,0.5,"Mức năng lượng hiện tại (uể oải, sung sức)"
+group_community_participation,5,0.67,Thường xuyên theo dõi và đọc bài,0.0,100.0,0.45999999999999996,0.5,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+social_engagement_style,5,0.67,"Tàu ngầm (Chỉ xem và like, không post không cmt)",40.0,60.0,0.58,0.7,Cách thức tương tác trực tuyến (Tàu ngầm / Bình luận / Chia sẻ)
+current_thread,4,0.54,Hành trình đi bộ từ Anh đến Việt Nam,0.0,100.0,0.6499999999999999,0.7,Luồng sự kiện/chủ đề đang theo đuổi trong phiên
+film_sci_fi_superhero,3,0.4,Rất thích,0.0,100.0,0.5333333333333333,0.6,Căn cứ nhận thức thuộc tính persona
+reading_frequency,3,0.4,Vài lần mỗi tuần,0.0,100.0,0.4666666666666666,0.5,"Tần suất đọc sách, tài liệu nghiên cứu sâu"
+sport_martial_arts,3,0.4,Quan tâm nhẹ,0.0,100.0,0.4000000000000001,0.4,Căn cứ nhận thức thuộc tính persona
+province,2,0.27,Đồng Nai,0.0,0.0,0.4,0.4,"Yếu tố địa phương, vùng miền gắn kết"
+dialect_register,2,0.27,Giọng miền Tây,0.0,100.0,0.35,0.4,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+interest_investing,2,0.27,Có hứng thú tìm hiểu,100.0,0.0,0.7,0.7,Căn cứ nhận thức thuộc tính persona
+cuisine_vietnamese,1,0.13,Thích,100.0,0.0,0.7,0.7,Sở thích ẩm thực truyền thống Việt Nam
+cuisine_street_food,1,0.13,Thích,0.0,100.0,0.6,0.6,"Thích món ăn đường phố, hàng quán bình dân"
+attitude_new_technology,1,0.13,Tích cực,0.0,100.0,0.5,0.5,Thái độ đón nhận công nghệ mới
+books_self_help,1,0.13,Thích,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+skepticism,1,0.13,Có phản biện tỉnh táo,0.0,100.0,0.5,0.5,"Thái độ hoài nghi, thói quen kiểm chứng nguồn tin"
+sport_gym_calisthenics,1,0.13,Quan tâm nhẹ,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+sport_table_tennis,1,0.13,Thường xuyên tham gia,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+value_family,1,0.13,Rất cao,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona

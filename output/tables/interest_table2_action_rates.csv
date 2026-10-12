@@ -1,0 +1,8 @@
+﻿persona_id,persona_ten,tong_so_hanh_dong,so_hanh_dong_co_so_thich,ty_le_hanh_dong_so_thich_%,tong_evidence_so_thich_vien_dan
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",225,126,56.0,147
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",125,23,18.4,26
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",272,145,53.31,208
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",372,58,15.59,58
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",171,11,6.43,11
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",139,45,32.37,59
+TOAN_HE_THONG,Toàn bộ 6 Persona Facebook,1304,408,31.29,509

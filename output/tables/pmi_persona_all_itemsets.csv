@@ -1,0 +1,61 @@
+﻿persona_id,persona_ten,loai_tap,evidence_set,evidence_1,evidence_2,evidence_3,so_lan_dong_xuat_hien,support_%,support_persona_%,pmi_score,npmi_score,tan_suat_toan_cuc_ev1,tan_suat_toan_cuc_ev2,tan_suat_toan_cuc_ev3,hang_rank
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 2 (2-itemset),character_social_intelligence  +  politeness,character_social_intelligence,politeness,-,1,0.08,0.44,7.541,0.729,7,1,0,1
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 2 (2-itemset),politeness  +  writing_format,politeness,writing_format,-,1,0.08,0.44,6.179,0.597,1,18,0,2
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 2 (2-itemset),character_playfulness  +  tech_savviness,character_playfulness,tech_savviness,-,2,0.15,0.89,5.442,0.582,12,5,0,3
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 2 (2-itemset),character_playfulness  +  sport_badminton,character_playfulness,sport_badminton,-,1,0.08,0.44,5.179,0.5,12,3,0,4
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 2 (2-itemset),attitude_new_technology  +  sport_martial_arts,attitude_new_technology,sport_martial_arts,-,1,0.08,0.44,3.939,0.381,17,5,0,5
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),books_romance  +  emotional_expressiveness,books_romance,emotional_expressiveness,-,2,0.15,1.6,7.027,0.752,2,10,0,1
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),attitude_online_reviews  +  children,attitude_online_reviews,children,-,1,0.08,0.8,5.541,0.535,4,7,0,2
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),children  +  interest_parenting_family_life,children,interest_parenting_family_life,-,3,0.23,2.4,5.319,0.607,7,14,0,3
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),interest_parenting_family_life  +  value_family,interest_parenting_family_life,value_family,-,5,0.38,4.0,4.956,0.617,14,15,0,4
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),tone  +  writing_format,tone,writing_format,-,15,1.15,12.0,4.764,0.74,40,18,0,5
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 2 (2-itemset),directness  +  emoji_emoticon_use,directness,emoji_emoticon_use,-,3,0.23,1.1,7.541,0.861,3,7,0,1
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 2 (2-itemset),music_indie  +  music_pop,music_indie,music_pop,-,2,0.15,0.74,7.027,0.752,10,2,0,2
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 2 (2-itemset),attitude_advertising  +  interest_investing,attitude_advertising,interest_investing,-,3,0.23,1.1,5.956,0.68,9,7,0,3
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 2 (2-itemset),books_historical_fiction  +  dialect_register,books_historical_fiction,dialect_register,-,1,0.08,0.37,5.825,0.563,1,23,0,4
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 2 (2-itemset),books_mystery  +  film_horror_thriller,books_mystery,film_horror_thriller,-,3,0.23,1.1,5.764,0.658,24,3,0,5
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),attitude_new_technology  +  film_sci_fi_superhero,attitude_new_technology,film_sci_fi_superhero,-,1,0.08,0.27,4.676,0.452,17,3,0,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),interest_investing  +  reading_frequency,interest_investing,reading_frequency,-,1,0.08,0.27,2.371,0.229,7,36,0,2
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),dialect_register  +  value_family,dialect_register,value_family,-,1,0.08,0.27,1.918,0.185,23,15,0,3
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),humor_style  +  sport_football,humor_style,sport_football,-,2,0.15,0.54,1.79,0.192,13,58,0,4
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),content_consumption_format  +  humor_style,content_consumption_format,humor_style,-,13,1.0,3.49,1.366,0.205,506,13,0,5
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),cuisine_japanese  +  emoji_emoticon_use,cuisine_japanese,emoji_emoticon_use,-,1,0.08,0.58,6.541,0.632,2,7,0,1
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),attitude_new_technology  +  logic_vs_intuition,attitude_new_technology,logic_vs_intuition,-,3,0.23,1.75,5.261,0.6,17,6,0,2
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),storytelling_tendency  +  value_tradition,storytelling_tendency,value_tradition,-,7,0.54,4.09,4.571,0.606,8,48,0,3
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),province  +  verbosity,province,verbosity,-,2,0.15,1.17,4.371,0.468,63,2,0,4
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),extroversion  +  tech_savviness,extroversion,tech_savviness,-,1,0.08,0.58,4.326,0.418,13,5,0,5
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),character_generosity  +  value_health,character_generosity,value_health,-,1,0.08,0.72,4.857,0.469,1,45,0,1
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),big_picture_vs_detail  +  value_wealth,big_picture_vs_detail,value_wealth,-,3,0.23,2.16,4.846,0.553,8,17,0,2
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),attitude_online_reviews  +  value_health,attitude_online_reviews,value_health,-,2,0.15,1.44,3.857,0.413,4,45,0,3
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),logic_vs_intuition  +  skepticism,logic_vs_intuition,skepticism,-,3,0.23,2.16,3.825,0.436,6,46,0,4
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),attitude_online_reviews  +  skepticism,attitude_online_reviews,skepticism,-,2,0.15,1.44,3.825,0.409,4,46,0,5
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),character_social_intelligence  +  politeness  +  writing_format,character_social_intelligence,politeness,writing_format,1,0.08,0.44,13.72,1.326,7,1,18,1
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),attitude_new_technology  +  career_role  +  interest_technology,attitude_new_technology,career_role,interest_technology,3,0.23,1.33,7.396,0.844,17,33,54,2
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),career_role  +  character_social_intelligence  +  interest_technology,career_role,character_social_intelligence,interest_technology,1,0.08,0.44,7.091,0.685,33,7,54,3
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),character_playfulness  +  curiosity  +  tech_savviness,character_playfulness,curiosity,tech_savviness,2,0.15,0.89,6.011,0.643,12,879,5,4
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),character_playfulness  +  curiosity  +  sport_badminton,character_playfulness,curiosity,sport_badminton,1,0.08,0.44,5.748,0.555,12,879,3,5
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 3 (3-itemset),attitude_online_reviews  +  children  +  province,attitude_online_reviews,children,province,1,0.08,0.8,9.913,0.958,4,7,63,1
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 3 (3-itemset),children  +  emotional_expressiveness  +  province,children,emotional_expressiveness,province,1,0.08,0.8,8.591,0.83,7,10,63,2
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 3 (3-itemset),attention_span  +  content_consumption_format  +  film_television,attention_span,content_consumption_format,film_television,1,0.08,0.8,6.1,0.589,49,506,1,3
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 3 (3-itemset),content_consumption_format  +  film_animation  +  interest_parenting_family_life,content_consumption_format,film_animation,interest_parenting_family_life,1,0.08,0.8,4.907,0.474,506,8,14,4
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 3 (3-itemset),attitude_climate_action  +  content_consumption_format  +  cuisine_vietnamese,attitude_climate_action,content_consumption_format,cuisine_vietnamese,1,0.08,0.8,4.207,0.406,2,506,91,5
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  directness  +  emoji_emoticon_use,cuisine_street_food,directness,emoji_emoticon_use,3,0.23,1.1,12.109,1.382,55,3,7,1
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),music_indie  +  music_pop  +  social_engagement_style,music_indie,music_pop,social_engagement_style,1,0.08,0.37,10.852,1.049,10,2,46,2
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),books_mystery  +  cuisine_vietnamese  +  film_horror_thriller,books_mystery,cuisine_vietnamese,film_horror_thriller,3,0.23,1.1,9.605,1.096,24,91,3,3
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  interest_film  +  sport_gym_calisthenics,cuisine_street_food,interest_film,sport_gym_calisthenics,3,0.23,1.1,9.179,1.047,55,32,5,4
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),books_mystery  +  cuisine_vietnamese  +  interest_film,books_mystery,cuisine_vietnamese,interest_film,17,1.3,6.25,8.692,1.388,24,91,32,5
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 3 (3-itemset),attitude_new_technology  +  content_consumption_format  +  film_sci_fi_superhero,attitude_new_technology,content_consumption_format,film_sci_fi_superhero,1,0.08,0.27,6.042,0.584,17,506,3,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 3 (3-itemset),reading_frequency  +  social_engagement_style  +  sport_football,reading_frequency,social_engagement_style,sport_football,1,0.08,0.27,4.146,0.401,36,46,58,2
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 3 (3-itemset),group_community_participation  +  social_engagement_style  +  sport_football,group_community_participation,social_engagement_style,sport_football,2,0.15,0.54,3.47,0.371,115,46,58,3
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 3 (3-itemset),content_consumption_format  +  dialect_register  +  value_family,content_consumption_format,dialect_register,value_family,1,0.08,0.27,3.284,0.317,506,23,15,4
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 3 (3-itemset),content_consumption_format  +  humor_style  +  sport_football,content_consumption_format,humor_style,sport_football,2,0.15,0.54,3.156,0.338,506,13,58,5
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),extroversion  +  skepticism  +  tech_savviness,extroversion,skepticism,tech_savviness,1,0.08,0.58,9.152,0.884,13,46,5,1
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),skepticism  +  tech_savviness  +  value_family,skepticism,tech_savviness,value_family,1,0.08,0.58,8.945,0.864,46,5,15,2
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),dialect_register  +  province  +  storytelling_tendency,dialect_register,province,storytelling_tendency,1,0.08,0.58,7.197,0.695,23,63,8,3
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),curiosity  +  storytelling_tendency  +  value_tradition,curiosity,storytelling_tendency,value_tradition,7,0.54,4.09,5.14,0.682,879,8,48,4
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),curiosity  +  province  +  verbosity,curiosity,province,verbosity,2,0.15,1.17,4.94,0.528,879,63,2,5
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),attitude_online_reviews  +  skepticism  +  value_health,attitude_online_reviews,skepticism,value_health,2,0.15,1.44,8.682,0.929,4,46,45,1
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),big_picture_vs_detail  +  interest_real_estate  +  value_wealth,big_picture_vs_detail,interest_real_estate,value_wealth,3,0.23,2.16,8.107,0.925,8,136,17,2
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),logic_vs_intuition  +  skepticism  +  value_health,logic_vs_intuition,skepticism,value_health,2,0.15,1.44,8.097,0.866,6,46,45,3
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),attitude_advertising  +  skepticism  +  value_health,attitude_advertising,skepticism,value_health,2,0.15,1.44,7.512,0.804,9,46,45,4
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),interest_real_estate  +  value_family  +  value_wealth,interest_real_estate,value_family,value_wealth,2,0.15,1.44,6.616,0.708,136,15,17,5

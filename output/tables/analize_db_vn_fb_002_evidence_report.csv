@@ -1,0 +1,27 @@
+﻿dimension,so_lan,ty_le_tong_%,gia_tri_dac_trung,ty_le_primary,ty_le_supporting,trong_so_tb,trong_so_max,y_nghia_nhan_thuc
+content_consumption_format,61,24.6,Video ngắn,86.88524590163934,13.114754098360656,0.6573770491803279,0.8,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+curiosity,44,17.74,Trung bình,27.27272727272727,70.45454545454545,0.4659090909090909,0.6,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+tone,24,9.68,Lo âu / Bồn chồn,70.83333333333334,25.0,0.5416666666666666,0.7,"Văn phong, thái độ giao tiếp (Lịch thiệp / Thẳng thắn / Cộc lốc)"
+writing_format,15,6.05,Hay dùng từ đệm tình cảm,0.0,100.0,0.38666666666666666,0.5,"Thói quen trình bày, định dạng văn bản"
+interest_parenting_family_life,14,5.65,Có hứng thú tìm hiểu,28.57142857142857,71.42857142857143,0.4785714285714286,0.6,Mối quan tâm nuôi dạy con cái & gia đình
+attention_span,8,3.23,Trung bình,0.0,100.0,0.4375,0.5,Độ dài thời gian duy trì sự chú ý sâu vào một việc
+dialect_register,8,3.23,Giọng miền Tây,0.0,87.5,0.2875,0.3,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+emotional_expressiveness,8,3.23,Biểu đạt cảm xúc tự nhiên,0.0,100.0,0.4875,0.5,Mức độ bộc lộ cảm xúc khi tương tác
+value_tradition,8,3.23,Trung bình,0.0,100.0,0.41250000000000003,0.5,"Tôn trọng truyền thống, lịch sử, văn hóa dân tộc"
+facebook_frequency,8,3.23,Nhiều lần mỗi ngày,62.5,37.5,0.4875,0.6,Tần suất truy cập mạng xã hội hàng ngày
+value_family,7,2.82,Trung bình,42.857142857142854,57.14285714285714,0.42857142857142855,0.5,Căn cứ nhận thức thuộc tính persona
+film_animation,7,2.82,Rất thích,42.857142857142854,57.14285714285714,0.6571428571428571,0.9,Căn cứ nhận thức thuộc tính persona
+children,6,2.42,Từ 3 con trở lên,0.0,100.0,0.5166666666666667,0.6,Căn cứ nhận thức thuộc tính persona
+interest_spirituality,6,2.42,Không quan tâm,16.666666666666664,50.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+province,5,2.02,Thành phố Hồ Chí Minh,100.0,0.0,0.74,0.8,"Yếu tố địa phương, vùng miền gắn kết"
+social_engagement_style,3,1.21,"Người thường xuyên tham gia, kết nối cộng đồng, hội nhóm",0.0,100.0,0.4666666666666666,0.5,Cách thức tương tác trực tuyến (Tàu ngầm / Bình luận / Chia sẻ)
+attitude_online_reviews,2,0.81,Luôn đọc kỹ review trước khi quyết định,0.0,100.0,0.45,0.5,Căn cứ nhận thức thuộc tính persona
+attitude_climate_action,2,0.81,Ủng hộ và thực hiện các thói quen xanh,0.0,100.0,0.45,0.5,Căn cứ nhận thức thuộc tính persona
+media_diet,2,0.81,Mạng xã hội,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+group_community_participation,2,0.81,Chỉ nằm vùng hóng chuyện,0.0,100.0,0.5,0.5,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+books_romance,2,0.81,Thích,100.0,0.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+cuisine_vietnamese,2,0.81,Rất thích,0.0,100.0,0.4,0.5,Sở thích ẩm thực truyền thống Việt Nam
+cuisine_street_food,1,0.4,Rất thích,100.0,0.0,0.6,0.6,"Thích món ăn đường phố, hàng quán bình dân"
+career_role,1,0.4,Lao động phổ thông,0.0,100.0,0.4,0.4,Đặc thù nghề nghiệp chi phối góc nhìn chuyên môn
+film_television,1,0.4,Không thích,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+sport_martial_arts,1,0.4,Quan tâm nhẹ,0.0,100.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona

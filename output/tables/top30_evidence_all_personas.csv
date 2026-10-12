@@ -1,0 +1,164 @@
+﻿persona_id,thu_hang,dimension,so_lan,ty_trong_%,gia_tri_thuong_gap,ty_le_primary,trong_so_tb
+vn_fb_001,1,curiosity,204,36.36,Rất cao,55.9,0.69
+vn_fb_001,2,interest_real_estate,93,16.58,Rất đam mê,78.5,0.74
+vn_fb_001,3,group_community_participation,65,11.59,Thường xuyên theo dõi và đọc bài,3.1,0.55
+vn_fb_001,4,interest_technology,52,9.27,Rất đam mê,88.5,0.84
+vn_fb_001,5,career_role,32,5.7,Thiết kế đồ họa,62.5,0.63
+vn_fb_001,6,reading_frequency,29,5.17,Hàng ngày,0.0,0.51
+vn_fb_001,7,tone,14,2.5,Tò mò / Hóng chuyện,0.0,0.58
+vn_fb_001,8,current_thread,13,2.32,co-vua-va-cac-tinh-huong-thu-vi,46.2,0.67
+vn_fb_001,9,character_playfulness,12,2.14,Cao,0.0,0.49
+vn_fb_001,10,decision_speed,11,1.96,Quyết định nhanh,9.1,0.51
+vn_fb_001,11,character_social_intelligence,7,1.25,Rất khéo léo và nhạy bén,14.3,0.67
+vn_fb_001,12,attitude_new_technology,6,1.07,Rất ủng hộ,0.0,0.58
+vn_fb_001,13,content_consumption_format,6,1.07,Kết hợp nhiều hình thức,0.0,0.48
+vn_fb_001,14,attention_span,3,0.53,Tập trung tốt,0.0,0.5
+vn_fb_001,15,tech_savviness,2,0.36,Rất quen thuộc,0.0,0.4
+vn_fb_001,16,dialect_register,1,0.18,Giọng Bắc chuẩn,0.0,0.3
+vn_fb_001,17,current_surface,1,0.18,feed,0.0,0.5
+vn_fb_001,18,interest_film,1,0.18,Rất đam mê,0.0,0.5
+vn_fb_001,19,emotional_expressiveness,1,0.18,Biểu đạt cảm xúc tự nhiên,0.0,0.3
+vn_fb_001,20,post_title,1,0.18,Brilliant Move But Why?,0.0,0.6
+vn_fb_001,21,politeness,1,0.18,Lịch thiệp văn minh,0.0,0.6
+vn_fb_001,22,facebook_frequency,1,0.18,Nhiều lần mỗi ngày,0.0,0.5
+vn_fb_001,23,sport_badminton,1,0.18,Thường xuyên tham gia,0.0,0.4
+vn_fb_001,24,sport_running,1,0.18,Không quan tâm,0.0,0.3
+vn_fb_001,25,sport_martial_arts,1,0.18,Quan tâm nhẹ,0.0,0.3
+vn_fb_001,26,sport_tennis,1,0.18,Không quan tâm,0.0,0.0
+vn_fb_001,27,writing_format,1,0.18,Hay dùng từ đệm tình cảm,100.0,0.7
+vn_fb_002,1,content_consumption_format,61,24.6,Video ngắn,86.9,0.66
+vn_fb_002,2,curiosity,44,17.74,Trung bình,27.3,0.47
+vn_fb_002,3,tone,24,9.68,Lo âu / Bồn chồn,70.8,0.54
+vn_fb_002,4,writing_format,15,6.05,Hay dùng từ đệm tình cảm,0.0,0.39
+vn_fb_002,5,interest_parenting_family_life,14,5.65,Có hứng thú tìm hiểu,28.6,0.48
+vn_fb_002,6,attention_span,8,3.23,Trung bình,0.0,0.44
+vn_fb_002,7,dialect_register,8,3.23,Giọng miền Tây,0.0,0.29
+vn_fb_002,8,emotional_expressiveness,8,3.23,Biểu đạt cảm xúc tự nhiên,0.0,0.49
+vn_fb_002,9,value_tradition,8,3.23,Trung bình,0.0,0.41
+vn_fb_002,10,facebook_frequency,8,3.23,Nhiều lần mỗi ngày,62.5,0.49
+vn_fb_002,11,value_family,7,2.82,Trung bình,42.9,0.43
+vn_fb_002,12,film_animation,7,2.82,Rất thích,42.9,0.66
+vn_fb_002,13,children,6,2.42,Từ 3 con trở lên,0.0,0.52
+vn_fb_002,14,interest_spirituality,6,2.42,Không quan tâm,16.7,0.3
+vn_fb_002,15,province,5,2.02,Thành phố Hồ Chí Minh,100.0,0.74
+vn_fb_002,16,social_engagement_style,3,1.21,"Người thường xuyên tham gia, kết nối cộng đồng, hội nhóm",0.0,0.47
+vn_fb_002,17,attitude_online_reviews,2,0.81,Luôn đọc kỹ review trước khi quyết định,0.0,0.45
+vn_fb_002,18,attitude_climate_action,2,0.81,Ủng hộ và thực hiện các thói quen xanh,0.0,0.45
+vn_fb_002,19,media_diet,2,0.81,Mạng xã hội,0.0,0.5
+vn_fb_002,20,group_community_participation,2,0.81,Chỉ nằm vùng hóng chuyện,0.0,0.5
+vn_fb_002,21,books_romance,2,0.81,Thích,100.0,0.6
+vn_fb_002,22,cuisine_vietnamese,2,0.81,Rất thích,0.0,0.4
+vn_fb_002,23,cuisine_street_food,1,0.4,Rất thích,100.0,0.6
+vn_fb_002,24,career_role,1,0.4,Lao động phổ thông,0.0,0.4
+vn_fb_002,25,film_television,1,0.4,Không thích,0.0,0.5
+vn_fb_002,26,sport_martial_arts,1,0.4,Quan tâm nhẹ,0.0,0.3
+vn_fb_003,1,curiosity,114,19.03,Trung bình,35.1,0.45
+vn_fb_003,2,cuisine_vietnamese,86,14.36,Rất thích,80.2,0.74
+vn_fb_003,3,content_consumption_format,73,12.19,Âm thanh,53.4,0.52
+vn_fb_003,4,cuisine_street_food,39,6.51,Thích,84.6,0.68
+vn_fb_003,5,province,36,6.01,Đà Nẵng,66.7,0.67
+vn_fb_003,6,interest_film,31,5.18,Rất đam mê,83.9,0.7
+vn_fb_003,7,attention_span,27,4.51,Trung bình,14.8,0.49
+vn_fb_003,8,social_engagement_style,26,4.34,Chiến thần bình luận dạo (Tương tác tích cực các post),46.2,0.62
+vn_fb_003,9,purpose,25,4.17,Tìm thêm quán ngon hoặc nội dung phù hợp sở thích,12.0,0.65
+vn_fb_003,10,books_mystery,24,4.01,Rất thích,50.0,0.67
+vn_fb_003,11,group_community_participation,17,2.84,Chỉ nằm vùng hóng chuyện,47.1,0.59
+vn_fb_003,12,interest_travel,13,2.17,Không quan tâm,76.9,0.68
+vn_fb_003,13,music_indie,10,1.67,Rất thích,30.0,0.51
+vn_fb_003,14,interest_pets,9,1.5,Không quan tâm,88.9,0.68
+vn_fb_003,15,dialect_register,7,1.17,Giọng Trung địa phương,14.3,0.5
+vn_fb_003,16,books_self_help,7,1.17,Rất thích,100.0,0.8
+vn_fb_003,17,emoji_emoticon_use,6,1.0,Rất nhiều emoji sinh động,33.3,0.57
+vn_fb_003,18,facebook_frequency,6,1.0,Nhiều lần mỗi ngày,33.3,0.57
+vn_fb_003,19,interest_investing,5,0.83,Không quan tâm,80.0,0.72
+vn_fb_003,20,current_thread,4,0.67,Xem bình luận về video CiiN,0.0,0.52
+vn_fb_003,21,sport_gym_calisthenics,4,0.67,Thường xuyên tham gia,0.0,0.65
+vn_fb_003,22,attitude_advertising,3,0.5,Hoài nghi,33.3,0.67
+vn_fb_003,23,directness,3,0.5,Thẳng như ruột ngựa / Không né tránh,66.7,0.73
+vn_fb_003,24,film_horror_thriller,3,0.5,Thích,100.0,0.7
+vn_fb_003,25,language_english,2,0.33,Giao tiếp được,100.0,0.8
+vn_fb_003,26,music_pop,2,0.33,Thích,0.0,0.4
+vn_fb_003,27,tone,2,0.33,Mệt mỏi / Căng thẳng,0.0,0.45
+vn_fb_003,28,formality,2,0.33,Rất suồng sã / Nhiều tiếng lóng,0.0,0.5
+vn_fb_003,29,interest_sports,2,0.33,Không thích,0.0,0.4
+vn_fb_003,30,interest_spirituality,2,0.33,Không thích,100.0,0.7
+vn_fb_004,1,content_consumption_format,348,46.71,Video ngắn,87.6,0.66
+vn_fb_004,2,curiosity,292,39.19,Rất cao,4.5,0.52
+vn_fb_004,3,sport_football,49,6.58,Chủ yếu theo dõi,93.9,0.6
+vn_fb_004,4,humor_style,13,1.74,Vui nhộn / Tinh nghịch,15.4,0.52
+vn_fb_004,5,energy_level,6,0.81,Hơi uể oải,0.0,0.4
+vn_fb_004,6,group_community_participation,5,0.67,Thường xuyên theo dõi và đọc bài,0.0,0.46
+vn_fb_004,7,social_engagement_style,5,0.67,"Tàu ngầm (Chỉ xem và like, không post không cmt)",40.0,0.58
+vn_fb_004,8,current_thread,4,0.54,Hành trình đi bộ từ Anh đến Việt Nam,0.0,0.65
+vn_fb_004,9,film_sci_fi_superhero,3,0.4,Rất thích,0.0,0.53
+vn_fb_004,10,reading_frequency,3,0.4,Vài lần mỗi tuần,0.0,0.47
+vn_fb_004,11,sport_martial_arts,3,0.4,Quan tâm nhẹ,0.0,0.4
+vn_fb_004,12,province,2,0.27,Đồng Nai,0.0,0.4
+vn_fb_004,13,dialect_register,2,0.27,Giọng miền Tây,0.0,0.35
+vn_fb_004,14,interest_investing,2,0.27,Có hứng thú tìm hiểu,100.0,0.7
+vn_fb_004,15,cuisine_vietnamese,1,0.13,Thích,100.0,0.7
+vn_fb_004,16,cuisine_street_food,1,0.13,Thích,0.0,0.6
+vn_fb_004,17,attitude_new_technology,1,0.13,Tích cực,0.0,0.5
+vn_fb_004,18,books_self_help,1,0.13,Thích,0.0,0.5
+vn_fb_004,19,skepticism,1,0.13,Có phản biện tỉnh táo,0.0,0.5
+vn_fb_004,20,sport_gym_calisthenics,1,0.13,Quan tâm nhẹ,0.0,0.5
+vn_fb_004,21,sport_table_tennis,1,0.13,Thường xuyên tham gia,100.0,0.8
+vn_fb_004,22,value_family,1,0.13,Rất cao,0.0,0.5
+vn_fb_005,1,curiosity,151,42.78,Cao,72.2,0.59
+vn_fb_005,2,value_tradition,40,11.33,Cao,77.5,0.59
+vn_fb_005,3,group_community_participation,32,9.07,Thỉnh thoảng đặt câu hỏi nhờ tư vấn,0.0,0.53
+vn_fb_005,4,province,14,3.97,Đà Nẵng,35.7,0.56
+vn_fb_005,5,open_question,14,3.97,Thời điểm nào trong đêm ngày 4/10 là tốt nhất để quan sát Sao Hỏa tại Đà Nẵng?,92.9,0.89
+vn_fb_005,6,extroversion,13,3.68,Thiên về hướng ngoại,7.7,0.44
+vn_fb_005,7,decision_speed,12,3.4,Quyết định nhanh,50.0,0.52
+vn_fb_005,8,attitude_new_technology,10,2.83,Tích cực,10.0,0.46
+vn_fb_005,9,sport_football,9,2.55,Thường xuyên tham gia,88.9,0.73
+vn_fb_005,10,storytelling_tendency,8,2.27,Thường lấy ví dụ thực tế minh họa,12.5,0.48
+vn_fb_005,11,content_consumption_format,6,1.7,Video dài,16.7,0.45
+vn_fb_005,12,energy_level,5,1.42,Kiệt sức / Hết pin,0.0,0.3
+vn_fb_005,13,attention_span,4,1.13,Trung bình,0.0,0.48
+vn_fb_005,14,skepticism,4,1.13,Có phản biện tỉnh táo,25.0,0.5
+vn_fb_005,15,interest_travel,4,1.13,Bình thường,0.0,0.3
+vn_fb_005,16,value_family,3,0.85,Trung bình,33.3,0.4
+vn_fb_005,17,logic_vs_intuition,3,0.85,Hoàn toàn dựa trên logic & dữ liệu,100.0,0.6
+vn_fb_005,18,tech_savviness,3,0.85,Rất quen thuộc,100.0,0.7
+vn_fb_005,19,books_fantasy,2,0.57,Không thích,100.0,0.6
+vn_fb_005,20,attitude_advertising,2,0.57,Trung lập,0.0,0.3
+vn_fb_005,21,cuisine_japanese,2,0.57,Rất thích,100.0,0.8
+vn_fb_005,22,facebook_frequency,2,0.57,Nhiều lần mỗi ngày,0.0,0.3
+vn_fb_005,23,verbosity,2,0.57,Thích viết dài / Kể lể chi tiết,0.0,0.4
+vn_fb_005,24,media_diet,2,0.57,Mạng xã hội,0.0,0.4
+vn_fb_005,25,dialect_register,1,0.28,Giọng Trung địa phương,0.0,0.6
+vn_fb_005,26,big_picture_vs_detail,1,0.28,Hoàn toàn nhìn tổng thể,0.0,0.3
+vn_fb_005,27,emoji_emoticon_use,1,0.28,Không bao giờ dùng emoji,0.0,0.4
+vn_fb_005,28,emotional_expressiveness,1,0.28,Biểu đạt cảm xúc tự nhiên,0.0,0.3
+vn_fb_005,29,reading_frequency,1,0.28,Không bao giờ,0.0,0.3
+vn_fb_005,30,social_engagement_style,1,0.28,"Người thích chia sẻ (Thường share bài, clip hay)",0.0,0.5
+vn_fb_006,1,curiosity,75,22.52,Cao,72.0,0.51
+vn_fb_006,2,value_health,45,13.51,Rất cao,51.1,0.57
+vn_fb_006,3,interest_real_estate,43,12.91,Có hứng thú tìm hiểu,90.7,0.72
+vn_fb_006,4,skepticism,41,12.31,Rất hoài nghi / Luôn kiểm chứng nguồn tin,29.3,0.54
+vn_fb_006,5,value_wealth,17,5.11,Cao,29.4,0.59
+vn_fb_006,6,cuisine_street_food,14,4.2,Rất thích,57.1,0.75
+vn_fb_006,7,content_consumption_format,12,3.6,Video dài,0.0,0.41
+vn_fb_006,8,social_engagement_style,11,3.3,"Tàu ngầm (Chỉ xem và like, không post không cmt)",18.2,0.33
+vn_fb_006,9,current_thread,8,2.4,Đọc chi tiết bài viết về hồ sơ nhà ở xã hội FLC Đại Mỗ,12.5,0.43
+vn_fb_006,10,attention_span,7,2.1,Tập trung tốt,0.0,0.34
+vn_fb_006,11,state,7,2.1,active,0.0,0.3
+vn_fb_006,12,energy_level,6,1.8,Kiệt sức / Hết pin,0.0,0.3
+vn_fb_006,13,province,6,1.8,Cần Thơ,0.0,0.5
+vn_fb_006,14,big_picture_vs_detail,6,1.8,Thiên về soi chi tiết,0.0,0.57
+vn_fb_006,15,facebook_frequency,5,1.5,Nhiều lần mỗi ngày,40.0,0.46
+vn_fb_006,16,attitude_advertising,4,1.2,Trung lập,25.0,0.4
+vn_fb_006,17,dialect_register,4,1.2,Giọng miền Tây,0.0,0.4
+vn_fb_006,18,logic_vs_intuition,3,0.9,Hoàn toàn dựa trên logic & dữ liệu,0.0,0.6
+vn_fb_006,19,value_family,3,0.9,Cao,0.0,0.53
+vn_fb_006,20,attitude_online_reviews,2,0.6,Xem lướt / Không quá phụ thuộc,0.0,0.45
+vn_fb_006,21,sport_badminton,2,0.6,Không quan tâm,50.0,0.55
+vn_fb_006,22,cuisine_vietnamese,2,0.6,Rất thích,0.0,0.8
+vn_fb_006,23,group_community_participation,2,0.6,Thỉnh thoảng đặt câu hỏi nhờ tư vấn,0.0,0.5
+vn_fb_006,24,location,2,0.6,"QUẬN NINH KIỀU, CẦN THƠ",0.0,0.65
+vn_fb_006,25,writing_format,2,0.6,Thường xuyên viết tắt / Dùng teencode,0.0,0.45
+vn_fb_006,26,reading_frequency,2,0.6,Hiếm khi,0.0,0.3
+vn_fb_006,27,character_generosity,1,0.3,Thấp,0.0,0.3
+vn_fb_006,28,film_animation,1,0.3,Không thích,100.0,0.6

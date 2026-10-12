@@ -1,0 +1,81 @@
+﻿dimension,vn_fb_004,5_persona_con_lai,toan_he_thong,ty_trong_%,y_nghia_nhan_thuc
+content_consumption_format,348,158,506,68.77,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+curiosity,292,588,880,33.18,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+sport_football,49,9,58,84.48,"Sở thích theo dõi bóng đá, tin thể thao"
+humor_style,13,0,13,100.0,"Gu hài hước, giải trí vui vẻ"
+energy_level,6,11,17,35.29,"Mức năng lượng hiện tại (uể oải, sung sức)"
+group_community_participation,5,118,123,4.07,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+social_engagement_style,5,41,46,10.87,Cách thức tương tác trực tuyến (Tàu ngầm / Bình luận / Chia sẻ)
+current_thread,4,25,29,13.79,Luồng sự kiện/chủ đề đang theo đuổi trong phiên
+sport_martial_arts,3,2,5,60.0,Căn cứ nhận thức thuộc tính persona
+film_sci_fi_superhero,3,0,3,100.0,Căn cứ nhận thức thuộc tính persona
+reading_frequency,3,33,36,8.33,"Tần suất đọc sách, tài liệu nghiên cứu sâu"
+province,2,61,63,3.17,"Yếu tố địa phương, vùng miền gắn kết"
+dialect_register,2,21,23,8.7,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+interest_investing,2,5,7,28.57,Căn cứ nhận thức thuộc tính persona
+attitude_new_technology,1,16,17,5.88,Thái độ đón nhận công nghệ mới
+books_self_help,1,7,8,12.5,Căn cứ nhận thức thuộc tính persona
+skepticism,1,45,46,2.17,"Thái độ hoài nghi, thói quen kiểm chứng nguồn tin"
+sport_table_tennis,1,0,1,100.0,Căn cứ nhận thức thuộc tính persona
+sport_gym_calisthenics,1,4,5,20.0,Căn cứ nhận thức thuộc tính persona
+value_family,1,14,15,6.67,Căn cứ nhận thức thuộc tính persona
+cuisine_vietnamese,1,90,91,1.1,Sở thích ẩm thực truyền thống Việt Nam
+cuisine_street_food,1,54,55,1.82,"Thích món ăn đường phố, hàng quán bình dân"
+career_role,0,33,33,0.0,Đặc thù nghề nghiệp chi phối góc nhìn chuyên môn
+books_romance,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+attitude_climate_action,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+books_fantasy,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+big_picture_vs_detail,0,8,8,0.0,Căn cứ nhận thức thuộc tính persona
+attitude_online_reviews,0,4,4,0.0,Căn cứ nhận thức thuộc tính persona
+attention_span,0,49,49,0.0,Độ dài thời gian duy trì sự chú ý sâu vào một việc
+attitude_advertising,0,9,9,0.0,Căn cứ nhận thức thuộc tính persona
+books_mystery,0,24,24,0.0,"Sở thích truyện trinh thám, ly kỳ bí ẩn"
+books_historical_fiction,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+children,0,7,7,0.0,Căn cứ nhận thức thuộc tính persona
+character_social_intelligence,0,7,7,0.0,Căn cứ nhận thức thuộc tính persona
+character_playfulness,0,12,12,0.0,"Tính cách hóm hỉnh, bông đùa"
+character_generosity,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+formality,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+film_television,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+film_horror_thriller,0,3,3,0.0,Căn cứ nhận thức thuộc tính persona
+emotional_expressiveness,0,10,10,0.0,Mức độ bộc lộ cảm xúc khi tương tác
+film_animation,0,8,8,0.0,Căn cứ nhận thức thuộc tính persona
+facebook_frequency,0,22,22,0.0,Tần suất truy cập mạng xã hội hàng ngày
+extroversion,0,13,13,0.0,"Tính cách hướng ngoại, năng động kết nối"
+directness,0,3,3,0.0,Căn cứ nhận thức thuộc tính persona
+decision_speed,0,23,23,0.0,Tốc độ đưa ra quyết định hành động
+current_surface,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+emoji_emoticon_use,0,7,7,0.0,Căn cứ nhận thức thuộc tính persona
+cuisine_japanese,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+language_english,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+interest_travel,0,17,17,0.0,Căn cứ nhận thức thuộc tính persona
+interest_technology,0,54,54,0.0,"Quan tâm công nghệ, AI, thiết bị số"
+interest_sports,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+interest_spirituality,0,8,8,0.0,Căn cứ nhận thức thuộc tính persona
+interest_real_estate,0,136,136,0.0,"Quan tâm thị trường nhà đất, bất động sản"
+interest_pets,0,9,9,0.0,Căn cứ nhận thức thuộc tính persona
+interest_parenting_family_life,0,14,14,0.0,Mối quan tâm nuôi dạy con cái & gia đình
+interest_film,0,32,32,0.0,"Sở thích xem phim ảnh, giải trí điện ảnh"
+politeness,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+open_question,0,14,14,0.0,Căn cứ nhận thức thuộc tính persona
+openness,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+location,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+logic_vs_intuition,0,6,6,0.0,Căn cứ nhận thức thuộc tính persona
+media_diet,0,4,4,0.0,Căn cứ nhận thức thuộc tính persona
+music_indie,0,10,10,0.0,Căn cứ nhận thức thuộc tính persona
+sport_boxing,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+sport_badminton,0,3,3,0.0,Căn cứ nhận thức thuộc tính persona
+post_title,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+purpose,0,25,25,0.0,Mục đích hành vi gắn với bối cảnh phiên
+music_pop,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+sport_running,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+state,0,7,7,0.0,Căn cứ nhận thức thuộc tính persona
+sport_tennis,0,1,1,0.0,Căn cứ nhận thức thuộc tính persona
+storytelling_tendency,0,8,8,0.0,"Xu hướng thích chia sẻ, kể chuyện cho người khác"
+tech_savviness,0,5,5,0.0,Căn cứ nhận thức thuộc tính persona
+tone,0,40,40,0.0,"Văn phong, thái độ giao tiếp (Lịch thiệp / Thẳng thắn / Cộc lốc)"
+value_health,0,45,45,0.0,"Chú trọng sức khỏe cá nhân, dinh dưỡng, y tế"
+value_tradition,0,48,48,0.0,"Tôn trọng truyền thống, lịch sử, văn hóa dân tộc"
+value_wealth,0,17,17,0.0,"Mức độ coi trọng tài chính, làm giàu"
+verbosity,0,2,2,0.0,Căn cứ nhận thức thuộc tính persona
+writing_format,0,18,18,0.0,"Thói quen trình bày, định dạng văn bản"

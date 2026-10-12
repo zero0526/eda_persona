@@ -1,0 +1,31 @@
+﻿dimension,so_lan,ty_le_tong_%,gia_tri_dac_trung,ty_le_primary,ty_le_supporting,trong_so_tb,trong_so_max,y_nghia_nhan_thuc
+curiosity,151,42.78,Cao,72.18543046357617,27.81456953642384,0.5940397350993377,0.8,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+value_tradition,40,11.33,Cao,77.5,22.5,0.5875,0.7,"Tôn trọng truyền thống, lịch sử, văn hóa dân tộc"
+group_community_participation,32,9.07,Thỉnh thoảng đặt câu hỏi nhờ tư vấn,0.0,100.0,0.53125,0.7,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+province,14,3.97,Đà Nẵng,35.714285714285715,64.28571428571429,0.5642857142857143,0.9,"Yếu tố địa phương, vùng miền gắn kết"
+open_question,14,3.97,Thời điểm nào trong đêm ngày 4/10 là tốt nhất để quan sát Sao Hỏa tại Đà Nẵng?,92.85714285714286,7.142857142857142,0.8857142857142858,0.9,Căn cứ nhận thức thuộc tính persona
+extroversion,13,3.68,Thiên về hướng ngoại,7.6923076923076925,92.3076923076923,0.43846153846153846,0.6,"Tính cách hướng ngoại, năng động kết nối"
+decision_speed,12,3.4,Quyết định nhanh,50.0,50.0,0.5166666666666667,0.6,Tốc độ đưa ra quyết định hành động
+attitude_new_technology,10,2.83,Tích cực,10.0,90.0,0.45999999999999996,0.7,Thái độ đón nhận công nghệ mới
+sport_football,9,2.55,Thường xuyên tham gia,88.88888888888889,11.11111111111111,0.7333333333333333,0.8,"Sở thích theo dõi bóng đá, tin thể thao"
+storytelling_tendency,8,2.27,Thường lấy ví dụ thực tế minh họa,12.5,87.5,0.475,0.7,"Xu hướng thích chia sẻ, kể chuyện cho người khác"
+content_consumption_format,6,1.7,Video dài,16.666666666666664,83.33333333333334,0.44999999999999996,0.7,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+energy_level,5,1.42,Kiệt sức / Hết pin,0.0,40.0,0.3,0.3,"Mức năng lượng hiện tại (uể oải, sung sức)"
+attention_span,4,1.13,Trung bình,0.0,100.0,0.475,0.5,Độ dài thời gian duy trì sự chú ý sâu vào một việc
+skepticism,4,1.13,Có phản biện tỉnh táo,25.0,75.0,0.5,0.5,"Thái độ hoài nghi, thói quen kiểm chứng nguồn tin"
+interest_travel,4,1.13,Bình thường,0.0,100.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+value_family,3,0.85,Trung bình,33.33333333333333,66.66666666666666,0.39999999999999997,0.5,Căn cứ nhận thức thuộc tính persona
+logic_vs_intuition,3,0.85,Hoàn toàn dựa trên logic & dữ liệu,100.0,0.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+tech_savviness,3,0.85,Rất quen thuộc,100.0,0.0,0.6999999999999998,0.7,Căn cứ nhận thức thuộc tính persona
+books_fantasy,2,0.57,Không thích,100.0,0.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+attitude_advertising,2,0.57,Trung lập,0.0,50.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+cuisine_japanese,2,0.57,Rất thích,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+facebook_frequency,2,0.57,Nhiều lần mỗi ngày,0.0,100.0,0.3,0.3,Tần suất truy cập mạng xã hội hàng ngày
+verbosity,2,0.57,Thích viết dài / Kể lể chi tiết,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+media_diet,2,0.57,Mạng xã hội,0.0,100.0,0.4,0.5,Căn cứ nhận thức thuộc tính persona
+dialect_register,1,0.28,Giọng Trung địa phương,0.0,100.0,0.6,0.6,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+big_picture_vs_detail,1,0.28,Hoàn toàn nhìn tổng thể,0.0,100.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+emoji_emoticon_use,1,0.28,Không bao giờ dùng emoji,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+emotional_expressiveness,1,0.28,Biểu đạt cảm xúc tự nhiên,0.0,100.0,0.3,0.3,Mức độ bộc lộ cảm xúc khi tương tác
+reading_frequency,1,0.28,Không bao giờ,0.0,100.0,0.3,0.3,"Tần suất đọc sách, tài liệu nghiên cứu sâu"
+social_engagement_style,1,0.28,"Người thích chia sẻ (Thường share bài, clip hay)",0.0,100.0,0.5,0.5,Cách thức tương tác trực tuyến (Tàu ngầm / Bình luận / Chia sẻ)

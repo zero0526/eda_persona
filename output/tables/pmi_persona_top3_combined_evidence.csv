@@ -1,0 +1,31 @@
+﻿persona_id,persona_ten,loai_tap,evidence_set,evidence_1,evidence_2,evidence_3,so_lan_dong_xuat_hien,support_%,support_persona_%,pmi_score,npmi_score,tan_suat_toan_cuc_ev1,tan_suat_toan_cuc_ev2,tan_suat_toan_cuc_ev3,hang_rank
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),attitude_new_technology  +  career_role  +  interest_technology,attitude_new_technology,career_role,interest_technology,3,0.23,1.33,7.396,0.844,17,33,54,1
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),curiosity  +  interest_real_estate  +  reading_frequency,curiosity,interest_real_estate,reading_frequency,18,1.38,8.0,2.83,0.458,879,136,36,2
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),career_role  +  curiosity  +  interest_real_estate,career_role,curiosity,interest_real_estate,16,1.23,7.11,2.786,0.439,33,879,136,3
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),curiosity  +  interest_real_estate  +  interest_technology,curiosity,interest_real_estate,interest_technology,19,1.46,8.44,2.323,0.381,879,136,54,4
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Nhóm 3 (3-itemset),curiosity  +  group_community_participation  +  interest_real_estate,curiosity,group_community_participation,interest_real_estate,24,1.84,10.67,1.57,0.272,879,115,136,5
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),children  +  interest_parenting_family_life,children,interest_parenting_family_life,-,3,0.23,2.4,5.319,0.607,7,14,0,1
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),interest_parenting_family_life  +  value_family,interest_parenting_family_life,value_family,-,5,0.38,4.0,4.956,0.617,14,15,0,2
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),tone  +  writing_format,tone,writing_format,-,15,1.15,12.0,4.764,0.74,40,18,0,3
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),interest_spirituality  +  value_tradition,interest_spirituality,value_tradition,-,3,0.23,2.4,3.349,0.382,8,48,0,4
+vn_fb_002,"vn_fb_002 (Nông nghiệp/Gia đình, 42t, Nữ)",Nhóm 2 (2-itemset),emotional_expressiveness  +  tone,emotional_expressiveness,tone,-,3,0.23,2.4,3.29,0.375,10,40,0,5
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  directness  +  emoji_emoticon_use,cuisine_street_food,directness,emoji_emoticon_use,3,0.23,1.1,12.109,1.382,55,3,7,1
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),books_mystery  +  cuisine_vietnamese  +  film_horror_thriller,books_mystery,cuisine_vietnamese,film_horror_thriller,3,0.23,1.1,9.605,1.096,24,91,3,2
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  interest_film  +  sport_gym_calisthenics,cuisine_street_food,interest_film,sport_gym_calisthenics,3,0.23,1.1,9.179,1.047,55,32,5,3
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),books_mystery  +  cuisine_vietnamese  +  interest_film,books_mystery,cuisine_vietnamese,interest_film,17,1.3,6.25,8.692,1.388,24,91,32,4
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  cuisine_vietnamese  +  dialect_register,cuisine_street_food,cuisine_vietnamese,dialect_register,3,0.23,1.1,5.47,0.624,55,91,23,5
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),content_consumption_format  +  humor_style,content_consumption_format,humor_style,-,13,1.0,3.49,1.366,0.205,506,13,0,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),content_consumption_format  +  film_sci_fi_superhero,content_consumption_format,film_sci_fi_superhero,-,3,0.23,0.81,1.366,0.156,506,3,0,2
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),social_engagement_style  +  sport_football,social_engagement_style,sport_football,-,5,0.38,1.34,1.289,0.161,46,58,0,3
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),content_consumption_format  +  sport_football,content_consumption_format,sport_football,-,36,2.76,9.68,0.678,0.131,506,58,0,4
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Nhóm 2 (2-itemset),content_consumption_format  +  sport_martial_arts,content_consumption_format,sport_martial_arts,-,3,0.23,0.81,0.629,0.072,506,5,0,5
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),curiosity  +  storytelling_tendency  +  value_tradition,curiosity,storytelling_tendency,value_tradition,7,0.54,4.09,5.14,0.682,879,8,48,1
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 3 (3-itemset),curiosity  +  group_community_participation  +  province,curiosity,group_community_participation,province,4,0.31,2.34,0.095,0.011,879,115,63,2
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),attitude_new_technology  +  logic_vs_intuition,attitude_new_technology,logic_vs_intuition,-,3,0.23,1.75,5.261,0.6,17,6,0,3
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),storytelling_tendency  +  value_tradition,storytelling_tendency,value_tradition,-,7,0.54,4.09,4.571,0.606,8,48,0,4
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Nhóm 2 (2-itemset),skepticism  +  tech_savviness,skepticism,tech_savviness,-,3,0.23,1.75,4.088,0.466,46,5,0,5
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),big_picture_vs_detail  +  interest_real_estate  +  value_wealth,big_picture_vs_detail,interest_real_estate,value_wealth,3,0.23,2.16,8.107,0.925,8,136,17,1
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),interest_real_estate  +  skepticism  +  value_wealth,interest_real_estate,skepticism,value_wealth,4,0.31,2.88,5.999,0.719,136,46,17,2
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),cuisine_street_food  +  interest_real_estate  +  value_health,cuisine_street_food,interest_real_estate,value_health,12,0.92,8.63,5.922,0.876,55,136,45,3
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 3 (3-itemset),attention_span  +  content_consumption_format  +  curiosity,attention_span,content_consumption_format,curiosity,3,0.23,2.16,-2.095,-0.239,49,506,879,4
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Nhóm 2 (2-itemset),big_picture_vs_detail  +  value_wealth,big_picture_vs_detail,value_wealth,-,3,0.23,2.16,4.846,0.553,8,17,0,5

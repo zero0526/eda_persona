@@ -1,0 +1,33 @@
+﻿persona_id,persona_ten,group,subgroup,dimension,thuoc_tinh,gia_tri,nhom_gia_tri,so_lan_evidence,so_hanh_dong
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Lifestyle,Interest,Interest: Real estate,Mức độ quan tâm đến thị trường địa ốc và không gian sống.,Rất đam mê,Mối quan tâm / Sở thích chuyên sâu,93,93
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Lifestyle,Interest,Interest: Technology & AI,Mức độ quan tâm đến thiết bị thông minh và công nghệ mới.,Rất đam mê,Mối quan tâm / Sở thích chuyên sâu,52,52
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Lifestyle,Interest,Interest: Film,"Mức độ quan tâm, yêu thích phim ảnh",Rất đam mê,Mối quan tâm / Sở thích chuyên sâu,1,1
+vn_fb_001,"vn_fb_001 (Thiết kế đồ họa, 26t, Nữ)",Lifestyle,Interest,Sport: Badminton,Mức độ tham gia cầu lông,Thường xuyên tham gia,Mức độ tham gia hoạt động,1,1
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",Lifestyle,Food & Beverage,Cuisine: Vietnamese,Mức độ yêu thích Ẩm thực truyền thống Việt Nam,Rất thích,Sở thích / Yêu thích,2,2
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",Lifestyle,Food & Beverage,Cuisine: Street Food,Mức độ yêu thích Món ăn đường phố,Rất thích,Sở thích / Yêu thích,1,1
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",Lifestyle,Interest,Interest: Parenting & Family life,Mức độ quan tâm đến phương pháp nuôi dạy con và vun vén tổ ấm.,Có hứng thú tìm hiểu,Mối quan tâm / Sở thích chuyên sâu,14,14
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",Lifestyle,Interest,Film: Animation,Mức độ yêu thích phim hoạt hình / Anime,Rất thích,Sở thích / Yêu thích,7,7
+vn_fb_002,"vn_fb_002 (Nông nghiệp / Gia đình, 42t, Nữ)",Lifestyle,Interest,Books: Romance,Mức độ yêu thích truyện tình cảm,Thích,Sở thích / Yêu thích,2,2
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Food & Beverage,Cuisine: Vietnamese,Mức độ yêu thích Ẩm thực truyền thống Việt Nam,Rất thích,Sở thích / Yêu thích,86,86
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Food & Beverage,Cuisine: Street Food,Mức độ yêu thích Món ăn đường phố,Thích,Sở thích / Yêu thích,39,39
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Interest: Film,"Mức độ quan tâm, yêu thích phim ảnh",Rất đam mê,Mối quan tâm / Sở thích chuyên sâu,31,31
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Books: Mystery / Thriller,Mức độ yêu thích truyện bí ẩn / giật gân,Rất thích,Sở thích / Yêu thích,24,24
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Music: Indie,Mức độ yêu thích nhạc Indie,Rất thích,Sở thích / Yêu thích,10,10
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Books: Self-help,Mức độ yêu thích sách phát triển bản thân,Rất thích,Sở thích / Yêu thích,7,7
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Sport: Gym & Calisthenic,Mức độ tập gym & calisthenics,Thường xuyên tham gia,Mức độ tham gia hoạt động,4,4
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Film: Horror / Thriller,Mức độ yêu thích phim kinh dị giật gân,Thích,Sở thích / Yêu thích,3,3
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Music: Pop,Mức độ yêu thích nhạc Pop,Thích,Sở thích / Yêu thích,2,2
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Sport: Boxing,Mức độ tham gia Boxing,Chủ yếu theo dõi,Mức độ tham gia hoạt động,1,1
+vn_fb_003,"vn_fb_003 (Bảo vệ ca trực, 28t, Nam)",Lifestyle,Interest,Books: Historical fiction,Mức độ yêu thích tiểu thuyết lịch sử,Rất thích,Sở thích / Yêu thích,1,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Food & Beverage,Cuisine: Street Food,Mức độ yêu thích Món ăn đường phố,Thích,Sở thích / Yêu thích,1,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Food & Beverage,Cuisine: Vietnamese,Mức độ yêu thích Ẩm thực truyền thống Việt Nam,Thích,Sở thích / Yêu thích,1,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Interest,Sport: Football,Mức độ tham gia bóng đá,Chủ yếu theo dõi,Mức độ tham gia hoạt động,49,49
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Interest,Film: Sci-fi / Superhero,Mức độ yêu thích phim khoa học viễn tưởng / siêu anh hùng,Rất thích,Sở thích / Yêu thích,3,3
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Interest,Interest: Personal finance & Investing,Mức độ quan tâm đến quản lý tiền bạc và đầu tư tài chính.,Có hứng thú tìm hiểu,Mối quan tâm / Sở thích chuyên sâu,2,2
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Interest,Sport: Table tennis,Mức độ tham gia bóng bàn,Thường xuyên tham gia,Mức độ tham gia hoạt động,1,1
+vn_fb_004,"vn_fb_004 (Nhân viên nhà hàng, 22t, Nam)",Lifestyle,Interest,Books: Self-help,Mức độ yêu thích sách phát triển bản thân,Thích,Sở thích / Yêu thích,1,1
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Lifestyle,Food & Beverage,Cuisine: Japanese,Mức độ yêu thích Ẩm thực Nhật Bản,Rất thích,Sở thích / Yêu thích,2,2
+vn_fb_005,"vn_fb_005 (Thợ cơ khí, 31t, Nam)",Lifestyle,Interest,Sport: Football,Mức độ tham gia bóng đá,Thường xuyên tham gia,Mức độ tham gia hoạt động,9,9
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Lifestyle,Food & Beverage,Cuisine: Street Food,Mức độ yêu thích Món ăn đường phố,Rất thích,Sở thích / Yêu thích,14,14
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Lifestyle,Food & Beverage,Cuisine: Vietnamese,Mức độ yêu thích Ẩm thực truyền thống Việt Nam,Rất thích,Sở thích / Yêu thích,2,2
+vn_fb_006,"vn_fb_006 (Kinh doanh BĐS, 52t, Nam)",Lifestyle,Interest,Interest: Real estate,Mức độ quan tâm đến thị trường địa ốc và không gian sống.,Có hứng thú tìm hiểu,Mối quan tâm / Sở thích chuyên sâu,43,43

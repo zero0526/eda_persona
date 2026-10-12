@@ -1,0 +1,28 @@
+﻿dimension,so_lan,ty_le_tong_%,gia_tri_dac_trung,ty_le_primary,ty_le_supporting,trong_so_tb,trong_so_max,y_nghia_nhan_thuc
+curiosity,204,36.36,Rất cao,55.88235294117647,44.11764705882353,0.6931372549019608,0.9,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+interest_real_estate,93,16.58,Rất đam mê,78.49462365591397,21.50537634408602,0.7430107526881722,0.9,"Quan tâm thị trường nhà đất, bất động sản"
+group_community_participation,65,11.59,Thường xuyên theo dõi và đọc bài,3.076923076923077,96.92307692307692,0.5515384615384615,0.75,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+interest_technology,52,9.27,Rất đam mê,88.46153846153845,11.538461538461538,0.8384615384615385,0.9,"Quan tâm công nghệ, AI, thiết bị số"
+career_role,32,5.7,Thiết kế đồ họa,62.5,37.5,0.6328125,0.85,Đặc thù nghề nghiệp chi phối góc nhìn chuyên môn
+reading_frequency,29,5.17,Hàng ngày,0.0,100.0,0.5103448275862068,0.7,"Tần suất đọc sách, tài liệu nghiên cứu sâu"
+tone,14,2.5,Tò mò / Hóng chuyện,0.0,100.0,0.5785714285714285,0.6,"Văn phong, thái độ giao tiếp (Lịch thiệp / Thẳng thắn / Cộc lốc)"
+current_thread,13,2.32,co-vua-va-cac-tinh-huong-thu-vi,46.15384615384615,38.46153846153847,0.6692307692307692,0.8,Luồng sự kiện/chủ đề đang theo đuổi trong phiên
+character_playfulness,12,2.14,Cao,0.0,100.0,0.4916666666666667,0.6,"Tính cách hóm hỉnh, bông đùa"
+decision_speed,11,1.96,Quyết định nhanh,9.090909090909092,90.9090909090909,0.509090909090909,0.7,Tốc độ đưa ra quyết định hành động
+character_social_intelligence,7,1.25,Rất khéo léo và nhạy bén,14.285714285714285,85.71428571428571,0.6714285714285715,0.8,Căn cứ nhận thức thuộc tính persona
+attitude_new_technology,6,1.07,Rất ủng hộ,0.0,100.0,0.5833333333333334,0.8,Thái độ đón nhận công nghệ mới
+content_consumption_format,6,1.07,Kết hợp nhiều hình thức,0.0,100.0,0.48333333333333334,0.6,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+attention_span,3,0.53,Tập trung tốt,0.0,100.0,0.5,0.5,Độ dài thời gian duy trì sự chú ý sâu vào một việc
+tech_savviness,2,0.36,Rất quen thuộc,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+dialect_register,1,0.18,Giọng Bắc chuẩn,0.0,100.0,0.3,0.3,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+current_surface,1,0.18,feed,0.0,0.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+interest_film,1,0.18,Rất đam mê,0.0,100.0,0.5,0.5,"Sở thích xem phim ảnh, giải trí điện ảnh"
+emotional_expressiveness,1,0.18,Biểu đạt cảm xúc tự nhiên,0.0,100.0,0.3,0.3,Mức độ bộc lộ cảm xúc khi tương tác
+post_title,1,0.18,Brilliant Move But Why?,0.0,100.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+politeness,1,0.18,Lịch thiệp văn minh,0.0,100.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+facebook_frequency,1,0.18,Nhiều lần mỗi ngày,0.0,100.0,0.5,0.5,Tần suất truy cập mạng xã hội hàng ngày
+sport_badminton,1,0.18,Thường xuyên tham gia,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+sport_running,1,0.18,Không quan tâm,0.0,0.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+sport_martial_arts,1,0.18,Quan tâm nhẹ,0.0,0.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+sport_tennis,1,0.18,Không quan tâm,0.0,0.0,0.0,0.0,Căn cứ nhận thức thuộc tính persona
+writing_format,1,0.18,Hay dùng từ đệm tình cảm,100.0,0.0,0.7,0.7,"Thói quen trình bày, định dạng văn bản"

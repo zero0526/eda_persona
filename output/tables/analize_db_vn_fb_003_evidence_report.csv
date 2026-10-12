@@ -1,0 +1,39 @@
+﻿dimension,so_lan,ty_le_tong_%,gia_tri_dac_trung,ty_le_primary,ty_le_supporting,trong_so_tb,trong_so_max,y_nghia_nhan_thuc
+curiosity,114,19.03,Trung bình,35.08771929824561,64.03508771929825,0.45263157894736844,0.6,"Mức độ tò mò, khám phá tri thức & nội dung mới"
+cuisine_vietnamese,86,14.36,Rất thích,80.23255813953489,19.767441860465116,0.7406976744186047,0.9,Sở thích ẩm thực truyền thống Việt Nam
+content_consumption_format,73,12.19,Âm thanh,53.42465753424658,46.57534246575342,0.5232876712328768,0.7,Định dạng nội dung ưa thích (Video ngắn/dài/văn bản/âm thanh)
+cuisine_street_food,39,6.51,Thích,84.61538461538461,15.384615384615385,0.6846153846153846,0.7,"Thích món ăn đường phố, hàng quán bình dân"
+province,36,6.01,Đà Nẵng,66.66666666666666,33.33333333333333,0.6722222222222222,0.8,"Yếu tố địa phương, vùng miền gắn kết"
+interest_film,31,5.18,Rất đam mê,83.87096774193549,16.129032258064516,0.6967741935483871,0.8,"Sở thích xem phim ảnh, giải trí điện ảnh"
+attention_span,27,4.51,Trung bình,14.814814814814813,85.18518518518519,0.49259259259259264,0.7,Độ dài thời gian duy trì sự chú ý sâu vào một việc
+social_engagement_style,26,4.34,Chiến thần bình luận dạo (Tương tác tích cực các post),46.15384615384615,53.84615384615385,0.6192307692307691,0.7,Cách thức tương tác trực tuyến (Tàu ngầm / Bình luận / Chia sẻ)
+purpose,25,4.17,Tìm thêm quán ngon hoặc nội dung phù hợp sở thích,12.0,60.0,0.652,0.9,Mục đích hành vi gắn với bối cảnh phiên
+books_mystery,24,4.01,Rất thích,50.0,50.0,0.6708333333333333,0.8,"Sở thích truyện trinh thám, ly kỳ bí ẩn"
+group_community_participation,17,2.84,Chỉ nằm vùng hóng chuyện,47.05882352941176,52.94117647058824,0.5882352941176471,0.7,"Thói quen tham gia, theo dõi cộng đồng / nhóm"
+interest_travel,13,2.17,Không quan tâm,76.92307692307693,23.076923076923077,0.6846153846153846,0.8,Căn cứ nhận thức thuộc tính persona
+music_indie,10,1.67,Rất thích,30.0,70.0,0.51,0.7,Căn cứ nhận thức thuộc tính persona
+interest_pets,9,1.5,Không quan tâm,88.88888888888889,11.11111111111111,0.6777777777777777,0.8,Căn cứ nhận thức thuộc tính persona
+dialect_register,7,1.17,Giọng Trung địa phương,14.285714285714285,85.71428571428571,0.5,0.6,"Ngôn ngữ địa phương (miền Bắc, Trung, Tây)"
+books_self_help,7,1.17,Rất thích,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+emoji_emoticon_use,6,1.0,Rất nhiều emoji sinh động,33.33333333333333,66.66666666666666,0.5666666666666667,0.7,Căn cứ nhận thức thuộc tính persona
+facebook_frequency,6,1.0,Nhiều lần mỗi ngày,33.33333333333333,66.66666666666666,0.5666666666666667,0.7,Tần suất truy cập mạng xã hội hàng ngày
+interest_investing,5,0.83,Không quan tâm,80.0,20.0,0.72,0.8,Căn cứ nhận thức thuộc tính persona
+current_thread,4,0.67,Xem bình luận về video CiiN,0.0,50.0,0.525,0.6,Luồng sự kiện/chủ đề đang theo đuổi trong phiên
+sport_gym_calisthenics,4,0.67,Thường xuyên tham gia,0.0,100.0,0.6499999999999999,0.7,Căn cứ nhận thức thuộc tính persona
+attitude_advertising,3,0.5,Hoài nghi,33.33333333333333,66.66666666666666,0.6666666666666666,0.8,Căn cứ nhận thức thuộc tính persona
+directness,3,0.5,Thẳng như ruột ngựa / Không né tránh,66.66666666666666,33.33333333333333,0.7333333333333334,0.8,Căn cứ nhận thức thuộc tính persona
+film_horror_thriller,3,0.5,Thích,100.0,0.0,0.6999999999999998,0.7,Căn cứ nhận thức thuộc tính persona
+language_english,2,0.33,Giao tiếp được,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+music_pop,2,0.33,Thích,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+tone,2,0.33,Mệt mỏi / Căng thẳng,0.0,50.0,0.44999999999999996,0.6,"Văn phong, thái độ giao tiếp (Lịch thiệp / Thẳng thắn / Cộc lốc)"
+formality,2,0.33,Rất suồng sã / Nhiều tiếng lóng,0.0,100.0,0.5,0.5,Căn cứ nhận thức thuộc tính persona
+interest_sports,2,0.33,Không thích,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+interest_spirituality,2,0.33,Không thích,100.0,0.0,0.7,0.7,Căn cứ nhận thức thuộc tính persona
+interest_technology,2,0.33,Không quan tâm,100.0,0.0,0.7,0.8,"Quan tâm công nghệ, AI, thiết bị số"
+books_historical_fiction,1,0.17,Rất thích,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+big_picture_vs_detail,1,0.17,Thiên về nhìn tổng quan,0.0,100.0,0.4,0.4,Căn cứ nhận thức thuộc tính persona
+children,1,0.17,Chưa có con,100.0,0.0,0.8,0.8,Căn cứ nhận thức thuộc tính persona
+openness,1,0.17,Hơi bảo thủ / Thiên về định kiến và quan điểm quen thuộc,0.0,100.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
+reading_frequency,1,0.17,Vài lần mỗi tuần,0.0,100.0,0.5,0.5,"Tần suất đọc sách, tài liệu nghiên cứu sâu"
+sport_boxing,1,0.17,Chủ yếu theo dõi,100.0,0.0,0.6,0.6,Căn cứ nhận thức thuộc tính persona
+value_family,1,0.17,Trung bình,0.0,100.0,0.3,0.3,Căn cứ nhận thức thuộc tính persona
