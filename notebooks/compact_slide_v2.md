@@ -446,8 +446,9 @@ Nhờ gắn chặt với các trường nghề nghiệp và hoàn cảnh sống,
 ![Tiến hóa Bộ nhớ Xuyên phiên & Theo dõi Vết Chủ đề](../output/figures/slide2_6_cross_session_memory_continuity.png)
 
 * **Các chỉ số đo lường bộ nhớ qua 24 phiên thực nghiệm:**
-  * ⚓ **Tỷ lệ duy trì luồng bản sắc gốc (`Baseline Retention`):** **55.1%** tổng lượt luồng xuất phát từ chủ đề Phiên 1 (duy trì 4/4 phiên ở `002` Phật giáo, `004` Reels; 3/3 phiên ở `006` BĐS).
-  * 🚀 **Tỷ lệ tiếp nối chủ đề mới (`Emerging Topic Adoption`):** **31.3%** chủ đề nảy sinh ở phiên trước tiếp tục được theo đuổi ở các phiên kế tiếp (khối màu xanh lục ★).
+  * ⚓ **Tỷ lệ bước chuyển duy trì chủ đề cũ (`Transition Retention`):** **77.8%** (14 / 18 bước chuyển phiên thành công duy trì ít nhất 1 chủ đề cũ).
+  * 🧠 **Tỷ lệ kế thừa bộ nhớ nhận thức (`Memory Continuity Rate`):** **59.2%** tổng lượt luồng (29 / 49 luồng gồm 20 luồng Bản sắc gốc từ P1 [40.8%] và 9 luồng Mới tiếp tục đào sâu ở P sau [18.4%]). Khám phá mới: 40.8% (20 / 49 luồng).
+  * 🚀 **Tỷ lệ tiếp nối chủ đề mới (`Emerging Topic Adoption`):** **45.0%** (9 / 20 chủ đề mới nảy sinh được duy trì đào sâu tiếp ở các phiên kế tiếp - khối màu xanh lục ★).
   * 🔄 **Dung lượng tích lũy:** Ghi nhận **61 lượt cập nhật bộ nhớ (`memory_deltas`)** xuyên suốt.
 * **Bằng chứng quay lại thực thể cố định (Entity Revisit):**
   * `001` (Thiết kế): Phiên 3 phát sinh luồng AI Kiến trúc $\to$ Phiên 4 quay lại đúng **Group ID `203414773608506`** để tìm kiếm tiếp.
@@ -521,7 +522,7 @@ Nhờ gắn chặt với các trường nghề nghiệp và hoàn cảnh sống,
 | Tầng kiểm chứng | Chỉ số đo lường chính | Kết quả thực nghiệm ghi nhận | Đánh giá mức độ phù hợp |
 | :--- | :--- | :--- | :--- |
 | **TẦNG 1: $H_1$**<br>Lịch trình & Thời lượng | • 4 Khung giờ sinh hoạt 24h<br>• Tần suất online mỗi ngày<br>• Thời lượng phiên hoạt động<br>• Cơ chế kết thúc tự chủ | • Tối 37.9%, Sáng 30.5%, Chiều 12.6%, Đêm 0%<br>• Trung bình 2.11 lần/ngày (1.67 – 2.75)<br>• Trung bình 18.7 phút/phiên (13.1m – 23.6m)<br>• 100% phiên kết thúc qua `agent_stop` | **Phù hợp tốt với $H_1$**<br>Khớp với nhịp sinh học và đặc thù ca làm việc của từng nghề nghiệp. |
-| **TẦNG 2: $H_2$**<br>Hành vi & Nhận thức | • Phân bổ Bề mặt Giao diện<br>• Cường độ & Phong cách tương tác<br>• Tỷ lệ Đọc sâu vs Lướt nhanh<br>• Động lực học thao tác cuộn<br>• Cơ sở nhận thức qua CoT<br>• Bộ nhớ xuyên phiên<br>• Chuỗi thao tác TF-IDF<br>• Tiền đề kích hoạt tương tác | • Chi phối rõ theo sở thích (Reels, Group, Feed)<br>• Tương tác chủ động 2.2% – 11.8%; Cmt 0% – 58.1%<br>• Đọc sâu 6.5% – 47.0%; Lưu 1.0 – 5.5 bài/phiên<br>• Quãng cuộn 595 – 1,719 px; Trễ dừng 7.7s – 10.7s<br>• 100% quyết định tập trung có lý do CoT 1-1<br>• Duy trì chủ đề gốc 55.1%; Đọc trùng bài 0.0%<br>• Xuất hiện chuỗi thao tác độc quyền cao<br>• 100% tương tác có tiền đề tiếp xúc nội dung | **Phù hợp tốt với $H_2$**<br>Hành vi phân hóa rõ ràng theo cá tính, lứa tuổi và lối sống của từng nhân vật. |
+| **TẦNG 2: $H_2$**<br>Hành vi & Nhận thức | • Phân bổ Bề mặt Giao diện<br>• Cường độ & Phong cách tương tác<br>• Tỷ lệ Đọc sâu vs Lướt nhanh<br>• Động lực học thao tác cuộn<br>• Cơ sở nhận thức qua CoT<br>• Bộ nhớ xuyên phiên<br>• Chuỗi thao tác TF-IDF<br>• Tiền đề kích hoạt tương tác | • Chi phối rõ theo sở thích (Reels, Group, Feed)<br>• Tương tác chủ động 2.2% – 11.8%; Cmt 0% – 58.1%<br>• Đọc sâu 6.5% – 47.0%; Lưu 1.0 – 5.5 bài/phiên<br>• Quãng cuộn 595 – 1,719 px; Trễ dừng 7.7s – 10.7s<br>• 100% quyết định tập trung có lý do CoT 1-1<br>• Duy trì bước chuyển 77.8%; Kế thừa bộ nhớ 59.2%; Đọc trùng bài 0.0%<br>• Xuất hiện chuỗi thao tác độc quyền cao<br>• 100% tương tác có tiền đề tiếp xúc nội dung | **Phù hợp tốt với $H_2$**<br>Hành vi phân hóa rõ ràng theo cá tính, lứa tuổi và lối sống của từng nhân vật. |
 
 * **3 Hướng ứng dụng thực tế:**
   1. **Kiểm thử An toàn Nền tảng (Platform Safety & Red Teaming):** Đóng vai các nhóm người dùng nhạy cảm để kiểm tra xem thuật toán gợi ý có phân phối nội dung độc hại hay lừa đảo hay không.

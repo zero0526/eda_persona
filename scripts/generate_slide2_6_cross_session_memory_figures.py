@@ -21,13 +21,13 @@ TABLES_DIR = PROJECT_ROOT / "output" / "tables"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 TABLES_DIR.mkdir(parents=True, exist_ok=True)
 
-# Cấu hình thẩm mỹ
+# Cấu hình thẩm mỹ chuẩn báo cáo học thuật & Slide Executive
 plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Arial', 'Segoe UI', 'Liberation Sans']
-plt.rcParams['axes.edgecolor'] = '#7f8c8d'
+plt.rcParams['axes.edgecolor'] = '#94a3b8'
 plt.rcParams['axes.linewidth'] = 1.0
-plt.rcParams['grid.color'] = '#ecf0f1'
+plt.rcParams['grid.color'] = '#f1f5f9'
 plt.rcParams['grid.linestyle'] = '--'
-plt.rcParams['grid.alpha'] = 0.7
+plt.rcParams['grid.alpha'] = 0.8
 
 PERSONA_ORDER = ['vn_fb_001', 'vn_fb_002', 'vn_fb_003', 'vn_fb_004', 'vn_fb_005', 'vn_fb_006']
 PERSONA_LABELS = {
@@ -45,12 +45,12 @@ from scratch.generate_canonical_topic_matrix import canonicalize_topic
 loader = ActionLoader()
 all_personas = loader.load_all_personas()
 
-# Định nghĩa tên ngắn gọn (Short Label) cho từng cụm chủ đề
+# Định nghĩa tên ngắn gọn (Short Label) chuẩn hóa cho từng cụm chủ đề
 SHORT_LABELS = {
     'Cờ vua & Kỳ thủ (Chess)': 'Cờ vua',
     'AI & Thiết kế Kiến trúc (Design)': 'AI Kiến trúc',
     'Thể thao & Phong trào (Sports)': 'Thể thao',
-    'Máy hút bụi công nghiệp': 'Gia dụng',
+    'Máy hút bụi công nghiệp': 'Gia dụng AI',
     
     'Tâm linh & Phật giáo (Spiritual)': 'Phật giáo',
     'Sức khỏe & Đời sống (Health)': 'Sức khỏe',
@@ -67,21 +67,21 @@ SHORT_LABELS = {
     'Nội dung feed hiện tại': 'Lướt feed',
     'Bóng đá & Highlights (Football)': 'Bóng đá',
     'Siêu xe & Đẳng cấp (Cars)': 'Siêu xe',
-    'Video thể thao nước': 'Thể thao',
+    'Video thể thao nước': 'Thể thao nước',
     
     'khám phá feed': 'Lướt feed',
     'câu chuyện tìm người mất tích': 'Tìm người',
     'Thiên văn học & Chụp ảnh Trăng/Sao (Astronomy)': 'Thiên văn',
     'Ẩm thực Nhật Bản (Japanese Food)': 'Ẩm thực Nhật',
-    'Lịch sử & Nghệ thuật Sơn mài (History/Art)': 'Sơn mài/Sử',
+    'Lịch sử & Nghệ thuật Sơn mài (History/Art)': 'Sơn mài / Sử',
     'Kỳ quan Thiên nhiên (Nature)': 'Thiên nhiên',
-    'Tình yêu thương - quan hệ con người': 'Tình cảm',
+    'Tình yêu thương - quan hệ con người': 'Tình cảm GD',
     
     'Bất động sản Cần Thơ & Dự án (Real Estate)': 'BĐS Cần Thơ',
     'Khám phá feed': 'Lướt feed',
     'Nội dung feed': 'Lướt feed',
     'Tin tức Đời sống Xã hội (Social News)': 'Tin xã hội',
-    'Dịch vụ Nha khoa (Dental)': 'Nha khoa Ruby',
+    'Dịch vụ Nha khoa (Dental)': 'Nha khoa',
 }
 
 # 1. Trích xuất danh sách các khối chủ đề theo phiên
@@ -159,21 +159,22 @@ for pid in PERSONA_ORDER:
             
     persona_topic_blocks[pid] = session_blocks
 
-print("2. Vẽ biểu đồ 2x3 Stacked Bars với Tên Chủ Đề & Số Lần Lặp...")
+print("2. Vẽ biểu đồ 2x3 Stacked Bars căn chỉnh chuẩn kích thước & khoảng cách...")
 
-fig, axes = plt.subplots(2, 3, figsize=(19.8, 11.5), facecolor='#ffffff')
-plt.subplots_adjust(left=0.055, right=0.965, top=0.815, bottom=0.085, wspace=0.22, hspace=0.42)
+# Thiết lập kích thước chuẩn Slide 16:9 cao cấp
+fig, axes = plt.subplots(2, 3, figsize=(20, 11.25), facecolor='#ffffff')
+plt.subplots_adjust(left=0.05, right=0.97, top=0.78, bottom=0.11, wspace=0.18, hspace=0.38)
 
 COLOR_MAP = {
-    'retained': '#2980b9',   # Xanh dương: Khởi tạo từ P1 (Baseline Identity)
-    'continued': '#27ae60',  # Xanh lục: Phát sinh ở P sau và TIẾP TỤC ĐÀO SÂU (Memory Retention)
-    'new': '#e67e22'         # Cam: Vừa mới phát sinh trong phiên (Exploration)
+    'retained': '#1d6fa5',   # Xanh dương đậm: Khởi tạo từ P1 (Bản sắc gốc)
+    'continued': '#2e7d32',  # Xanh lục đậm: Tiếp nối đào sâu từ P sau (Kế thừa trí nhớ)
+    'new': '#d97706'         # Cam ấm: Khám phá mới linh hoạt trong phiên
 }
 
 BORDER_MAP = {
-    'retained': '#1c5980',
-    'continued': '#196f3d',
-    'new': '#b96617'
+    'retained': '#0f4c75',
+    'continued': '#1b5e20',
+    'new': '#92400e'
 }
 
 STATUS_RANK = {
@@ -191,13 +192,13 @@ for idx, pid in enumerate(PERSONA_ORDER):
     ax = axes[row, col]
     
     blocks_dict = persona_topic_blocks[pid]
-    bar_width = 0.74  # Độ rộng tối ưu để nhãn 2 dòng nằm trọn vẹn trong thanh
+    bar_width = 0.72
     
     max_height = 0
     for s_ord in range(1, 5):
         raw_blocks = blocks_dict[s_ord]
         
-        # Sắp xếp các khối: Nền tảng (retained) ở đáy -> Tiếp nối (continued) ở giữa -> Mới (new) ở đỉnh
+        # Sắp xếp: Bản sắc gốc (Đáy) -> Tiếp nối (Giữa) -> Mới (Đỉnh)
         blocks = sorted(raw_blocks, key=lambda b: (STATUS_RANK[b['status']], b['orig_s'], -b['count']))
         
         y_bottom = 0.0
@@ -211,13 +212,13 @@ for idx, pid in enumerate(PERSONA_ORDER):
             
             # Vẽ từng khối chuẩn hóa cao 1.0 đơn vị
             ax.bar(s_ord, 1.0, bar_width, bottom=y_bottom,
-                   color=c_fill, edgecolor=c_edge, linewidth=1.2, alpha=0.93)
+                   color=c_fill, edgecolor=c_edge, linewidth=1.1, alpha=0.95)
             
-            # In Tên chủ đề (Dòng 1) và Số lần lặp/Huy hiệu (Dòng 2)
-            ax.text(s_ord, y_bottom + 0.62, l1, ha='center', va='center',
-                    color='#ffffff', fontsize=8.4, fontweight='bold')
-            ax.text(s_ord, y_bottom + 0.34, l2, ha='center', va='center',
-                    color='#fffae6', fontsize=7.6, fontweight='bold')
+            # In Tên chủ đề & Huy hiệu
+            ax.text(s_ord, y_bottom + 0.63, l1, ha='center', va='center',
+                    color='#ffffff', fontsize=8.8, fontweight='bold')
+            ax.text(s_ord, y_bottom + 0.33, l2, ha='center', va='center',
+                    color='#fef08a', fontsize=7.6, fontweight='bold')
             
             y_bottom += 1.0
             
@@ -226,15 +227,15 @@ for idx, pid in enumerate(PERSONA_ORDER):
             
         # Hiển thị tổng số luồng trên đầu cột
         if y_bottom > 0:
-            ax.text(s_ord, y_bottom + 0.16, f"{int(y_bottom)} luồng", ha='center', va='bottom',
-                    color='#1a365d', fontsize=9.2, fontweight='bold')
+            ax.text(s_ord, y_bottom + 0.15, f"{int(y_bottom)} luồng", ha='center', va='bottom',
+                    color='#0f172a', fontsize=9.2, fontweight='bold')
                     
     # Cấu hình trục
     ax.set_xticks(x_sessions)
-    ax.set_xticklabels(session_names, fontsize=10, fontweight='bold', color='#34495e')
-    ax.set_ylim(0, 5.3)
+    ax.set_xticklabels(session_names, fontsize=10, fontweight='bold', color='#334155')
+    ax.set_ylim(0, 4.9)
     ax.set_yticks(range(0, 6))
-    ax.grid(axis='y', linestyle='--', alpha=0.6)
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
     
     role_name = PERSONA_LABELS[pid]
     sub_notes = {
@@ -242,51 +243,51 @@ for idx, pid in enumerate(PERSONA_ORDER):
         'vn_fb_002': 'Phật giáo xuyên suốt [#1 ➔ #4] + Tiếp nối Reels Di sản [#1 ➔ #2]',
         'vn_fb_003': 'Ẩm thực ĐN [#1, #2] + Tiếp nối Video Du lịch [#1 ➔ #2]',
         'vn_fb_004': 'Reels Clip xuyên suốt [#1 ➔ #4] + Tiếp nối Bóng đá [#1 ➔ #3]',
-        'vn_fb_005': 'Tiến hóa Thiên văn: P2 [#1] ➔ P3 [#2] ➔ P4 [#3] (6 Search Đà Nẵng)',
+        'vn_fb_005': 'Tiến hóa Thiên văn: P2 [#1] ➔ P3 [#2] ➔ P4 [#3] (6 Search SAL Đà Nẵng)',
         'vn_fb_006': 'BĐS Cần Thơ xuyên suốt [#1, #2, #3] ➔ Mở rộng Nha khoa & Tin xã hội'
     }
     
-    ax.set_title(f"{role_name}\n({sub_notes[pid]})", fontsize=10.2, fontweight='bold', color='#1a365d', pad=10)
+    ax.set_title(f"{role_name}\n({sub_notes[pid]})", fontsize=10.5, fontweight='bold', color='#0f2942', pad=10)
     
     if col == 0:
-        ax.set_ylabel('Số lượng Luồng Chủ đề', fontsize=10.2, fontweight='bold', color='#34495e')
+        ax.set_ylabel('Số lượng Luồng Chủ đề', fontsize=10.5, fontweight='bold', color='#334155')
 
-# Tạo Custom Legend rõ ràng, không dùng emoji thiếu font
+# Legend cao cấp đặt ngay dưới tiêu đề, không đè lấn đồ thị
 legend_elements = [
     patches.Patch(facecolor=COLOR_MAP['retained'], edgecolor=BORDER_MAP['retained'], 
-                  label='Chủ đề Bản sắc Khởi tạo (Xuất hiện từ P1: [#1 Gốc] ➔ [#4 Duy trì / Nhớ lại])'),
+                  label='Chủ đề Bản sắc Khởi tạo từ P1: 20 luồng (40.8%) [#1 Gốc] ➔ [#4 Duy trì / Nhớ lại]'),
     patches.Patch(facecolor=COLOR_MAP['continued'], edgecolor=BORDER_MAP['continued'], 
-                  label='★ Chủ đề Mới được Tiếp tục Đào sâu ở P sau (Minh chứng Bộ nhớ: [#2] ➔ [#k Tiếp nối])'),
+                  label='★ Chủ đề Mới được Tiếp tục Đào sâu ở P sau: 9 luồng (18.4%) [#2] ➔ [#k Tiếp nối]'),
     patches.Patch(facecolor=COLOR_MAP['new'], edgecolor=BORDER_MAP['new'], 
-                  label='Chủ đề Mới khám phá trong Phiên (Thích ứng linh hoạt: [#1 Mới])')
+                  label='Chủ đề Mới khám phá trong Phiên: 20 luồng (40.8%) [Thích ứng linh hoạt: #1 Mới]')
 ]
 
-fig.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.51, 0.898),
-           ncol=3, fontsize=10.2, frameon=True, facecolor='#ffffff', edgecolor='#bdc3c7', fancybox=True, borderpad=0.6)
+fig.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.51, 0.865),
+           ncol=3, fontsize=9.8, frameon=True, facecolor='#ffffff', edgecolor='#cbd5e1', fancybox=True, borderpad=0.55)
 
-# Tiêu đề toàn slide
+# Tiêu đề toàn slide chuẩn xác, trang trọng
 fig.suptitle(
     "TIẾN HÓA BỘ NHỚ THEO PHIÊN (SLIDE 2.6): THEO DÕI VẾT CHỦ ĐỀ & TẦN SUẤT LẶP QUA 4 PHIÊN\n"
-    "(Cross-Session Topic Lineage: Tracking Recurring Threads & Memory Retention across Sessions)",
+    "(Cross-Session Topic Lineage: Tracking Recurring Threads & Memory Retention across 24 Experimental Sessions)",
     fontsize=14.5,
     fontweight='bold',
-    color='#1a365d',
-    y=0.968
+    color='#0f2942',
+    y=0.965
 )
 
-# Chân hình Callout Box
+# Chân hình Callout Box ghi rõ ràng các số liệu kiểm chứng thực nghiệm
 fig.text(
-    0.5, 0.038,
+    0.5, 0.045,
     "★ BẰNG CHỨNG THỰC NGHIỆM VỀ TÍNH LIÊN KẾT NHẬN THỨC XUYÊN PHIÊN (H2) ★\n"
-    "• Ký hiệu [#k] thể hiện số lần chủ đề được duy trì/thao tác tích lũy qua các phiên. Ví dụ: Phật giáo [#1➔#4], Bóng đá [#1➔#3], BĐS [#1➔#3], Thiên văn [#1➔#3].\n"
-    "• Khối Xanh lá (★) chứng minh: Chủ đề mới phát sinh ở phiên trước không bị lãng quên mà tiếp tục được Agent nhớ và thao tác ở phiên kế tiếp. Đọc lặp bài: 0.0%.",
+    "• Tỷ lệ bước chuyển duy trì chủ đề cũ: 77.8% (14 / 18 bước chuyển phiên mang theo ít nhất 1 chủ đề cũ từ phiên trước sang phiên sau).\n"
+    "• Tỷ lệ luồng có tính kế thừa bộ nhớ: 59.2% (29 / 49 luồng gồm 20 luồng Bản sắc gốc P1 + 9 luồng Mới tiếp tục đào sâu ở P sau). Khám phá mới: 40.8% (20/49 luồng).\n"
+    "• Ký hiệu [#k] thể hiện số lần chủ đề được tích lũy/duy trì. Khối Xanh lá (★) chứng minh năng lực ghi nhớ chủ đề mới. Đọc trùng lặp bài viết: 0.0% (0/95 bài).",
     ha='center', va='center',
-    fontsize=9.2, fontweight='bold', color='#196f3d',
-    bbox=dict(boxstyle='round,pad=0.5', facecolor='#eafaf1', edgecolor='#27ae60', linewidth=1.2)
+    fontsize=9.2, fontweight='bold', color='#166534',
+    bbox=dict(boxstyle='round,pad=0.55', facecolor='#f0fdf4', edgecolor='#22c55e', linewidth=1.2)
 )
 
 fig_path = FIGURES_DIR / "slide2_6_cross_session_memory_continuity.png"
 plt.savefig(fig_path, dpi=300)
 plt.close()
-print(f"  -> Đã lưu biểu đồ theo dõi vết chủ đề: {fig_path}")
-
+print(f"  -> Đã lưu biểu đồ theo dõi vết chủ đề chuẩn đẹp: {fig_path}")

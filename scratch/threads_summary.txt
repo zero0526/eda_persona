@@ -1,0 +1,91 @@
+=== vn_fb_001 | Ep: 2241a54c (threads: 2) ===
+   Key: co-vua-va-cac-tinh-huong-thu-vi-trong-tro-choi | Topic: Cờ vua và các tình huống thú vị trong trò chơi
+   Key: thanh-tich-co-vua-cua-hikaru-nakamura | Topic: Thành tích cờ vua của Hikaru Nakamura
+=== vn_fb_001 | Ep: 1f4fc804 (threads: 4) ===
+   Key: co-vua-tinh-huong-thu-vi | Topic: Cờ vua - tình huống thú vị
+   Key: the-thao-đua-xe-viet-nam | Topic: Thể thao đua xe Việt Nam
+   Key: the-thao-viet-nam-marathon | Topic: Thể thao Việt Nam - Marathon
+   Key: the-thao-viet-nam-teakwondo-vr | Topic: Thể thao Việt Nam - Teakwondo VR
+=== vn_fb_001 | Ep: 1b810cd9 (threads: 2) ===
+   Key: cong-cu-thiet-ke-so | Topic: Công cụ thiết kế số
+   Key: thanh-tich-the-thao-quoc-te | Topic: Thành tích thể thao quốc tế
+=== vn_fb_001 | Ep: 773d113e (threads: 4) ===
+   Key: thiet-ke-3d-trong-kien-truc-va-noi-that | Topic: Thiết kế 3D trong kiến trúc và nội thất
+   Key: giai-phap-chieu-sang-ngoai-troi-trong-thiet-ke-kien-truc | Topic: Giải pháp chiếu sáng ngoài trời trong thiết kế kiến trúc
+   Key: may-hut-bui-cong-nghiep | Topic: Máy hút bụi công nghiệp
+   Key: thiet-ke-toi-gian-trong-khong-gian-thuong-hieu | Topic: Thiết kế tối giản trong không gian thương hiệu
+=== vn_fb_002 | Ep: 34efda55 (threads: 4) ===
+   Key: kham-suc-khoe-sinh-san | Topic: Khám sức khỏe sinh sản
+   Key: tam-tinh-cuoc-song | Topic: Tâm tình cuộc sống
+   Key: đen-ong-hoang-muoi | Topic: Đền Ông Hoàng Mười
+   Key: me-nam-hai-bac-lieu | Topic: Mẹ Nam Hải Bạc Liêu
+=== vn_fb_002 | Ep: 521c9990 (threads: 1) ===
+   Key: tam-linh-phat-giao | Topic: Tâm linh Phật giáo
+=== vn_fb_002 | Ep: 38c96768 (threads: 2) ===
+   Key: video-ngan-reels | Topic: Video ngắn - Reels
+   Key: tam-linh-phat-giao-quan-the-am-bo-tat-fansipan | Topic: Tâm linh Phật giáo - Quan Thế Âm Bồ Tát Fansipan
+=== vn_fb_002 | Ep: 5cb3f0bf (threads: 4) ===
+   Key: video-ngan | Topic: Video ngắn
+   Key: di-san-van-hoa-viet-nam | Topic: Di sản văn hóa Việt Nam
+   Key: tam-linh-phat-giao | Topic: Tâm linh Phật giáo
+   Key: cau-chuyen-đoi-song | Topic: Câu chuyện đời sống
+=== vn_fb_003 | Ep: 9e8baabb (threads: 1) ===
+   Key: am-thuc-đuong-pho-đa-nang | Topic: Ẩm thực đường phố Đà Nẵng
+=== vn_fb_003 | Ep: a27a406f (threads: 2) ===
+   Key: cali-gym-discussion | Topic: cali_gym_discussion
+   Key: feed-exploration | Topic: feed_exploration
+=== vn_fb_003 | Ep: 62cedcab (threads: 4) ===
+   Key: video-ngan-giai-tri | Topic: video ngắn giải trí
+   Key: video-canh-đep-nha-tho-y | Topic: video cảnh đẹp nhà thờ Ý
+   Key: video-thu-hai-rau-cu | Topic: video thu hái rau củ
+   Key: video-canh-đep | Topic: video cảnh đẹp
+=== vn_fb_003 | Ep: 8b0a810e (threads: 4) ===
+   Key: phat-trien-ban-than | Topic: phát triển bản thân
+   Key: video-ngan | Topic: video ngắn
+   Key: video-du-lich-am-thuc | Topic: video du lịch ẩm thực
+   Key: video-ngan-vo-thuat | Topic: video ngắn võ thuật
+=== vn_fb_004 | Ep: eaedef3d (threads: 2) ===
+   Key: reels | Topic: Reels
+   Key: noi-dung-feed-hien-tai | Topic: Nội dung feed hiện tại
+=== vn_fb_004 | Ep: 7fa44f4e (threads: 4) ===
+   Key: video-highlight-bong-đa | Topic: video highlight bóng đá
+   Key: video-ngan-giai-tri | Topic: video ngắn giải trí
+   Key: video-canh-đep | Topic: video cảnh đẹp
+   Key: video-hai-huoc | Topic: video hài hước
+=== vn_fb_004 | Ep: 828f064e (threads: 4) ===
+   Key: video-giai-tri | Topic: video giải trí
+   Key: sieu-xe-lamborghini | Topic: siêu xe Lamborghini
+   Key: messi-bong-đa | Topic: Messi bóng đá
+   Key: canh-đep-nhat-ban | Topic: cảnh đẹp Nhật Bản
+=== vn_fb_004 | Ep: 1467fb7f (threads: 4) ===
+   Key: video-giai-tri | Topic: Video giải trí
+   Key: video-mua-thu | Topic: Video mùa thu
+   Key: video-bong-đa | Topic: Video bóng đá
+   Key: video-the-thao-nuoc | Topic: Video thể thao nước
+=== vn_fb_005 | Ep: 5123fea1 (threads: 2) ===
+   Key: kham-pha-feed | Topic: khám phá feed
+   Key: cau-chuyen-tim-nguoi-mat-tich | Topic: câu chuyện tìm người mất tích
+=== vn_fb_005 | Ep: 3bd87615 (threads: 4) ===
+   Key: ky-thuat-nhiep-anh-mat-trang | Topic: kỹ thuật nhiếp ảnh mặt trăng
+   Key: am-thuc-nhat-ban | Topic: ẩm thực Nhật Bản
+   Key: tranh-son-mai-va-nghe-thuat-truyen-thong | Topic: tranh sơn mài và nghệ thuật truyền thống
+   Key: lich-su-va-truyen-thong-viet-nam | Topic: lịch sử và truyền thống Việt Nam
+=== vn_fb_005 | Ep: 397f1fb0 (threads: 4) ===
+   Key: su-kien-thien-van-sao-hoa-va-mat-trang | Topic: Sự kiện thiên văn - Sao Hỏa và Mặt Trăng
+   Key: tinh-yeu-thuong-quan-he-con-nguoi | Topic: Tình yêu thương - quan hệ con người
+   Key: canh-quan-thien-nhien-chocolate-hills-philippines | Topic: Cảnh quan thiên nhiên - Chocolate Hills Philippines
+   Key: viet-nam-trai-nghiem-du-lich-nhat-ban | Topic: Việt Nam - trải nghiệm du lịch - Nhật Bản
+=== vn_fb_005 | Ep: 81b9d263 (threads: 0) ===
+=== vn_fb_006 | Ep: 3bec6714 (threads: 2) ===
+   Key: bat-đong-san-can-tho | Topic: Bất động sản Cần Thơ
+   Key: am-thuc-đuong-pho-can-tho | Topic: Ẩm thực đường phố Cần Thơ
+=== vn_fb_006 | Ep: 2f5baca0 (threads: 1) ===
+   Key: kham-pha-feed | Topic: Khám phá feed
+=== vn_fb_006 | Ep: 53a21bfd (threads: 2) ===
+   Key: noi-dung-feed | Topic: Nội dung feed
+   Key: nha-o-xa-hoi-flc-đai-mo | Topic: Nhà ở xã hội FLC Đại Mỗ
+=== vn_fb_006 | Ep: 3122847b (threads: 4) ===
+   Key: thoi-tiet-mien-nam | Topic: Thời tiết miền Nam
+   Key: hien-tang | Topic: Hiến tạng
+   Key: dich-vu-nha-khoa | Topic: Dịch vụ nha khoa
+   Key: an-toan-thuc-pham | Topic: An toàn thực phẩm

@@ -535,8 +535,9 @@
 
 * **Bộ Chỉ số Kiểm chứng Thực nghiệm Tuyệt đối (CSDL SQLite):**
   * 🚫 **Tỷ lệ đọc lặp bài viết xuyên phiên (`Cross-Session Duplicate Read Rate`):** **0.0%** (0 / 95 bài đọc bị lặp). Bộ nhớ ngắn hạn `read_posts` hoạt động hoàn hảo, xóa bỏ hoàn toàn hội chứng "mau quên lặp bài" của AI.
-  * ⚓ **Tỷ lệ duy trì luồng bản sắc gốc (`Baseline Retention`):** **55.1%** tổng lượt luồng thuộc về các chủ đề bản sắc khởi tạo từ Phiên 1 (Duy trì 4/4 phiên ở `002` Phật giáo, `004` Reels Clip; 3/3 phiên ở `006` BĐS Cần Thơ; tái xuất hiện ở `003` Ẩm thực Đà Nẵng).
-  * 🚀 **Tỷ lệ tiếp nhận & đào sâu chủ đề mới (`Emerging Topic Adoption`):** **31.3%** các chủ đề mới nảy sinh ở phiên sau tiếp tục được theo đuổi ở các phiên kế tiếp (Khối màu xanh lục ★).
+  * ⚓ **Tỷ lệ bước chuyển duy trì chủ đề cũ (`Transition Retention`):** **77.8%** (14 / 18 bước chuyển phiên thành công duy trì ít nhất 1 chủ đề cũ từ phiên trước sang phiên sau).
+  * 🧠 **Tỷ lệ kế thừa bộ nhớ nhận thức (`Memory Continuity Rate`):** **59.2%** tổng lượt luồng (29 / 49 luồng gồm 20 luồng Bản sắc gốc từ P1 [40.8%] và 9 luồng Mới tiếp tục đào sâu ở P sau [18.4%]). Khám phá mới: 40.8% (20 / 49 luồng).
+  * 🚀 **Tỷ lệ tiếp nhận & đào sâu chủ đề mới (`Emerging Topic Adoption`):** **45.0%** (9 / 20 chủ đề mới nảy sinh ở phiên sau tiếp tục được Agent ghi nhớ và đào sâu ở các phiên kế tiếp - Khối màu xanh lục ★).
   * 🔄 **Dung lượng tích lũy nhận thức:** **61 lượt cập nhật bộ nhớ (`memory_deltas`)** được ghi nhận và củng cố xuyên suốt 24 phiên chạy.
 * **Bằng chứng Thao tác Thực tế trên Thực thể Cố định (Entity Revisit):**
   * `vn_fb_001` (Thiết kế đồ họa): Phiên 3 phát sinh luồng AI Kiến trúc `[#1 Mới]` $\to$ Phiên 4 quay lại chính xác **Group ID `203414773608506`** và thực hiện lại truy vấn tìm kiếm *"AI thiết kế kiến trúc 2026"* `[#2 Tiếp nối]`.
